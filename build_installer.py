@@ -26,8 +26,9 @@ def run(cmd, label):
 # Step 1: Build main app
 run(f'"{PY}" -m PyInstaller -y --clean --onedir --noconsole '
     f'--name "Starlifter Requisition Terminal" --paths "." '
-    f'--collect-all fontTools --collect-all fpdf '
+    f'--collect-all fontTools --collect-all fpdf --collect-all customtkinter '
     f'--hidden-import "fontTools.misc.bezierTools" '
+    f'--hidden-import "cv2" '
     f'--icon "app_icon.ico" entry.py',
     "Build main app")
 

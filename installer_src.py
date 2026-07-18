@@ -308,21 +308,52 @@ class StarlifterInstaller(ctk.CTk):
         icon_path = os.path.join(working_dir, "app_icon.ico")
         if not os.path.exists(icon_path):
             icon_path = target  # fallback to exe icon
-        # Use escaped variables to handle paths with spaces safely
+
+        # Method 1: Try PowerShell with full path
+        ps_exe = os.path.join(os.environ.get("SYSTEMROOT", r"C:\Windows"),
+                              "System32", "WindowsPowerShell", "v1.0", "powershell.exe")
         ps_script = (
             f'$ws = New-Object -ComObject WScript.Shell; '
-            f'$s = $ws.CreateShortcut("{shortcut_path}"); '
-            f'$s.TargetPath = "{target}"; '
-            f'$s.WorkingDirectory = "{working_dir}"; '
-            f'$s.IconLocation = "{icon_path}"; '
-            f'$s.Description = "UEE Logistics Center - Requisition Terminal v0.6"; '
+            f'$s = $ws.CreateShortcut(\"{shortcut_path}\"); '
+            f'$s.TargetPath = \"{target}\"; '
+            f'$s.WorkingDirectory = \"{working_dir}\"; '
+            f'$s.IconLocation = \"{icon_path}\"; '
+            f'$s.Description = \"UEE Logistics Center - Requisition Terminal v0.6\"; '
             f'$s.Save()'
         )
-        subprocess.run(
-            ["powershell", "-NoProfile", "-NonInteractive", "-Command", ps_script],
-            capture_output=True,
-            creationflags=0x08000000  # CREATE_NO_WINDOW
-        )
+        try:
+            result = subprocess.run(
+                [ps_exe, "-NoProfile", "-NonInteractive", "-Command", ps_script],
+                capture_output=True, timeout=15,
+                creationflags=0x08000000  # CREATE_NO_WINDOW
+            )
+            if result.returncode == 0 and os.path.exists(shortcut_path):
+                return  # Success
+        except Exception:
+            pass
+
+        # Method 2: VBScript fallback
+        try:
+            vbs_content = (
+                f'Set ws = CreateObject("WScript.Shell")\n'
+                f'Set s = ws.CreateShortcut("{shortcut_path}")\n'
+                f's.TargetPath = "{target}"\n'
+                f's.WorkingDirectory = "{working_dir}"\n'
+                f's.IconLocation = "{icon_path}"\n'
+                f's.Description = "UEE Logistics Center - Requisition Terminal v0.6"\n'
+                f's.Save\n'
+            )
+            vbs_path = os.path.join(self.target_dir, "_create_shortcut.vbs")
+            with open(vbs_path, "w") as f:
+                f.write(vbs_content)
+            subprocess.run(
+                ["cscript", "//nologo", vbs_path],
+                capture_output=True, timeout=15,
+                creationflags=0x08000000
+            )
+            os.remove(vbs_path)
+        except Exception:
+            pass
         
     def launch_app(self):
         exe_path = os.path.join(self.target_dir, "Starlifter Requisition Terminal.exe")
