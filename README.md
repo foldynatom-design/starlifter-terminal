@@ -153,9 +153,25 @@ Starlifter_Terminal/          ← Install location (%LOCALAPPDATA%)
 
 ---
 
+## 🌐 Data Sources
+
+This tool pulls live data from the following community APIs:
+
+| Source | URL | Data Provided |
+|--------|-----|---------------|
+| **UEX Corp** | [uexcorp.space](https://uexcorp.space/) | Commodity & item trade prices, buy/sell locations, ship specs (SCU, pad size) |
+| **Star Citizen Wiki** | [api.star-citizen.wiki](https://api.star-citizen.wiki/) | Vehicle dimensions, item volumes/weights, production status, manufacturer data |
+| **SC-Cargo.space** | [sc-cargo.space](https://sc-cargo.space/) | Ship cargo grid layouts — exact bay dimensions (width × height × length per group) |
+
+All data is fetched on-demand via the **⟳ Verify All Data** button and cached locally for offline use.
+
+> 🙏 Huge thanks to the maintainers of these community projects for making their data freely available.
+
+---
+
 ## 📌 Known Limitations
 
-- Requires an active internet connection for **live UEX trade data** (offline mode uses cached DB)
+- Requires an active internet connection for **live trade data and verification** (offline mode uses cached DB)
 - Intro video may not play on systems without media codecs (app continues normally)
 - Not affiliated with Cloud Imperium Games — this is a fan-made RP tool
 
