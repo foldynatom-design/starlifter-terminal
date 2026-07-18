@@ -27,9 +27,10 @@ _orig_gen_req = main.RequisitionApp.generate_requisition_pdf
 from pdf_engine import generate_pdf_direct, LORE_STORY_CACHE
 from lore_helper import sc_date_only
 try:
-    from uex_sync import _uex_ships_db
+    from uex_sync import _uex_ships_db, _verify_and_update_uex_data
 except ImportError:
     _uex_ships_db = {}
+    _verify_and_update_uex_data = None
 try:
     from path_config import PATHS
     def _play_sound(name):
@@ -461,7 +462,7 @@ def patched_create_left_panel(self, *args, **kwargs):
                 req = urllib.request.Request(url, headers={"User-Agent": "StarlifterRequisitionTerminal/0.6"})
                 with urllib.request.urlopen(req, timeout=20) as resp:
                     raw = resp.read().decode("utf-8")
-                api_data = _json.loads(raw)
+                api_data = json.loads(raw)
                 commodities = api_data.get("data", []) if isinstance(api_data, dict) else api_data
                 
                 # Build lookup by name (lowercase)
@@ -478,7 +479,7 @@ def patched_create_left_panel(self, *args, **kwargs):
                 
                 if os.path.exists(config_path):
                     with open(config_path, "r", encoding="utf-8") as cf:
-                        config = _json.load(cf)
+                        config = json.load(cf)
                     
                     items = config.get("frequent_items", [])
                     for item in items:
@@ -499,7 +500,7 @@ def patched_create_left_panel(self, *args, **kwargs):
                     
                     if result["updated"] > 0:
                         with open(config_path, "w", encoding="utf-8") as cf:
-                            _json.dump(config, cf, indent=2, ensure_ascii=False)
+                            json.dump(config, cf, indent=2, ensure_ascii=False)
                         if hasattr(self, 'config_data'):
                             self.config_data = config
                 
@@ -545,6 +546,9 @@ def patched_create_left_panel(self, *args, **kwargs):
             self._verify_btn.configure(text=f"{_sp[_si[0]]} Syncing...")
             self.after(200, _anim)
     def _on_verify():
+        if _verify_and_update_uex_data is None:
+            messagebox.showerror("Verify", "Sync module not available (uex_sync not loaded).")
+            return
         self._verify_btn.configure(state="disabled"); _sa[0] = True; _anim()
         def _run():
             result = _verify_and_update_uex_data()
@@ -559,25 +563,31 @@ def patched_create_left_panel(self, *args, **kwargs):
                 ga = len(r.get("grids_added", []))
                 gl = len(r.get("grids_linked", []))
                 wn = r.get("warnings", [])
-                msg = f"Wiki API: {r.get('wiki_total', 0)} vehicles\n"
+                msg = f"Wiki API: {r.get('wiki_total', 0)} vehicles, {r.get('wiki_items_total', 0)} items\n"
                 msg += f"UEX API: {r.get('uex_total', 0)} vehicles\n"
+                msg += f"SC-Cargo: {r.get('sc_cargo_ships', 0)} grid layouts\n"
                 msg += f"Local DB: {len(_uex_ships_db)} ships\n"
-                msg += f"Cargo grids: {gl} linked, {ga} auto-created\n\n"
+                scm = r.get("sc_grids_merged", 0)
+                msg += f"Cargo grids: {gl} linked, {scm} from sc-cargo, {ga} auto-created\n\n"
                 if a:
                     msg += f"\u2795 {a} NEW ships:\n" + "".join(f"  + {s}\n" for s in r["added"][:12])
                 if u:
                     msg += f"\n\u27f3 {u} UPDATED:\n" + "".join(f"  ~ {s}\n" for s in r["updated"][:12])
                 if ga:
                     msg += f"\n\U0001f4e6 {ga} new cargo grids:\n" + "".join(f"  \u25a3 {s}\n" for s in r["grids_added"][:8])
+                va = r.get("vol_added", 0)
+                vu = r.get("vol_updated", 0)
+                if va or vu:
+                    msg += f"\n\u2696 Item volumes: +{va} new, ~{vu} updated\n"
                 if wn:
                     msg += f"\n\u26a0 Warnings:\n" + "".join(f"  ! {w}\n" for w in wn[:5])
-                if not a and not u and not ga:
+                if not a and not u and not ga and not va and not vu:
                     msg += "\u2713 All databases up to date!"
-                # Update ship selector if new ships available
-                if r.get("all_ship_names") and hasattr(self, 'ship_selector'):
-                    try:
-                        self.ship_selector.configure(values=r["all_ship_names"])
-                    except: pass
+                # Update internal ship names cache but keep selector showing loadout vessels only
+                if r.get("all_ship_names"):
+                    self._all_ship_names = r["all_ship_names"]
+                    # Do NOT override selector — keep it showing loadout vessels only
+                    # self.ship_selector.configure(values=r["all_ship_names"])
                 _play_sound("verify_sync.wav")
                 messagebox.showinfo("Verify All Data", msg)
         threading.Thread(target=_run, daemon=True).start()

@@ -15,6 +15,7 @@ Usage:
 import os
 import sys
 import json as _json
+import re
 import urllib.request
 import time
 
@@ -231,7 +232,108 @@ def _verify_and_update_uex_data(status_callback=None):
             if name not in result["added"]:
                 result["added"].append(f"{name} (UEX)")
     
-    # 5) Cross-validate cargo grids
+    # 4b) Fetch sc-cargo.space grid layouts
+    if status_callback:
+        status_callback("Fetching cargo grids from sc-cargo.space...")
+    
+    sc_cargo_grids = {}
+    sc_cargo_warnings = []
+    try:
+        # Fetch the SPA HTML to discover the current JS bundle hash
+        html_req = urllib.request.Request("https://sc-cargo.space/", headers={
+            "User-Agent": "StarlifterRequisitionTerminal/0.6",
+        })
+        with urllib.request.urlopen(html_req, timeout=15) as html_resp:
+            html_text = html_resp.read().decode("utf-8")
+        
+        js_match = re.search(r'src="(/assets/index-[A-Za-z0-9_-]+\.js)"', html_text)
+        if js_match:
+            js_url = f"https://sc-cargo.space{js_match.group(1)}"
+            if status_callback:
+                status_callback("Downloading sc-cargo.space grid bundle...")
+            js_req = urllib.request.Request(js_url, headers={
+                "User-Agent": "StarlifterRequisitionTerminal/0.6",
+            })
+            with urllib.request.urlopen(js_req, timeout=30) as js_resp:
+                js_content = js_resp.read().decode("utf-8", errors="replace")
+            
+            # Parse grid data from JS bundle: {capacity:NNN,groups:[...]}
+            cap_pat = re.compile(r'\{capacity:(\d+),groups:\[')
+            for m in cap_pat.finditer(js_content):
+                start = m.start()
+                cap = int(m.group(1))
+                # Extract full object by brace counting
+                brace_count = 0
+                obj_end = start
+                for i in range(start, min(start + 50000, len(js_content))):
+                    c = js_content[i]
+                    if c == '{': brace_count += 1
+                    elif c == '}':
+                        brace_count -= 1
+                        if brace_count == 0:
+                            obj_end = i + 1
+                            break
+                obj_str = js_content[start:obj_end]
+                # Convert JS to JSON (add quotes around keys)
+                json_str = re.sub(r'(\b)(x|y|z|width|height|length|capacity|groups|grids):', r'"\2":', obj_str)
+                try:
+                    grid_data = _json.loads(json_str)
+                except _json.JSONDecodeError:
+                    try:
+                        json_str2 = re.sub(r'([{,])(\w+):', r'\1"\2":', obj_str)
+                        grid_data = _json.loads(json_str2)
+                    except Exception:
+                        continue
+                
+                # Look back for manufacturer + ship name
+                lookback = js_content[max(0, start - 500):start]
+                strings = re.findall(r'"([^"]{2,50})"', lookback)
+                skip_names = {"Module", "value", "default", "module", "exports",
+                              "undefined", "function", "object", "string", "number", "boolean"}
+                if len(strings) >= 2:
+                    manufacturer, name = strings[-2], strings[-1]
+                elif len(strings) == 1:
+                    manufacturer, name = "Unknown", strings[-1]
+                else:
+                    continue
+                if name in skip_names or manufacturer in skip_names:
+                    alt = re.findall(r'="([A-Z][a-zA-Z0-9\- ]+)"', lookback)
+                    if len(alt) >= 2:
+                        manufacturer, name = alt[-2], alt[-1]
+                    elif len(alt) == 1:
+                        name = alt[-1]
+                    else:
+                        continue
+                
+                # Validate grid cells
+                total_cells = 0
+                for grp in grid_data.get("groups", []):
+                    for g in grp.get("grids", []):
+                        total_cells += (g.get("width", 0) or 0) * (g.get("height", 0) or 0) * (g.get("length", 0) or 0)
+                if total_cells == 0:
+                    continue
+                
+                ship_key = f"{manufacturer} {name}" if manufacturer != "Unknown" else name
+                if ship_key in sc_cargo_grids:
+                    if len(grid_data.get("groups", [])) <= len(sc_cargo_grids[ship_key].get("groups", [])):
+                        continue
+                sc_cargo_grids[ship_key] = {
+                    "manufacturer": manufacturer,
+                    "name": name,
+                    "capacity": cap,
+                    "groups": grid_data["groups"],
+                    "_source": "sc-cargo.space",
+                }
+        else:
+            sc_cargo_warnings.append("Could not find JS bundle URL in sc-cargo.space HTML")
+    except Exception as e:
+        sc_cargo_warnings.append(f"sc-cargo.space: {e}")
+    
+    result["sc_cargo_ships"] = len(sc_cargo_grids)
+    if sc_cargo_warnings:
+        result["warnings"].extend(sc_cargo_warnings)
+    
+    # 5) Cross-validate cargo grids (merge sc-cargo.space data first)
     if status_callback:
         status_callback("Cross-validating cargo grids...")
     
@@ -246,6 +348,37 @@ def _verify_and_update_uex_data(status_callback=None):
     
     grids_keys_norm = {_normalize(k): k for k in grids_db}
     grids_modified = False
+    
+    # Merge sc-cargo.space grids into DB (priority over auto-generated stubs)
+    sc_grids_merged = 0
+    for sc_key, sc_val in sc_cargo_grids.items():
+        sc_norm = _normalize(sc_key)
+        sc_name_norm = _normalize(sc_val.get("name", ""))
+        
+        # Find existing entry by normalized key
+        existing_key = grids_keys_norm.get(sc_norm) or grids_keys_norm.get(sc_name_norm)
+        if not existing_key:
+            # Try substring match
+            for gk_norm, gk_orig in grids_keys_norm.items():
+                if sc_name_norm and (sc_name_norm in gk_norm or gk_norm in sc_name_norm):
+                    existing_key = gk_orig
+                    break
+        
+        if existing_key:
+            old = grids_db[existing_key]
+            # Only replace auto-generated stubs, never manually curated grids
+            if old.get("_auto_generated"):
+                grids_db[existing_key] = sc_val
+                grids_modified = True
+                sc_grids_merged += 1
+        else:
+            # New ship — add it
+            grids_db[sc_key] = sc_val
+            grids_keys_norm[sc_norm] = sc_key
+            grids_modified = True
+            sc_grids_merged += 1
+    
+    result["sc_grids_merged"] = sc_grids_merged
     
     for key, ship in _uex_ships_db.items():
         scu = ship.get("scu", 0) or 0
@@ -320,6 +453,88 @@ def _verify_and_update_uex_data(status_callback=None):
         except Exception as e:
             result["warnings"].append(f"Grid save: {e}")
     
+    # 5b) Sync item volumes from SC Wiki API
+    if status_callback:
+        status_callback("Syncing item volumes from SC Wiki API...")
+    
+    vol_path = os.path.join(_res_dir, "item_volumes.json")
+    item_volumes = {}
+    try:
+        if os.path.exists(vol_path):
+            with open(vol_path, "r", encoding="utf-8") as vf:
+                item_volumes = _json.load(vf)
+    except Exception:
+        pass
+    
+    vol_updated = 0
+    vol_added = 0
+    items_vol_warnings = []
+    
+    # Paginate through Wiki items API (page=1..N, 50 per page)
+    page = 1
+    max_pages = 30  # safety cap (~1500 items)
+    wiki_items_total = 0
+    
+    while page <= max_pages:
+        try:
+            items_url = f"https://api.star-citizen.wiki/api/v2/items?page={page}&limit=50"
+            req_items = urllib.request.Request(items_url, headers={
+                "User-Agent": "StarlifterRequisitionTerminal/0.6",
+                "Accept": "application/json",
+            })
+            with urllib.request.urlopen(req_items, timeout=25) as resp_items:
+                raw_items = resp_items.read().decode("utf-8")
+            items_data = _json.loads(raw_items)
+            items_list = items_data.get("data", [])
+            if not items_list:
+                break
+            
+            for itm in items_list:
+                wiki_items_total += 1
+                iname = itm.get("name", "")
+                if not iname:
+                    continue
+                
+                dim = itm.get("dimension", {}) or {}
+                vol = dim.get("volume", 0) or 0  # SCU
+                
+                if vol <= 0:
+                    continue
+                
+                key = iname.lower().strip()
+                old_vol = item_volumes.get(key, 0) or 0
+                
+                if key not in item_volumes:
+                    item_volumes[key] = vol
+                    vol_added += 1
+                elif abs(vol - old_vol) > 0.0001 and vol > 0:
+                    item_volumes[key] = vol
+                    vol_updated += 1
+            
+            # Check if there are more pages
+            meta = items_data.get("meta", {})
+            last_page = meta.get("last_page", page)
+            if page >= last_page:
+                break
+            page += 1
+            
+        except Exception as e:
+            items_vol_warnings.append(f"Wiki items page {page}: {e}")
+            break
+    
+    if vol_added > 0 or vol_updated > 0:
+        try:
+            with open(vol_path, "w", encoding="utf-8") as vf:
+                _json.dump(item_volumes, vf, indent=2, ensure_ascii=False)
+        except Exception as e:
+            items_vol_warnings.append(f"Volume save: {e}")
+    
+    result["vol_added"] = vol_added
+    result["vol_updated"] = vol_updated
+    result["wiki_items_total"] = wiki_items_total
+    if items_vol_warnings:
+        result["warnings"].extend(items_vol_warnings)
+    
     # 6) Save updated ship DB
     if result["added"] or result["updated"]:
         db_path = os.path.join(_res_dir, "uex_ships_db.json")
@@ -337,7 +552,9 @@ def _verify_and_update_uex_data(status_callback=None):
     
     if status_callback:
         status_callback(f"Done! Wiki:{result['wiki_total']} UEX:{result['uex_total']} "
-                       f"+{len(result['added'])} ~{len(result['updated'])} grids:+{len(result['grids_added'])}")
+                       f"+{len(result['added'])} ~{len(result['updated'])} "
+                       f"grids:{result.get('sc_cargo_ships', 0)}sc/{len(result['grids_added'])}auto "
+                       f"items:+{vol_added} ~{vol_updated}")
     
     return result
 
