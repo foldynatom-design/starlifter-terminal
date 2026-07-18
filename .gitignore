@@ -1,0 +1,26 @@
+# PyInstaller build output
+build/
+dist/
+*.spec
+__pycache__/
+*.pyc
+*.pyo
+
+# Font cache — NEVER commit these, they contain absolute paths from the build machine
+fonts/*.pkl
+fonts/*.cw127.pkl
+
+# App zip
+app_files.zip
+
+# Python env
+.venv/
+*.egg-info/
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
+crash_log.txt
