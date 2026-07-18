@@ -67,7 +67,9 @@ if getattr(sys, 'frozen', False):
 else:
     base_path = os.path.dirname(os.path.abspath(__file__))
 
-sys.path.insert(0, base_path)
+# app_root FIRST so loose .py patches (ui_panel, slang_helper) override bundled copies
+sys.path.insert(0, PATHS.app_root)
+sys.path.insert(1, base_path)
 
 # ── Monkey-patch resource_path → delegates to PATHS.resource() ──
 _orig_resource_path = getattr(main, 'resource_path', None)
