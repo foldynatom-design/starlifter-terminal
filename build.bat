@@ -22,6 +22,10 @@ copy config.json "%TARGET_DIR%\"
 :: 5. Copy main.pyc (compiled app core)
 copy main.pyc "%TARGET_DIR%\"
 
+:: 5b. Copy runtime Python patches (slang resolution, UI overrides)
+copy ui_panel.py "%TARGET_DIR%\"
+copy slang_helper.py "%TARGET_DIR%\"
+
 :: 6. Copy logos + watermarks (root level — entry.py looks here first)
 copy logo.png "%TARGET_DIR%\"
 copy logo_uee44.png "%TARGET_DIR%\"

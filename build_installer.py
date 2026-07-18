@@ -52,7 +52,8 @@ def cp(src, dst):
 
 # Root level files
 for f in ["config.json", "main.pyc", "logo.png", "logo_uee44.png", "cvbg44_logo.png",
-          "watermark_secured.png", "watermark_classified.png", "watermark_public.png", "app_icon.ico"]:
+          "watermark_secured.png", "watermark_classified.png", "watermark_public.png", "app_icon.ico",
+          "ui_panel.py", "slang_helper.py"]:
     src = os.path.join(ROOT, f)
     if os.path.exists(src):
         cp(src, os.path.join(DIST, f))
