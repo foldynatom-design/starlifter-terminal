@@ -1,0 +1,2319 @@
+{
+  "frequent_items": [
+    {
+      "name": "P4-AR \"Nightstalker\" Rifle",
+      "price": 4559,
+      "unit": "rifle",
+      "category": "weapons"
+    },
+    {
+      "name": "P4-AR Rifle",
+      "price": 4757,
+      "unit": "rifle",
+      "category": "weapons"
+    },
+    {
+      "name": "S-38 Pistol",
+      "price": 920,
+      "unit": "pistol",
+      "category": "weapons"
+    },
+    {
+      "name": "P8-SC SMG",
+      "price": 1250,
+      "unit": "smg",
+      "category": "weapons"
+    },
+    {
+      "name": "P6-LR Sniper Rifle",
+      "price": 3800,
+      "unit": "rifle",
+      "category": "weapons"
+    },
+    {
+      "name": "P8-AR Rifle",
+      "price": 2600,
+      "unit": "rifle",
+      "category": "weapons"
+    },
+    {
+      "name": "Aril Helmet",
+      "price": 3300,
+      "unit": "helmet",
+      "category": "uniforms"
+    },
+    {
+      "name": "Aril Core",
+      "price": 5500,
+      "unit": "core",
+      "category": "uniforms"
+    },
+    {
+      "name": "Aril Arms",
+      "price": 1500,
+      "unit": "arms",
+      "category": "uniforms"
+    },
+    {
+      "name": "Aril Legs",
+      "price": 2500,
+      "unit": "legs",
+      "category": "uniforms"
+    },
+    {
+      "name": "Aril Backpack",
+      "price": 3000,
+      "unit": "backpack",
+      "category": "uniforms"
+    },
+    {
+      "name": "Tailwind Flight Suit",
+      "price": 1450,
+      "unit": "suit",
+      "category": "uniforms"
+    },
+    {
+      "name": "Omni-AFS Saphire Slate",
+      "price": 2450,
+      "unit": "helmet",
+      "category": "uniforms"
+    },
+    {
+      "name": "TCS-4 Undersuit",
+      "price": 883,
+      "unit": "suit",
+      "category": "uniforms"
+    },
+    {
+      "name": "TCS-4 Undersuit Black/Grey",
+      "price": 851,
+      "unit": "suit",
+      "category": "uniforms"
+    },
+    {
+      "name": "TCS-4 Undersuit Black",
+      "price": 883,
+      "unit": "suit",
+      "category": "uniforms"
+    },
+    {
+      "name": "ADP-mk4 Helmet Woodland",
+      "price": 4918,
+      "unit": "helmet",
+      "category": "uniforms"
+    },
+    {
+      "name": "ADP-mk4 Core Woodland",
+      "price": 5308,
+      "unit": "core",
+      "category": "uniforms"
+    },
+    {
+      "name": "ADP-mk4 Arms Woodland",
+      "price": 1482,
+      "unit": "arms",
+      "category": "uniforms"
+    },
+    {
+      "name": "ADP-mk4 Legs Woodland",
+      "price": 2546,
+      "unit": "legs",
+      "category": "uniforms"
+    },
+    {
+      "name": "ORC-mkX Helmet Woodland",
+      "price": 1095,
+      "unit": "helmet",
+      "category": "uniforms"
+    },
+    {
+      "name": "ORC-mkX Core Woodland",
+      "price": 2721,
+      "unit": "core",
+      "category": "uniforms"
+    },
+    {
+      "name": "ORC-mkX Arms Woodland",
+      "price": 826,
+      "unit": "arms",
+      "category": "uniforms"
+    },
+    {
+      "name": "ORC-mkX Legs Woodland",
+      "price": 2434,
+      "unit": "legs",
+      "category": "uniforms"
+    },
+    {
+      "name": "ORC-mkX Helmet Twilight",
+      "price": 2434,
+      "unit": "helmet",
+      "category": "uniforms"
+    },
+    {
+      "name": "ORC-mkX Core Twilight",
+      "price": 2721,
+      "unit": "core",
+      "category": "uniforms"
+    },
+    {
+      "name": "ORC-mkX Arms Twilight",
+      "price": 826,
+      "unit": "arms",
+      "category": "uniforms"
+    },
+    {
+      "name": "ORC-mkX Legs Twilight",
+      "price": 1095,
+      "unit": "legs",
+      "category": "uniforms"
+    },
+    {
+      "name": "Field Recon Suit Helmet",
+      "price": 1587,
+      "unit": "helmet",
+      "category": "uniforms"
+    },
+    {
+      "name": "Field Recon Suit Core",
+      "price": 1514,
+      "unit": "core",
+      "category": "uniforms"
+    },
+    {
+      "name": "Field Recon Suit Arms",
+      "price": 493,
+      "unit": "arms",
+      "category": "uniforms"
+    },
+    {
+      "name": "Field Recon Suit Legs",
+      "price": 456,
+      "unit": "legs",
+      "category": "uniforms"
+    },
+    {
+      "name": "CSP-68H Backpack",
+      "price": 2604,
+      "unit": "pack",
+      "category": "uniforms"
+    },
+    {
+      "name": "CSP-68M Backpack",
+      "price": 2990,
+      "unit": "pack",
+      "category": "uniforms"
+    },
+    {
+      "name": "CSP-68L Backpack",
+      "price": 1511,
+      "unit": "pack",
+      "category": "uniforms"
+    },
+    {
+      "name": "Adiva Jacket Imperial",
+      "price": 3396,
+      "unit": "jacket",
+      "category": "uniforms"
+    },
+    {
+      "name": "Adiva Jacket White",
+      "price": 3396,
+      "unit": "jacket",
+      "category": "uniforms"
+    },
+    {
+      "name": "Adiva Jacket Blue",
+      "price": 2675,
+      "unit": "jacket",
+      "category": "uniforms"
+    },
+    {
+      "name": "Adiva Jacket Yellow",
+      "price": 2675,
+      "unit": "jacket",
+      "category": "uniforms"
+    },
+    {
+      "name": "Adiva Jacket Dark Green",
+      "price": 3396,
+      "unit": "jacket",
+      "category": "uniforms"
+    },
+    {
+      "name": "Adiva Jacket Red",
+      "price": 3396,
+      "unit": "jacket",
+      "category": "uniforms"
+    },
+    {
+      "name": "LeMarque Pants",
+      "price": 375,
+      "unit": "pants",
+      "category": "uniforms"
+    },
+    {
+      "name": "Deo Shirt Black",
+      "price": 460,
+      "unit": "shirt",
+      "category": "uniforms"
+    },
+    {
+      "name": "Prim Shoes Black",
+      "price": 260,
+      "unit": "shoes",
+      "category": "uniforms"
+    },
+    {
+      "name": "Ventra Gloves Black",
+      "price": 300,
+      "unit": "gloves",
+      "category": "uniforms"
+    },
+    {
+      "name": "Size 1 Ammunition",
+      "price": 7383,
+      "unit": "SCU",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Size 2 Ammunition",
+      "price": 7641,
+      "unit": "SCU",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Size 3 Ammunition",
+      "price": 7383,
+      "unit": "SCU",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Size 4 Ammunition",
+      "price": 7641,
+      "unit": "SCU",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Size 5 Ammunition",
+      "price": 7984,
+      "unit": "SCU",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Size 6 Ammunition",
+      "price": 8326,
+      "unit": "SCU",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Size 7 Ammunition",
+      "price": 8671,
+      "unit": "SCU",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Decoy Countermeasures",
+      "price": 4293,
+      "unit": "SCU",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Noise Countermeasures",
+      "price": 8585,
+      "unit": "SCU",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Raptor IV Missile",
+      "price": 1412,
+      "unit": "missile",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Thunderbolt III Missile",
+      "price": 678,
+      "unit": "missile",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Dominator II Missile",
+      "price": 350,
+      "unit": "missile",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Ignite II Missile",
+      "price": 350,
+      "unit": "missile",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Reaper V Missile",
+      "price": 3200,
+      "unit": "missile",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Stormburst Bomb",
+      "price": 5065,
+      "unit": "bomb",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Colossus Bomb",
+      "price": 25000,
+      "unit": "bomb",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "P4-AR Magazine",
+      "price": 198,
+      "unit": "mag",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "S-38 Magazine",
+      "price": 149,
+      "unit": "mag",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Quantum Fuel",
+      "price": 978,
+      "unit": "SCU",
+      "category": "materials",
+      "limit": 12000
+    },
+    {
+      "name": "Hydrogen Fuel",
+      "price": 196,
+      "unit": "SCU",
+      "category": "materials",
+      "limit": 12000
+    },
+    {
+      "name": "CRUZ Lux",
+      "price": 7,
+      "unit": "bottle",
+      "category": "food"
+    },
+    {
+      "name": "Pancea MedGel Canister",
+      "price": 100000,
+      "unit": "unit",
+      "category": "materials"
+    },
+    {
+      "name": "Stor-All 1 SCU Storage Container",
+      "price": 2100,
+      "unit": "unit",
+      "category": "materials"
+    },
+    {
+      "name": "Stor*All 2 SCU Self-Storage Container",
+      "price": 4250,
+      "unit": "unit",
+      "category": "materials"
+    },
+    {
+      "name": "Stor*All 4 SCU Self-Storage Container",
+      "price": 8500,
+      "unit": "unit",
+      "category": "materials"
+    },
+    {
+      "name": "Stor*All 8 SCU Self-Storage Container",
+      "price": 15960,
+      "unit": "unit",
+      "category": "materials"
+    },
+    {
+      "name": "Recycled Material Composite (RMC)",
+      "price": 7550,
+      "unit": "SCU",
+      "category": "materials",
+      "limit": 100
+    },
+    {
+      "name": "Cambio SRT",
+      "price": 20900,
+      "unit": "unit",
+      "category": "utility"
+    },
+    {
+      "name": "Cambio SRT Canister",
+      "price": 175,
+      "unit": "unit",
+      "category": "utility"
+    },
+    {
+      "name": "Cambio Multi-tool Battery",
+      "price": 63,
+      "unit": "unit",
+      "category": "utility"
+    },
+    {
+      "name": "MaxLift Tractor Beam",
+      "price": 19000,
+      "unit": "unit",
+      "category": "utility"
+    },
+    {
+      "name": "Maxlift Tractor Beam Battery",
+      "price": 175,
+      "unit": "unit",
+      "category": "utility"
+    },
+    {
+      "name": "ParaMed Medical Device",
+      "price": 1320,
+      "unit": "unit",
+      "category": "utility"
+    },
+    {
+      "name": "ParaMed Refill",
+      "price": 150,
+      "unit": "unit",
+      "category": "utility"
+    },
+    {
+      "name": "Hemozal MedPen",
+      "price": 100,
+      "unit": "pen",
+      "category": "utility"
+    },
+    {
+      "name": "Item Fabricator",
+      "price": 95000,
+      "unit": "unit",
+      "category": "utility"
+    },
+    {
+      "name": "MK-4 Frag Grenade",
+      "price": 150,
+      "unit": "grenade",
+      "category": "weapons"
+    },
+    {
+      "name": "Pink QuikFlare",
+      "price": 25,
+      "unit": "flare",
+      "category": "weapons"
+    },
+    {
+      "name": "Scorch Plasma Grenade",
+      "price": 506,
+      "unit": "grenade",
+      "category": "weapons"
+    },
+    {
+      "name": "Buster's Chocolate Bar",
+      "price": 5,
+      "unit": "bar",
+      "category": "food"
+    },
+    {
+      "name": "Fizzz Peach",
+      "price": 5,
+      "unit": "can",
+      "category": "food"
+    },
+    {
+      "name": "Karoby Energy Bar",
+      "price": 5,
+      "unit": "bar",
+      "category": "food"
+    },
+    {
+      "name": "Mug",
+      "price": 10,
+      "unit": "mug",
+      "category": "food"
+    },
+    {
+      "name": "OneMeal Nutrition Bar",
+      "price": 10,
+      "unit": "bar",
+      "category": "food"
+    },
+    {
+      "name": "Pips Energy T17",
+      "price": 5,
+      "unit": "can",
+      "category": "food"
+    },
+    {
+      "name": "Quantainium Water Bottle",
+      "price": 7,
+      "unit": "bottle",
+      "category": "food"
+    },
+    {
+      "name": "ReadyMeal",
+      "price": 10,
+      "unit": "meal",
+      "category": "food"
+    },
+    {
+      "name": "Snaggle Stick",
+      "price": 5,
+      "unit": "stick",
+      "category": "food"
+    },
+    {
+      "name": "Veggie Dog",
+      "price": 12,
+      "unit": "dog",
+      "category": "food"
+    },
+    {
+      "name": "Cambio-Lite SRT Attachment",
+      "price": 225,
+      "unit": "unit",
+      "category": "utility"
+    },
+    {
+      "name": "LifeGuard Medical Attachment",
+      "price": 225,
+      "unit": "unit",
+      "category": "utility"
+    },
+    {
+      "name": "TruHold Tractor Beam Attachment",
+      "price": 225,
+      "unit": "unit",
+      "category": "utility"
+    },
+    {
+      "name": "AdrenaPen",
+      "price": 100,
+      "unit": "pen",
+      "category": "utility"
+    },
+    {
+      "name": "CorticoPen",
+      "price": 100,
+      "unit": "pen",
+      "category": "utility"
+    },
+    {
+      "name": "DeconPen",
+      "price": 100,
+      "unit": "pen",
+      "category": "utility"
+    },
+    {
+      "name": "DetoxPen",
+      "price": 100,
+      "unit": "pen",
+      "category": "utility"
+    },
+    {
+      "name": "OpioPen",
+      "price": 100,
+      "unit": "pen",
+      "category": "utility"
+    },
+    {
+      "name": "APX Fire Extinguisher",
+      "price": 250,
+      "unit": "unit",
+      "category": "utility"
+    },
+    {
+      "name": "Seeker IX Torpedo",
+      "price": 8500,
+      "unit": "torpedo",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Argus IX Torpedo",
+      "price": 8500,
+      "unit": "torpedo",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Typhoon IX Torpedo",
+      "price": 8500,
+      "unit": "torpedo",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Marksman II Missile",
+      "price": 250,
+      "unit": "missile",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Tempest II Missile",
+      "price": 250,
+      "unit": "missile",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Strikeforce II Missile",
+      "price": 270,
+      "unit": "missile",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Arrester III Missile",
+      "price": 600,
+      "unit": "missile",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Stalker IV Missile",
+      "price": 1350,
+      "unit": "missile",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Pioneer I Missile",
+      "price": 100,
+      "unit": "missile",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Viper I Missile",
+      "price": 100,
+      "unit": "missile",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Spark I Missile",
+      "price": 100,
+      "unit": "missile",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "P8-SC Magazine",
+      "price": 85,
+      "unit": "mag",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "P6-LR Magazine",
+      "price": 220,
+      "unit": "mag",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "P8-AR Magazine",
+      "price": 110,
+      "unit": "mag",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Coda Pistol",
+      "price": 750,
+      "unit": "pistol",
+      "category": "weapons"
+    },
+    {
+      "name": "Coda Magazine",
+      "price": 90,
+      "unit": "mag",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Gallant Rifle",
+      "price": 2400,
+      "unit": "rifle",
+      "category": "weapons"
+    },
+    {
+      "name": "Gallant Magazine",
+      "price": 120,
+      "unit": "mag",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "C54 SMG",
+      "price": 1150,
+      "unit": "smg",
+      "category": "weapons"
+    },
+    {
+      "name": "C54 Magazine",
+      "price": 75,
+      "unit": "mag",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "FS-9 LMG",
+      "price": 3600,
+      "unit": "lmg",
+      "category": "weapons"
+    },
+    {
+      "name": "FS-9 Magazine",
+      "price": 180,
+      "unit": "mag",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Devastator Shotgun",
+      "price": 2100,
+      "unit": "shotgun",
+      "category": "weapons"
+    },
+    {
+      "name": "Devastator Magazine",
+      "price": 150,
+      "unit": "mag",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Lumin V SMG",
+      "price": 1300,
+      "unit": "smg",
+      "category": "weapons"
+    },
+    {
+      "name": "Lumin V Magazine",
+      "price": 80,
+      "unit": "mag",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Scalpel Sniper Rifle",
+      "price": 4100,
+      "unit": "rifle",
+      "category": "weapons"
+    },
+    {
+      "name": "Scalpel Magazine",
+      "price": 250,
+      "unit": "mag",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "Custodian SMG",
+      "price": 1400,
+      "unit": "smg",
+      "category": "weapons"
+    },
+    {
+      "name": "Custodian Magazine",
+      "price": 90,
+      "unit": "mag",
+      "category": "ammo & missiles"
+    },
+    {
+      "name": "ADP-mk4 Helmet (Slate)",
+      "price": 4900,
+      "unit": "helmet",
+      "category": "uniforms"
+    },
+    {
+      "name": "ADP-mk4 Core (Slate)",
+      "price": 12500,
+      "unit": "core",
+      "category": "uniforms"
+    },
+    {
+      "name": "ADP-mk4 Arms (Slate)",
+      "price": 3200,
+      "unit": "arms",
+      "category": "uniforms"
+    },
+    {
+      "name": "ADP-mk4 Legs (Slate)",
+      "price": 3200,
+      "unit": "legs",
+      "category": "uniforms"
+    },
+    {
+      "name": "MacFlex Helmet",
+      "price": 1600,
+      "unit": "helmet",
+      "category": "uniforms"
+    },
+    {
+      "name": "MacFlex Core",
+      "price": 3200,
+      "unit": "core",
+      "category": "uniforms"
+    },
+    {
+      "name": "MacFlex Arms",
+      "price": 950,
+      "unit": "arms",
+      "category": "uniforms"
+    },
+    {
+      "name": "MacFlex Legs",
+      "price": 950,
+      "unit": "legs",
+      "category": "uniforms"
+    },
+    {
+      "name": "Odyssey Undersuit",
+      "price": 850,
+      "unit": "undersuit",
+      "category": "uniforms"
+    },
+    {
+      "name": "Beacon Undersuit",
+      "price": 850,
+      "unit": "undersuit",
+      "category": "uniforms"
+    },
+    {
+      "name": "Omni-AFS Sapphire Slate",
+      "price": 1550,
+      "unit": "flightsuit",
+      "category": "uniforms"
+    },
+    {
+      "name": "Deo Black Shirt",
+      "price": 350,
+      "unit": "shirt",
+      "category": "uniforms"
+    },
+    {
+      "name": "Prim Black Shoes",
+      "price": 200,
+      "unit": "shoes",
+      "category": "uniforms"
+    },
+    {
+      "name": "Refined Silicon",
+      "price": 1964,
+      "unit": "1 SCU",
+      "category": "materials"
+    },
+    {
+      "name": "Refined Iron",
+      "price": 2704,
+      "unit": "1 SCU",
+      "category": "materials"
+    },
+    {
+      "name": "Refined Copper",
+      "price": 3262,
+      "unit": "1 SCU",
+      "category": "materials"
+    },
+    {
+      "name": "Refined Titanium",
+      "price": 7340,
+      "unit": "1 SCU",
+      "category": "materials"
+    },
+    {
+      "name": "Refined Gold",
+      "price": 26492,
+      "unit": "1 SCU",
+      "category": "materials"
+    },
+    {
+      "name": "Refined Laranite",
+      "price": 7329,
+      "unit": "1 SCU",
+      "category": "materials"
+    },
+    {
+      "name": "Refined Agricium",
+      "price": 8607,
+      "unit": "1 SCU",
+      "category": "materials"
+    },
+    {
+      "name": "Refined Bexlite",
+      "price": 2200,
+      "unit": "1 SCU",
+      "category": "materials"
+    },
+    {
+      "name": "Refined Taranite",
+      "price": 20358,
+      "unit": "1 SCU",
+      "category": "materials"
+    },
+    {
+      "name": "Refined Quantainium",
+      "price": 24500,
+      "unit": "1 SCU",
+      "category": "materials"
+    },
+    {
+      "name": "Construction Materials",
+      "price": 9332,
+      "unit": "1 SCU",
+      "category": "materials"
+    },
+    {
+      "name": "Behring \"CQ7\" Bullpup Rifle",
+      "price": 3250,
+      "unit": "rifle",
+      "category": "weapons"
+    },
+    {
+      "name": "Behring \"CQ7\" Magazine",
+      "price": 80,
+      "unit": "magazine",
+      "category": "weapons"
+    },
+    {
+      "name": "Tailwind Helmet",
+      "price": 1100,
+      "unit": "helmet",
+      "category": "uniforms"
+    },
+    {
+      "name": "Omni-AFS Sapphire Slate Helmet",
+      "price": 1100,
+      "unit": "helmet",
+      "category": "uniforms"
+    },
+    {
+      "name": "Arrow I Missile",
+      "price": 1200,
+      "unit": "missile_s1",
+      "category": "ammo & missiles",
+      "scu_volume": 1,
+      "signal_type": "Infrared"
+    },
+    {
+      "name": "Marksman I Missile",
+      "price": 1200,
+      "unit": "missile_s1",
+      "category": "ammo & missiles",
+      "scu_volume": 1,
+      "signal_type": "Infrared"
+    },
+    {
+      "name": "TaskForce I Missile",
+      "price": 1200,
+      "unit": "missile_s1",
+      "category": "ammo & missiles",
+      "scu_volume": 1,
+      "signal_type": "Electromagnetic"
+    },
+    {
+      "name": "Spark I-G Missile",
+      "price": 1200,
+      "unit": "missile_s1",
+      "category": "ammo & missiles",
+      "scu_volume": 1,
+      "signal_type": "Cross Section"
+    },
+    {
+      "name": "Bullet II Missile",
+      "price": 2500,
+      "unit": "missile_s2",
+      "category": "ammo & missiles",
+      "scu_volume": 1,
+      "signal_type": "Infrared"
+    },
+    {
+      "name": "Rattler II Missile",
+      "price": 2500,
+      "unit": "missile_s2",
+      "category": "ammo & missiles",
+      "scu_volume": 1,
+      "signal_type": "Infrared"
+    },
+    {
+      "name": "Chaos III Missile",
+      "price": 5000,
+      "unit": "missile_s3",
+      "category": "ammo & missiles",
+      "scu_volume": 2,
+      "signal_type": "Infrared"
+    },
+    {
+      "name": "Viper III Missile",
+      "price": 5000,
+      "unit": "missile_s3",
+      "category": "ammo & missiles",
+      "scu_volume": 2,
+      "signal_type": "Infrared"
+    },
+    {
+      "name": "Assailant IV Missile",
+      "price": 8500,
+      "unit": "missile_s4",
+      "category": "ammo & missiles",
+      "scu_volume": 2,
+      "signal_type": "Cross Section"
+    },
+    {
+      "name": "Dragon IV Missile",
+      "price": 8500,
+      "unit": "missile_s4",
+      "category": "ammo & missiles",
+      "scu_volume": 2,
+      "signal_type": "Infrared"
+    },
+    {
+      "name": "Pathfinder IV Missile",
+      "price": 8500,
+      "unit": "missile_s4",
+      "category": "ammo & missiles",
+      "scu_volume": 2,
+      "signal_type": "Infrared"
+    },
+    {
+      "name": "Scimitar V Missile",
+      "price": 14000,
+      "unit": "missile_s5",
+      "category": "ammo & missiles",
+      "scu_volume": 4,
+      "signal_type": "Electromagnetic"
+    },
+    {
+      "name": "Hellion VII Missile",
+      "price": 28000,
+      "unit": "missile_s7",
+      "category": "ammo & missiles",
+      "scu_volume": 4,
+      "signal_type": "Infrared"
+    },
+    {
+      "name": "Stalker V Missile",
+      "price": 14000,
+      "unit": "missile_s5",
+      "category": "ammo & missiles",
+      "scu_volume": 4,
+      "signal_type": "Cross Section"
+    },
+    {
+      "name": "Valkyrie V Missile",
+      "price": 14000,
+      "unit": "missile_s5",
+      "category": "ammo & missiles",
+      "scu_volume": 4,
+      "signal_type": "Infrared"
+    },
+    {
+      "name": "Argos IX Torpedo",
+      "price": 45000,
+      "unit": "torpedo_s9",
+      "category": "ammo & missiles",
+      "scu_volume": 8,
+      "signal_type": "Cross Section"
+    },
+    {
+      "name": "Executor S10-CS Torpedo",
+      "price": 85000,
+      "unit": "torpedo_s10",
+      "category": "ammo & missiles",
+      "scu_volume": 16,
+      "signal_type": "Cross Section"
+    },
+    {
+      "name": "Executor S10-EM Torpedo",
+      "price": 85000,
+      "unit": "torpedo_s10",
+      "category": "ammo & missiles",
+      "scu_volume": 16,
+      "signal_type": "Electromagnetic"
+    },
+    {
+      "name": "Executor S10-IR Torpedo",
+      "price": 85000,
+      "unit": "torpedo_s10",
+      "category": "ammo & missiles",
+      "scu_volume": 16,
+      "signal_type": "Infrared"
+    },
+    {
+      "name": "Executor S12-CS Torpedo",
+      "price": 150000,
+      "unit": "torpedo_s12",
+      "category": "ammo & missiles",
+      "scu_volume": 32,
+      "signal_type": "Cross Section"
+    },
+    {
+      "name": "Executor S12-EM Torpedo",
+      "price": 150000,
+      "unit": "torpedo_s12",
+      "category": "ammo & missiles",
+      "scu_volume": 32,
+      "signal_type": "Electromagnetic"
+    },
+    {
+      "name": "Executor S12-IR Torpedo",
+      "price": 150000,
+      "unit": "torpedo_s12",
+      "category": "ammo & missiles",
+      "scu_volume": 32,
+      "signal_type": "Infrared"
+    },
+    {
+      "name": "Calamity XII-CS Torpedo",
+      "price": 150000,
+      "unit": "torpedo_s12",
+      "category": "ammo & missiles",
+      "scu_volume": 32,
+      "signal_type": "Cross Section"
+    },
+    {
+      "name": "Calamity XII-IR Torpedo",
+      "price": 150000,
+      "unit": "torpedo_s12",
+      "category": "ammo & missiles",
+      "scu_volume": 32,
+      "signal_type": "Infrared"
+    },
+    {
+      "name": "Vanquisher X-CS Torpedo",
+      "price": 85000,
+      "unit": "torpedo_s10",
+      "category": "ammo & missiles",
+      "scu_volume": 16,
+      "signal_type": "Cross Section"
+    },
+    {
+      "name": "Vanquisher X-EM Torpedo",
+      "price": 85000,
+      "unit": "torpedo_s10",
+      "category": "ammo & missiles",
+      "scu_volume": 16,
+      "signal_type": "Electromagnetic"
+    },
+    {
+      "name": "Vanquisher X-IR Torpedo",
+      "price": 85000,
+      "unit": "torpedo_s10",
+      "category": "ammo & missiles",
+      "scu_volume": 16,
+      "signal_type": "Infrared"
+    },
+    {
+      "name": "Veritas S10 Torpedo",
+      "price": 85000,
+      "unit": "torpedo_s10",
+      "category": "ammo & missiles",
+      "scu_volume": 16,
+      "signal_type": "Infrared"
+    },
+    {
+      "name": "A03 Sniper Rifle",
+      "price": 6200,
+      "unit": "rifle",
+      "category": "weapons"
+    },
+    {
+      "name": "Arrowhead Sniper Rifle",
+      "price": 5500,
+      "unit": "rifle",
+      "category": "weapons"
+    },
+    {
+      "name": "Atzkav Sniper Rifle",
+      "price": 7800,
+      "unit": "rifle",
+      "category": "weapons"
+    },
+    {
+      "name": "BR-2 Shotgun",
+      "price": 3200,
+      "unit": "shotgun",
+      "category": "weapons"
+    },
+    {
+      "name": "Demeco \"Lichen\" LMG",
+      "price": 8500,
+      "unit": "lmg",
+      "category": "weapons"
+    },
+    {
+      "name": "Demeco LMG",
+      "price": 7800,
+      "unit": "lmg",
+      "category": "weapons"
+    },
+    {
+      "name": "GP-33 Grenade Launcher",
+      "price": 4200,
+      "unit": "launcher",
+      "category": "weapons"
+    },
+    {
+      "name": "Karna Rifle",
+      "price": 5500,
+      "unit": "rifle",
+      "category": "weapons"
+    },
+    {
+      "name": "Klaus & Werner Lumin V SMG",
+      "price": 3200,
+      "unit": "smg",
+      "category": "weapons"
+    },
+    {
+      "name": "Animus Missile Launcher",
+      "price": 12000,
+      "unit": "launcher",
+      "category": "weapons"
+    },
+    {
+      "name": "Arclight Pistol",
+      "price": 1400,
+      "unit": "pistol",
+      "category": "weapons"
+    },
+    {
+      "name": "CQB Bullpup Rifle",
+      "price": 4800,
+      "unit": "rifle",
+      "category": "weapons"
+    },
+    {
+      "name": "E-420 Shotgun",
+      "price": 3400,
+      "unit": "shotgun",
+      "category": "weapons"
+    },
+    {
+      "name": "Banu Knife",
+      "price": 350,
+      "unit": "knife",
+      "category": "weapons"
+    },
+    {
+      "name": "Survival Knife",
+      "price": 200,
+      "unit": "knife",
+      "category": "weapons"
+    },
+    {
+      "name": "OC-14 Combat Knife",
+      "price": 280,
+      "unit": "knife",
+      "category": "weapons"
+    },
+    {
+      "name": "Yubarev Electron Pistol",
+      "price": 1800,
+      "unit": "pistol",
+      "category": "weapons"
+    },
+    {
+      "name": "Gallant Energy Rifle",
+      "price": 5200,
+      "unit": "rifle",
+      "category": "weapons"
+    },
+    {
+      "name": "ADO-5 Laser Mine",
+      "price": 1500,
+      "unit": "mine",
+      "category": "weapons"
+    },
+    {
+      "name": "AP-7 Concussion Grenade",
+      "price": 350,
+      "unit": "grenade",
+      "category": "weapons"
+    },
+    {
+      "name": "Pyro RYT Multi-tool",
+      "price": 600,
+      "unit": "multitool",
+      "category": "weapons"
+    },
+    {
+      "name": "Atzkav \"Deadeye\" Sniper Rifle",
+      "price": 9200,
+      "unit": "rifle",
+      "category": "weapons"
+    },
+    {
+      "name": "Behring S-38 Railgun",
+      "price": 8800,
+      "unit": "rifle",
+      "category": "weapons"
+    },
+    {
+      "name": "Size 8 Ammunition",
+      "price": 8500,
+      "unit": "ammo_s8",
+      "category": "ammo & missiles",
+      "scu_volume": 1
+    },
+    {
+      "name": "Size 9 Ammunition",
+      "price": 12000,
+      "unit": "ammo_s9",
+      "category": "ammo & missiles",
+      "scu_volume": 1
+    },
+    {
+      "name": "Size 10 Ammunition",
+      "price": 18000,
+      "unit": "ammo_s10",
+      "category": "ammo & missiles",
+      "scu_volume": 1
+    }
+  ],
+  "vessels": {
+    "Aegis Idris-M": [
+      {
+        "name": "Size 1 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7383,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Size 2 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7641,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Size 3 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7383,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Size 4 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7641,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Size 5 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7984,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Decoy Countermeasures",
+        "qty": 1,
+        "box_size": "4 SCU",
+        "price": 8585,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Noise Countermeasures",
+        "qty": 1,
+        "box_size": "4 SCU",
+        "price": 4293,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Hydrogen Fuel",
+        "qty": 4,
+        "box_size": "8 SCU",
+        "price": 196,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Quantum Fuel",
+        "qty": 4,
+        "box_size": "8 SCU",
+        "price": 978,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Raptor IV Missile",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": 1412,
+        "unit": "missile",
+        "courtesy": false
+      },
+      {
+        "name": "Thunderbolt III Missile",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": 678,
+        "unit": "missile",
+        "courtesy": false
+      },
+      {
+        "name": "Dominator II Missile",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": 350,
+        "unit": "missile",
+        "courtesy": false
+      },
+      {
+        "name": "Recycled Material Composite (RMC)",
+        "qty": 16,
+        "box_size": "8 SCU",
+        "price": 10710,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "MaxLift Tractor Beam",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": 19000,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": 20900,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT Canister",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": 175,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "CRUZ Lux",
+        "qty": 400,
+        "box_size": "1 SCU",
+        "price": 7,
+        "unit": "bottle",
+        "courtesy": false
+      },
+      {
+        "name": "Seeker IX Torpedo",
+        "qty": "",
+        "box_size": "24 SCU"
+      },
+      {
+        "name": "Argus IX Torpedo",
+        "qty": "",
+        "box_size": "24 SCU"
+      },
+      {
+        "name": "Typhoon IX Torpedo",
+        "qty": "",
+        "box_size": "24 SCU"
+      },
+      {
+        "name": "Colossus Bomb",
+        "qty": "",
+        "box_size": "32 SCU"
+      },
+      {
+        "name": "Stormburst Bomb",
+        "qty": "",
+        "box_size": "8 SCU"
+      },
+      {
+        "name": "Maxlift Tractor Beam Battery",
+        "qty": 1,
+        "price": 175,
+        "box_size": "1 SCU",
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio Multi-tool Battery",
+        "qty": 1,
+        "price": 63,
+        "box_size": "1 SCU",
+        "unit": "SCU",
+        "courtesy": false
+      }
+    ],
+    "Polaris": [
+      {
+        "name": "Quantum Fuel",
+        "qty": 2,
+        "box_size": "8 SCU",
+        "price": 978,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Hydrogen Fuel",
+        "qty": 2,
+        "box_size": "8 SCU",
+        "price": 196,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Size 1 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7383,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Size 2 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7641,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Size 3 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7383,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Size 4 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7641,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Size 5 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7984,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Decoy Countermeasures",
+        "qty": 1,
+        "box_size": "4 SCU",
+        "price": 8585,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Noise Countermeasures",
+        "qty": 1,
+        "box_size": "4 SCU",
+        "price": 4293,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Raptor IV Missile",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": 1412,
+        "unit": "missile",
+        "courtesy": false
+      },
+      {
+        "name": "Thunderbolt III Missile",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": 678,
+        "unit": "missile",
+        "courtesy": false
+      },
+      {
+        "name": "Dominator II Missile",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": 350,
+        "unit": "missile",
+        "courtesy": false
+      },
+      {
+        "name": "Recycled Material Composite (RMC)",
+        "qty": 8,
+        "box_size": "8 SCU",
+        "price": 10710,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "MaxLift Tractor Beam",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": 19000,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": 20900,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT Canister",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": 175,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "CRUZ Lux",
+        "qty": 200,
+        "box_size": "1 SCU",
+        "price": 7,
+        "unit": "bottle",
+        "courtesy": false
+      },
+      {
+        "name": "Seeker IX Torpedo",
+        "qty": "28",
+        "box_size": "24 SCU"
+      },
+      {
+        "name": "Argus IX Torpedo",
+        "qty": "",
+        "box_size": "24 SCU"
+      },
+      {
+        "name": "Typhoon IX Torpedo",
+        "qty": "",
+        "box_size": "24 SCU"
+      },
+      {
+        "name": "Maxlift Tractor Beam Battery",
+        "qty": 1,
+        "price": 175,
+        "box_size": "1 SCU",
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio Multi-tool Battery",
+        "qty": 1,
+        "price": 63,
+        "box_size": "1 SCU",
+        "unit": "SCU",
+        "courtesy": false
+      }
+    ],
+    "Perseus": [
+      {
+        "name": "Stor-All 1 SCU Storage Container",
+        "qty": 1,
+        "box_size": "1 SCU",
+        "price": 2100,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "MaxLift Tractor Beam",
+        "qty": 1,
+        "box_size": "1 SCU",
+        "price": 19000,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT",
+        "qty": 1,
+        "box_size": "1 SCU",
+        "price": 20900,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "CRUZ Lux",
+        "qty": 40,
+        "box_size": "1 SCU",
+        "price": 7,
+        "unit": "bottle",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT Canister",
+        "qty": 20,
+        "box_size": "1 SCU",
+        "price": 175,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Scorch Plasma Grenade",
+        "qty": 20,
+        "box_size": "1 SCU",
+        "price": 506,
+        "unit": "grenade",
+        "courtesy": false
+      },
+      {
+        "name": "P4-AR Magazine",
+        "qty": 100,
+        "box_size": "1 SCU",
+        "price": 198,
+        "unit": "mag",
+        "courtesy": false
+      },
+      {
+        "name": "Maxlift Tractor Beam Battery",
+        "qty": 1,
+        "price": 175,
+        "box_size": "1 SCU",
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio Multi-tool Battery",
+        "qty": 1,
+        "price": 63,
+        "box_size": "1 SCU",
+        "unit": "SCU",
+        "courtesy": false
+      }
+    ],
+    "Hammerhead": [
+      {
+        "name": "Stor-All 1 SCU Storage Container",
+        "qty": 1,
+        "box_size": "1 SCU",
+        "price": 2100,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "MaxLift Tractor Beam",
+        "qty": 1,
+        "box_size": "1 SCU",
+        "price": 19000,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT",
+        "qty": 1,
+        "box_size": "1 SCU",
+        "price": 20900,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "CRUZ Lux",
+        "qty": 40,
+        "box_size": "1 SCU",
+        "price": 7,
+        "unit": "bottle",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT Canister",
+        "qty": 20,
+        "box_size": "1 SCU",
+        "price": 175,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Scorch Plasma Grenade",
+        "qty": 20,
+        "box_size": "1 SCU",
+        "price": 506,
+        "unit": "grenade",
+        "courtesy": false
+      },
+      {
+        "name": "P4-AR Magazine",
+        "qty": 100,
+        "box_size": "1 SCU",
+        "price": 198,
+        "unit": "mag",
+        "courtesy": false
+      },
+      {
+        "name": "Maxlift Tractor Beam Battery",
+        "qty": 1,
+        "price": 175,
+        "box_size": "1 SCU",
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio Multi-tool Battery",
+        "qty": 1,
+        "price": 63,
+        "box_size": "1 SCU",
+        "unit": "SCU",
+        "courtesy": false
+      }
+    ],
+    "Tiburon": [
+      {
+        "name": "Stor-All 1 SCU Storage Container",
+        "qty": 1,
+        "box_size": "1 SCU",
+        "price": 2100,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "MaxLift Tractor Beam",
+        "qty": 1,
+        "box_size": "1 SCU",
+        "price": 19000,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT",
+        "qty": 1,
+        "box_size": "1 SCU",
+        "price": 20900,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "CRUZ Lux",
+        "qty": 40,
+        "box_size": "1 SCU",
+        "price": 7,
+        "unit": "bottle",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT Canister",
+        "qty": 20,
+        "box_size": "1 SCU",
+        "price": 175,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Scorch Plasma Grenade",
+        "qty": 20,
+        "box_size": "1 SCU",
+        "price": 506,
+        "unit": "grenade",
+        "courtesy": false
+      },
+      {
+        "name": "P4-AR Magazine",
+        "qty": 100,
+        "box_size": "1 SCU",
+        "price": 198,
+        "unit": "mag",
+        "courtesy": false
+      },
+      {
+        "name": "Maxlift Tractor Beam Battery",
+        "qty": 1,
+        "price": 175,
+        "box_size": "1 SCU",
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio Multi-tool Battery",
+        "qty": 1,
+        "price": 63,
+        "box_size": "1 SCU",
+        "unit": "SCU",
+        "courtesy": false
+      }
+    ],
+    "Reclaimer": [
+      {
+        "name": "Recycled Material Composite (RMC)",
+        "qty": "40",
+        "box_size": "8 SCU"
+      },
+      {
+        "name": "Construction Materials",
+        "qty": "40",
+        "box_size": "8 SCU"
+      },
+      {
+        "name": "MaxLift Tractor Beam",
+        "qty": "2",
+        "box_size": "1 SCU"
+      },
+      {
+        "name": "Maxlift Tractor Beam Battery",
+        "qty": "4",
+        "box_size": "1 SCU"
+      },
+      {
+        "name": "Cambio SRT",
+        "qty": "2",
+        "box_size": "1 SCU"
+      },
+      {
+        "name": "Cambio Multi-tool Battery",
+        "qty": "4",
+        "box_size": "1 SCU"
+      },
+      {
+        "name": "CRUZ Lux",
+        "qty": "50",
+        "box_size": "1 SCU"
+      }
+    ],
+    "MOLE": [
+      {
+        "name": "MaxLift Tractor Beam",
+        "qty": "1",
+        "box_size": "1 SCU"
+      },
+      {
+        "name": "Maxlift Tractor Beam Battery",
+        "qty": "2",
+        "box_size": "1 SCU"
+      },
+      {
+        "name": "Cambio SRT",
+        "qty": "1",
+        "box_size": "1 SCU"
+      },
+      {
+        "name": "Cambio Multi-tool Battery",
+        "qty": "2",
+        "box_size": "1 SCU"
+      },
+      {
+        "name": "CRUZ Lux",
+        "qty": "20",
+        "box_size": "1 SCU"
+      }
+    ],
+    "Argo MOTH": [
+      {
+        "name": "MaxLift Tractor Beam",
+        "qty": "1",
+        "box_size": "1 SCU"
+      },
+      {
+        "name": "Maxlift Tractor Beam Battery",
+        "qty": "2",
+        "box_size": "1 SCU"
+      },
+      {
+        "name": "Cambio SRT",
+        "qty": "1",
+        "box_size": "1 SCU"
+      },
+      {
+        "name": "Cambio Multi-tool Battery",
+        "qty": "2",
+        "box_size": "1 SCU"
+      },
+      {
+        "name": "CRUZ Lux",
+        "qty": "20",
+        "box_size": "1 SCU"
+      }
+    ],
+    "Drake Caterpillar": [
+      {
+        "name": "Stor-All 1 SCU Storage Container",
+        "qty": "1",
+        "box_size": "1 SCU",
+        "price": "2100",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Scorch Plasma Grenade",
+        "qty": "20",
+        "box_size": "1 SCU",
+        "price": "506",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "P4-AR Magazine",
+        "qty": "100",
+        "box_size": "1 SCU",
+        "price": "198",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "MaxLift Tractor Beam",
+        "qty": "1",
+        "box_size": "1 SCU",
+        "price": "19000",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Maxlift Tractor Beam Battery",
+        "qty": "1",
+        "box_size": "1 SCU",
+        "price": "175",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT",
+        "qty": "1",
+        "box_size": "1 SCU",
+        "price": "20900",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio Multi-tool Battery",
+        "qty": "1",
+        "box_size": "1 SCU",
+        "price": "63",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT Canister",
+        "qty": "20",
+        "box_size": "1 SCU",
+        "price": "175",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Maxlift Tractor Beam Battery",
+        "qty": "1",
+        "box_size": "1 SCU",
+        "price": "175",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio Multi-tool Battery",
+        "qty": "1",
+        "box_size": "1 SCU",
+        "price": "63",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "CRUZ Lux",
+        "qty": "40",
+        "box_size": "1 SCU",
+        "price": "7",
+        "unit": "unit",
+        "courtesy": false
+      }
+    ],
+    "Aegis Idris-P": [
+      {
+        "name": "Hydrogen Fuel",
+        "qty": "4",
+        "box_size": "1 SCU",
+        "price": "1568",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Quantum Fuel",
+        "qty": "4",
+        "box_size": "1 SCU",
+        "price": "7824",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Recycled Material Composite (RMC)",
+        "qty": "16",
+        "box_size": "1 SCU",
+        "price": "85680",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Seeker IX Torpedo",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": "8500",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Argus IX Torpedo",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": "8500",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Typhoon IX Torpedo",
+        "qty": "5",
+        "box_size": "1 SCU",
+        "price": "8500",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Size 1 Ammunition",
+        "qty": "1",
+        "box_size": "1 SCU",
+        "price": "59064",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Size 2 Ammunition",
+        "qty": "1",
+        "box_size": "1 SCU",
+        "price": "61128",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Size 3 Ammunition",
+        "qty": "10",
+        "box_size": "1 SCU",
+        "price": "59064",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Size 4 Ammunition",
+        "qty": "1",
+        "box_size": "1 SCU",
+        "price": "61128",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Size 5 Ammunition",
+        "qty": "1",
+        "box_size": "1 SCU",
+        "price": "63872",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Decoy Countermeasures",
+        "qty": "1",
+        "box_size": "1 SCU",
+        "price": "34340",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Noise Countermeasures",
+        "qty": "1",
+        "box_size": "1 SCU",
+        "price": "17172",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Raptor IV Missile",
+        "qty": "3",
+        "box_size": "1 SCU",
+        "price": "1412",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Thunderbolt III Missile",
+        "qty": "1",
+        "box_size": "1 SCU",
+        "price": "678",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Dominator II Missile",
+        "qty": "4",
+        "box_size": "1 SCU",
+        "price": "350",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Colossus Bomb",
+        "qty": "4",
+        "box_size": "1 SCU",
+        "price": "25000",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Stormburst Bomb",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": "5065",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "MaxLift Tractor Beam",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": "19000",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Maxlift Tractor Beam Battery",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": "175",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT",
+        "qty": "5",
+        "box_size": "1 SCU",
+        "price": "20900",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio Multi-tool Battery",
+        "qty": "5",
+        "box_size": "1 SCU",
+        "price": "63",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT Canister",
+        "qty": "5",
+        "box_size": "1 SCU",
+        "price": "175",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Maxlift Tractor Beam Battery",
+        "qty": "1",
+        "box_size": "1 SCU",
+        "price": "175",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio Multi-tool Battery",
+        "qty": "1",
+        "box_size": "1 SCU",
+        "price": "63",
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "CRUZ Lux",
+        "qty": "400",
+        "box_size": "1 SCU",
+        "price": "7",
+        "unit": "unit",
+        "courtesy": false
+      }
+    ]
+  }
+}

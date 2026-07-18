@@ -10,7 +10,7 @@ __pycache__/
 fonts/*.pkl
 fonts/*.cw127.pkl
 
-# App zip
+# App zip (built artifact, not source)
 app_files.zip
 
 # Python env
@@ -24,3 +24,22 @@ app_files.zip
 # Logs
 *.log
 crash_log.txt
+_manifest_crash.log
+
+# Backup/monolith files
+entry.py.backup
+entry_monolith_backup.py
+
+# Debug/sync scripts (development only, not part of app)
+_*.py
+_video_path.txt
+
+# Test output images
+test_*.png
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Large bundled JS (scraped data, not needed at runtime)
+resources/sc_cargo_bundle.js

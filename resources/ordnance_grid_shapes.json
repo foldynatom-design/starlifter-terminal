@@ -1,0 +1,65 @@
+{
+  "S1": {
+    "width": 1,
+    "height": 1,
+    "length": 1,
+    "scu": 0.125,
+    "label": "1/8 SCU"
+  },
+  "S2": {
+    "width": 1,
+    "height": 1,
+    "length": 1,
+    "scu": 1.0,
+    "label": "1 SCU"
+  },
+  "S3": {
+    "width": 2,
+    "height": 2,
+    "length": 2,
+    "scu": 8.0,
+    "label": "8 SCU"
+  },
+  "S4": {
+    "width": 2,
+    "height": 2,
+    "length": 2,
+    "scu": 8.0,
+    "label": "8 SCU"
+  },
+  "S5": {
+    "width": 2,
+    "height": 2,
+    "length": 4,
+    "scu": 16.0,
+    "label": "16 SCU"
+  },
+  "S7": {
+    "width": 2,
+    "height": 2,
+    "length": 4,
+    "scu": 16.0,
+    "label": "16 SCU"
+  },
+  "S9": {
+    "width": 2,
+    "height": 2,
+    "length": 6,
+    "scu": 24.0,
+    "label": "24 SCU"
+  },
+  "S10": {
+    "width": 2,
+    "height": 2,
+    "length": 8,
+    "scu": 32.0,
+    "label": "32 SCU"
+  },
+  "S12": {
+    "width": 2,
+    "height": 2,
+    "length": 8,
+    "scu": 32.0,
+    "label": "32 SCU"
+  }
+}

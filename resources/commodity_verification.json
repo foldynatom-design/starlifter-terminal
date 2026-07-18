@@ -1,0 +1,499 @@
+{
+  "results": {
+    "ores": [
+      {
+        "name": "Quantainium",
+        "key": "quantainium",
+        "db": 1.0,
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Agricultural Supplies",
+        "key": "agricultural supplies",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Agricium",
+        "key": "agricium",
+        "db": 1.0,
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Aluminum",
+        "key": "aluminum",
+        "db": 1.0,
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Beryl",
+        "key": "beryl",
+        "db": 1.0,
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Bexalite",
+        "key": "bexalite",
+        "db": 1.0,
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Borase",
+        "key": "borase",
+        "db": 1.0,
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Copper",
+        "key": "copper",
+        "db": 1.0,
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Corundum",
+        "key": "corundum",
+        "db": 1.0,
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Diamond",
+        "key": "diamond",
+        "db": 1.0,
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Gold",
+        "key": "gold",
+        "db": 1.0,
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Hephaestanite",
+        "key": "hephaestanite",
+        "db": 1.0,
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Iron",
+        "key": "iron",
+        "db": 1.0,
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Laranite",
+        "key": "laranite",
+        "db": 1.0,
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Quartz",
+        "key": "quartz",
+        "db": 1.0,
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Silicon",
+        "key": "silicon",
+        "db": 1.0,
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Taranite",
+        "key": "taranite",
+        "db": 1.0,
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Titanium",
+        "key": "titanium",
+        "db": 1.0,
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Tungsten",
+        "key": "tungsten",
+        "db": 1.0,
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Refined Quantainium",
+        "key": "refined quantainium",
+        "db": 1,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Refined Agricium",
+        "key": "refined agricium",
+        "db": 1,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Refined Aluminum",
+        "key": "refined aluminum",
+        "db": "NOT_IN_DB",
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Refined Beryl",
+        "key": "refined beryl",
+        "db": "NOT_IN_DB",
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Refined Bexalite",
+        "key": "refined bexalite",
+        "db": "NOT_IN_DB",
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Refined Borase",
+        "key": "refined borase",
+        "db": "NOT_IN_DB",
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Refined Copper",
+        "key": "refined copper",
+        "db": 1,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Refined Corundum",
+        "key": "refined corundum",
+        "db": "NOT_IN_DB",
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Refined Diamond",
+        "key": "refined diamond",
+        "db": "NOT_IN_DB",
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Refined Gold",
+        "key": "refined gold",
+        "db": 1,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Refined Hephaestanite",
+        "key": "refined hephaestanite",
+        "db": "NOT_IN_DB",
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Refined Iron",
+        "key": "refined iron",
+        "db": 1,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Refined Laranite",
+        "key": "refined laranite",
+        "db": 1,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Refined Silicon",
+        "key": "refined silicon",
+        "db": 1,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Refined Taranite",
+        "key": "refined taranite",
+        "db": 1,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Refined Titanium",
+        "key": "refined titanium",
+        "db": 1,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Refined Tungsten",
+        "key": "refined tungsten",
+        "db": "NOT_IN_DB",
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Aphorite",
+        "key": "aphorite",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Dolivine",
+        "key": "dolivine",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Hadanite",
+        "key": "hadanite",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Janalite",
+        "key": "janalite",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      }
+    ],
+    "commodities": [
+      {
+        "name": "Hydrogen Fuel",
+        "key": "hydrogen fuel",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Quantum Fuel",
+        "key": "quantum fuel",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Recycled Material Composite",
+        "key": "recycled material composite",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Construction Materials",
+        "key": "construction materials",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Stims",
+        "key": "stims",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Medical Supplies",
+        "key": "medical supplies",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Scrap",
+        "key": "scrap",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Waste",
+        "key": "waste",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Distilled Spirits",
+        "key": "distilled spirits",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Processed Food",
+        "key": "processed food",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Astatine",
+        "key": "astatine",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Chlorine",
+        "key": "chlorine",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Fluorine",
+        "key": "fluorine",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      },
+      {
+        "name": "Iodine",
+        "key": "iodine",
+        "db": 1.0,
+        "wiki": null,
+        "label": "not_found",
+        "mismatch": false
+      }
+    ],
+    "blueprints": [
+      {
+        "name": "ADP-Mk4 Armor Blueprint",
+        "key": "adp-mk4 armor blueprint",
+        "db": "NOT_IN_DB",
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "ORC-Mkx Armor Blueprint",
+        "key": "orc-mkx armor blueprint",
+        "db": "NOT_IN_DB",
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "MacFlex Armor Blueprint",
+        "key": "macflex armor blueprint",
+        "db": "NOT_IN_DB",
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "P4-AR Rifle Blueprint",
+        "key": "p4-ar rifle blueprint",
+        "db": "NOT_IN_DB",
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Coda Pistol Blueprint",
+        "key": "coda pistol blueprint",
+        "db": "NOT_IN_DB",
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "C54 SMG Blueprint",
+        "key": "c54 smg blueprint",
+        "db": "NOT_IN_DB",
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      },
+      {
+        "name": "Devastator Shotgun Blueprint",
+        "key": "devastator shotgun blueprint",
+        "db": "NOT_IN_DB",
+        "wiki": null,
+        "label": "HTTP error: HTTP Error 404: Not Found",
+        "mismatch": false
+      }
+    ]
+  },
+  "corrections": {}
+}

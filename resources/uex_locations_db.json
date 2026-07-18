@@ -1,0 +1,1595 @@
+{
+  "cities": {
+    "Area 18": {
+      "planet": "ArcCorp",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "type": "city"
+    },
+    "Lorville": {
+      "planet": "Hurston",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "type": "city"
+    },
+    "New Babbage": {
+      "planet": "MicroTech",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "type": "city"
+    },
+    "Orison": {
+      "planet": "Crusader",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "type": "city"
+    },
+    "Levski": {
+      "planet": null,
+      "system": "Nyx",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "city"
+    }
+  },
+  "space_stations": {
+    "ARC-L1 Wide Forest Station": {
+      "displayname": "ARC-L1 Wide Forest Station",
+      "nickname": "ARC-L1",
+      "planet": "ArcCorp",
+      "orbit": "ArcCorp Lagrange Point 1",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "ARC-L2 Lively Pathway Station": {
+      "displayname": "ARC-L2 Lively Pathway Station",
+      "nickname": "ARC-L2",
+      "planet": "ArcCorp",
+      "orbit": "ArcCorp Lagrange Point 2",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "ARC-L3 Modern Express Station": {
+      "displayname": "ARC-L3 Modern Express Station",
+      "nickname": "ARC-L3",
+      "planet": "ArcCorp",
+      "orbit": "ArcCorp Lagrange Point 3",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 1,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "ARC-L4 Faint Glen Station": {
+      "displayname": "ARC-L4 Faint Glen Station",
+      "nickname": "ARC-L4",
+      "planet": "ArcCorp",
+      "orbit": "ArcCorp Lagrange Point 4",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 1,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "ARC-L5 Yellow Core Station": {
+      "displayname": "ARC-L5 Yellow Core Station",
+      "nickname": "ARC-L5",
+      "planet": "ArcCorp",
+      "orbit": "ArcCorp Lagrange Point 5",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 1,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Baijini Point": {
+      "displayname": "Baijini Point",
+      "nickname": "Baijini Point",
+      "planet": "ArcCorp",
+      "orbit": "ArcCorp",
+      "system": "Stanton",
+      "has_loading_dock": 1,
+      "has_docking_port": 1,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "CRU-L1 Ambitious Dream Station": {
+      "displayname": "CRU-L1 Ambitious Dream Station",
+      "nickname": "CRU-L1",
+      "planet": "Crusader",
+      "orbit": "Crusader Lagrange Point 1",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "CRU-L4 Shallow Fields Station": {
+      "displayname": "CRU-L4 Shallow Fields Station",
+      "nickname": "CRU-L4",
+      "planet": "Crusader",
+      "orbit": "Crusader Lagrange Point 4",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 1,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "CRU-L5 Beautiful Glen Station": {
+      "displayname": "CRU-L5 Beautiful Glen Station",
+      "nickname": "CRU-L5",
+      "planet": "Crusader",
+      "orbit": "Crusader Lagrange Point 5",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 1,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Everus Harbor": {
+      "displayname": "Everus Harbor",
+      "nickname": "Everus Harbor",
+      "planet": "Hurston",
+      "orbit": "Hurston",
+      "system": "Stanton",
+      "has_loading_dock": 1,
+      "has_docking_port": 1,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Green Imperial Housing Exchange": {
+      "displayname": "Grim HEX",
+      "nickname": "GrimHEX",
+      "planet": "Crusader",
+      "orbit": "Crusader",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 1,
+      "type": "space_station"
+    },
+    "HUR-L1 Green Glade Station": {
+      "displayname": "HUR-L1 Green Glade Station",
+      "nickname": "HUR-L1",
+      "planet": "Hurston",
+      "orbit": "Hurston Lagrange Point 1",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "HUR-L2 Faithful Dream Station": {
+      "displayname": "HUR-L2 Faithful Dream Station",
+      "nickname": "HUR-L2",
+      "planet": "Hurston",
+      "orbit": "Hurston Lagrange Point 2",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "HUR-L3 Thundering Express Station": {
+      "displayname": "HUR-L3 Thundering Express Station",
+      "nickname": "HUR-L3",
+      "planet": "Hurston",
+      "orbit": "Hurston Lagrange Point 3",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "HUR-L4 Melodic Fields Station": {
+      "displayname": "HUR-L4 Melodic Fields Station",
+      "nickname": "HUR-L4",
+      "planet": "Hurston",
+      "orbit": "Hurston Lagrange Point 4",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 1,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "HUR-L5 High Course Station": {
+      "displayname": "HUR-L5 High Course Station",
+      "nickname": "HUR-L5",
+      "planet": "Hurston",
+      "orbit": "Hurston Lagrange Point 5",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 1,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "MIC-L1 Shallow Frontier Station": {
+      "displayname": "MIC-L1 Shallow Frontier Station",
+      "nickname": "MIC-L1",
+      "planet": "MicroTech",
+      "orbit": "microTech Lagrange Point 1",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "MIC-L2 Long Forest Station": {
+      "displayname": "MIC-L2 Long Forest Station",
+      "nickname": "MIC-L2",
+      "planet": "MicroTech",
+      "orbit": "microTech Lagrange Point 2",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "MIC-L3 Endless Odyssey Station": {
+      "displayname": "MIC-L3 Endless Odyssey Station",
+      "nickname": "MIC-L3",
+      "planet": "MicroTech",
+      "orbit": "microTech Lagrange Point 3",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "MIC-L4 Red Crossroads Station": {
+      "displayname": "MIC-L4 Red Crossroads Station",
+      "nickname": "MIC-L4",
+      "planet": "MicroTech",
+      "orbit": "microTech Lagrange Point 4",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "MIC-L5 Modern Icarus Station": {
+      "displayname": "MIC-L5 Modern Icarus Station",
+      "nickname": "MIC-L5",
+      "planet": "MicroTech",
+      "orbit": "microTech Lagrange Point 5",
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Port Tressler": {
+      "displayname": "Port Tressler",
+      "nickname": "Port Tressler",
+      "planet": "MicroTech",
+      "orbit": "MicroTech",
+      "system": "Stanton",
+      "has_loading_dock": 1,
+      "has_docking_port": 1,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Terra Gateway (Stanton)": {
+      "displayname": "Terra Gateway",
+      "nickname": "Terra Gateway (Stanton)",
+      "planet": null,
+      "orbit": "Terra Gateway (Stanton system)",
+      "system": "Stanton",
+      "has_loading_dock": 1,
+      "has_docking_port": 1,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Pyro Gateway (Stanton)": {
+      "displayname": "Pyro Gateway",
+      "nickname": "Pyro Gateway (Stanton)",
+      "planet": null,
+      "orbit": "Pyro Gateway (Stanton system)",
+      "system": "Stanton",
+      "has_loading_dock": 1,
+      "has_docking_port": 1,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Nyx Gateway (Stanton)": {
+      "displayname": "Nyx Gateway",
+      "nickname": "Nyx Gateway (Stanton)",
+      "planet": null,
+      "orbit": "Nyx Gateway (Stanton system)",
+      "system": "Stanton",
+      "has_loading_dock": 1,
+      "has_docking_port": 1,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Seraphim Station": {
+      "displayname": "Seraphim Station",
+      "nickname": "Seraphim",
+      "planet": "Crusader",
+      "orbit": "Crusader",
+      "system": "Stanton",
+      "has_loading_dock": 1,
+      "has_docking_port": 1,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Checkmate Station": {
+      "displayname": "Checkmate",
+      "nickname": "Checkmate",
+      "planet": "Monox",
+      "orbit": "Monox Lagrange Point 4",
+      "system": "Pyro",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Patch City": {
+      "displayname": "Patch City",
+      "nickname": "Patch City",
+      "planet": "Bloom",
+      "orbit": "Bloom Lagrange Point 3",
+      "system": "Pyro",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Orbituary": {
+      "displayname": "Orbituary",
+      "nickname": "Orbituary",
+      "planet": "Bloom",
+      "orbit": "Bloom",
+      "system": "Pyro",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Starlight Service Station": {
+      "displayname": "Starlight Service Station",
+      "nickname": "Starlight",
+      "planet": "Bloom",
+      "orbit": "Bloom Lagrange Point 1",
+      "system": "Pyro",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Ruin Station": {
+      "displayname": "Ruin Station",
+      "nickname": "Medical Ruin",
+      "planet": "Terminus",
+      "orbit": "Terminus",
+      "system": "Pyro",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Megumi Refueling": {
+      "displayname": "Megumi Refueling",
+      "nickname": "Medical Megumi",
+      "planet": "Terminus",
+      "orbit": "Pyro VI Lagrange Point 5",
+      "system": "Pyro",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Endgame": {
+      "displayname": "Endgame",
+      "nickname": "Endgame",
+      "planet": "Pyro IV",
+      "orbit": "Pyro VI Lagrange Point 3",
+      "system": "Pyro",
+      "has_loading_dock": 0,
+      "has_docking_port": 1,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Rod's Fuel 'N Supplies": {
+      "displayname": "Rod's Fuel 'N Supplies",
+      "nickname": "Rod's Fuel",
+      "planet": "Pyro V",
+      "orbit": "Pyro V Lagrange Point 4",
+      "system": "Pyro",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Gaslight": {
+      "displayname": "Gaslight",
+      "nickname": "Gaslight",
+      "planet": "Pyro V",
+      "orbit": "Pyro V Lagrange Point 2",
+      "system": "Pyro",
+      "has_loading_dock": 1,
+      "has_docking_port": 1,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Stanton Gateway (Pyro)": {
+      "displayname": "Stanton Gateway",
+      "nickname": "Stanton Gateway (Pyro)",
+      "planet": null,
+      "orbit": "Stanton Gateway (Pyro system)",
+      "system": "Pyro",
+      "has_loading_dock": 1,
+      "has_docking_port": 1,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Rat's Nest": {
+      "displayname": "Rat's Nest",
+      "nickname": "Rat's Nest",
+      "planet": "Pyro V",
+      "orbit": "Pyro V Lagrange Point 5",
+      "system": "Pyro",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Dudley & Daughters": {
+      "displayname": "Dudley & Daughters",
+      "nickname": "Ship Parts Dudley",
+      "planet": "Terminus",
+      "orbit": "Pyro VI Lagrange Point 4",
+      "system": "Pyro",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Wikelo Emporium Dasi Station": {
+      "displayname": "Wikelo Emporium Dasi Station",
+      "nickname": "Wikelo Dasi",
+      "planet": null,
+      "orbit": null,
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Wikelo Emporium Kinga Station": {
+      "displayname": "Wikelo Emporium Kinga Station",
+      "nickname": "Wikelo Kinga",
+      "planet": null,
+      "orbit": null,
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Wikelo Emporium Selo Station": {
+      "displayname": "Wikelo Emporium Selo Station",
+      "nickname": "Wikelo Selo",
+      "planet": null,
+      "orbit": null,
+      "system": "Stanton",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Nyx Gateway (Pyro)": {
+      "displayname": "Nyx Gateway",
+      "nickname": "Pharmacy Nyx Gateway (Pyro)",
+      "planet": null,
+      "orbit": "Nyx Gateway (Pyro system)",
+      "system": "Pyro",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Pyro Gateway (Nyx)": {
+      "displayname": "Pyro Gateway",
+      "nickname": "Pyro Gateway (Nyx)",
+      "planet": null,
+      "orbit": "Pyro Gateway (Nyx system)",
+      "system": "Nyx",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "Stanton Gateway (Nyx)": {
+      "displayname": "Stanton Gateway",
+      "nickname": "Pharmacy Stanton Gateway (Nyx)",
+      "planet": null,
+      "orbit": "Stanton Gateway (Nyx system)",
+      "system": "Nyx",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "People's Service Station Alpha": {
+      "displayname": "People's Service Station Alpha",
+      "nickname": "PSS Alpha",
+      "planet": null,
+      "orbit": "People's Service Station Alpha",
+      "system": "Nyx",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 0,
+      "max_container_size": 32,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "People's Service Station Delta": {
+      "displayname": "Weapons and Armor - People's Service Station Delta",
+      "nickname": "Weapons & Armor PSSD",
+      "planet": null,
+      "orbit": "People's Service Station Delta",
+      "system": "Nyx",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "People's Service Station Theta": {
+      "displayname": "People's Service Station Theta",
+      "nickname": "Landing Services Theta",
+      "planet": null,
+      "orbit": "People's Service Station Theta",
+      "system": "Nyx",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "is_nqa": 0,
+      "type": "space_station"
+    },
+    "People's Service Station Lambda": {
+      "displayname": "People's Service Station Lambda",
+      "nickname": "Pharmacy PPSL",
+      "planet": null,
+      "orbit": "People's Service Station Lambda",
+      "system": "Nyx",
+      "has_loading_dock": 0,
+      "has_docking_port": 0,
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "is_nqa": 0,
+      "type": "space_station"
+    }
+  },
+  "outposts": {
+    "ArcCorp Mining Area 045": {
+      "displayname": "ArcCorp Mining Area 045",
+      "planet": "ArcCorp",
+      "moon": "Wala",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "ArcCorp Mining Area 048": {
+      "displayname": "ArcCorp Mining Area 048",
+      "planet": "ArcCorp",
+      "moon": "Wala",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "ArcCorp Mining Area 056": {
+      "displayname": "ArcCorp Mining Area 056",
+      "planet": "ArcCorp",
+      "moon": "Wala",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "ArcCorp Mining Area 061": {
+      "displayname": "ArcCorp Mining Area 061",
+      "planet": "ArcCorp",
+      "moon": "Wala",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "ArcCorp Mining Area 141": {
+      "displayname": "ArcCorp Mining Area 141",
+      "planet": "Crusader",
+      "moon": "Daymar",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "type": "outpost"
+    },
+    "ArcCorp Mining Area 157": {
+      "displayname": "ArcCorp Mining Area 157",
+      "planet": "Crusader",
+      "moon": "Yela",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Brio's Breaker Yard": {
+      "displayname": "Brio's Breaker Yard",
+      "planet": "Crusader",
+      "moon": "Daymar",
+      "system": "Stanton",
+      "has_freight_elevator": 0,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Deakins Research": {
+      "displayname": "Deakins Research Outpost",
+      "planet": "Crusader",
+      "moon": "Yela",
+      "system": "Stanton",
+      "has_freight_elevator": 0,
+      "max_container_size": 32,
+      "type": "outpost"
+    },
+    "Devlin Scrap & Salvage": {
+      "displayname": "Devlin Scrap & Salvage",
+      "planet": "MicroTech",
+      "moon": "Euterpe",
+      "system": "Stanton",
+      "has_freight_elevator": 0,
+      "max_container_size": 32,
+      "type": "outpost"
+    },
+    "HDMS-Anderson": {
+      "displayname": "HDMS-Anderson",
+      "planet": "Hurston",
+      "moon": "Aberdeen",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "HDMS-Bezdek": {
+      "displayname": "HDMS-Bezdek",
+      "planet": "Hurston",
+      "moon": "Arial",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "type": "outpost"
+    },
+    "HDMS-Edmond": {
+      "displayname": "HDMS-Edmond",
+      "planet": "Hurston",
+      "moon": null,
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "type": "outpost"
+    },
+    "HDMS-Hadley": {
+      "displayname": "HDMS-Hadley",
+      "planet": "Hurston",
+      "moon": null,
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "HDMS-Hahn": {
+      "displayname": "HDMS-Hahn",
+      "planet": "Hurston",
+      "moon": "Magda",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "type": "outpost"
+    },
+    "HDMS-Lathan": {
+      "displayname": "HDMS-Lathan",
+      "planet": "Hurston",
+      "moon": "Arial",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "type": "outpost"
+    },
+    "HDMS-Norgaard": {
+      "displayname": "HDMS-Norgaard",
+      "planet": "Hurston",
+      "moon": "Aberdeen",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "HDMS-Oparei": {
+      "displayname": "HDMS-Oparei",
+      "planet": "Hurston",
+      "moon": null,
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "type": "outpost"
+    },
+    "HDMS-Perlman": {
+      "displayname": "HDMS-Perlman",
+      "planet": "Hurston",
+      "moon": "Magda",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "type": "outpost"
+    },
+    "HDMS-Pinewood": {
+      "displayname": "HDMS-Pinewood",
+      "planet": "Hurston",
+      "moon": null,
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "HDMS-Ryder": {
+      "displayname": "HDMS-Ryder",
+      "planet": "Hurston",
+      "moon": "Ita",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "HDMS-Stanhope": {
+      "displayname": "HDMS-Stanhope",
+      "planet": "Hurston",
+      "moon": null,
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "HDMS-Thedus": {
+      "displayname": "HDMS-Thedus",
+      "planet": "Hurston",
+      "moon": null,
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "HDMS-Woodruff": {
+      "displayname": "HDMS-Woodruff",
+      "planet": "Hurston",
+      "moon": "Ita",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Hickes Research": {
+      "displayname": "Hickes Research Outpost",
+      "planet": "Crusader",
+      "moon": "Cellin",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Rayari Anvik Research Outpost": {
+      "displayname": "Rayari Anvik Research Outpost",
+      "planet": "MicroTech",
+      "moon": "Calliope",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Rayari Cantwell Research Outpost": {
+      "displayname": "Rayari Cantwell Research Outpost",
+      "planet": "MicroTech",
+      "moon": "Clio",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Rayari Deltana Research Outpost": {
+      "displayname": "Rayari Deltana Research Outpost",
+      "planet": "MicroTech",
+      "moon": null,
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "type": "outpost"
+    },
+    "Rayari Kaltag Research Outpost": {
+      "displayname": "Rayari Kaltag Research Outpost",
+      "planet": "MicroTech",
+      "moon": "Calliope",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Rayari McGrath Research Outpost": {
+      "displayname": "Rayari McGrath Research Outpost",
+      "planet": "MicroTech",
+      "moon": "Clio",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Reclamation & Disposal Orinth": {
+      "displayname": "Reclamation & Disposal Orinth",
+      "planet": "Hurston",
+      "moon": null,
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "type": "outpost"
+    },
+    "Samson & Son's Salvage Center": {
+      "displayname": "Samson & Son's Salvage Center",
+      "planet": "ArcCorp",
+      "moon": "Wala",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Shubin Mining Facility SAL-2": {
+      "displayname": "Shubin Mining Facility SAL-2",
+      "planet": "ArcCorp",
+      "moon": "Lyria",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Shubin Mining Facility SAL-5": {
+      "displayname": "Shubin Mining Facility SAL-5",
+      "planet": "ArcCorp",
+      "moon": "Lyria",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Shubin Mining Facility SCD-1": {
+      "displayname": "Shubin Mining Facility SCD-1",
+      "planet": "Crusader",
+      "moon": "Daymar",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "type": "outpost"
+    },
+    "Shubin Mining Facility SM0-10": {
+      "displayname": "Shubin Mining Facility SM0-10",
+      "planet": "MicroTech",
+      "moon": null,
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Shubin Mining Facility SM0-13": {
+      "displayname": "Shubin Mining Facility SM0-13",
+      "planet": "MicroTech",
+      "moon": null,
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Shubin Mining Facility SM0-18": {
+      "displayname": "Shubin Mining Facility SM0-18",
+      "planet": "MicroTech",
+      "moon": null,
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Shubin Mining Facility SM0-22": {
+      "displayname": "Shubin Mining Facility SM0-22",
+      "planet": "MicroTech",
+      "moon": null,
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Shubin Mining Facility SMCa-6": {
+      "displayname": "Shubin Mining Facility SMCa-6",
+      "planet": "MicroTech",
+      "moon": "Calliope",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Shubin Mining Facility SMCa-8": {
+      "displayname": "Shubin Mining Facility SMCa-8",
+      "planet": "MicroTech",
+      "moon": "Calliope",
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Terra Mills HydroFarm": {
+      "displayname": "Terra Mills HydroFarm",
+      "planet": "Crusader",
+      "moon": "Cellin",
+      "system": "Stanton",
+      "has_freight_elevator": 0,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Astor's Clearing": {
+      "displayname": "Astor's Clearing",
+      "planet": "MicroTech",
+      "moon": null,
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Dunboro": {
+      "displayname": "Dunboro",
+      "planet": "MicroTech",
+      "moon": null,
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Rappel": {
+      "displayname": "Rappel",
+      "planet": "Hurston",
+      "moon": null,
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "type": "outpost"
+    },
+    "Picker's Field": {
+      "displayname": "Picker's Field",
+      "planet": "Hurston",
+      "moon": null,
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "type": "outpost"
+    },
+    "Zephyr": {
+      "displayname": "Zephyr",
+      "planet": "Hurston",
+      "moon": null,
+      "system": "Stanton",
+      "has_freight_elevator": 1,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Frostbite": {
+      "displayname": "Frostbite",
+      "planet": "MicroTech",
+      "moon": null,
+      "system": "Stanton",
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "The Yard": {
+      "displayname": "The Yard",
+      "planet": "Bloom",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Canard View": {
+      "displayname": "Canard View",
+      "planet": "Terminus",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Blackrock Exchange": {
+      "displayname": "Blackrock Exchange",
+      "planet": "Terminus",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 1,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Scarper's Turn": {
+      "displayname": "Scarper's Turn",
+      "planet": "Terminus",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 0,
+      "max_container_size": 16,
+      "type": "outpost"
+    },
+    "Rough Landing": {
+      "displayname": "Rough Landing",
+      "planet": "Terminus",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 1,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Yang's Place": {
+      "displayname": "Yang's Place",
+      "planet": "Monox",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Jackson's Swap": {
+      "displayname": "Jackson's Swap",
+      "planet": "Monox",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 1,
+      "max_container_size": 16,
+      "type": "outpost"
+    },
+    "Narena's Rest": {
+      "displayname": "Narena's Rest",
+      "planet": "Bloom",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Ashland": {
+      "displayname": "Ashland",
+      "planet": "Pyro V",
+      "moon": "Ignis",
+      "system": "Pyro",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Chawla's Beach": {
+      "displayname": "Chawla's Beach",
+      "planet": "Pyro V",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Prophet's Peak": {
+      "displayname": "Prophet's Peak",
+      "planet": "Pyro V",
+      "moon": "Adir",
+      "system": "Pyro",
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Seer's Canyon": {
+      "displayname": "Seer's Canyon",
+      "planet": "Pyro V",
+      "moon": "Vatra",
+      "system": "Pyro",
+      "has_freight_elevator": 1,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Rustville": {
+      "displayname": "Rustville",
+      "planet": "Pyro I",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Ostler's Claim": {
+      "displayname": "Ostler's Claim",
+      "planet": "Monox",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Sunset Mesa": {
+      "displayname": "Sunset Mesa",
+      "planet": "Monox",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Bueno Ravine": {
+      "displayname": "Bueno Ravine",
+      "planet": "Bloom",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 1,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Kabir's Post": {
+      "displayname": "Kabir's Post",
+      "planet": "Pyro V",
+      "moon": "Ignis",
+      "system": "Pyro",
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Shepherd's Rest": {
+      "displayname": "Shepherd's Rest",
+      "planet": "Bloom",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 1,
+      "max_container_size": 32,
+      "type": "outpost"
+    },
+    "Windfall": {
+      "displayname": "Windfall",
+      "planet": "Bloom",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Frigid Knot": {
+      "displayname": "Frigid Knot",
+      "planet": "Bloom",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Last Landings": {
+      "displayname": "Last Landings",
+      "planet": "Terminus",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 1,
+      "max_container_size": 16,
+      "type": "outpost"
+    },
+    "Goner's Deal": {
+      "displayname": "Goner's Deal",
+      "planet": "Pyro IV",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Fallow Field": {
+      "displayname": "Fallow Field",
+      "planet": "Pyro IV",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "The Golden Riviera": {
+      "displayname": "The Golden Riviera",
+      "planet": "Bloom",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 1,
+      "max_container_size": 24,
+      "type": "outpost"
+    },
+    "Carver's Ridge": {
+      "displayname": "Carver's Ridge",
+      "planet": "Bloom",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Arid Reach": {
+      "displayname": "Arid Reach",
+      "planet": "Monox",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 1,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Sacren's Plot": {
+      "displayname": "Sacren's Plot",
+      "planet": "Pyro IV",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 1,
+      "max_container_size": 16,
+      "type": "outpost"
+    },
+    "Stag's Rut": {
+      "displayname": "Stag's Rut",
+      "planet": "Pyro I",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Bullock's Reach": {
+      "displayname": "Shop Terminal - Bullock's Reach",
+      "planet": "Terminus",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "outpost"
+    },
+    "Kinder Plots": {
+      "displayname": "Kinder Plots",
+      "planet": "Terminus",
+      "moon": null,
+      "system": "Pyro",
+      "has_freight_elevator": 0,
+      "max_container_size": 0,
+      "type": "outpost"
+    }
+  },
+  "planets": {
+    "ArcCorp": {
+      "system": "Stanton",
+      "code": "ARC",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "planet"
+    },
+    "Crusader": {
+      "system": "Stanton",
+      "code": "CRU",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "planet"
+    },
+    "Hurston": {
+      "system": "Stanton",
+      "code": "HUR",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "planet"
+    },
+    "MicroTech": {
+      "system": "Stanton",
+      "code": "MIC",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "planet"
+    },
+    "Pyro I": {
+      "system": "Pyro",
+      "code": "PY1",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "planet"
+    },
+    "Monox": {
+      "system": "Pyro",
+      "code": "MON",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "planet"
+    },
+    "Bloom": {
+      "system": "Pyro",
+      "code": "BLO",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "planet"
+    },
+    "Pyro IV": {
+      "system": "Pyro",
+      "code": "PY4",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "planet"
+    },
+    "Pyro V": {
+      "system": "Pyro",
+      "code": "PY5",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "planet"
+    },
+    "Terminus": {
+      "system": "Pyro",
+      "code": "TER",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "planet"
+    },
+    "Delamar": {
+      "system": "Nyx",
+      "code": "DEL",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "planet"
+    }
+  },
+  "moons": {
+    "Aberdeen": {
+      "system": "Stanton",
+      "planet": "Hurston",
+      "code": "ABE",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "moon"
+    },
+    "Adir": {
+      "system": "Pyro",
+      "planet": "Pyro V",
+      "code": "ADI",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "moon"
+    },
+    "Arial": {
+      "system": "Stanton",
+      "planet": "Hurston",
+      "code": "ARI",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "moon"
+    },
+    "Calliope": {
+      "system": "Stanton",
+      "planet": "MicroTech",
+      "code": "CAL",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "moon"
+    },
+    "Cellin": {
+      "system": "Stanton",
+      "planet": "Crusader",
+      "code": "CEL",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "moon"
+    },
+    "Clio": {
+      "system": "Stanton",
+      "planet": "MicroTech",
+      "code": "CLI",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "moon"
+    },
+    "Daymar": {
+      "system": "Stanton",
+      "planet": "Crusader",
+      "code": "DAY",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "moon"
+    },
+    "Euterpe": {
+      "system": "Stanton",
+      "planet": "MicroTech",
+      "code": "EUT",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "moon"
+    },
+    "Fairo": {
+      "system": "Pyro",
+      "planet": "Pyro V",
+      "code": "FAI",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "moon"
+    },
+    "Fuego": {
+      "system": "Pyro",
+      "planet": "Pyro V",
+      "code": "FUE",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "moon"
+    },
+    "Ignis": {
+      "system": "Pyro",
+      "planet": "Pyro V",
+      "code": "IGN",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "moon"
+    },
+    "Ita": {
+      "system": "Stanton",
+      "planet": "Hurston",
+      "code": "ITA",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "moon"
+    },
+    "Lyria": {
+      "system": "Stanton",
+      "planet": "ArcCorp",
+      "code": "LYR",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "moon"
+    },
+    "Magda": {
+      "system": "Stanton",
+      "planet": "Hurston",
+      "code": "MAG",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "moon"
+    },
+    "Vatra": {
+      "system": "Pyro",
+      "planet": "Pyro V",
+      "code": "VAT",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "moon"
+    },
+    "Vuur": {
+      "system": "Pyro",
+      "planet": "Pyro V",
+      "code": "VUU",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "moon"
+    },
+    "Wala": {
+      "system": "Stanton",
+      "planet": "ArcCorp",
+      "code": "WAL",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "moon"
+    },
+    "Yela": {
+      "system": "Stanton",
+      "planet": "Crusader",
+      "code": "YEL",
+      "is_landable": 0,
+      "has_quantum_marker": 0,
+      "type": "moon"
+    }
+  }
+}

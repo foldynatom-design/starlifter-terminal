@@ -1,0 +1,7240 @@
+{
+  "P4-AR \"Boneyard\" Rifle": [
+    {
+      "terminal": "Live Fire Pyro Gateway (Nyx)",
+      "price": 4623,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Nyx)",
+      "price": 4623,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Pyro)",
+      "price": 4623,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Pyro)",
+      "price": 4623,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Seraphim",
+      "price": 4623,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Tressler",
+      "price": 4425,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Pyro Gateway (Stanton)",
+      "price": 4330,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor CRU-L1",
+      "price": 4907,
+      "location": "CRU-L1 Ambitious Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Terra Gateway (Stanton)",
+      "price": 4623,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Stanton)",
+      "price": 4623,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L4",
+      "price": 4907,
+      "location": "HUR-L4 Melodic Fields Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L3",
+      "price": 4623,
+      "location": "MIC-L3 Endless Odyssey Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L1",
+      "price": 4623,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "P4-AR \"Desert Shadow\" Rifle": [
+    {
+      "terminal": "FPS Armor CRU-L4",
+      "price": 4648,
+      "location": "CRU-L4 Shallow Fields Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Seraphim",
+      "price": 4568,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L4",
+      "price": 4648,
+      "location": "MIC-L4 Red Crossroads Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L5",
+      "price": 4648,
+      "location": "HUR-L5 High Course Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "P4-AR Magazine (40 cap)": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 198,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 198,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 198,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 198,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 198,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "P4-AR \"Nightstalker\" Rifle": [
+    {
+      "terminal": "Shop Fallow Field",
+      "price": 4532,
+      "location": "Fallow Field",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Ashland",
+      "price": 4532,
+      "location": "Ashland",
+      "parent": "Ignis",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor CRU-L4",
+      "price": 4648,
+      "location": "CRU-L4 Shallow Fields Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Cubby Area 18",
+      "price": 4757,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L4",
+      "price": 4648,
+      "location": "MIC-L4 Red Crossroads Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L5",
+      "price": 4648,
+      "location": "HUR-L5 High Course Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "P4-AR Rifle": [
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 4737,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "P4-AR \"Warhawk\" Rifle": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 4757,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 4757,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "C54 SMG": [
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 2993,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 2993,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "C54 SMG Magazine (50 cap)": [
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 248,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 248,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 248,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 248,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 248,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Custodian \"Boneyard\" SMG": [
+    {
+      "terminal": "Conscientious Levski",
+      "price": 2915,
+      "location": "Levski",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "FPS Armor ARC-L4",
+      "price": 2677,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L1",
+      "price": 2677,
+      "location": "HUR-L1 Green Glade Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor HUR-L1",
+      "price": 2677,
+      "location": "HUR-L1 Green Glade Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L2",
+      "price": 2677,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Custodian \"Desert Shadow\" SMG": [
+    {
+      "terminal": "Cubby Area 18",
+      "price": 2468,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Astors",
+      "price": 2848,
+      "location": "Astor's Clearing",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Dunboro",
+      "price": 2848,
+      "location": "Dunboro",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Zephyr",
+      "price": 2848,
+      "location": "Zephyr",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Skutters Grim",
+      "price": 2852,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Frostbite",
+      "price": 2848,
+      "location": "Frostbite",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "Custodian \"Midnight\" SMG": [
+    {
+      "terminal": "FPS Armor CRU-L4",
+      "price": 2615,
+      "location": "CRU-L4 Shallow Fields Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire ARC-L1",
+      "price": 2494,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L4",
+      "price": 2615,
+      "location": "MIC-L4 Red Crossroads Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L5",
+      "price": 2615,
+      "location": "HUR-L5 High Course Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L1",
+      "price": 2494,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Custodian \"Nightstalker\" SMG": [
+    {
+      "terminal": "FPS Armor Pyro Gateway (Nyx)",
+      "price": 2899,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Pyro Gateway (Nyx)",
+      "price": 2813,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "FPS Armor Stanton Gateway (Nyx)",
+      "price": 2899,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Nyx)",
+      "price": 2813,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Pyro)",
+      "price": 2813,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Stanton Gateway (Pyro)",
+      "price": 2899,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Pyro)",
+      "price": 2813,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Nyx Gateway (Pyro)",
+      "price": 2899,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Seraphim",
+      "price": 2813,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire CRU-L5",
+      "price": 2899,
+      "location": "CRU-L5 Beautiful Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Tressler",
+      "price": 2466,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Pyro Gateway (Stanton)",
+      "price": 2671,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Pyro Gateway (Stanton)",
+      "price": 2671,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Nyx Gateway (Stanton)",
+      "price": 2899,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Terra Gateway (Stanton)",
+      "price": 2813,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Terra Gateway (Stanton)",
+      "price": 2899,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Stanton)",
+      "price": 2813,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L3",
+      "price": 2813,
+      "location": "MIC-L3 Endless Odyssey Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L1",
+      "price": 2813,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Custodian SMG": [
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 2677,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Custodian SMG Magazine (60 cap)": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 347,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 347,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 347,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 347,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 347,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Custodian \"Warhawk\" SMG": [
+    {
+      "terminal": "FPS Armor Pyro Gateway (Nyx)",
+      "price": 2899,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "FPS Armor Stanton Gateway (Nyx)",
+      "price": 2899,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "FPS Armor Stanton Gateway (Pyro)",
+      "price": 2899,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Nyx Gateway (Pyro)",
+      "price": 2899,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Live Fire Seraphim",
+      "price": 2848,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire CRU-L5",
+      "price": 2899,
+      "location": "CRU-L5 Beautiful Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Pyro Gateway (Stanton)",
+      "price": 2671,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Nyx Gateway (Stanton)",
+      "price": 2899,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Terra Gateway (Stanton)",
+      "price": 2899,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Demeco LMG Battery (100 cap)": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 520,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 520,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 520,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 520,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 520,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "FS-9 Magazine (75 cap)": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 520,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 520,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 520,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 520,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 520,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Karna Rifle Battery (35 cap)": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 248,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 248,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 248,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 248,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 248,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "LH86 \"Boneyard\" Pistol": [
+    {
+      "terminal": "Cubby Area 18",
+      "price": 969,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Astors",
+      "price": 979,
+      "location": "Astor's Clearing",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Dunboro",
+      "price": 979,
+      "location": "Dunboro",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Zephyr",
+      "price": 979,
+      "location": "Zephyr",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Skutters Grim",
+      "price": 981,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Frostbite",
+      "price": 979,
+      "location": "Frostbite",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "LH86 \"Desert Shadow\" Pistol": [
+    {
+      "terminal": "Shop Narena's Rest",
+      "price": 945,
+      "location": "Narena's Rest",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Prophet's Peak",
+      "price": 945,
+      "location": "Prophet's Peak",
+      "parent": "Adir",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 857,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 857,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Astors",
+      "price": 979,
+      "location": "Astor's Clearing",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Dunboro",
+      "price": 979,
+      "location": "Dunboro",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Zephyr",
+      "price": 979,
+      "location": "Zephyr",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Skutters Grim",
+      "price": 981,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Frostbite",
+      "price": 979,
+      "location": "Frostbite",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "LH86 \"Nightstalker\" Pistol": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 857,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 857,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Cubby Area 18",
+      "price": 696,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "LH86 Pistol": [
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 977,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 857,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 977,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "LH86 Pistol Magazine (25 cap)": [
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 174,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 174,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 174,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 174,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 174,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "LH86 \"Righteous\" Pistol": [
+    {
+      "terminal": "Cubby Area 18",
+      "price": 1322,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "LH86 \"Stormfall\" Pistol": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 857,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 857,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Cubby Area 18",
+      "price": 696,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "LH86 \"Warhawk\" Pistol": [
+    {
+      "terminal": "Cubby Area 18",
+      "price": 969,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Astors",
+      "price": 979,
+      "location": "Astor's Clearing",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Dunboro",
+      "price": 979,
+      "location": "Dunboro",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Zephyr",
+      "price": 979,
+      "location": "Zephyr",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Skutters Grim",
+      "price": 981,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Frostbite",
+      "price": 979,
+      "location": "Frostbite",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "Lumin V SMG": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 3051,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "Lumin V SMG Battery (45 cap)": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 396,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 396,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 396,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 396,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 396,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "P6-LR Magazine (8 cap)": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 446,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 446,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 446,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 446,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 446,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Ravager-212 Twin Shotgun": [
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 4295,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Ravager-212 Twin Shotgun Magazine (16 cap)": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 570,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 570,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 570,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 570,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 570,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "S71 Rifle Magazine (30 cap)": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 297,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 297,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 297,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 297,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 297,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Scorch Plasma Grenade": [
+    {
+      "terminal": "FPS Armor Pyro Gateway (Nyx)",
+      "price": 506,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Pyro Gateway (Nyx)",
+      "price": 506,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "FPS Armor Stanton Gateway (Nyx)",
+      "price": 506,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Nyx)",
+      "price": 506,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSSL",
+      "price": 506,
+      "location": "People's Service Station Lambda",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSSA",
+      "price": 506,
+      "location": "People's Service Station Alpha",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSST",
+      "price": 506,
+      "location": "People's Service Station Theta",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSSD",
+      "price": 506,
+      "location": "People's Service Station Delta",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Conscientious Levski",
+      "price": 506,
+      "location": "Levski",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Guns Starlight",
+      "price": 506,
+      "location": "Starlight Service Station",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Fallow Field",
+      "price": 506,
+      "location": "Fallow Field",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Goner's Deal",
+      "price": 506,
+      "location": "Goner's Deal",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Ashland",
+      "price": 506,
+      "location": "Ashland",
+      "parent": "Ignis",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Arid Reach",
+      "price": 506,
+      "location": "Arid Reach",
+      "parent": "Monox",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Checkmate",
+      "price": 506,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Rod's Fuel",
+      "price": 506,
+      "location": "Rod's Fuel 'N Supplies",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Gaslight",
+      "price": 506,
+      "location": "Gaslight",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Megumi",
+      "price": 506,
+      "location": "Megumi Refueling",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Pyro)",
+      "price": 506,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Orbituary",
+      "price": 506,
+      "location": "Orbituary",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Rough Landing",
+      "price": 506,
+      "location": "Rough Landing",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Ruin",
+      "price": 506,
+      "location": "Ruin Station",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Rat's Nest",
+      "price": 506,
+      "location": "Rat's Nest",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Dudley",
+      "price": 506,
+      "location": "Dudley & Daughters",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Endgame",
+      "price": 506,
+      "location": "Endgame",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Stanton Gateway (Pyro)",
+      "price": 506,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Patch City",
+      "price": 506,
+      "location": "Patch City",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Pyro)",
+      "price": 506,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Nyx Gateway (Pyro)",
+      "price": 506,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor CRU-L4",
+      "price": 506,
+      "location": "CRU-L4 Shallow Fields Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Seraphim",
+      "price": 506,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Seraphim",
+      "price": 506,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Tammany and Sons",
+      "price": 506,
+      "location": "Lorville",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire CRU-L5",
+      "price": 506,
+      "location": "CRU-L5 Beautiful Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor ARC-L4",
+      "price": 506,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor ARC-L1",
+      "price": 506,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire ARC-L1",
+      "price": 506,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Cubby Area 18",
+      "price": 506,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Tressler",
+      "price": 506,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Everus",
+      "price": 506,
+      "location": "Everus Harbor",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Terra Gateway (Stanton)",
+      "price": 506,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L3",
+      "price": 506,
+      "location": "MIC-L3 Endless Odyssey Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L5",
+      "price": 506,
+      "location": "HUR-L5 High Course Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Pyro Gateway (Stanton)",
+      "price": 506,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Pyro Gateway (Stanton)",
+      "price": 506,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L1",
+      "price": 506,
+      "location": "HUR-L1 Green Glade Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor HUR-L1",
+      "price": 506,
+      "location": "HUR-L1 Green Glade Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire CRU-L1",
+      "price": 506,
+      "location": "CRU-L1 Ambitious Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor CRU-L1",
+      "price": 506,
+      "location": "CRU-L1 Ambitious Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Nyx Gateway (Stanton)",
+      "price": 506,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Skutters Grim",
+      "price": 506,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L4",
+      "price": 506,
+      "location": "MIC-L4 Red Crossroads Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Terra Gateway (Stanton)",
+      "price": 506,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Stanton)",
+      "price": 506,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L4",
+      "price": 506,
+      "location": "HUR-L4 Melodic Fields Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L2",
+      "price": 506,
+      "location": "HUR-L2 Faithful Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L2",
+      "price": 506,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L1",
+      "price": 506,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L1",
+      "price": 506,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "MK-4 Frag Grenade": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 292,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 296,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 280,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 291,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "MaxLift Tractor Beam": [
+    {
+      "terminal": "Refinery Shop - MIC-L2",
+      "price": 19175,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's Depot - Area 18",
+      "price": 19175,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shubin Interstellar - Commons - New Babbage",
+      "price": 19175,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Omega Pro - New Babbage",
+      "price": 19175,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 19175,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ship Weapons - Cousin Crow's - Providence Platform - Orison",
+      "price": 19175,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - ARC-L1",
+      "price": 19175,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - HUR-L2",
+      "price": 19175,
+      "location": "HUR-L2 Faithful Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L1",
+      "price": 19175,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - Port Tressler",
+      "price": 19175,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Cargo Center Supplies - Port Tressler",
+      "price": 19175,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L2",
+      "price": 19175,
+      "location": "ARC-L2 Lively Pathway Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "MaxLift Tractor Beam Battery": [
+    {
+      "terminal": "Refinery Shop - MIC-L2",
+      "price": 175,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L1",
+      "price": 175,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Cargo Center Supplies - Port Tressler",
+      "price": 175,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L2",
+      "price": 175,
+      "location": "ARC-L2 Lively Pathway Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Cambio-Lite SRT Attachment": [
+    {
+      "terminal": "Refinery Shop - MIC-L2",
+      "price": 375,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ship Weapons - Cousin Crow's - Providence Platform - Orison",
+      "price": 375,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - HUR-L2",
+      "price": 375,
+      "location": "HUR-L2 Faithful Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's Depot - Area 18",
+      "price": 375,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - ARC-L1",
+      "price": 375,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shubin Interstellar - Commons - New Babbage",
+      "price": 375,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L1",
+      "price": 375,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - Port Tressler",
+      "price": 375,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L2",
+      "price": 375,
+      "location": "ARC-L2 Lively Pathway Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Cambio-Lite SRT Canister": [
+    {
+      "terminal": "Refinery Shop - MIC-L2",
+      "price": 275,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Riker Memorial Spaceport - Area 18",
+      "price": 275,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - ARC-L1",
+      "price": 275,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ship Weapons - Cousin Crow's - Providence Platform - Orison",
+      "price": 275,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - HUR-L2",
+      "price": 275,
+      "location": "HUR-L2 Faithful Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's Depot - Area 18",
+      "price": 275,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Omega Pro - New Babbage",
+      "price": 275,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - NBIS - New Babbage",
+      "price": 275,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 275,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L1",
+      "price": 275,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 275,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - Port Tressler",
+      "price": 275,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 275,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L2",
+      "price": 275,
+      "location": "ARC-L2 Lively Pathway Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Cambio SRT": [
+    {
+      "terminal": "Refinery Shop - MIC-L2",
+      "price": 21138,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's Depot - Area 18",
+      "price": 21200,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - ARC-L1",
+      "price": 21200,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - HUR-L2",
+      "price": 21200,
+      "location": "HUR-L2 Faithful Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Omega Pro - New Babbage",
+      "price": 21200,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ship Weapons - Cousin Crow's - Providence Platform - Orison",
+      "price": 21200,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shubin Interstellar - Commons - New Babbage",
+      "price": 21200,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 21200,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L1",
+      "price": 21138,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - Port Tressler",
+      "price": 21200,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L2",
+      "price": 21138,
+      "location": "ARC-L2 Lively Pathway Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Cambio SRT Canister": [
+    {
+      "terminal": "Refinery Shop - MIC-L2",
+      "price": 275,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Riker Memorial Spaceport - Area 18",
+      "price": 275,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's Depot - Area 18",
+      "price": 275,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - ARC-L1",
+      "price": 275,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - HUR-L2",
+      "price": 275,
+      "location": "HUR-L2 Faithful Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Omega Pro - New Babbage",
+      "price": 275,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ship Weapons - Cousin Crow's - Providence Platform - Orison",
+      "price": 275,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - NBIS - New Babbage",
+      "price": 275,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 275,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L1",
+      "price": 275,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 275,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - Port Tressler",
+      "price": 275,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 275,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L2",
+      "price": 275,
+      "location": "ARC-L2 Lively Pathway Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Pyro RYT Multi-Tool": [
+    {
+      "terminal": "Refinery Shop - MIC-L2",
+      "price": 485,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 485,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's Depot - Area 18",
+      "price": 1260,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shubin Interstellar - Commons - New Babbage",
+      "price": 485,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Omega Pro - New Babbage",
+      "price": 485,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - ARC-L1",
+      "price": 485,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - HUR-L2",
+      "price": 485,
+      "location": "HUR-L2 Faithful Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L1",
+      "price": 485,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - Port Tressler",
+      "price": 485,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Cargo Center Supplies - Port Tressler",
+      "price": 485,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L2",
+      "price": 485,
+      "location": "ARC-L2 Lively Pathway Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "TruHold Tractor Beam Attachment": [
+    {
+      "terminal": "Refinery Shop - MIC-L2",
+      "price": 450,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 450,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shubin Interstellar - Commons - New Babbage",
+      "price": 450,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ship Weapons - Cousin Crow's - Providence Platform - Orison",
+      "price": 450,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's Depot - Area 18",
+      "price": 450,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - ARC-L1",
+      "price": 450,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Omega Pro - New Babbage",
+      "price": 450,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - HUR-L2",
+      "price": 450,
+      "location": "HUR-L2 Faithful Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L1",
+      "price": 450,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Platinum Bay - Port Tressler",
+      "price": 450,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Cargo Center Supplies - Port Tressler",
+      "price": 450,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L2",
+      "price": 450,
+      "location": "ARC-L2 Lively Pathway Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "CRUZ Lux": [
+    {
+      "terminal": "Ship Weapons - Cousin Crow's - Providence Platform - Orison",
+      "price": 7,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ellroy's - New Babbage",
+      "price": 6,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L4",
+      "price": 7,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Casaba Outlet - ARC-L4",
+      "price": 7,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L1",
+      "price": 7,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Cargo Center Supplies - Port Tressler",
+      "price": 7,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 7,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L2",
+      "price": 7,
+      "location": "ARC-L2 Lively Pathway Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Clothing Shop - ARC-L2",
+      "price": 7,
+      "location": "ARC-L2 Lively Pathway Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Chile Birria Burrito": [
+    {
+      "terminal": "Burrito Bar - Port Tressler",
+      "price": 15,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ellroy's - ARC-L1",
+      "price": 14,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Burrito Bar - ARC-L1",
+      "price": 15,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Citrus Beef Burrito": [
+    {
+      "terminal": "Kel-To - Riker Memorial Spaceport - Area 18",
+      "price": 18,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 18,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Burrito Bar - Port Tressler",
+      "price": 18,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ellroy's - ARC-L1",
+      "price": 17,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Burrito Bar - ARC-L1",
+      "price": 18,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Dak Galbi Chicken Burrito": [
+    {
+      "terminal": "Burrito Bar - Port Tressler",
+      "price": 17,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ellroy's - ARC-L1",
+      "price": 16,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Burrito Bar - ARC-L1",
+      "price": 17,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Musaka Burrito": [
+    {
+      "terminal": "Kel-To - Riker Memorial Spaceport - Area 18",
+      "price": 16,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Burrito Bar - Port Tressler",
+      "price": 16,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ellroy's - ARC-L1",
+      "price": 15,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Burrito Bar - ARC-L1",
+      "price": 16,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "ReadyMeal (Bean and Rice Burrito)": [
+    {
+      "terminal": "Cordry's Levski",
+      "price": 17,
+      "location": "Levski",
+      "parent": "Nyx",
+      "system": "Nyx"
+    }
+  ],
+  "MedPen (Hemozal)": [
+    {
+      "terminal": "Kel-To - Riker Memorial Spaceport - Area 18",
+      "price": 265,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 263,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 282,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Brentworth Pharmacy - New Babbage",
+      "price": 265,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Empire Hospital Pharmacy - Area 18",
+      "price": 265,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Pharmacy - Maria Pure of Heart - Lorville",
+      "price": 252,
+      "location": "Lorville",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - NBIS - New Babbage",
+      "price": 265,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L4",
+      "price": 265,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 265,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Pharmacy - ARC-L4",
+      "price": 265,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L1",
+      "price": 265,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 265,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Pharmacy - Port Tressler",
+      "price": 265,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 280,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Pharmacy - ARC-L1",
+      "price": 265,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L2",
+      "price": 265,
+      "location": "ARC-L2 Lively Pathway Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "ParaMed Medical Device": [
+    {
+      "terminal": "Brentworth Pharmacy - New Babbage",
+      "price": 1500,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Empire Hospital Pharmacy - Area 18",
+      "price": 1500,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Pharmacy - Maria Pure of Heart - Lorville",
+      "price": 1426,
+      "location": "Lorville",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Pharmacy - ARC-L4",
+      "price": 1500,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Pharmacy - ARC-L1",
+      "price": 1500,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "ParaMed Refill": [
+    {
+      "terminal": "Brentworth Pharmacy - New Babbage",
+      "price": 250,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Empire Hospital Pharmacy - Area 18",
+      "price": 250,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Pharmacy - Maria Pure of Heart - Lorville",
+      "price": 238,
+      "location": "Lorville",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Pharmacy - ARC-L4",
+      "price": 250,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Pharmacy - Port Tressler",
+      "price": 250,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Pharmacy - ARC-L1",
+      "price": 250,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Hofstede-S1 Mining Laser": [
+    {
+      "terminal": "Dumper's Depot - Area 18",
+      "price": 12750,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shubin Interstellar - Commons - New Babbage",
+      "price": 12750,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "Hofstede-S2 Mining Laser": [
+    {
+      "terminal": "Refinery Shop - MIC-L2",
+      "price": 22750,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shubin Interstellar - Commons - New Babbage",
+      "price": 22750,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L2",
+      "price": 22750,
+      "location": "ARC-L2 Lively Pathway Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "S00 Hofstede": [
+    {
+      "terminal": "Refinery Shop - MIC-L2",
+      "price": 5750,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's Depot - Area 18",
+      "price": 5750,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shubin Interstellar - Commons - New Babbage",
+      "price": 5750,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L2",
+      "price": 5750,
+      "location": "ARC-L2 Lively Pathway Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Arclight Pistol Battery (30 cap)": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 273,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 273,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 273,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 273,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 273,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Arrowhead Sniper Rifle Battery (16 cap)": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 520,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 520,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 520,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 520,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 520,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Atzkav Sniper Rifle Battery (8 cap)": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 471,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 471,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 471,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 471,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 471,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Cambrio SRT Battery": [
+    {
+      "terminal": "Refinery Shop - MIC-L2",
+      "price": 63,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L1",
+      "price": 63,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Cargo Center Supplies - Port Tressler",
+      "price": 63,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Refinery Shop - ARC-L2",
+      "price": 63,
+      "location": "ARC-L2 Lively Pathway Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Devastator Shotgun Battery (12 cap)": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 471,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 471,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 471,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 471,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 471,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Fresnel Energy LMG Battery (165 Cap)": [
+    {
+      "terminal": "FPS Armor Pyro Gateway (Nyx)",
+      "price": 941,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Pyro Gateway (Nyx)",
+      "price": 941,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "FPS Armor Stanton Gateway (Nyx)",
+      "price": 941,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Nyx)",
+      "price": 941,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSSL",
+      "price": 941,
+      "location": "People's Service Station Lambda",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSSA",
+      "price": 941,
+      "location": "People's Service Station Alpha",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSST",
+      "price": 941,
+      "location": "People's Service Station Theta",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSSD",
+      "price": 941,
+      "location": "People's Service Station Delta",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Conscientious Levski",
+      "price": 941,
+      "location": "Levski",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Shop Sacren's Plot",
+      "price": 941,
+      "location": "Sacren's Plot",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Starlight",
+      "price": 941,
+      "location": "Starlight Service Station",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "CZ Checkmate",
+      "price": 1069,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Shepherd's Rest",
+      "price": 941,
+      "location": "Shepherd's Rest",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Narena's Rest",
+      "price": 941,
+      "location": "Narena's Rest",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Kabir's Post",
+      "price": 941,
+      "location": "Kabir's Post",
+      "parent": "Ignis",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Frigid Knot",
+      "price": 941,
+      "location": "Frigid Knot",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Prophet's Peak",
+      "price": 941,
+      "location": "Prophet's Peak",
+      "parent": "Adir",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Fallow Field",
+      "price": 941,
+      "location": "Fallow Field",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Goner's Deal",
+      "price": 941,
+      "location": "Goner's Deal",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Ashland",
+      "price": 941,
+      "location": "Ashland",
+      "parent": "Ignis",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Arid Reach",
+      "price": 941,
+      "location": "Arid Reach",
+      "parent": "Monox",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Jackson's Swap",
+      "price": 941,
+      "location": "Jackson's Swap",
+      "parent": "Monox",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Checkmate",
+      "price": 941,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Rod's Fuel",
+      "price": 941,
+      "location": "Rod's Fuel 'N Supplies",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shooters Checkmate",
+      "price": 941,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Gaslight",
+      "price": 941,
+      "location": "Gaslight",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Megumi",
+      "price": 941,
+      "location": "Megumi Refueling",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Stanton Gateway (Pyro)",
+      "price": 941,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Pyro)",
+      "price": 941,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Orbituary",
+      "price": 941,
+      "location": "Orbituary",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shooters Orbituary",
+      "price": 941,
+      "location": "Orbituary",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Rough Landing",
+      "price": 941,
+      "location": "Rough Landing",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Canard View",
+      "price": 941,
+      "location": "Canard View",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Bullock's Reach",
+      "price": 941,
+      "location": "Bullock's Reach",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Blackrock Exchange",
+      "price": 941,
+      "location": "Blackrock Exchange",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Ruin",
+      "price": 941,
+      "location": "Ruin Station",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shooters Ruin",
+      "price": 941,
+      "location": "Ruin Station",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Rat's Nest",
+      "price": 941,
+      "location": "Rat's Nest",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Dudley",
+      "price": 941,
+      "location": "Dudley & Daughters",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Endgame",
+      "price": 941,
+      "location": "Endgame",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Patch City",
+      "price": 941,
+      "location": "Patch City",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Pyro)",
+      "price": 941,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Nyx Gateway (Pyro)",
+      "price": 941,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Kel-To Aspire Grand",
+      "price": 941,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 941,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor CRU-L4",
+      "price": 941,
+      "location": "CRU-L4 Shallow Fields Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Seraphim",
+      "price": 941,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Seraphim",
+      "price": 941,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Tammany and Sons",
+      "price": 898,
+      "location": "Lorville",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire CRU-L5",
+      "price": 941,
+      "location": "CRU-L5 Beautiful Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor ARC-L4",
+      "price": 941,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor ARC-L1",
+      "price": 941,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire ARC-L1",
+      "price": 941,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 941,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Cubby Area 18",
+      "price": 941,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Tressler",
+      "price": 941,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Everus",
+      "price": 898,
+      "location": "Everus Harbor",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Pyro Gateway (Stanton)",
+      "price": 813,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Pyro Gateway (Stanton)",
+      "price": 813,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Nyx Gateway (Stanton)",
+      "price": 941,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire CRU-L1",
+      "price": 941,
+      "location": "CRU-L1 Ambitious Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor CRU-L1",
+      "price": 941,
+      "location": "CRU-L1 Ambitious Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Skutters Grim",
+      "price": 950,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Astors",
+      "price": 941,
+      "location": "Astor's Clearing",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Dunboro",
+      "price": 941,
+      "location": "Dunboro",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L4",
+      "price": 941,
+      "location": "MIC-L4 Red Crossroads Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Terra Gateway (Stanton)",
+      "price": 941,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Terra Gateway (Stanton)",
+      "price": 941,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Stanton)",
+      "price": 941,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L5",
+      "price": 941,
+      "location": "HUR-L5 High Course Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L4",
+      "price": 941,
+      "location": "HUR-L4 Melodic Fields Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L3",
+      "price": 941,
+      "location": "MIC-L3 Endless Odyssey Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Zephyr",
+      "price": 941,
+      "location": "Zephyr",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To Cloudview Center",
+      "price": 941,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L2",
+      "price": 941,
+      "location": "HUR-L2 Faithful Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L2",
+      "price": 941,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor HUR-L1",
+      "price": 941,
+      "location": "HUR-L1 Green Glade Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L1",
+      "price": 941,
+      "location": "HUR-L1 Green Glade Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Frostbite",
+      "price": 941,
+      "location": "Frostbite",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L1",
+      "price": 941,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L1",
+      "price": 941,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Gallant Rifle Battery (45 cap)": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 396,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 396,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 396,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 396,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 396,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Parallax Rifle Battery (80 Cap)": [
+    {
+      "terminal": "FPS Armor Pyro Gateway (Nyx)",
+      "price": 644,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Pyro Gateway (Nyx)",
+      "price": 644,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "FPS Armor Stanton Gateway (Nyx)",
+      "price": 644,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Nyx)",
+      "price": 644,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSSL",
+      "price": 644,
+      "location": "People's Service Station Lambda",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSSA",
+      "price": 644,
+      "location": "People's Service Station Alpha",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSST",
+      "price": 644,
+      "location": "People's Service Station Theta",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSSD",
+      "price": 644,
+      "location": "People's Service Station Delta",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Conscientious Levski",
+      "price": 644,
+      "location": "Levski",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Shop Sacren's Plot",
+      "price": 644,
+      "location": "Sacren's Plot",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Starlight",
+      "price": 644,
+      "location": "Starlight Service Station",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "CZ Checkmate",
+      "price": 813,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Shepherd's Rest",
+      "price": 644,
+      "location": "Shepherd's Rest",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Narena's Rest",
+      "price": 644,
+      "location": "Narena's Rest",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Kabir's Post",
+      "price": 644,
+      "location": "Kabir's Post",
+      "parent": "Ignis",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Frigid Knot",
+      "price": 644,
+      "location": "Frigid Knot",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Prophet's Peak",
+      "price": 644,
+      "location": "Prophet's Peak",
+      "parent": "Adir",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Fallow Field",
+      "price": 644,
+      "location": "Fallow Field",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Goner's Deal",
+      "price": 644,
+      "location": "Goner's Deal",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Ashland",
+      "price": 644,
+      "location": "Ashland",
+      "parent": "Ignis",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Arid Reach",
+      "price": 644,
+      "location": "Arid Reach",
+      "parent": "Monox",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Jackson's Swap",
+      "price": 644,
+      "location": "Jackson's Swap",
+      "parent": "Monox",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Checkmate",
+      "price": 644,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Rod's Fuel",
+      "price": 644,
+      "location": "Rod's Fuel 'N Supplies",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shooters Checkmate",
+      "price": 644,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Gaslight",
+      "price": 644,
+      "location": "Gaslight",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Megumi",
+      "price": 644,
+      "location": "Megumi Refueling",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Stanton Gateway (Pyro)",
+      "price": 644,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Pyro)",
+      "price": 644,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Orbituary",
+      "price": 644,
+      "location": "Orbituary",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shooters Orbituary",
+      "price": 644,
+      "location": "Orbituary",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Rough Landing",
+      "price": 644,
+      "location": "Rough Landing",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Canard View",
+      "price": 644,
+      "location": "Canard View",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Bullock's Reach",
+      "price": 644,
+      "location": "Bullock's Reach",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Blackrock Exchange",
+      "price": 644,
+      "location": "Blackrock Exchange",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Ruin",
+      "price": 644,
+      "location": "Ruin Station",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shooters Ruin",
+      "price": 644,
+      "location": "Ruin Station",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Rat's Nest",
+      "price": 644,
+      "location": "Rat's Nest",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Dudley",
+      "price": 644,
+      "location": "Dudley & Daughters",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Endgame",
+      "price": 644,
+      "location": "Endgame",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Patch City",
+      "price": 644,
+      "location": "Patch City",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Pyro)",
+      "price": 644,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Nyx Gateway (Pyro)",
+      "price": 644,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Kel-To Aspire Grand",
+      "price": 644,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 644,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor CRU-L4",
+      "price": 644,
+      "location": "CRU-L4 Shallow Fields Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Seraphim",
+      "price": 644,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Seraphim",
+      "price": 644,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Tammany and Sons",
+      "price": 615,
+      "location": "Lorville",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire CRU-L5",
+      "price": 644,
+      "location": "CRU-L5 Beautiful Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor ARC-L4",
+      "price": 644,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor ARC-L1",
+      "price": 644,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire ARC-L1",
+      "price": 644,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 644,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Cubby Area 18",
+      "price": 644,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Tressler",
+      "price": 644,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Everus",
+      "price": 615,
+      "location": "Everus Harbor",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Pyro Gateway (Stanton)",
+      "price": 556,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Pyro Gateway (Stanton)",
+      "price": 556,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Nyx Gateway (Stanton)",
+      "price": 644,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire CRU-L1",
+      "price": 644,
+      "location": "CRU-L1 Ambitious Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor CRU-L1",
+      "price": 644,
+      "location": "CRU-L1 Ambitious Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Skutters Grim",
+      "price": 650,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Astors",
+      "price": 644,
+      "location": "Astor's Clearing",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Dunboro",
+      "price": 644,
+      "location": "Dunboro",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L4",
+      "price": 644,
+      "location": "MIC-L4 Red Crossroads Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Terra Gateway (Stanton)",
+      "price": 644,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Terra Gateway (Stanton)",
+      "price": 644,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Stanton)",
+      "price": 644,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L5",
+      "price": 644,
+      "location": "HUR-L5 High Course Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L4",
+      "price": 644,
+      "location": "HUR-L4 Melodic Fields Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L3",
+      "price": 644,
+      "location": "MIC-L3 Endless Odyssey Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Zephyr",
+      "price": 644,
+      "location": "Zephyr",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To Cloudview Center",
+      "price": 644,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L2",
+      "price": 644,
+      "location": "HUR-L2 Faithful Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L2",
+      "price": 644,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor HUR-L1",
+      "price": 644,
+      "location": "HUR-L1 Green Glade Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L1",
+      "price": 644,
+      "location": "HUR-L1 Green Glade Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Frostbite",
+      "price": 644,
+      "location": "Frostbite",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L1",
+      "price": 644,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L1",
+      "price": 644,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Prism Laser Shotgun Battery (20 cap)": [
+    {
+      "terminal": "FPS Armor Pyro Gateway (Nyx)",
+      "price": 495,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Pyro Gateway (Nyx)",
+      "price": 495,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "FPS Armor Stanton Gateway (Nyx)",
+      "price": 495,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Nyx)",
+      "price": 495,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSSL",
+      "price": 495,
+      "location": "People's Service Station Lambda",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSSA",
+      "price": 495,
+      "location": "People's Service Station Alpha",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSST",
+      "price": 495,
+      "location": "People's Service Station Theta",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSSD",
+      "price": 495,
+      "location": "People's Service Station Delta",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Conscientious Levski",
+      "price": 495,
+      "location": "Levski",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Shop Sacren's Plot",
+      "price": 495,
+      "location": "Sacren's Plot",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Starlight",
+      "price": 495,
+      "location": "Starlight Service Station",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "CZ Checkmate",
+      "price": 625,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Shepherd's Rest",
+      "price": 495,
+      "location": "Shepherd's Rest",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Narena's Rest",
+      "price": 495,
+      "location": "Narena's Rest",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Kabir's Post",
+      "price": 495,
+      "location": "Kabir's Post",
+      "parent": "Ignis",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Frigid Knot",
+      "price": 495,
+      "location": "Frigid Knot",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Prophet's Peak",
+      "price": 495,
+      "location": "Prophet's Peak",
+      "parent": "Adir",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Fallow Field",
+      "price": 495,
+      "location": "Fallow Field",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Goner's Deal",
+      "price": 495,
+      "location": "Goner's Deal",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Ashland",
+      "price": 495,
+      "location": "Ashland",
+      "parent": "Ignis",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Arid Reach",
+      "price": 495,
+      "location": "Arid Reach",
+      "parent": "Monox",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Jackson's Swap",
+      "price": 495,
+      "location": "Jackson's Swap",
+      "parent": "Monox",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Checkmate",
+      "price": 495,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Rod's Fuel",
+      "price": 495,
+      "location": "Rod's Fuel 'N Supplies",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shooters Checkmate",
+      "price": 495,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Gaslight",
+      "price": 495,
+      "location": "Gaslight",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Megumi",
+      "price": 495,
+      "location": "Megumi Refueling",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Stanton Gateway (Pyro)",
+      "price": 495,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Pyro)",
+      "price": 495,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Orbituary",
+      "price": 495,
+      "location": "Orbituary",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shooters Orbituary",
+      "price": 495,
+      "location": "Orbituary",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Rough Landing",
+      "price": 495,
+      "location": "Rough Landing",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Canard View",
+      "price": 495,
+      "location": "Canard View",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Bullock's Reach",
+      "price": 495,
+      "location": "Bullock's Reach",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Blackrock Exchange",
+      "price": 495,
+      "location": "Blackrock Exchange",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Ruin",
+      "price": 495,
+      "location": "Ruin Station",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shooters Ruin",
+      "price": 495,
+      "location": "Ruin Station",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Rat's Nest",
+      "price": 495,
+      "location": "Rat's Nest",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Dudley",
+      "price": 495,
+      "location": "Dudley & Daughters",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Endgame",
+      "price": 495,
+      "location": "Endgame",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Patch City",
+      "price": 495,
+      "location": "Patch City",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Pyro)",
+      "price": 495,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Nyx Gateway (Pyro)",
+      "price": 495,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Kel-To Aspire Grand",
+      "price": 495,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 495,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor CRU-L4",
+      "price": 495,
+      "location": "CRU-L4 Shallow Fields Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Seraphim",
+      "price": 495,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Seraphim",
+      "price": 495,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Tammany and Sons",
+      "price": 473,
+      "location": "Lorville",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire CRU-L5",
+      "price": 495,
+      "location": "CRU-L5 Beautiful Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor ARC-L4",
+      "price": 495,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor ARC-L1",
+      "price": 495,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire ARC-L1",
+      "price": 495,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 495,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Cubby Area 18",
+      "price": 495,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Tressler",
+      "price": 495,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Everus",
+      "price": 473,
+      "location": "Everus Harbor",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Pyro Gateway (Stanton)",
+      "price": 428,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Pyro Gateway (Stanton)",
+      "price": 428,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Nyx Gateway (Stanton)",
+      "price": 495,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire CRU-L1",
+      "price": 495,
+      "location": "CRU-L1 Ambitious Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor CRU-L1",
+      "price": 495,
+      "location": "CRU-L1 Ambitious Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Skutters Grim",
+      "price": 500,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Astors",
+      "price": 495,
+      "location": "Astor's Clearing",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Dunboro",
+      "price": 495,
+      "location": "Dunboro",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L4",
+      "price": 495,
+      "location": "MIC-L4 Red Crossroads Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Terra Gateway (Stanton)",
+      "price": 495,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Terra Gateway (Stanton)",
+      "price": 495,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Stanton)",
+      "price": 495,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L5",
+      "price": 495,
+      "location": "HUR-L5 High Course Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L4",
+      "price": 495,
+      "location": "HUR-L4 Melodic Fields Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L3",
+      "price": 495,
+      "location": "MIC-L3 Endless Odyssey Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Zephyr",
+      "price": 495,
+      "location": "Zephyr",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To Cloudview Center",
+      "price": 495,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L2",
+      "price": 495,
+      "location": "HUR-L2 Faithful Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L2",
+      "price": 495,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor HUR-L1",
+      "price": 495,
+      "location": "HUR-L1 Green Glade Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L1",
+      "price": 495,
+      "location": "HUR-L1 Green Glade Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Frostbite",
+      "price": 495,
+      "location": "Frostbite",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L1",
+      "price": 495,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L1",
+      "price": 495,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Pulse Laser Pistol Battery (60 Cap)": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 174,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 174,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 174,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 174,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 174,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Quartz Energy SMG Battery (45 cap)": [
+    {
+      "terminal": "FPS Armor Pyro Gateway (Nyx)",
+      "price": 495,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Pyro Gateway (Nyx)",
+      "price": 495,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "FPS Armor Stanton Gateway (Nyx)",
+      "price": 495,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Nyx)",
+      "price": 495,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSSL",
+      "price": 495,
+      "location": "People's Service Station Lambda",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSSA",
+      "price": 495,
+      "location": "People's Service Station Alpha",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSST",
+      "price": 495,
+      "location": "People's Service Station Theta",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSSD",
+      "price": 495,
+      "location": "People's Service Station Delta",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Conscientious Levski",
+      "price": 495,
+      "location": "Levski",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Shop Sacren's Plot",
+      "price": 495,
+      "location": "Sacren's Plot",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Starlight",
+      "price": 495,
+      "location": "Starlight Service Station",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "CZ Checkmate",
+      "price": 625,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Shepherd's Rest",
+      "price": 495,
+      "location": "Shepherd's Rest",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Narena's Rest",
+      "price": 495,
+      "location": "Narena's Rest",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Kabir's Post",
+      "price": 495,
+      "location": "Kabir's Post",
+      "parent": "Ignis",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Frigid Knot",
+      "price": 495,
+      "location": "Frigid Knot",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Prophet's Peak",
+      "price": 495,
+      "location": "Prophet's Peak",
+      "parent": "Adir",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Fallow Field",
+      "price": 495,
+      "location": "Fallow Field",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Goner's Deal",
+      "price": 495,
+      "location": "Goner's Deal",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Ashland",
+      "price": 495,
+      "location": "Ashland",
+      "parent": "Ignis",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Arid Reach",
+      "price": 495,
+      "location": "Arid Reach",
+      "parent": "Monox",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Jackson's Swap",
+      "price": 495,
+      "location": "Jackson's Swap",
+      "parent": "Monox",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Checkmate",
+      "price": 495,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Rod's Fuel",
+      "price": 495,
+      "location": "Rod's Fuel 'N Supplies",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shooters Checkmate",
+      "price": 495,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Gaslight",
+      "price": 495,
+      "location": "Gaslight",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Megumi",
+      "price": 495,
+      "location": "Megumi Refueling",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Stanton Gateway (Pyro)",
+      "price": 495,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Pyro)",
+      "price": 495,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Orbituary",
+      "price": 495,
+      "location": "Orbituary",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shooters Orbituary",
+      "price": 495,
+      "location": "Orbituary",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Rough Landing",
+      "price": 495,
+      "location": "Rough Landing",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Canard View",
+      "price": 495,
+      "location": "Canard View",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Bullock's Reach",
+      "price": 495,
+      "location": "Bullock's Reach",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Blackrock Exchange",
+      "price": 495,
+      "location": "Blackrock Exchange",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Ruin",
+      "price": 495,
+      "location": "Ruin Station",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shooters Ruin",
+      "price": 495,
+      "location": "Ruin Station",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Rat's Nest",
+      "price": 495,
+      "location": "Rat's Nest",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Dudley",
+      "price": 495,
+      "location": "Dudley & Daughters",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Endgame",
+      "price": 495,
+      "location": "Endgame",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Patch City",
+      "price": 495,
+      "location": "Patch City",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Pyro)",
+      "price": 495,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Nyx Gateway (Pyro)",
+      "price": 495,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Kel-To Aspire Grand",
+      "price": 495,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 495,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor CRU-L4",
+      "price": 495,
+      "location": "CRU-L4 Shallow Fields Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Seraphim",
+      "price": 495,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Seraphim",
+      "price": 495,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Tammany and Sons",
+      "price": 473,
+      "location": "Lorville",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire CRU-L5",
+      "price": 495,
+      "location": "CRU-L5 Beautiful Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor ARC-L4",
+      "price": 495,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor ARC-L1",
+      "price": 495,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire ARC-L1",
+      "price": 495,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 495,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Cubby Area 18",
+      "price": 495,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Tressler",
+      "price": 495,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Everus",
+      "price": 473,
+      "location": "Everus Harbor",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Pyro Gateway (Stanton)",
+      "price": 428,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Pyro Gateway (Stanton)",
+      "price": 428,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Nyx Gateway (Stanton)",
+      "price": 495,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire CRU-L1",
+      "price": 495,
+      "location": "CRU-L1 Ambitious Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor CRU-L1",
+      "price": 495,
+      "location": "CRU-L1 Ambitious Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Skutters Grim",
+      "price": 500,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Astors",
+      "price": 495,
+      "location": "Astor's Clearing",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Dunboro",
+      "price": 495,
+      "location": "Dunboro",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L4",
+      "price": 495,
+      "location": "MIC-L4 Red Crossroads Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Terra Gateway (Stanton)",
+      "price": 495,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Terra Gateway (Stanton)",
+      "price": 495,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Stanton)",
+      "price": 495,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L5",
+      "price": 495,
+      "location": "HUR-L5 High Course Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L4",
+      "price": 495,
+      "location": "HUR-L4 Melodic Fields Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L3",
+      "price": 495,
+      "location": "MIC-L3 Endless Odyssey Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Zephyr",
+      "price": 495,
+      "location": "Zephyr",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To Cloudview Center",
+      "price": 495,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L2",
+      "price": 495,
+      "location": "HUR-L2 Faithful Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L2",
+      "price": 495,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor HUR-L1",
+      "price": 495,
+      "location": "HUR-L1 Green Glade Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L1",
+      "price": 495,
+      "location": "HUR-L1 Green Glade Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Frostbite",
+      "price": 495,
+      "location": "Frostbite",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L1",
+      "price": 495,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L1",
+      "price": 495,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Ripper SMG Battery (60 cap)": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 495,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To - Aspire Grand - New Babbage",
+      "price": 495,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L4",
+      "price": 495,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Armor - ARC-L1",
+      "price": 495,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Weapons - ARC-L1",
+      "price": 495,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Yubarev Pistol Battery (10 cap)": [
+    {
+      "terminal": "FPS Armor Pyro Gateway (Nyx)",
+      "price": 149,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Pyro Gateway (Nyx)",
+      "price": 149,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "FPS Armor Stanton Gateway (Nyx)",
+      "price": 149,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Nyx)",
+      "price": 149,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSSL",
+      "price": 149,
+      "location": "People's Service Station Lambda",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSSA",
+      "price": 149,
+      "location": "People's Service Station Alpha",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSST",
+      "price": 149,
+      "location": "People's Service Station Theta",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Weapons & Armor PSSD",
+      "price": 149,
+      "location": "People's Service Station Delta",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Conscientious Levski",
+      "price": 149,
+      "location": "Levski",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Shop Sacren's Plot",
+      "price": 149,
+      "location": "Sacren's Plot",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Starlight",
+      "price": 149,
+      "location": "Starlight Service Station",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "CZ Checkmate",
+      "price": 188,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Shepherd's Rest",
+      "price": 149,
+      "location": "Shepherd's Rest",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Narena's Rest",
+      "price": 149,
+      "location": "Narena's Rest",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Kabir's Post",
+      "price": 149,
+      "location": "Kabir's Post",
+      "parent": "Ignis",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Frigid Knot",
+      "price": 149,
+      "location": "Frigid Knot",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Prophet's Peak",
+      "price": 149,
+      "location": "Prophet's Peak",
+      "parent": "Adir",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Fallow Field",
+      "price": 149,
+      "location": "Fallow Field",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Goner's Deal",
+      "price": 149,
+      "location": "Goner's Deal",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Ashland",
+      "price": 149,
+      "location": "Ashland",
+      "parent": "Ignis",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Arid Reach",
+      "price": 149,
+      "location": "Arid Reach",
+      "parent": "Monox",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Jackson's Swap",
+      "price": 149,
+      "location": "Jackson's Swap",
+      "parent": "Monox",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Checkmate",
+      "price": 149,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Rod's Fuel",
+      "price": 149,
+      "location": "Rod's Fuel 'N Supplies",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shooters Checkmate",
+      "price": 149,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Gaslight",
+      "price": 149,
+      "location": "Gaslight",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Megumi",
+      "price": 149,
+      "location": "Megumi Refueling",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Stanton Gateway (Pyro)",
+      "price": 149,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Pyro)",
+      "price": 149,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Orbituary",
+      "price": 149,
+      "location": "Orbituary",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shooters Orbituary",
+      "price": 149,
+      "location": "Orbituary",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Rough Landing",
+      "price": 149,
+      "location": "Rough Landing",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Canard View",
+      "price": 149,
+      "location": "Canard View",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Bullock's Reach",
+      "price": 149,
+      "location": "Bullock's Reach",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Blackrock Exchange",
+      "price": 149,
+      "location": "Blackrock Exchange",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Ruin",
+      "price": 149,
+      "location": "Ruin Station",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shooters Ruin",
+      "price": 149,
+      "location": "Ruin Station",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Rat's Nest",
+      "price": 149,
+      "location": "Rat's Nest",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Dudley",
+      "price": 149,
+      "location": "Dudley & Daughters",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Endgame",
+      "price": 149,
+      "location": "Endgame",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Patch City",
+      "price": 149,
+      "location": "Patch City",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Pyro)",
+      "price": 149,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Nyx Gateway (Pyro)",
+      "price": 149,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 149,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To Aspire Grand",
+      "price": 149,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor CRU-L4",
+      "price": 149,
+      "location": "CRU-L4 Shallow Fields Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Seraphim",
+      "price": 149,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Seraphim",
+      "price": 149,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Tammany and Sons",
+      "price": 142,
+      "location": "Lorville",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire CRU-L5",
+      "price": 149,
+      "location": "CRU-L5 Beautiful Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor ARC-L4",
+      "price": 149,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor ARC-L1",
+      "price": 149,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire ARC-L1",
+      "price": 149,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 149,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Cubby Area 18",
+      "price": 149,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Tressler",
+      "price": 149,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Everus",
+      "price": 142,
+      "location": "Everus Harbor",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Pyro Gateway (Stanton)",
+      "price": 129,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Pyro Gateway (Stanton)",
+      "price": 129,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Nyx Gateway (Stanton)",
+      "price": 149,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire CRU-L1",
+      "price": 149,
+      "location": "CRU-L1 Ambitious Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor CRU-L1",
+      "price": 149,
+      "location": "CRU-L1 Ambitious Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Skutters Grim",
+      "price": 150,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Astors",
+      "price": 149,
+      "location": "Astor's Clearing",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Dunboro",
+      "price": 149,
+      "location": "Dunboro",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L4",
+      "price": 149,
+      "location": "MIC-L4 Red Crossroads Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Terra Gateway (Stanton)",
+      "price": 149,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Terra Gateway (Stanton)",
+      "price": 149,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Stanton)",
+      "price": 149,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L5",
+      "price": 149,
+      "location": "HUR-L5 High Course Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L4",
+      "price": 149,
+      "location": "HUR-L4 Melodic Fields Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L3",
+      "price": 149,
+      "location": "MIC-L3 Endless Odyssey Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Zephyr",
+      "price": 149,
+      "location": "Zephyr",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To Cloudview Center",
+      "price": 149,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L2",
+      "price": 149,
+      "location": "HUR-L2 Faithful Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L2",
+      "price": 149,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor HUR-L1",
+      "price": 149,
+      "location": "HUR-L1 Green Glade Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L1",
+      "price": 149,
+      "location": "HUR-L1 Green Glade Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Frostbite",
+      "price": 149,
+      "location": "Frostbite",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L1",
+      "price": 149,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L1",
+      "price": 149,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Zenith Laser Sniper Rifle Battery (22 Cap)": [
+    {
+      "terminal": "FPS Armor Pyro Gateway (Nyx)",
+      "price": 347,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Pyro Gateway (Nyx)",
+      "price": 347,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "FPS Armor Stanton Gateway (Nyx)",
+      "price": 347,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Nyx)",
+      "price": 347,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Shop Sacren's Plot",
+      "price": 347,
+      "location": "Sacren's Plot",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Starlight",
+      "price": 347,
+      "location": "Starlight Service Station",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "CZ Checkmate",
+      "price": 438,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Shepherd's Rest",
+      "price": 347,
+      "location": "Shepherd's Rest",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Narena's Rest",
+      "price": 347,
+      "location": "Narena's Rest",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Kabir's Post",
+      "price": 347,
+      "location": "Kabir's Post",
+      "parent": "Ignis",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Frigid Knot",
+      "price": 347,
+      "location": "Frigid Knot",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Prophet's Peak",
+      "price": 347,
+      "location": "Prophet's Peak",
+      "parent": "Adir",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Fallow Field",
+      "price": 347,
+      "location": "Fallow Field",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Goner's Deal",
+      "price": 347,
+      "location": "Goner's Deal",
+      "parent": "Pyro IV",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Ashland",
+      "price": 347,
+      "location": "Ashland",
+      "parent": "Ignis",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Arid Reach",
+      "price": 347,
+      "location": "Arid Reach",
+      "parent": "Monox",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Jackson's Swap",
+      "price": 347,
+      "location": "Jackson's Swap",
+      "parent": "Monox",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Checkmate",
+      "price": 347,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Rod's Fuel",
+      "price": 347,
+      "location": "Rod's Fuel 'N Supplies",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shooters Checkmate",
+      "price": 347,
+      "location": "Checkmate",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Gaslight",
+      "price": 347,
+      "location": "Gaslight",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Megumi",
+      "price": 347,
+      "location": "Megumi Refueling",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Stanton Gateway (Pyro)",
+      "price": 347,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Pyro)",
+      "price": 347,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Orbituary",
+      "price": 347,
+      "location": "Orbituary",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shooters Orbituary",
+      "price": 347,
+      "location": "Orbituary",
+      "parent": "Bloom",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Rough Landing",
+      "price": 347,
+      "location": "Rough Landing",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Canard View",
+      "price": 347,
+      "location": "Canard View",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Bullock's Reach",
+      "price": 347,
+      "location": "Bullock's Reach",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shop Blackrock Exchange",
+      "price": 347,
+      "location": "Blackrock Exchange",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Ruin",
+      "price": 347,
+      "location": "Ruin Station",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Shooters Ruin",
+      "price": 347,
+      "location": "Ruin Station",
+      "parent": "Terminus",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Rat's Nest",
+      "price": 347,
+      "location": "Rat's Nest",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Dudley",
+      "price": 347,
+      "location": "Dudley & Daughters",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Endgame",
+      "price": 347,
+      "location": "Endgame",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Guns Patch City",
+      "price": 347,
+      "location": "Patch City",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Pyro)",
+      "price": 347,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Nyx Gateway (Pyro)",
+      "price": 347,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Kel-To Aspire Grand",
+      "price": 347,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 347,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor CRU-L4",
+      "price": 347,
+      "location": "CRU-L4 Shallow Fields Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Seraphim",
+      "price": 347,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Seraphim",
+      "price": 347,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Tammany and Sons",
+      "price": 331,
+      "location": "Lorville",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire CRU-L5",
+      "price": 347,
+      "location": "CRU-L5 Beautiful Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor ARC-L4",
+      "price": 347,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor ARC-L1",
+      "price": 347,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire ARC-L1",
+      "price": 347,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 347,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Cubby Area 18",
+      "price": 349,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Tressler",
+      "price": 347,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Everus",
+      "price": 331,
+      "location": "Everus Harbor",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Pyro Gateway (Stanton)",
+      "price": 300,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Pyro Gateway (Stanton)",
+      "price": 300,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Nyx Gateway (Stanton)",
+      "price": 347,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire CRU-L1",
+      "price": 347,
+      "location": "CRU-L1 Ambitious Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor CRU-L1",
+      "price": 347,
+      "location": "CRU-L1 Ambitious Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Skutters Grim",
+      "price": 350,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Astors",
+      "price": 347,
+      "location": "Astor's Clearing",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Dunboro",
+      "price": 347,
+      "location": "Dunboro",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L4",
+      "price": 347,
+      "location": "MIC-L4 Red Crossroads Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Terra Gateway (Stanton)",
+      "price": 347,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Terra Gateway (Stanton)",
+      "price": 347,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Stanton)",
+      "price": 347,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L5",
+      "price": 347,
+      "location": "HUR-L5 High Course Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L4",
+      "price": 347,
+      "location": "HUR-L4 Melodic Fields Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L3",
+      "price": 347,
+      "location": "MIC-L3 Endless Odyssey Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Shop Zephyr",
+      "price": 347,
+      "location": "Zephyr",
+      "parent": "Hurston",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Kel-To Cloudview Center",
+      "price": 347,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L2",
+      "price": 347,
+      "location": "HUR-L2 Faithful Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L2",
+      "price": 347,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor HUR-L1",
+      "price": 347,
+      "location": "HUR-L1 Green Glade Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L1",
+      "price": 347,
+      "location": "HUR-L1 Green Glade Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Frostbite",
+      "price": 347,
+      "location": "Frostbite",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L1",
+      "price": 347,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L1",
+      "price": 347,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Argos IX Torpedo": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 23214,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "Calamity XII-CS Torpedo": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 94258,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 94285,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "Calamity XII-EM Torpedo": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 94285,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "EX-T10-CS \"Executor\" Torpedo": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 30785,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 30785,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "EX-T10-EM \"Executor\" Torpedo": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 30785,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 30785,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "EX-T10-IR \"Executor\" Torpedo": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 30785,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 30785,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "EX-T12-CS \"Executor\" Torpedo": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 94285,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 94285,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "EX-T12-EM \"Executor\" Torpedo": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 94285,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 94285,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "EX-T12-IR \"Executor\" Torpedo": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 94285,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 94285,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "Arrester III Missile": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 678,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ship Weapons - Baijini Point",
+      "price": 550,
+      "location": "Baijini Point",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "'Arrow' I Missile": [
+    {
+      "terminal": "Ship Weapons - MIC-L2",
+      "price": 240,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Assailant IV Missile": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 1070,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "'Chaos' III Missile": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 735,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ship Weapons - MIC-L2",
+      "price": 735,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Dominator II-G Missile": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 175,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's Area 18",
+      "price": 175,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 175,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ship Weapons Showroom Orison ",
+      "price": 175,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's GrimHEX",
+      "price": 175,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    }
+  ],
+  "Dominator II Missile": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 350,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "Thunderbolt III Missile": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 678,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "Vanquisher X-CS Torpedo": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 30785,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 30785,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "Vanquisher X-EM Torpedo": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 30785,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 30785,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "Vanquisher X-IR Torpedo": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 30785,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 30785,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "Reaper V-G Missile": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 940,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's Area 18",
+      "price": 940,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 940,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ship Weapons Showroom Orison ",
+      "price": 940,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's GrimHEX",
+      "price": 940,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    }
+  ],
+  "Reaper V Missile": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 1875,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "Typhoon IX Torpedo": [
+    {
+      "terminal": "Dumper's Depot - Area 18",
+      "price": 17595,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 23214,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "Arclight \"Nightstalker\" Pistol": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 969,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "Avenger Stalker PHB Flight Blade": [
+    {
+      "terminal": "Omega New Babbage",
+      "price": 237500,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "Avenger Stalker TSB Flight Blade": [
+    {
+      "terminal": "Omega New Babbage",
+      "price": 237500,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "Devastator \"Nightstalker\" Shotgun": [
+    {
+      "terminal": "Live Fire Pyro Gateway (Nyx)",
+      "price": 4622,
+      "location": "Pyro Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Nyx)",
+      "price": 4622,
+      "location": "Stanton Gateway",
+      "parent": "Nyx",
+      "system": "Nyx"
+    },
+    {
+      "terminal": "Live Fire Stanton Gateway (Pyro)",
+      "price": 4622,
+      "location": "Stanton Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Pyro)",
+      "price": 4622,
+      "location": "Nyx Gateway",
+      "parent": "Pyro",
+      "system": "Pyro"
+    },
+    {
+      "terminal": "FPS Armor Seraphim",
+      "price": 4622,
+      "location": "Seraphim Station",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire ARC-L1",
+      "price": 4085,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor Tressler",
+      "price": 4151,
+      "location": "Port Tressler",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Pyro Gateway (Stanton)",
+      "price": 4397,
+      "location": "Pyro Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Terra Gateway (Stanton)",
+      "price": 4622,
+      "location": "Terra Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire Nyx Gateway (Stanton)",
+      "price": 4622,
+      "location": "Nyx Gateway",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L3",
+      "price": 4622,
+      "location": "MIC-L3 Endless Odyssey Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor MIC-L1",
+      "price": 4085,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L1",
+      "price": 4622,
+      "location": "MIC-L1 Shallow Frontier Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Gallant \"Nightstalker\" Rifle": [
+    {
+      "terminal": "FPS Armor ARC-L4",
+      "price": 4798,
+      "location": "ARC-L4 Faint Glen Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor ARC-L1",
+      "price": 5095,
+      "location": "ARC-L1 Wide Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire HUR-L1",
+      "price": 4798,
+      "location": "HUR-L1 Green Glade Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "FPS Armor HUR-L1",
+      "price": 4798,
+      "location": "HUR-L1 Green Glade Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire CRU-L1",
+      "price": 5095,
+      "location": "CRU-L1 Ambitious Dream Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Live Fire MIC-L2",
+      "price": 4798,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "P8-SC \"Nightstalker\" SMG": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 3233,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 3233,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "Stalker V-G Missile": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 940,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's Area 18",
+      "price": 940,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 940,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ship Weapons Showroom Orison ",
+      "price": 940,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's GrimHEX",
+      "price": 940,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    }
+  ],
+  "Stalker V Missile": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 2474,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "Tempest II-G Missile": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 160,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's Area 18",
+      "price": 160,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 160,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ship Weapons Showroom Orison ",
+      "price": 160,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's GrimHEX",
+      "price": 160,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    }
+  ],
+  "Tempest II Missile": [
+    {
+      "terminal": "Dumper's Depot - Area 18",
+      "price": 389,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "Ignite II-G Missile": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 160,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's Area 18",
+      "price": 160,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 160,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ship Weapons Showroom Orison ",
+      "price": 160,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's GrimHEX",
+      "price": 160,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    }
+  ],
+  "Ignite II Missile": [
+    {
+      "terminal": "Dumper's Depot - Area 18",
+      "price": 389,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ship Weapons - MIC-L2",
+      "price": 315,
+      "location": "MIC-L2 Long Forest Station",
+      "parent": "Stanton",
+      "system": "Stanton"
+    }
+  ],
+  "Marksman I-G Missile": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 100,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's Area 18",
+      "price": 100,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 100,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ship Weapons Showroom Orison ",
+      "price": 100,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's GrimHEX",
+      "price": 100,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    }
+  ],
+  "Marksman I Missile": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 209,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "Rattler II Missile": [
+    {
+      "terminal": "Dumper's Depot - Area 18",
+      "price": 424,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ship Weapons - Baijini Point",
+      "price": 315,
+      "location": "Baijini Point",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "Spark I-G Missile": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 90,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's Area 18",
+      "price": 90,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 90,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ship Weapons Showroom Orison ",
+      "price": 90,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's GrimHEX",
+      "price": 90,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    }
+  ],
+  "SparkJet Pro": [
+    {
+      "terminal": "Dumper's Depot - Area 18",
+      "price": 44000,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    }
+  ],
+  "Pioneer I-G Missile": [
+    {
+      "terminal": "CenterMass New Babbage",
+      "price": 100,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's Area 18",
+      "price": 100,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass Area 18",
+      "price": 100,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Ship Weapons Showroom Orison ",
+      "price": 100,
+      "location": "Orison",
+      "parent": "Crusader",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "Dumper's GrimHEX",
+      "price": 100,
+      "location": "Grim HEX",
+      "parent": "Yela",
+      "system": "Stanton"
+    }
+  ],
+  "Pioneer I Missile": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 2672,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "Colossus": [
+    {
+      "terminal": "Omega Pro - New Babbage",
+      "price": 113400,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "Colossus Bomb": [
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 83125,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ],
+  "Seeker IX Torpedo": [
+    {
+      "terminal": "Dumper's Depot - Area 18",
+      "price": 17595,
+      "location": "Area18",
+      "parent": "ArcCorp",
+      "system": "Stanton"
+    },
+    {
+      "terminal": "CenterMass - New Babbage",
+      "price": 17595,
+      "location": "New Babbage",
+      "parent": "microTech",
+      "system": "Stanton"
+    }
+  ]
+}

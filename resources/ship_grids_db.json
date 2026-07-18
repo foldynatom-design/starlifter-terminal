@@ -1,0 +1,2127 @@
+{
+  "Origin 100i": {
+    "manufacturer": "Origin",
+    "name": "Origin 100i",
+    "capacity": 2,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ]
+  },
+  "Origin 125a": {
+    "manufacturer": "Origin",
+    "name": "Origin 125a",
+    "capacity": 2,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ]
+  },
+  "Origin 135c": {
+    "manufacturer": "Origin",
+    "name": "Origin 135c",
+    "capacity": 6,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 5,
+            "width": 1,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ]
+  },
+  "Origin 300i": {
+    "manufacturer": "Origin",
+    "name": "Origin 300i",
+    "capacity": 8,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 4
+          }
+        ]
+      }
+    ]
+  },
+  "Origin 315p": {
+    "manufacturer": "Origin",
+    "name": "Origin 315p",
+    "capacity": 12,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 2
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 3,
+            "width": 2,
+            "height": 1,
+            "length": 4
+          }
+        ]
+      }
+    ]
+  },
+  "Origin 325a": {
+    "manufacturer": "Origin",
+    "name": "Origin 325a",
+    "capacity": 4,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ]
+  },
+  "Origin 350r": {
+    "manufacturer": "Origin",
+    "name": "Origin 350r",
+    "capacity": 4,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ]
+  },
+  "Origin 400i": {
+    "manufacturer": "Origin",
+    "name": "Origin 400i",
+    "capacity": 42,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 2,
+            "length": 7
+          }
+        ]
+      }
+    ]
+  },
+  "Origin 600i Explorer": {
+    "manufacturer": "Origin",
+    "name": "Origin 600i Explorer",
+    "capacity": 44,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 7,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 4,
+            "width": 1,
+            "height": 2,
+            "length": 1
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 4,
+            "width": 1,
+            "height": 2,
+            "length": 1
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 8,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "width": 1,
+            "height": 3,
+            "length": 2
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 3,
+            "length": 1
+          },
+          {
+            "x": 7,
+            "y": 0,
+            "z": 2,
+            "width": 1,
+            "height": 3,
+            "length": 2
+          }
+        ]
+      }
+    ]
+  },
+  "Origin 890 Jump": {
+    "manufacturer": "Origin",
+    "name": "Origin 890 Jump",
+    "capacity": 388,
+    "groups": [
+      {
+        "x": 2,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 4,
+            "length": 12
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 15,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 2,
+            "length": 5
+          },
+          {
+            "x": 7,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 2,
+            "length": 5
+          }
+        ]
+      },
+      {
+        "x": 2,
+        "z": 23,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 5
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 5
+          }
+        ]
+      },
+      {
+        "x": 3,
+        "z": 31,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 5
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 5
+          }
+        ]
+      }
+    ]
+  },
+  "Crusader A2 Hercules": {
+    "manufacturer": "Crusader",
+    "name": "Crusader A2 Hercules",
+    "capacity": 216,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 2,
+            "length": 18
+          }
+        ]
+      }
+    ]
+  },
+  "Anvil Asgard": {
+    "manufacturer": "Anvil",
+    "name": "Anvil Asgard",
+    "capacity": 180,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 4,
+            "length": 9
+          }
+        ]
+      }
+    ]
+  },
+  "Aegis Avenger Titan": {
+    "manufacturer": "Aegis",
+    "name": "Aegis Avenger Titan",
+    "capacity": 8,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 4
+          }
+        ]
+      }
+    ]
+  },
+  "Crusader C2 Hercules": {
+    "manufacturer": "Crusader",
+    "name": "Crusader C2 Hercules",
+    "capacity": 696,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 8,
+            "height": 4,
+            "length": 15
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "z": 16,
+            "width": 6,
+            "height": 4,
+            "length": 9
+          }
+        ]
+      }
+    ]
+  },
+  "Anvil C8 Pisces": {
+    "manufacturer": "Anvil",
+    "name": "Anvil C8 Pisces",
+    "capacity": 4,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ]
+  },
+  "Anvil C8X Pisces": {
+    "manufacturer": "Anvil",
+    "name": "Anvil C8X Pisces",
+    "capacity": 4,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ]
+  },
+  "Anvil Carrack": {
+    "manufacturer": "Anvil",
+    "name": "Anvil Carrack",
+    "capacity": 456,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 3
+          },
+          {
+            "x": 10,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 7,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 3
+          },
+          {
+            "x": 10,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 14,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 3
+          },
+          {
+            "x": 10,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          }
+        ]
+      }
+    ]
+  },
+  "Drake Caterpillar": {
+    "manufacturer": "Drake",
+    "name": "Drake Caterpillar",
+    "capacity": 576,
+    "groups": [
+      {
+        "x": 1,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 2,
+            "length": 6
+          },
+          {
+            "x": 0,
+            "y": 2,
+            "z": 0,
+            "width": 5,
+            "height": 1,
+            "length": 4
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 9,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 4,
+            "width": 5,
+            "height": 4,
+            "length": 1
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 18,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 4,
+            "width": 5,
+            "height": 4,
+            "length": 1
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 27,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 4,
+            "width": 5,
+            "height": 4,
+            "length": 1
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 36,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 4,
+            "width": 5,
+            "height": 4,
+            "length": 1
+          }
+        ]
+      }
+    ]
+  },
+  "Drake Clipper": {
+    "manufacturer": "Drake",
+    "name": "Drake Clipper",
+    "capacity": 12,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 3
+          }
+        ]
+      }
+    ]
+  },
+  "Drake Corsair": {
+    "manufacturer": "Drake",
+    "name": "Drake Corsair",
+    "capacity": 72,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 3,
+            "length": 6
+          }
+        ]
+      }
+    ]
+  },
+  "Argo CSV-SM": {
+    "manufacturer": "Argo",
+    "name": "Argo CSV-SM",
+    "capacity": 4,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ]
+  },
+  "Drake Cutlass Black": {
+    "manufacturer": "Drake",
+    "name": "Drake Cutlass Black",
+    "capacity": 46,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 1.5,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 4,
+            "width": 4,
+            "height": 2,
+            "length": 5
+          }
+        ]
+      }
+    ]
+  },
+  "Drake Cutlass Blue": {
+    "manufacturer": "Drake",
+    "name": "Drake Cutlass Blue",
+    "capacity": 12,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3
+          }
+        ]
+      }
+    ]
+  },
+  "Drake Cutlass Red": {
+    "manufacturer": "Drake",
+    "name": "Drake Cutlass Red",
+    "capacity": 12,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3
+          }
+        ]
+      }
+    ]
+  },
+  "Drake Cutter": {
+    "manufacturer": "Drake",
+    "name": "Drake Cutter",
+    "capacity": 4,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 2
+          }
+        ]
+      }
+    ]
+  },
+  "Drake Cutter Rambler": {
+    "manufacturer": "Drake",
+    "name": "Drake Cutter Rambler",
+    "capacity": 2,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 1
+          }
+        ]
+      }
+    ]
+  },
+  "Drake Cutter Scout": {
+    "manufacturer": "Drake",
+    "name": "Drake Cutter Scout",
+    "capacity": 2,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 1
+          }
+        ]
+      }
+    ]
+  },
+  "Drake Golem Ox": {
+    "manufacturer": "Drake",
+    "name": "Drake Golem Ox",
+    "capacity": 64,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 8
+          }
+        ]
+      }
+    ]
+  },
+  "Aegis Hammerhead": {
+    "manufacturer": "Aegis",
+    "name": "Aegis Hammerhead",
+    "capacity": 64,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 8
+          }
+        ]
+      }
+    ]
+  },
+  "Aegis Idris-M": {
+    "manufacturer": "Aegis",
+    "name": "Aegis Idris-M",
+    "capacity": 1326,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 6,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 11,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 19,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 24,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 32,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 37,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 47,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 6,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 11,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 19,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 24,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 32,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 37,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 47,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          }
+        ]
+      },
+      {
+        "x": 23,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 7,
+            "width": 18,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 1,
+            "width": 14,
+            "height": 2,
+            "length": 5
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 1
+          },
+          {
+            "x": 6.5,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 2,
+            "length": 1
+          },
+          {
+            "x": 14,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 1
+          }
+        ]
+      }
+    ]
+  },
+  "Aegis Idris-P": {
+    "manufacturer": "Aegis",
+    "name": "Aegis Idris-P",
+    "capacity": 1374,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 6,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 11,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 19,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 24,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 32,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 37,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 47,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 6,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 11,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 19,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 24,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 32,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 37,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 47,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          }
+        ]
+      },
+      {
+        "x": 23,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 7,
+            "width": 18,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 1,
+            "width": 14,
+            "height": 2,
+            "length": 5
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 1
+          },
+          {
+            "x": 6.5,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 2,
+            "length": 1
+          },
+          {
+            "x": 14,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 1
+          }
+        ]
+      },
+      {
+        "x": 23,
+        "z": 14,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 4,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 2,
+            "length": 4
+          }
+        ]
+      }
+    ]
+  },
+  "Crusader Intrepid": {
+    "manufacturer": "Crusader",
+    "name": "Crusader Intrepid",
+    "capacity": 8,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 4
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 4
+          }
+        ]
+      }
+    ]
+  },
+  "Anvil Liberator [Concept]": {
+    "manufacturer": "Anvil",
+    "name": "Anvil Liberator [Concept]",
+    "capacity": 400,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 4,
+            "length": 10
+          }
+        ]
+      },
+      {
+        "x": 8,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 4,
+            "length": 10
+          }
+        ]
+      }
+    ]
+  },
+  "Crusader M2 Hercules": {
+    "manufacturer": "Crusader",
+    "name": "Crusader M2 Hercules",
+    "capacity": 522,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 8,
+            "height": 3,
+            "length": 15
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "z": 16,
+            "width": 6,
+            "height": 3,
+            "length": 9
+          }
+        ]
+      }
+    ]
+  },
+  "Origin M80": {
+    "manufacturer": "Origin",
+    "name": "Origin M80",
+    "capacity": 2,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ]
+  },
+  "Banu Merchantman [Concept]": {
+    "manufacturer": "Banu",
+    "name": "Banu Merchantman [Concept]",
+    "capacity": 2880,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 10,
+            "length": 24
+          }
+        ]
+      },
+      {
+        "x": 9,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 10,
+            "length": 24
+          }
+        ]
+      }
+    ]
+  },
+  "Argo MOLE": {
+    "manufacturer": "Argo",
+    "name": "Argo MOLE",
+    "capacity": 32,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 4
+          }
+        ]
+      }
+    ]
+  },
+  "Argo MOTH": {
+    "manufacturer": "Argo",
+    "name": "Argo MOTH",
+    "capacity": 224,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 6
+          },
+          {
+            "x": 6,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 6
+          }
+        ]
+      },
+      {
+        "x": 3,
+        "z": 9,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 4
+          }
+        ]
+      }
+    ]
+  },
+  "Argo MPUV-C": {
+    "manufacturer": "Argo",
+    "name": "Argo MPUV-C",
+    "capacity": 2,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ]
+  },
+  "Argo MPUV-T": {
+    "manufacturer": "Argo",
+    "name": "Argo MPUV-T",
+    "capacity": 16,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4
+          }
+        ]
+      }
+    ]
+  },
+  "Crusader Mercury Star Runner": {
+    "manufacturer": "Crusader",
+    "name": "Crusader Mercury Star Runner",
+    "capacity": 114,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 3,
+            "length": 6
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3
+          }
+        ]
+      }
+    ]
+  },
+  "Drake Mule": {
+    "manufacturer": "Drake",
+    "name": "Drake Mule",
+    "capacity": 1,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 1
+          }
+        ]
+      }
+    ]
+  },
+  "Consolidated Outland Nomad": {
+    "manufacturer": "Consolidated Outland",
+    "name": "Consolidated Outland Nomad",
+    "capacity": 24,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 2,
+            "length": 4
+          }
+        ]
+      }
+    ]
+  },
+  "Anvil Paladin": {
+    "manufacturer": "Anvil",
+    "name": "Anvil Paladin",
+    "capacity": 4,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 4
+          }
+        ]
+      }
+    ]
+  },
+  "Esperia Prowler Utility": {
+    "manufacturer": "Esperia",
+    "name": "Esperia Prowler Utility",
+    "capacity": 32,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 4,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4
+          }
+        ]
+      }
+    ]
+  },
+  "Argo Raft": {
+    "manufacturer": "Argo",
+    "name": "Argo Raft",
+    "capacity": 192,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 8,
+            "height": 2,
+            "length": 12
+          }
+        ]
+      }
+    ]
+  },
+  "Aegis Reclaimer": {
+    "manufacturer": "Aegis",
+    "name": "Aegis Reclaimer",
+    "capacity": 420,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 2,
+            "length": 7
+          },
+          {
+            "x": 7,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 2,
+            "length": 7
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 11,
+            "width": 5,
+            "height": 2,
+            "length": 5
+          },
+          {
+            "x": 7,
+            "y": 0,
+            "z": 11,
+            "width": 5,
+            "height": 2,
+            "length": 5
+          }
+        ]
+      },
+      {
+        "x": 15,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 3,
+            "length": 2
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 4,
+            "width": 3,
+            "height": 3,
+            "length": 3
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 9,
+            "width": 3,
+            "height": 3,
+            "length": 3
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 14,
+            "width": 3,
+            "height": 3,
+            "length": 2
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 3,
+            "length": 2
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 4,
+            "width": 3,
+            "height": 3,
+            "length": 3
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 9,
+            "width": 3,
+            "height": 3,
+            "length": 3
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 14,
+            "width": 3,
+            "height": 3,
+            "length": 2
+          }
+        ]
+      }
+    ]
+  },
+  "Aegis Redeemer": {
+    "manufacturer": "Aegis",
+    "name": "Aegis Redeemer",
+    "capacity": 2,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 1
+          }
+        ]
+      }
+    ]
+  },
+  "Aegis Retaliator": {
+    "manufacturer": "Aegis",
+    "name": "Aegis Retaliator",
+    "capacity": 74,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 2,
+            "length": 6
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 9,
+        "grids": [
+          {
+            "x": 1,
+            "y": 0,
+            "z": 1,
+            "width": 2,
+            "height": 2,
+            "length": 6
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 1
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 1,
+            "width": 1,
+            "height": 2,
+            "length": 5
+          }
+        ]
+      }
+    ]
+  },
+  "Argo SRV": {
+    "manufacturer": "Argo",
+    "name": "Argo SRV",
+    "capacity": 12,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 1,
+            "length": 3
+          }
+        ]
+      }
+    ]
+  },
+  "Gatac Syulen": {
+    "manufacturer": "Gatac",
+    "name": "Gatac Syulen",
+    "capacity": 6,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ]
+  },
+  "Aegis Tiburon": {
+    "manufacturer": "Aegis",
+    "name": "Aegis Tiburon",
+    "capacity": 64,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 8
+          }
+        ]
+      }
+    ]
+  },
+  "Gatac Tyilui": {
+    "manufacturer": "Gatac",
+    "name": "Gatac Tyilui",
+    "capacity": 96,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 6
+          }
+        ]
+      },
+      {
+        "x": 7,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 6
+          }
+        ]
+      }
+    ]
+  },
+  "Anvil Valkyrie": {
+    "manufacturer": "Anvil",
+    "name": "Anvil Valkyrie",
+    "capacity": 90,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 3,
+            "length": 6
+          }
+        ]
+      }
+    ]
+  },
+  "Drake Vulture": {
+    "manufacturer": "Drake",
+    "name": "Drake Vulture",
+    "capacity": 13,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 1
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 1,
+            "width": 2,
+            "height": 2,
+            "length": 3
+          }
+        ]
+      }
+    ]
+  }
+}

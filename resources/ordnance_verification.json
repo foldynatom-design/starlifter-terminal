@@ -1,0 +1,339 @@
+{
+  "results": [
+    {
+      "name": "Pioneer I Missile",
+      "db": 1,
+      "wiki": 8,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Spark I Missile",
+      "db": 1,
+      "wiki": 8,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Arrow I Missile",
+      "db": 1,
+      "wiki": 8,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Marksman I Missile",
+      "db": 1,
+      "wiki": 8,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Tempest II Missile",
+      "db": 1,
+      "wiki": 1,
+      "status": "found",
+      "mismatch": false
+    },
+    {
+      "name": "Ignite II Missile",
+      "db": 1,
+      "wiki": 1,
+      "status": "found",
+      "mismatch": false
+    },
+    {
+      "name": "Dominator II Missile",
+      "db": 1,
+      "wiki": 1,
+      "status": "found",
+      "mismatch": false
+    },
+    {
+      "name": "Rattler II Missile",
+      "db": 1,
+      "wiki": 1,
+      "status": "found",
+      "mismatch": false
+    },
+    {
+      "name": "Bullet II Missile",
+      "db": 1,
+      "wiki": 1,
+      "status": "found",
+      "mismatch": false
+    },
+    {
+      "name": "Arrester III Missile",
+      "db": 2,
+      "wiki": 8,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Thunderbolt III Missile",
+      "db": 2,
+      "wiki": 8,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Viper III Missile",
+      "db": 2,
+      "wiki": 8,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Chaos III Missile",
+      "db": 2,
+      "wiki": 8,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Raptor IV Missile",
+      "db": 2,
+      "wiki": 8,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Pathfinder IV Missile",
+      "db": 2,
+      "wiki": 8,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Dragon IV Missile",
+      "db": 2,
+      "wiki": 8,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Assailant IV Missile",
+      "db": 2,
+      "wiki": 8,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Reaper V Missile",
+      "db": 4,
+      "wiki": 16,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Stalker V Missile",
+      "db": 4,
+      "wiki": 16,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Scimitar V Missile",
+      "db": 4,
+      "wiki": 16,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Valkyrie V Missile",
+      "db": 4,
+      "wiki": 16,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Hellion VII Missile",
+      "db": 4,
+      "wiki": 16,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Seeker IX Torpedo",
+      "db": 8,
+      "wiki": 24,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Argos IX Torpedo",
+      "db": 8,
+      "wiki": 24,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Typhoon IX Torpedo",
+      "db": 8,
+      "wiki": 24,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Vanquisher X-CS Torpedo",
+      "db": 16,
+      "wiki": 32,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Vanquisher X-EM Torpedo",
+      "db": 16,
+      "wiki": 32,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Vanquisher X-IR Torpedo",
+      "db": 16,
+      "wiki": 32,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "EX-T10-CS Executor Torpedo",
+      "db": "NOT IN DB",
+      "wiki": 32,
+      "status": "found",
+      "mismatch": false
+    },
+    {
+      "name": "EX-T10-EM Executor Torpedo",
+      "db": "NOT IN DB",
+      "wiki": 32,
+      "status": "found",
+      "mismatch": false
+    },
+    {
+      "name": "EX-T10-IR Executor Torpedo",
+      "db": "NOT IN DB",
+      "wiki": 32,
+      "status": "found",
+      "mismatch": false
+    },
+    {
+      "name": "VT-T10 Veritas Torpedo",
+      "db": "NOT IN DB",
+      "wiki": 32,
+      "status": "found",
+      "mismatch": false
+    },
+    {
+      "name": "Calamity XII-CS Torpedo",
+      "db": 32,
+      "wiki": 32,
+      "status": "found",
+      "mismatch": false
+    },
+    {
+      "name": "Calamity XII-IR Torpedo",
+      "db": 32,
+      "wiki": 32,
+      "status": "found",
+      "mismatch": false
+    },
+    {
+      "name": "EX-T12-CS Executor Torpedo",
+      "db": "NOT IN DB",
+      "wiki": 32,
+      "status": "found",
+      "mismatch": false
+    },
+    {
+      "name": "EX-T12-EM Executor Torpedo",
+      "db": "NOT IN DB",
+      "wiki": 32,
+      "status": "found",
+      "mismatch": false
+    },
+    {
+      "name": "EX-T12-IR Executor Torpedo",
+      "db": "NOT IN DB",
+      "wiki": 32,
+      "status": "found",
+      "mismatch": false
+    },
+    {
+      "name": "Stormburst Bomb",
+      "db": 4,
+      "wiki": 8,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Colossus Bomb",
+      "db": 16,
+      "wiki": 32,
+      "status": "found",
+      "mismatch": true
+    },
+    {
+      "name": "Thunderball Bomb",
+      "db": 2,
+      "wiki": 8,
+      "status": "found",
+      "mismatch": true
+    }
+  ],
+  "errors": [
+    {
+      "name": "Viper I Missile",
+      "wiki_page": "Viper_I_Missile",
+      "error": "HTTP error: HTTP Error 404: Not Found"
+    },
+    {
+      "name": "Taskforce I Missile",
+      "wiki_page": "Taskforce_I_Missile",
+      "error": "HTTP error: HTTP Error 404: Not Found"
+    },
+    {
+      "name": "Marksman II Missile",
+      "wiki_page": "Marksman_II_Missile",
+      "error": "HTTP error: HTTP Error 404: Not Found"
+    },
+    {
+      "name": "Strikeforce II Missile",
+      "wiki_page": "Strikeforce_II_Missile",
+      "error": "HTTP error: HTTP Error 404: Not Found"
+    },
+    {
+      "name": "Stalker IV Missile",
+      "wiki_page": "Stalker_IV_Missile",
+      "error": "HTTP error: HTTP Error 404: Not Found"
+    }
+  ],
+  "corrections": {
+    "pioneer i missile": 8,
+    "spark i missile": 8,
+    "arrow i missile": 8,
+    "marksman i missile": 8,
+    "arrester iii missile": 8,
+    "thunderbolt iii missile": 8,
+    "viper iii missile": 8,
+    "chaos iii missile": 8,
+    "raptor iv missile": 8,
+    "pathfinder iv missile": 8,
+    "dragon iv missile": 8,
+    "assailant iv missile": 8,
+    "reaper v missile": 16,
+    "stalker v missile": 16,
+    "scimitar v missile": 16,
+    "valkyrie v missile": 16,
+    "hellion vii missile": 16,
+    "seeker ix torpedo": 24,
+    "argos ix torpedo": 24,
+    "typhoon ix torpedo": 24,
+    "vanquisher x-cs torpedo": 32,
+    "vanquisher x-em torpedo": 32,
+    "vanquisher x-ir torpedo": 32,
+    "stormburst bomb": 8,
+    "colossus bomb": 32,
+    "thunderball bomb": 8
+  }
+}

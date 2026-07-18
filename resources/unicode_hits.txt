@@ -1,0 +1,7 @@
+L1221: '—' -> '--' |     # Note: _FONT_CACHE injection disabled — fpdf2 font subsetting
+L1428: '—' -> '--' |         # 1) Commodity trade DB — prefer nearby locations
+L1527: '⚠' -> '[!]' |                     qt_str = f" (⚠ WORMHOLE ~{qt} min)"
+L1221: '—' -> '--' |     # Note: _FONT_CACHE injection disabled — fpdf2 font subsetting
+L1428: '—' -> '--' |         # 1) Commodity trade DB — prefer nearby locations
+L1527: '⚠' -> '[!]' |                     qt_str = f" (⚠ WORMHOLE ~{qt} min)"
+source/pdf_engine.py L1527:                     qt_str = f" (⚠ WORMHOLE ~{qt} min)"

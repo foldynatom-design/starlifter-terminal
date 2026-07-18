@@ -1,0 +1,275 @@
+{
+  "results": [
+    {
+      "name": "Pioneer I Missile",
+      "db": 8,
+      "wiki_scu": 0.125,
+      "wiki_label": "1/8",
+      "status": "fraction_box",
+      "mismatch": true
+    },
+    {
+      "name": "Spark I Missile",
+      "db": 8,
+      "wiki_scu": 0.125,
+      "wiki_label": "1/8",
+      "status": "fraction_box",
+      "mismatch": true
+    },
+    {
+      "name": "Arrow I Missile",
+      "db": 8,
+      "wiki_scu": 0.125,
+      "wiki_label": "1/8",
+      "status": "fraction_box",
+      "mismatch": true
+    },
+    {
+      "name": "Marksman I Missile",
+      "db": 8,
+      "wiki_scu": 0.125,
+      "wiki_label": "1/8",
+      "status": "fraction_box",
+      "mismatch": true
+    },
+    {
+      "name": "Tempest II Missile",
+      "db": 1,
+      "wiki_scu": 1.0,
+      "wiki_label": "1",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Ignite II Missile",
+      "db": 1,
+      "wiki_scu": 1.0,
+      "wiki_label": "1",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Dominator II Missile",
+      "db": 1,
+      "wiki_scu": 1.0,
+      "wiki_label": "1",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Rattler II Missile",
+      "db": 1,
+      "wiki_scu": 1.0,
+      "wiki_label": "1",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Bullet II Missile",
+      "db": 1,
+      "wiki_scu": 1.0,
+      "wiki_label": "1",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Arrester III Missile",
+      "db": 8,
+      "wiki_scu": 8.0,
+      "wiki_label": "8",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Thunderbolt III Missile",
+      "db": 8,
+      "wiki_scu": 8.0,
+      "wiki_label": "8",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Viper III Missile",
+      "db": 8,
+      "wiki_scu": 8.0,
+      "wiki_label": "8",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Chaos III Missile",
+      "db": 8,
+      "wiki_scu": 8.0,
+      "wiki_label": "8",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Raptor IV Missile",
+      "db": 8,
+      "wiki_scu": 8.0,
+      "wiki_label": "8",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Pathfinder IV Missile",
+      "db": 8,
+      "wiki_scu": 8.0,
+      "wiki_label": "8",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Dragon IV Missile",
+      "db": 8,
+      "wiki_scu": 8.0,
+      "wiki_label": "8",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Assailant IV Missile",
+      "db": 8,
+      "wiki_scu": 8.0,
+      "wiki_label": "8",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Reaper V Missile",
+      "db": 16,
+      "wiki_scu": 16.0,
+      "wiki_label": "16",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Stalker V Missile",
+      "db": 16,
+      "wiki_scu": 16.0,
+      "wiki_label": "16",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Scimitar V Missile",
+      "db": 16,
+      "wiki_scu": 16.0,
+      "wiki_label": "16",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Valkyrie V Missile",
+      "db": 16,
+      "wiki_scu": 16.0,
+      "wiki_label": "16",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Hellion VII Missile",
+      "db": 16,
+      "wiki_scu": 16.0,
+      "wiki_label": "16",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Seeker IX Torpedo",
+      "db": 24,
+      "wiki_scu": 24.0,
+      "wiki_label": "24",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Argos IX Torpedo",
+      "db": 24,
+      "wiki_scu": 24.0,
+      "wiki_label": "24",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Typhoon IX Torpedo",
+      "db": 24,
+      "wiki_scu": 24.0,
+      "wiki_label": "24",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Vanquisher X-CS Torpedo",
+      "db": 32,
+      "wiki_scu": 32.0,
+      "wiki_label": "32",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Vanquisher X-EM Torpedo",
+      "db": 32,
+      "wiki_scu": 32.0,
+      "wiki_label": "32",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Vanquisher X-IR Torpedo",
+      "db": 32,
+      "wiki_scu": 32.0,
+      "wiki_label": "32",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Calamity XII-CS Torpedo",
+      "db": 32,
+      "wiki_scu": 32.0,
+      "wiki_label": "32",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Calamity XII-IR Torpedo",
+      "db": 32,
+      "wiki_scu": 32.0,
+      "wiki_label": "32",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Stormburst Bomb",
+      "db": 8,
+      "wiki_scu": 8.0,
+      "wiki_label": "8",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Colossus Bomb",
+      "db": 32,
+      "wiki_scu": 32.0,
+      "wiki_label": "32",
+      "status": "whole_box",
+      "mismatch": false
+    },
+    {
+      "name": "Thunderball Bomb",
+      "db": 8,
+      "wiki_scu": 8.0,
+      "wiki_label": "8",
+      "status": "whole_box",
+      "mismatch": false
+    }
+  ],
+  "errors": [],
+  "corrections": {
+    "pioneer i missile": 0.125,
+    "spark i missile": 0.125,
+    "arrow i missile": 0.125,
+    "marksman i missile": 0.125
+  }
+}
