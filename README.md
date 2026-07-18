@@ -147,7 +147,13 @@ Starlifter_Terminal/          ← Install location (%LOCALAPPDATA%)
 
 ---
 
-## ⚠️ Known Limitations
+## ⚠️ Known Issues
+
+- **Category filter autofill** — The category filter for writing/search/delete can be a bit janky. It works with patience when trying to autofill entries.
+
+---
+
+## 📌 Known Limitations
 
 - Requires an active internet connection for **live UEX trade data** (offline mode uses cached DB)
 - Intro video may not play on systems without media codecs (app continues normally)
