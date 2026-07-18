@@ -982,6 +982,174 @@ main.RequisitionApp.add_cargo_row_to_ui = _patched_add_cargo_row
 print(f"[UI_PANEL] add_cargo_row_to_ui patched (slang + auto-battery) OK",
       file=__import__('sys').stderr)
 
+
+# ══════════════════════════════════════════════════════════════════════════
+# SECTION: Clipboard Paste Fallback — structured fix + raw slang lines
+# ══════════════════════════════════════════════════════════════════════════
+import re as _re
+
+_orig_import_clipboard = main.RequisitionApp.import_from_clipboard
+
+# Regex for structured lines WITHOUT the leading dash
+_STRUCT_NO_DASH = _re.compile(
+    r'^([^|]+)\|\s*Qty:\s*\[?\s*([\d.\s?]+)\s*\]?\s*\|\s*Box:\s*([^|]+)\|\s*Price:\s*([\d.]+)\s*(?:aUEC)?\s*(?:\[COURTESY\])?\s*\|\s*(\w+)?',
+    _re.IGNORECASE
+)
+
+def _patched_import_from_clipboard(self):
+    """Wraps import_from_clipboard to handle:
+    1. Structured lines missing the leading '- ' dash (preprocess + original parser)
+       → clears existing rows first (full replace).
+    2. Raw slang lines like 'maxlift', '3x p4', etc.
+       → merges into existing rows (adds qty if item exists).
+    """
+    try:
+        raw = self.clipboard_get()
+    except Exception:
+        raw = ""
+
+    if not raw or not raw.strip():
+        return _orig_import_clipboard(self)
+
+    # ── Check if clipboard has structured format (pipes + Qty:) ──
+    has_structured = bool(_re.search(r'\|.*Qty:', raw, _re.IGNORECASE))
+
+    if has_structured:
+        # Clear existing rows first (full replace)
+        for row in list(getattr(self, 'cargo_rows', [])):
+            try:
+                row['frame'].destroy()
+            except Exception:
+                pass
+        if hasattr(self, 'cargo_rows'):
+            self.cargo_rows.clear()
+
+        # Preprocess: add '- ' prefix to lines that lack dash
+        fixed_lines = []
+        for line in raw.splitlines():
+            stripped = line.strip()
+            if stripped and '|' in stripped and 'Qty:' in stripped:
+                if not stripped.startswith('-'):
+                    stripped = '- ' + stripped
+            fixed_lines.append(stripped)
+        fixed_text = '\n'.join(fixed_lines)
+
+        # Replace clipboard with fixed text, call original, restore
+        try:
+            self.clipboard_clear()
+            self.clipboard_append(fixed_text)
+            self.update()
+        except Exception:
+            pass
+
+        result = _orig_import_clipboard(self)
+
+        # Restore original clipboard
+        try:
+            self.clipboard_clear()
+            self.clipboard_append(raw)
+            self.update()
+        except Exception:
+            pass
+
+        return result
+
+    # ── Raw slang fallback: parse each line, merge into existing rows ──
+    lines = [l.strip() for l in raw.strip().splitlines() if l.strip()]
+    added = 0
+    _qty_prefix_re = _re.compile(r'^(\d+)\s*x\s+(.+)$', _re.IGNORECASE)
+    _qty_suffix_re = _re.compile(r'^(.+?)\s+x\s*(\d+)$', _re.IGNORECASE)
+
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+
+        # Parse optional quantity
+        qty_str = "1"
+        name = line
+
+        m = _qty_prefix_re.match(line)
+        if m:
+            qty_str = m.group(1)
+            name = m.group(2).strip()
+        else:
+            m = _qty_suffix_re.match(line)
+            if m:
+                name = m.group(1).strip()
+                qty_str = m.group(2)
+
+        new_qty = int(qty_str) if qty_str.isdigit() else 1
+
+        # Resolve slang
+        config = getattr(self, 'config_data', None)
+        resolved = resolve_slang(name, config_data=config)
+        if not resolved or not resolved.strip():
+            continue
+
+        # Check if item already exists in cargo_rows → merge qty
+        found_existing = False
+        for row in getattr(self, 'cargo_rows', []):
+            try:
+                existing_name = row.get('name_var', None)
+                if existing_name and existing_name.get().strip().lower() == resolved.lower():
+                    # Add to existing qty
+                    old_qty_str = row.get('qty_var', None)
+                    if old_qty_str:
+                        try:
+                            old_qty = int(float(old_qty_str.get()))
+                        except (ValueError, TypeError):
+                            old_qty = 0
+                        old_qty_str.set(str(old_qty + new_qty))
+                    found_existing = True
+                    added += 1
+                    print(f"[PASTE-SLANG] Merged: {resolved} +{new_qty} (now {old_qty + new_qty})",
+                          file=__import__('sys').stderr)
+                    break
+            except Exception:
+                continue
+
+        if not found_existing:
+            # Look up price from config frequent_items
+            price = 0
+            if config:
+                fi_data = config.get("frequent_items", {})
+                flat_items = []
+                if isinstance(fi_data, dict):
+                    for cat, cat_items in fi_data.items():
+                        if isinstance(cat_items, list):
+                            flat_items.extend(cat_items)
+                elif isinstance(fi_data, list):
+                    flat_items = fi_data
+                for fi in flat_items:
+                    if isinstance(fi, dict) and fi.get("name", "").lower() == resolved.lower():
+                        price = fi.get("price", 0)
+                        break
+
+            self.add_cargo_row_to_ui(
+                name=resolved,
+                qty=qty_str,
+                box_size="1 SCU",
+                price=price,
+                courtesy=False,
+                unit="unit",
+            )
+            added += 1
+            print(f"[PASTE-SLANG] Added: {resolved} x{qty_str} @ {price}",
+                  file=__import__('sys').stderr)
+
+    if added > 0:
+        try:
+            self.update_grand_total()
+        except Exception:
+            pass
+
+main.RequisitionApp.import_from_clipboard = _patched_import_from_clipboard
+print(f"[UI_PANEL] import_from_clipboard patched (structured fix + raw slang) OK",
+      file=__import__('sys').stderr)
+
+
+
 def apply_all_patches(main_module):
     """Called by entry.py after imports. Fix intro video path via descriptor."""
     _correct_video = None
