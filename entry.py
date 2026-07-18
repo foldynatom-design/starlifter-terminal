@@ -4572,6 +4572,9 @@ main.RequisitionApp.generate_requisition_pdf = _patched_generate_requisition_pdf
 
 if __name__ == '__main__':
     try:
+        import customtkinter
+        customtkinter.set_appearance_mode("dark")
+        customtkinter.set_default_color_theme("dark-blue")
         app = main.RequisitionApp()
         app.mainloop()
     except Exception as e:
