@@ -230,10 +230,35 @@ class StarlifterInstaller(ctk.CTk):
             self.update_task_status(3, "running")
             self.info_lbl.configure(text="Registering desktop tactical launcher shortcut...")
             exe_path = os.path.join(self.target_dir, "Starlifter Requisition Terminal.exe")
-            desktop = os.path.join(os.path.expanduser("~"), "Desktop")
-            desktop_shortcut = os.path.join(desktop, "Starlifter Requisition Terminal.lnk")
-            
-            self.create_shortcut_silent(exe_path, desktop_shortcut)
+            # Detect actual desktop path (OneDrive sync or standard)
+            home = os.path.expanduser("~")
+            onedrive_desktop = os.path.join(home, "OneDrive", "Desktop")
+            standard_desktop = os.path.join(home, "Desktop")
+            # Try Shell folder registry key for the real desktop path
+            try:
+                import winreg
+                key = winreg.OpenKey(winreg.HKEY_CURRENT_USER,
+                    r"SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders")
+                desktop_reg = winreg.QueryValueEx(key, "Desktop")[0]
+                desktop_reg = os.path.expandvars(desktop_reg)
+                winreg.CloseKey(key)
+            except Exception:
+                desktop_reg = None
+
+            # Create shortcut on all valid desktop paths
+            desktops = set()
+            if desktop_reg and os.path.isdir(desktop_reg):
+                desktops.add(desktop_reg)
+            if os.path.isdir(onedrive_desktop):
+                desktops.add(onedrive_desktop)
+            if os.path.isdir(standard_desktop):
+                desktops.add(standard_desktop)
+            if not desktops:
+                desktops.add(standard_desktop)
+
+            for desktop in desktops:
+                desktop_shortcut = os.path.join(desktop, "Starlifter Requisition Terminal.lnk")
+                self.create_shortcut_silent(exe_path, desktop_shortcut)
             self.progress_bar.set(0.85)
             self.update_task_status(3, "success")
             time.sleep(0.3)
