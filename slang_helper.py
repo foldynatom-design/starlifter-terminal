@@ -9,7 +9,7 @@ Usage:
     from slang_helper import resolve_slang
 """
 
-def resolve_slang(name_raw):
+def resolve_slang(name_raw, config_data=None):
     name_raw_low = name_raw.lower().strip()
     slang_map = {
         # \u2500\u2500 Weapons \u2500\u2500
@@ -180,20 +180,21 @@ def resolve_slang(name_raw):
     for slang, official in slang_map.items():
         if slang in name_raw_low:
             return official
-    # Match against config items
-    fi_data = self.config_data.get("frequent_items", {})
-    flat_items = []
-    if isinstance(fi_data, dict):
-        for cat, cat_items in fi_data.items():
-            if isinstance(cat_items, list):
-                flat_items.extend(cat_items)
-    elif isinstance(fi_data, list):
-        flat_items = fi_data
-    for fi in flat_items:
-        if isinstance(fi, dict) and fi.get("name"):
-            fi_name_low = fi["name"].lower()
-            if name_raw_low == fi_name_low or name_raw_low in fi_name_low or fi_name_low in name_raw_low:
-                return fi["name"]
+    # Match against config items (if config_data provided by caller)
+    if config_data is not None:
+        fi_data = config_data.get("frequent_items", {})
+        flat_items = []
+        if isinstance(fi_data, dict):
+            for cat, cat_items in fi_data.items():
+                if isinstance(cat_items, list):
+                    flat_items.extend(cat_items)
+        elif isinstance(fi_data, list):
+            flat_items = fi_data
+        for fi in flat_items:
+            if isinstance(fi, dict) and fi.get("name"):
+                fi_name_low = fi["name"].lower()
+                if name_raw_low == fi_name_low or name_raw_low in fi_name_low or fi_name_low in name_raw_low:
+                    return fi["name"]
     return name_raw.title()
 
 

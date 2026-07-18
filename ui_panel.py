@@ -916,6 +916,72 @@ main.RequisitionApp.show_main_app_layout = _patched_show_main
 print(f"[UI_PANEL] show_main_app_layout patched OK", file=__import__('sys').stderr)
 
 
+# ══════════════════════════════════════════════════════════════════════════
+# SECTION: Slang Resolution + Auto-Battery Companion Patch
+# ══════════════════════════════════════════════════════════════════════════
+
+from slang_helper import resolve_slang
+
+# Items that should auto-add a companion battery row
+_BATTERY_COMPANIONS = {
+    "maxlift tractor beam": {"name": "Maxlift Tractor Beam Battery", "price": 175, "unit": "unit"},
+    "cambio srt":           {"name": "Cambio Multi-tool Battery",    "price": 63,  "unit": "unit"},
+}
+
+_orig_add_cargo_row = main.RequisitionApp.add_cargo_row_to_ui
+_adding_battery = False  # recursion guard
+
+def _patched_add_cargo_row(self, name="", qty="", box_size="1 SCU",
+                            price=0, courtesy=False, unit="SCU", **kwargs):
+    """Wraps add_cargo_row_to_ui to:
+    1. Run item names through resolve_slang() for Ctrl+V and quick-add.
+    2. Auto-add companion battery when MaxLift or Cambio is added.
+    """
+    global _adding_battery
+
+    # ── 1) Slang resolution ──
+    resolved_name = name
+    if name and isinstance(name, str) and name.strip():
+        config = getattr(self, 'config_data', None)
+        resolved = resolve_slang(name.strip(), config_data=config)
+        if resolved:
+            resolved_name = resolved
+
+    # ── 2) Call original to add the row ──
+    result = _orig_add_cargo_row(self, name=resolved_name, qty=qty,
+                                  box_size=box_size, price=price,
+                                  courtesy=courtesy, unit=unit, **kwargs)
+
+    # ── 3) Auto-battery companion (skip if we're already adding a battery) ──
+    if not _adding_battery:
+        companion = _BATTERY_COMPANIONS.get(resolved_name.lower().strip())
+        if companion:
+            _adding_battery = True
+            try:
+                # Match battery qty to the parent item qty
+                bat_qty = qty if qty else "1"
+                _orig_add_cargo_row(
+                    self,
+                    name=companion["name"],
+                    qty=bat_qty,
+                    box_size="1 SCU",
+                    price=companion["price"],
+                    courtesy=False,
+                    unit=companion["unit"],
+                )
+                print(f"[AUTO-BATTERY] Added {companion['name']} x{bat_qty}",
+                      file=__import__('sys').stderr)
+            except Exception as e:
+                print(f"[AUTO-BATTERY] Error: {e}", file=__import__('sys').stderr)
+            finally:
+                _adding_battery = False
+
+    return result
+
+main.RequisitionApp.add_cargo_row_to_ui = _patched_add_cargo_row
+print(f"[UI_PANEL] add_cargo_row_to_ui patched (slang + auto-battery) OK",
+      file=__import__('sys').stderr)
+
 def apply_all_patches(main_module):
     """Called by entry.py after imports. Fix intro video path via descriptor."""
     _correct_video = None
