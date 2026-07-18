@@ -176,7 +176,15 @@ def resolve_slang(name_raw, config_data=None):
     # Exact match first
     if name_raw_low in slang_map:
         return slang_map[name_raw_low]
-    # Partial match
+    # Check if input is already a canonical name (value in slang_map)
+    _canonical_low = {v.lower() for v in slang_map.values()}
+    if name_raw_low in _canonical_low:
+        # Return the properly-cased version
+        for v in slang_map.values():
+            if v.lower() == name_raw_low:
+                return v
+        return name_raw  # exact case if no match found
+    # Partial match (only for short/slang inputs, not full canonical names)
     for slang, official in slang_map.items():
         if slang in name_raw_low:
             return official
