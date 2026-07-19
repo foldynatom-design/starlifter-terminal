@@ -949,9 +949,9 @@ def _patched_add_cargo_row(self, name="", qty="", box_size="1 SCU",
     """
     global _adding_battery
 
-    # ── 1) Slang resolution ──
+    # ── 1) Slang resolution (skip if _skip_slang flag is set) ──
     resolved_name = name
-    if name and isinstance(name, str) and name.strip():
+    if name and isinstance(name, str) and name.strip() and not getattr(self, '_skip_slang', False):
         config = getattr(self, 'config_data', None)
         resolved = resolve_slang(name.strip(), config_data=config)
         if resolved:
@@ -999,6 +999,7 @@ print(f"[UI_PANEL] add_cargo_row_to_ui patched (slang + auto-battery) OK",
 import re as _re
 
 _orig_import_clipboard = main.RequisitionApp.import_from_clipboard
+_orig_clear_all_rows = main.RequisitionApp.clear_all_rows
 
 # Regex for structured lines WITHOUT the leading dash
 _STRUCT_NO_DASH = _re.compile(
@@ -1008,10 +1009,9 @@ _STRUCT_NO_DASH = _re.compile(
 
 def _patched_import_from_clipboard(self):
     """Wraps import_from_clipboard to handle:
-    1. Structured lines missing the leading '- ' dash (preprocess + original parser)
-       → clears existing rows first (full replace).
-    2. Raw slang lines like 'maxlift', '3x p4', etc.
-       → merges into existing rows (adds qty if item exists).
+    1. Full requisitions (with metadata) → clear + replace + load ship loadout
+    2. Structured item lines → add to existing cargo (additive)
+    3. Raw slang lines → resolve + merge into existing rows
     """
     try:
         raw = self.clipboard_get()
@@ -1021,141 +1021,346 @@ def _patched_import_from_clipboard(self):
     if not raw or not raw.strip():
         return _orig_import_clipboard(self)
 
-    # ── Check if clipboard has structured format (pipes + Qty:) ──
-    has_structured = bool(_re.search(r'\|.*Qty:', raw, _re.IGNORECASE))
+    # -- Check if the pasted text is a full requisition or just extra items --
+    is_full_requisition = bool(_re.search(r'(Requisition ID|Vessel|Ship):', raw, _re.IGNORECASE))
 
-    if has_structured:
-        # Clear existing rows first (full replace)
-        for row in list(getattr(self, 'cargo_rows', [])):
+    # Parse metadata if it's a full requisition
+    metadata = {}
+    lines = raw.splitlines()
+    for line in lines:
+        line_str = line.strip()
+        if ":" in line_str:
+            parts = line_str.split(":", 1)
+            key = parts[0].strip().lower()
+            val = parts[1].strip()
+            if key in ("request id", "requisition id"):
+                metadata["request_id"] = val
+            elif key in ("captain", "ship captain"):
+                metadata["captain"] = val
+            elif key in ("ship", "vessel", "select vessel"):
+                metadata["ship"] = val
+            elif key in ("location", "station", "station / location", "loading location"):
+                metadata["location"] = val
+            elif key in ("loading type", "type"):
+                metadata["loading_type"] = val
+            elif key in ("notes", "operation / notes", "operation", "note"):
+                metadata["notes"] = val
+            elif key in ("submitted", "delivery date", "delivery/load date"):
+                metadata["submitted"] = val
+
+    # -- Parse and format submitted time to Star Citizen date format --
+    if "submitted" in metadata:
+        raw_sub = metadata["submitted"]
+        try:
+            match_a = _re.search(r'(\d{4})[-./](\d{2})[-./](\d{2})[T\s](\d{2}):(\d{2})', raw_sub)
+            match_b = _re.search(r'(\d{2})[-./](\d{2})[-./](\d{4})[T\s](\d{2}):(\d{2})', raw_sub)
+            if match_a:
+                y, m, d, hh, mm = match_a.groups()
+                year_val = int(y)
+                sc_year = year_val + 930 if year_val < 2500 else year_val
+                metadata["sc_delivery_date"] = f"{sc_year}-{m}-{d} {hh}:{mm}"
+            elif match_b:
+                d, m, y, hh, mm = match_b.groups()
+                year_val = int(y)
+                sc_year = year_val + 930 if year_val < 2500 else year_val
+                metadata["sc_delivery_date"] = f"{sc_year}-{m}-{d} {hh}:{mm}"
+            else:
+                metadata["sc_delivery_date"] = raw_sub
+        except Exception:
+            metadata["sc_delivery_date"] = raw_sub
+
+    def _apply_metadata_to_ui():
+        if "request_id" in metadata:
+            if hasattr(self, 'req_id_var'):
+                self.req_id_var.set(metadata["request_id"])
+            elif hasattr(self, 'req_id_entry'):
+                self.req_id_entry.delete(0, 'end')
+                self.req_id_entry.insert(0, metadata["request_id"])
+        if "captain" in metadata:
+            if hasattr(self, 'captain_entry'):
+                self.captain_entry.delete(0, 'end')
+                self.captain_entry.insert(0, metadata["captain"])
+        if "ship" in metadata:
+            if hasattr(self, 'ship_selector'):
+                try:
+                    self.ship_selector.set(metadata["ship"])
+                except Exception:
+                    pass
+        # loading_type MUST be set before location (trace resets location)
+        if "loading_type" in metadata:
+            if hasattr(self, '_loading_type_var'):
+                self._loading_type_var.set(metadata["loading_type"])
+        if "location" in metadata:
+            if hasattr(self, '_location_ac_var'):
+                self._location_ac_var.set(metadata["location"])
+        if "sc_delivery_date" in metadata:
+            if hasattr(self, 'delivery_date_var'):
+                self.delivery_date_var.set(metadata["sc_delivery_date"])
+        if "notes" in metadata:
+            if hasattr(self, 'mission_var'):
+                self.mission_var.set(metadata["notes"])
+            elif hasattr(self, 'mission_entry'):
+                try:
+                    self.mission_entry.delete(0, 'end')
+                    self.mission_entry.insert(0, metadata["notes"])
+                except Exception:
+                    pass
+
+    # -- Filter metadata & titles out of the raw text so we parse items only --
+    clean_lines = []
+    for line in lines:
+        line_str = line.strip()
+        if not line_str:
+            continue
+        if line_str.startswith("===") or "STARLIFTER REQUISITION" in line_str:
+            continue
+        if "Cargo" in line_str or "Copy & Paste" in line_str:
+            continue
+        if line_str.startswith("```") or line_str.startswith("**"):
+            continue
+        is_meta_line = False
+        if ":" in line_str:
+            parts = line_str.split(":", 1)
+            key = parts[0].strip().lower()
+            if key in ("request id", "requisition id", "captain", "ship captain",
+                        "ship", "vessel", "select vessel", "location", "station",
+                        "station / location", "loading location", "loading type",
+                        "type", "notes", "operation / notes", "operation", "note",
+                        "submitted", "discord user", "delivery date",
+                        "delivery/load date", "total value", "date",
+                        "loading officer", "loading crew"):
+                is_meta_line = True
+        if is_meta_line:
+            continue
+        if line_str.startswith("UNIFORM REQUISITION") or line_str.startswith("LOGISTICS OFFICE"):
+            continue
+        if line_str.startswith("ACTION REQUIRED") or line_str.startswith("*(Include"):
+            continue
+        if line_str.startswith("ITEMS:") or line_str.startswith("TOTAL VALUE:"):
+            continue
+        clean_lines.append(line_str)
+
+    filtered_raw = "\n".join(clean_lines)
+
+    # -- 1. Find matching vessel in config --
+    matched_key = None
+    if "ship" in metadata and hasattr(self, 'config_data') and 'vessels' in self.config_data:
+        ship_name = metadata["ship"]
+        vessels_dict = self.config_data['vessels']
+        if ship_name in vessels_dict:
+            matched_key = ship_name
+        else:
+            for k in vessels_dict.keys():
+                if k.lower() in ship_name.lower() or ship_name.lower() in k.lower():
+                    matched_key = k
+                    break
+
+    # -- 2. Clear table if full requisition --
+    if is_full_requisition:
+        try:
+            _orig_clear_all_rows(self)
+        except Exception:
+            pass
+        if hasattr(self, 'ship_selector'):
             try:
-                row['frame'].destroy()
+                if matched_key:
+                    self.ship_selector.set(matched_key)
+                elif "ship" in metadata:
+                    self.ship_selector.set(metadata["ship"])
             except Exception:
                 pass
-        if hasattr(self, 'cargo_rows'):
-            self.cargo_rows.clear()
 
-        # Preprocess: add '- ' prefix to lines that lack dash
-        fixed_lines = []
-        for line in raw.splitlines():
-            stripped = line.strip()
-            if stripped and '|' in stripped and 'Qty:' in stripped:
-                if not stripped.startswith('-'):
-                    stripped = '- ' + stripped
-            fixed_lines.append(stripped)
-        fixed_text = '\n'.join(fixed_lines)
-
-        # Replace clipboard with fixed text, call original, restore
-        try:
-            self.clipboard_clear()
-            self.clipboard_append(fixed_text)
-            self.update()
-        except Exception:
-            pass
-
-        result = _orig_import_clipboard(self)
-
-        # Restore original clipboard
-        try:
-            self.clipboard_clear()
-            self.clipboard_append(raw)
-            self.update()
-        except Exception:
-            pass
-
-        return result
-
-    # ── Raw slang fallback: parse each line, merge into existing rows ──
-    lines = [l.strip() for l in raw.strip().splitlines() if l.strip()]
-    added = 0
-    _qty_prefix_re = _re.compile(r'^(\d+)\s*x\s+(.+)$', _re.IGNORECASE)
-    _qty_suffix_re = _re.compile(r'^(.+?)\s+x\s*(\d+)$', _re.IGNORECASE)
-
-    for line in lines:
-        line = line.strip()
-        if not line:
-            continue
-
-        # Parse optional quantity
-        qty_str = "1"
-        name = line
-
-        m = _qty_prefix_re.match(line)
-        if m:
-            qty_str = m.group(1)
-            name = m.group(2).strip()
-        else:
-            m = _qty_suffix_re.match(line)
-            if m:
-                name = m.group(1).strip()
-                qty_str = m.group(2)
-
-        new_qty = int(qty_str) if qty_str.isdigit() else 1
-
-        # Resolve slang
-        config = getattr(self, 'config_data', None)
-        resolved = resolve_slang(name, config_data=config)
-        if not resolved or not resolved.strip():
-            continue
-
-        # Check if item already exists in cargo_rows → merge qty
-        found_existing = False
-        for row in getattr(self, 'cargo_rows', []):
-            try:
-                existing_name = row.get('name_var', None)
-                if existing_name and existing_name.get().strip().lower() == resolved.lower():
-                    # Add to existing qty
-                    old_qty_str = row.get('qty_var', None)
-                    if old_qty_str:
-                        try:
-                            old_qty = int(float(old_qty_str.get()))
-                        except (ValueError, TypeError):
-                            old_qty = 0
-                        old_qty_str.set(str(old_qty + new_qty))
-                    found_existing = True
-                    added += 1
-                    print(f"[PASTE-SLANG] Merged: {resolved} +{new_qty} (now {old_qty + new_qty})",
-                          file=__import__('sys').stderr)
-                    break
-            except Exception:
+    # -- 3. Collect default loadout items if full requisition --
+    merged_items = []
+    if is_full_requisition and matched_key and hasattr(self, 'config_data') and 'vessels' in self.config_data:
+        default_loadout = self.config_data['vessels'][matched_key]
+        for item in default_loadout:
+            if not isinstance(item, dict) or not item.get("name"):
                 continue
-
-        if not found_existing:
-            # Look up price from config frequent_items
+            name = item["name"]
+            qty_val = item.get("qty")
+            if qty_val == "" or qty_val is None:
+                qty = 1
+            else:
+                try:
+                    qty = int(float(qty_val))
+                except (ValueError, TypeError):
+                    qty = 1
+            box = item.get("box_size", "1 SCU")
             price = 0
-            if config:
-                fi_data = config.get("frequent_items", {})
-                flat_items = []
-                if isinstance(fi_data, dict):
-                    for cat, cat_items in fi_data.items():
-                        if isinstance(cat_items, list):
-                            flat_items.extend(cat_items)
-                elif isinstance(fi_data, list):
-                    flat_items = fi_data
-                for fi in flat_items:
-                    if isinstance(fi, dict) and fi.get("name", "").lower() == resolved.lower():
-                        price = fi.get("price", 0)
+            try:
+                price = int(float(item.get("price", 0)))
+            except (ValueError, TypeError):
+                pass
+            courtesy = bool(item.get("courtesy", False))
+            unit = item.get("unit", "unit")
+            merged_items.append({
+                "name": name, "qty": qty, "box_size": box,
+                "price": price, "courtesy": courtesy, "unit": unit
+            })
+
+    # Determine if it has structured items
+    has_structured = bool(_re.search(r'\|.*Qty:', filtered_raw, _re.IGNORECASE))
+
+    # -- 4. Parse cargo items from clipboard --
+    parsed_items = []
+
+    if has_structured:
+        cargo_lines = [l.strip() for l in filtered_raw.splitlines() if l.strip()]
+        _struct_re = _re.compile(
+            r'^\s*-\s*(.+?)\s*\|\s*Qty:\s*\[?\s*([\d.\s?]+)\s*\]?\s*\|\s*Box:\s*(.+?)\s*(?:\|\s*Price:\s*(\d+)\s*aUEC(?:\s*\[COURTESY\])?\s*)?\|\s*(.+)$',
+            _re.IGNORECASE
+        )
+        for line in cargo_lines:
+            m = _struct_re.match(line)
+            if not m:
+                continue
+            item_name = m.group(1).strip()
+            qty_str = m.group(2).strip()
+            box_size = m.group(3).strip()
+            price_str = m.group(4) or "0"
+            unit_str = m.group(5).strip()
+            new_qty = int(qty_str) if qty_str.isdigit() else 1
+            price_val = int(price_str) if price_str.isdigit() else 0
+            is_courtesy = "[COURTESY]" in line.upper()
+            parsed_items.append((item_name, new_qty, box_size, price_val, is_courtesy, unit_str))
+    else:
+        # Raw slang parser
+        lines_slang = [l.strip() for l in filtered_raw.strip().splitlines() if l.strip()]
+        for line in lines_slang:
+            qty = 1
+            name = line
+            m = _re.match(r'^(\d+)\s*x\s+(.+)$', line, _re.IGNORECASE)
+            if m:
+                qty = int(m.group(1))
+                name = m.group(2).strip()
+            else:
+                m = _re.match(r'^(.+?)\s+x\s*(\d+)$', line, _re.IGNORECASE)
+                if m:
+                    name = m.group(1).strip()
+                    qty = int(m.group(2))
+                else:
+                    tokens = line.split()
+                    # Leading number without 'x': "20 arrester 3"
+                    if len(tokens) > 1 and tokens[0].isdigit():
+                        possible_qty = int(tokens[0])
+                        possible_name = " ".join(tokens[1:])
+                        resolved_test = resolve_slang(possible_name, config_data=self.config_data)
+                        fi_list = self.config_data.get("frequent_items", [])
+                        exists = any(
+                            isinstance(fi, dict) and fi.get("name") and fi["name"].lower() == resolved_test.lower()
+                            for fi in fi_list
+                        )
+                        if exists:
+                            qty = possible_qty
+                            name = possible_name
+                    # Trailing number without 'x': "arrester 3 20"
+                    elif len(tokens) > 1 and tokens[-1].isdigit():
+                        possible_qty = int(tokens[-1])
+                        possible_name = " ".join(tokens[:-1])
+                        resolved_test = resolve_slang(possible_name, config_data=self.config_data)
+                        fi_list = self.config_data.get("frequent_items", [])
+                        exists = any(
+                            isinstance(fi, dict) and fi.get("name") and fi["name"].lower() == resolved_test.lower()
+                            for fi in fi_list
+                        )
+                        if exists:
+                            qty = possible_qty
+                            name = possible_name
+
+            resolved = resolve_slang(name, config_data=self.config_data)
+            price_val = 0
+            unit_str = "unit"
+            fi_list = self.config_data.get("frequent_items", [])
+            for fi in fi_list:
+                if isinstance(fi, dict) and fi.get("name") and fi["name"].lower() == resolved.lower():
+                    price_val = int(float(fi.get("price", 0)))
+                    unit_str = fi.get("unit", "unit")
+                    break
+            parsed_items.append((resolved, qty, "1 unit", price_val, False, unit_str))
+
+    # -- 5. Merge clipboard items on top of defaults --
+    for item_name, new_qty, box_size, price_val, is_courtesy, unit_str in parsed_items:
+        resolved_name = item_name
+        found = False
+        for mi in merged_items:
+            if mi["name"].lower() == resolved_name.lower():
+                if is_full_requisition:
+                    mi["qty"] = new_qty  # Overwrite for full requisition
+                else:
+                    mi["qty"] += new_qty  # Add for extra items
+                if box_size: mi["box_size"] = box_size
+                if price_val: mi["price"] = price_val
+                mi["courtesy"] = is_courtesy
+                if unit_str: mi["unit"] = unit_str
+                found = True
+                break
+        if not found:
+            merged_items.append({
+                "name": resolved_name, "qty": new_qty, "box_size": box_size,
+                "price": price_val, "courtesy": is_courtesy, "unit": unit_str
+            })
+
+    # -- 6. If NOT full requisition, also keep existing cargo rows --
+    # Skip slang for structured items (names are already canonical)
+    if has_structured:
+        self._skip_slang = True
+    if not is_full_requisition and merged_items:
+        for mi in merged_items:
+            found_in_ui = False
+            for row in getattr(self, 'cargo_rows', []):
+                try:
+                    existing_name = row.get('name_var', None)
+                    if existing_name and existing_name.get().strip().lower() == mi["name"].lower():
+                        old_qty_str = row.get('qty_var', None)
+                        if old_qty_str:
+                            try:
+                                old_qty = int(float(old_qty_str.get()))
+                            except (ValueError, TypeError):
+                                old_qty = 0
+                            old_qty_str.set(str(old_qty + mi["qty"]))
+                        found_in_ui = True
                         break
-
+                except Exception:
+                    continue
+            if not found_in_ui:
+                self.add_cargo_row_to_ui(
+                    name=mi["name"], qty=str(mi["qty"]), box_size=mi["box_size"],
+                    price=mi["price"], courtesy=mi["courtesy"], unit=mi["unit"]
+                )
+    else:
+        # Full requisition: populate from merged_items
+        for mi in merged_items:
             self.add_cargo_row_to_ui(
-                name=resolved,
-                qty=qty_str,
-                box_size="1 SCU",
-                price=price,
-                courtesy=False,
-                unit="unit",
+                name=mi["name"], qty=str(mi["qty"]), box_size=mi["box_size"],
+                price=mi["price"], courtesy=mi["courtesy"], unit=mi["unit"]
             )
-            added += 1
-            print(f"[PASTE-SLANG] Added: {resolved} x{qty_str} @ {price}",
-                  file=__import__('sys').stderr)
 
-    if added > 0:
-        try:
-            self.update_grand_total()
-        except Exception:
-            pass
+    # Reset slang skip flag
+    self._skip_slang = False
+
+    # Apply metadata if full requisition
+    if is_full_requisition:
+        _apply_metadata_to_ui()
+
+    # Update grand total
+    try:
+        self.update_grand_total()
+    except Exception:
+        pass
+
+    # Restore original clipboard
+    try:
+        self.clipboard_clear()
+        self.clipboard_append(raw)
+        self.update()
+    except Exception:
+        pass
+
+    return True
 
 main.RequisitionApp.import_from_clipboard = _patched_import_from_clipboard
-print(f"[UI_PANEL] import_from_clipboard patched (structured fix + raw slang) OK",
+print("[UI_PANEL] import_from_clipboard patched (structured + metadata + additive) OK",
       file=__import__('sys').stderr)
 
 
