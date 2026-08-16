@@ -168,8 +168,8 @@ def process_signature(podpisy_dir=None, name_key=None, is_captain=False):
 
     for chosen_base in possible_files:
         sig_path = None
-        # Try pre-processed _flat.png first, then .png, .jpeg, .jpg
-        for ext in ["_flat.png", ".png", ".jpeg", ".jpg"]:
+        # Try clean transparent .png first, then _flat.png, .jpeg, .jpg
+        for ext in [".png", "_flat.png", ".jpeg", ".jpg"]:
             p = os.path.join(podpisy_dir, chosen_base + ext)
             if os.path.exists(p):
                 sig_path = p
@@ -196,51 +196,54 @@ def process_signature(podpisy_dir=None, name_key=None, is_captain=False):
     return None
 
 def _process_single_signature(sig_path, chosen_base):
-    """Process a single signature image file. Extract one sig from multi-sig sheets."""
-    if sig_path.lower().endswith('.png'):
-        try:
-            img = Image.open(sig_path).convert("RGBA")
-            datas = _get_rgba_pixels(img)
-            newData = []
-            for px in datas:
-                r, g, b, a = px
-                if r < 80 and g < 80 and b < 80:
-                    newData.append(px)
-                elif b > 100 and b > r * 1.2 and b > g * 1.1:
-                    newData.append(px)
-                elif r < 120 and g < 120 and b < 180 and (b > r or b > g):
-                    newData.append(px)
+    """Process a single signature image file. Extract one sig from multi-sig sheets with clean alpha."""
+    try:
+        img = Image.open(sig_path).convert("RGBA")
+        if img.width > 800:
+            ratio = 800 / img.width
+            img = img.resize((800, int(img.height * ratio)), Image.LANCZOS)
+            
+        datas = _get_rgba_pixels(img)
+        newData = []
+        for px in datas:
+            r, g, b, a = int(px[0]), int(px[1]), int(px[2]), int(px[3])
+            if a < 15:
+                newData.append((255, 255, 255, 0))
+                continue
+                
+            brightness = (r + g + b) / 3.0
+            max_diff = max(abs(r - g), abs(g - b), abs(r - b))
+            is_neutral = max_diff <= 15
+            
+            is_blue_ink = (b > r + 15 and b > g + 10) or (b > 100 and b > max(r, g) * 1.15)
+            is_dark_ink = brightness < 90 and not (is_neutral and brightness > 75)
+            
+            if is_blue_ink:
+                newData.append((r, g, b, a if a > 120 else min(255, int(a * 2.0))))
+            elif is_dark_ink:
+                newData.append((r, g, b, a))
+            elif is_neutral or brightness > 130:
+                newData.append((255, 255, 255, 0))
+            else:
+                if b > max(r, g) + 5 and brightness < 180:
+                    newData.append((r, g, b, a))
                 else:
                     newData.append((255, 255, 255, 0))
-            img.putdata(newData)
-            img = extract_signature_from_sheet(img)
-            bbox = img.getbbox()
-            if bbox:
-                img = img.crop(bbox)
-            trans_path = os.path.join(
-                os.path.expanduser("~"), "AppData", "Local", "Temp",
-                f"temp_sig_{chosen_base.replace(' ', '_')}_trans.png")
-            img.save(trans_path, "PNG")
-            return trans_path
-        except Exception:
-            return sig_path
-    else:
-        try:
-            img = Image.open(sig_path).convert("RGBA")
-            if img.width > 800:
-                ratio = 800 / img.width
-                img = img.resize((800, int(img.height * ratio)), Image.LANCZOS)
-            datas = _get_rgba_pixels(img)
-            newData = [(255,255,255,0) if px[0]>200 and px[1]>200 and px[2]>200 else px for px in datas]
-            img.putdata(newData)
-            img = extract_signature_from_sheet(img)
-            bbox = img.getbbox()
-            if bbox: img = img.crop(bbox)
-            tmp = os.path.join(os.path.expanduser("~"), "AppData", "Local", "Temp", f"temp_sig_{chosen_base.replace(' ', '_')}.png")
-            img.save(tmp, "PNG")
-            return tmp
-        except Exception:
-            return sig_path
+                    
+        cleaned = Image.new("RGBA", img.size)
+        cleaned.putdata(newData)
+        cleaned = extract_signature_from_sheet(cleaned)
+        bbox = cleaned.getbbox()
+        if bbox:
+            cleaned = cleaned.crop(bbox)
+            
+        trans_path = os.path.join(
+            os.path.expanduser("~"), "AppData", "Local", "Temp",
+            f"temp_sig_{chosen_base.replace(' ', '_')}_trans.png")
+        cleaned.save(trans_path, "PNG")
+        return trans_path
+    except Exception:
+        return sig_path
 
 def process_r1_stamp(podpisy_dir=None):
     if podpisy_dir is None:
