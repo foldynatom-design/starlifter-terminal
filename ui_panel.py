@@ -1165,7 +1165,7 @@ main.RequisitionApp.export_blank_template_to_clipboard = _dynamic_export_blank
 
 
 
-# ── Monkey-patch add_new_vessel: custom autocomplete dialog ──
+# ── Open full Fleet Database & Loadout Manager (with custom pairing, JSON export/import) ──
 def _patched_add_new_vessel(self):
     """Open Fleet Database & Loadout Manager (with custom pairing, loadout export & import)."""
     try:

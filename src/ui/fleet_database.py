@@ -133,93 +133,84 @@ class FleetDatabaseModal(ctk.CTkToplevel):
         self.name_entry.bind("<FocusIn>", lambda e: self.after(10, _clear_name_selection), add="+")
         self.name_entry.bind("<Button-1>", lambda e: self.after(10, _clear_name_selection), add="+")
 
-        # Input: Base Hull Model (FULL 331 Ships Database)
+        # Input: Base Hull Model (FULL 331 Ships Database) with 10-Item Autofill Suggestions
         ctk.CTkLabel(form_frame, text="Base Hull Model (Full DB Pairing):", font=ctk.CTkFont(size=11), text_color="#cbd5e1").pack(anchor="w", padx=12, pady=(5, 2))
         
         try:
             from fleet_helper import _load_uex_ships_db
-            db_ships = getattr(self.parent_app, '_all_ship_names', [])
-            if not db_ships:
-                _s_db = _load_uex_ships_db()
-                db_ships = sorted(set(v.get("name", v.get("short_name", k)) for k, v in _s_db.items() if v.get("name") or v.get("short_name"))) if _s_db else []
-            loadout_ships = sorted(self.parent_app.config_data.get("vessels", {}).keys())
+            _s_db = _load_uex_ships_db()
+            db_ships = sorted(set(
+                v.get("name", v.get("short_name", k))
+                for k, v in _s_db.items()
+                if (v.get("name") or v.get("short_name")) and v.get("is_spaceship", 1)
+            )) if _s_db else []
+            loadout_ships = sorted(TemplateManager.load_vessels().keys())
             base_models = sorted(set(loadout_ships + db_ships))
         except Exception:
-            base_models = sorted(self.parent_app.config_data.get("vessels", {}).keys())
+            base_models = sorted(TemplateManager.load_vessels().keys())
 
         if not base_models:
-            base_models = ["Aegis Idris-M", "Aegis Idris-P", "Polaris", "Perseus", "Hammerhead", "Reclaimer", "Drake Caterpillar"]
+            base_models = [
+                "Aegis Avenger Titan", "Aegis Eclipse", "Aegis Gladius", "Aegis Hammerhead",
+                "Aegis Idris-M", "Aegis Idris-P", "Aegis Javelin", "Aegis Reclaimer", "Aegis Redeemer",
+                "Aegis Retaliator", "Aegis Sabre", "Aegis Vanguard Warden", "Anvil Carrack",
+                "Anvil C8X Pisces", "Anvil F7C Hornet", "Anvil F8C Lightning", "Anvil Terrapin",
+                "Anvil Valkyrie", "ARGO MOLE", "ARGO RAFT", "Crusader A1 Spirit", "Crusader C1 Spirit",
+                "Crusader C2 Hercules", "Crusader M2 Hercules", "Crusader Mercury Star Runner",
+                "Drake Corsair", "Drake Caterpillar", "Drake Cutlass Black", "Drake Vulture",
+                "MISC Freelancer MAX", "MISC Hull C", "Origin 600i Explorer", "Origin 890 Jump",
+                "RSI Constellation Andromeda", "RSI Constellation Taurus", "RSI Perseus", "RSI Polaris", "RSI Galaxy"
+            ]
 
-        self.base_hull_combo = ctk.CTkComboBox(form_frame, values=base_models[:10], fg_color="#0e1319", dropdown_fg_color="#161d26")
-        self.base_hull_combo.pack(fill="x", padx=12, pady=(0, 15))
-        self.base_hull_combo.set("")  # Start empty — user must type or select
+        self.base_hull_var = tk.StringVar()
+        self.base_hull_entry = ctk.CTkEntry(
+            form_frame, textvariable=self.base_hull_var, placeholder_text="Type to search base ship model...",
+            fg_color="#0e1319", text_color="#f8fafc"
+        )
+        self.base_hull_entry.pack(fill="x", padx=12, pady=(0, 4))
 
-        _orig_fh_configure = self.base_hull_combo.configure
-        def _capped_fh_configure(*args, **kwargs):
-            if 'values' in kwargs and isinstance(kwargs['values'], (list, tuple)):
-                kwargs['values'] = list(kwargs['values'])[:10]
-            return _orig_fh_configure(*args, **kwargs)
-        self.base_hull_combo.configure = _capped_fh_configure
+        # 10-Item Autofill Suggestion Listbox
+        sugg_frame = ctk.CTkFrame(form_frame, fg_color="#0e1319", corner_radius=6, border_width=1, border_color="#1e293b")
+        sugg_frame.pack(fill="x", padx=12, pady=(0, 10))
 
-        _orig_fh_open = getattr(self.base_hull_combo, '_open_dropdown_menu', None)
-        def _position_fh_dropdown(*args, **kwargs):
-            typed = self.base_hull_combo.get().strip()
-            typed_low = typed.lower()
-            words = typed_low.split()
-            if words:
-                filtered = [s for s in base_models if all(w in s.lower() for w in words)]
-                _orig_fh_configure(values=filtered[:10] if filtered else base_models[:10])
+        self.sugg_listbox = tk.Listbox(
+            sugg_frame, height=8, bg="#0e1319", fg="#cbd5e1", selectbackground="#0284c7", selectforeground="#ffffff",
+            font=("Segoe UI", 9), relief="flat", bd=0, highlightthickness=0
+        )
+        self.sugg_listbox.pack(fill="both", expand=True, padx=4, pady=4)
+
+        def _update_sugg_list(*args):
+            typed = self.base_hull_var.get().strip().lower()
+            self.sugg_listbox.delete(0, tk.END)
+            if not typed:
+                for s in base_models[:10]:
+                    self.sugg_listbox.insert(tk.END, f"  {s}")
             else:
-                _orig_fh_configure(values=base_models[:10])
-            if _orig_fh_open:
-                try: _orig_fh_open(*args, **kwargs)
-                except Exception: pass
-            try:
-                if hasattr(self.base_hull_combo, '_dropdown_menu') and self.base_hull_combo._dropdown_menu:
-                    rx = self.base_hull_combo.winfo_rootx()
-                    h = self.base_hull_combo.winfo_height()
-                    ry = self.base_hull_combo.winfo_rooty() + h + 2
-                    self.base_hull_combo._dropdown_menu.geometry(f"+{rx}+{ry}")
-                    self.base_hull_combo._dropdown_menu.lift()
-            except Exception: pass
+                words = typed.split()
+                matches = [s for s in base_models if all(w in s.lower() for w in words)]
+                if not matches:
+                    matches = [s for s in base_models if typed in s.lower()]
+                for s in matches[:10]:
+                    self.sugg_listbox.insert(tk.END, f"  {s}")
 
-        self.base_hull_combo._open_dropdown_menu = _position_fh_dropdown
+        self.base_hull_var.trace_add("write", _update_sugg_list)
+        _update_sugg_list()
 
-        # Live filter base_hull_combo values as user types (150ms debounced + auto-open dropdown popup!)
-        def _on_fleet_combo_key(event=None):
-            if event and getattr(event, 'keysym', None) in ['Return', 'Tab', 'Up', 'Down', 'Escape']:
-                return
-            if hasattr(self.base_hull_combo, '_search_timer') and self.base_hull_combo._search_timer:
-                try: self.base_hull_combo.after_cancel(self.base_hull_combo._search_timer)
-                except Exception: pass
+        def _on_sugg_select(event=None):
+            sel = self.sugg_listbox.curselection()
+            if sel:
+                val = self.sugg_listbox.get(sel[0]).strip()
+                self.base_hull_var.set(val)
 
-            def _do_fleet_filter():
-                typed = self.base_hull_combo.get().strip()
-                typed_low = typed.lower()
-                if not typed:
-                    _orig_fh_configure(values=base_models[:10])
-                else:
-                    words = typed_low.split()
-                    matches = [s for s in base_models if all(w in s.lower() for w in words)]
-                    _orig_fh_configure(values=matches[:10])
-                try:
-                    _position_fh_dropdown()
-                except Exception: pass
-
-            self.base_hull_combo._search_timer = self.base_hull_combo.after(150, _do_fleet_filter)
-
-        self.base_hull_combo.bind('<KeyRelease>', _on_fleet_combo_key)
-        try:
-            if hasattr(self.base_hull_combo, '_entry') and self.base_hull_combo._entry:
-                self.base_hull_combo._entry.bind('<KeyRelease>', _on_fleet_combo_key)
-        except Exception: pass
+        self.sugg_listbox.bind("<<ListboxSelect>>", _on_sugg_select)
+        self.sugg_listbox.bind("<Double-1>", lambda e: _on_sugg_select())
 
         # Action Buttons
         btn_save = ctk.CTkButton(
             form_frame, text="Save to Fleet Database", command=self._on_save_vessel,
             fg_color="#0284c7", hover_color="#0369a1", font=ctk.CTkFont(weight="bold")
         )
-        btn_save.pack(fill="x", padx=12, pady=(5, 5))
+        btn_save.pack(fill="x", padx=12, pady=(2, 5))
 
         btn_copy_current = ctk.CTkButton(
             form_frame, text="Import Current UI Loadout", command=self._on_import_current_loadout,
@@ -276,14 +267,14 @@ class FleetDatabaseModal(ctk.CTkToplevel):
 
     def _on_save_vessel(self):
         callsign = self.name_entry.get().strip()
-        base_hull = self.base_hull_combo.get().strip()
+        base_hull = self.base_hull_var.get().strip()
 
         if not callsign:
             messagebox.showerror("Error", "Please enter a custom vessel callsign.", parent=self)
             return
 
         if not base_hull:
-            messagebox.showerror("Error", "Please select a base hull model.", parent=self)
+            messagebox.showerror("Error", "Please select or type a base hull model.", parent=self)
             return
 
         # Fetch default loadout from base hull if available
@@ -295,14 +286,19 @@ class FleetDatabaseModal(ctk.CTkToplevel):
             "loadout": base_loadout
         }
 
+        # Save formatted vessel to TemplateManager
+        formatted_name = f"{callsign} ({base_hull})" if callsign.lower() != base_hull.lower() else callsign
+        TemplateManager.save_vessel(formatted_name, base_loadout)
+
         if self._save_custom_vessels():
             messagebox.showinfo("Success", f"Vessel '{callsign}' registered cleanly as {base_hull}!", parent=self)
             self.name_entry.delete(0, 'end')
+            self.base_hull_var.set('')
             self._refresh_fleet_list()
 
     def _on_import_current_loadout(self):
         callsign = self.name_entry.get().strip()
-        base_hull = self.base_hull_combo.get().strip()
+        base_hull = self.base_hull_var.get().strip()
 
         if not callsign:
             messagebox.showerror("Error", "Please enter custom vessel name first.", parent=self)
