@@ -315,8 +315,8 @@ def _recommend_shuttle(vessel_name, total_scu, ships_db=None, loading_type="", l
     is_concept_mother = hangar_info.get("concept_only", False) if hangar_info else False
     concept_note = " (NOTE: Concept ship, specs may change.)" if is_concept_mother else ""
 
-    is_eva = any(e in str(loading_type).lower() for e in ["eva", "orbit", "float"]) or any(e in str(location).lower() for e in ["eva", "orbit", "float"])
-    is_planetary = any(e in str(location).lower() for e in ["surface", "outpost", "planet", "ground", "land", "monox", "bloom", "delamar", "sunset mesa", "ostler", "jacksons", "jackson's", "yang", "arid reach", "rayari", "shubin", "hdms", "babbage", "lorville", "area18", "area 18", "orison", "levski", "revolux", "zeus", "rappel", "facility", "site", "farm"]) or any(e in str(loading_type).lower() for e in ["surface", "outpost", "planet", "planetary", "ground"])
+    is_eva = any(e in type_str for e in ["eva", "orbit", "float"]) or any(e in loc_str for e in ["eva", "orbit", "float"])
+    is_planetary = any(e in loc_str for e in ["surface", "outpost", "planet", "ground", "land", "monox", "bloom", "delamar", "sunset mesa", "ostler", "jacksons", "jackson's", "yang", "arid reach", "rayari", "shubin", "hdms", "babbage", "lorville", "area18", "area 18", "orison", "levski", "revolux", "zeus", "rappel", "facility", "site", "farm"]) or any(e in type_str for e in ["surface", "outpost", "planet", "planetary", "ground"])
 
     # ── Build candidate shuttle list ──
     max_pad_order = _PAD_ORDER.get(hangar_info.get("max_pad", "XS"), 0) if hangar_info else 0

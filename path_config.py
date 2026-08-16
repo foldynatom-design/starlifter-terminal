@@ -87,8 +87,13 @@ class _StarlifterPaths:
     @property
     def intro_video(self):
         """Path to intro_video.mp4."""
-        return self._paths.get("intro_video",
-                               os.path.join(self.app_root, "intro_video.mp4"))
+        candidate = self._paths.get("intro_video")
+        if candidate and os.path.isfile(candidate):
+            return candidate
+        res_vid = os.path.join(self.resources, "intro_video.mp4")
+        if os.path.isfile(res_vid):
+            return res_vid
+        return os.path.join(self.app_root, "intro_video.mp4")
 
     @property
     def internal(self):
@@ -319,11 +324,12 @@ class _StarlifterPaths:
 
         # Intro video
         video_candidates = [
+            os.path.join(self._paths["resources"], "intro_video.mp4"),
+            os.path.join(app_root, "resources", "intro_video.mp4"),
             os.path.join(app_root, "intro_video.mp4"),
-            os.path.join(app_root, "má_to_být_animace_při_spoušte.mp4"),
         ]
         self._paths["intro_video"] = self._first_existing_file(
-            video_candidates, os.path.join(app_root, "intro_video.mp4"))
+            video_candidates, os.path.join(self._paths["resources"], "intro_video.mp4"))
 
         # _internal (PyInstaller runtime)
         self._paths["internal"] = os.path.join(app_root, "_internal")

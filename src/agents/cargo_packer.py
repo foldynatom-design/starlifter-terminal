@@ -378,11 +378,38 @@ def _pick_box_size(vol):
     return 8.0, "8 SCU", 8.00
 
 
-def reload_volume_map():
-    """Force reload item_volumes.json from disk into memory cache."""
-    global _volume_map_cache
-    _volume_map_cache = None
-    return load_volume_map()
+def get_item_unit_volume(name, volume_map=None):
+    """Retrieve exact unit SCU volume for an item name from volume_map."""
+    if volume_map is None:
+        volume_map = load_volume_map()
+    
+    name_low = str(name).lower().strip()
+
+    # 1. Multi-tool / Tractor Beam & Canister Overrides
+    if "cambio" in name_low and "canister" in name_low:
+        return 0.005
+    if "cambio" in name_low:
+        return 0.015
+    if "maxlift" in name_low and "battery" not in name_low:
+        return 0.015
+    if "pyro multi-tool" in name_low or "pyro multitool" in name_low:
+        return 0.015
+
+    # 2. Exact match from volume_map
+    if name_low in volume_map:
+        return volume_map[name_low]
+
+    if "battery" in name_low:
+        return 0.002
+    if any(k in name_low for k in ["canister", "attachment"]):
+        return 0.005
+
+    # 3. Length-sorted key matching (longest matching key first)
+    for k in sorted(volume_map.keys(), key=len, reverse=True):
+        if len(k) >= 4 and k in name_low:
+            return volume_map[k]
+
+    return 0.005
 
 
 def pack_items(items_list, volume_map=None, vessel=""):

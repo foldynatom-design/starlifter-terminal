@@ -7,7 +7,7 @@ Steps:
 4. Create app_files.zip from dist
 5. Build Setup.exe (installer) with app_files.zip + Uninstall.exe + logo bundled inside
 """
-import subprocess, os, sys, shutil, zipfile
+import subprocess, os, sys, shutil, zipfile, glob
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DIST = os.path.join(ROOT, "dist", "Starlifter Requisition Terminal")
@@ -22,6 +22,16 @@ def run(cmd, label):
         print(f"FAILED: {label}")
         sys.exit(1)
     print(f"OK: {label}")
+
+def cp(src, dst):
+    os.makedirs(os.path.dirname(dst) if not os.path.isdir(dst) else dst, exist_ok=True)
+    if os.path.isdir(src):
+        if os.path.exists(dst) and os.path.isdir(dst):
+            shutil.copytree(src, dst, dirs_exist_ok=True)
+        else:
+            shutil.copytree(src, dst)
+    else:
+        shutil.copy2(src, dst)
 
 # Step 1: Build main app
 run(f'"{PY}" -m PyInstaller -y --clean --onedir --noconsole '
@@ -40,13 +50,6 @@ print("\n" + "="*60)
 print("  Copying resources into dist")
 print("="*60)
 
-def cp(src, dst):
-    os.makedirs(os.path.dirname(dst) if not os.path.isdir(dst) else dst, exist_ok=True)
-    if os.path.isdir(src):
-        if os.path.exists(dst) and os.path.isdir(dst):
-            shutil.copytree(src, dst, dirs_exist_ok=True)
-        else:
-            shutil.copytree(src, dst)
 # Root level files and directories
 for f in ["config.json", "main.pyc", "logo.png", "logo_uee44.png", "cvbg44_logo.png",
           "watermark_secured.png", "watermark_classified.png", "watermark_public.png", "app_icon.ico",
@@ -59,43 +62,29 @@ for f in ["config.json", "main.pyc", "logo.png", "logo_uee44.png", "cvbg44_logo.
     if os.path.exists(src):
         cp(src, os.path.join(DIST, f))
 
-# Resources
+# Resources - copy ALL json, png, mp4, wav, subfolders (Podpisy, sounds, etc.)
 res_dst = os.path.join(DIST, "resources")
 os.makedirs(res_dst, exist_ok=True)
 res_src = os.path.join(ROOT, "resources")
-for ext in ["*.png", "*.json"]:
-    import glob
-    for f in glob.glob(os.path.join(res_src, ext)):
-        cp(f, os.path.join(res_dst, os.path.basename(f)))
+if os.path.exists(res_src):
+    for root, dirs, files in os.walk(res_src):
+        rel_dir = os.path.relpath(root, res_src)
+        target_dir = os.path.join(res_dst, rel_dir) if rel_dir != "." else res_dst
+        os.makedirs(target_dir, exist_ok=True)
+        for fn in files:
+            src_f = os.path.join(root, fn)
+            dst_f = os.path.join(target_dir, fn)
+            shutil.copy2(src_f, dst_f)
 
-if os.path.exists(os.path.join(res_src, "intro_video.mp4")):
-    cp(os.path.join(res_src, "intro_video.mp4"), os.path.join(res_dst, "intro_video.mp4"))
-
-# Sounds
-snd_dst = os.path.join(res_dst, "sounds")
-os.makedirs(snd_dst, exist_ok=True)
-for f in glob.glob(os.path.join(res_src, "sounds", "*.wav")):
-    cp(f, os.path.join(snd_dst, os.path.basename(f)))
-
-# Podpisy
-pod_src = os.path.join(res_src, "Podpisy")
-pod_dst = os.path.join(res_dst, "Podpisy")
-if os.path.exists(pod_src):
-    os.makedirs(pod_dst, exist_ok=True)
-    for f in glob.glob(os.path.join(pod_src, "*.png")):
-        cp(f, os.path.join(pod_dst, os.path.basename(f)))
-
-# Fonts — copy .ttf ONLY, NEVER .pkl!
-# .pkl files store absolute paths from the build machine and cause
-# 'No such file or directory' errors on any other PC.
-# fpdf regenerates them automatically with correct local paths on first run.
+# Fonts - copy .ttf ONLY, NEVER .pkl!
 fnt_dst = os.path.join(DIST, "fonts")
 os.makedirs(fnt_dst, exist_ok=True)
 fnt_src = os.path.join(ROOT, "fonts")
-for f in glob.glob(os.path.join(fnt_src, "*.ttf")):
-    cp(f, os.path.join(fnt_dst, os.path.basename(f)))
-if os.path.exists(os.path.join(fnt_src, "intro_sound.wav")):
-    cp(os.path.join(fnt_src, "intro_sound.wav"), os.path.join(fnt_dst, "intro_sound.wav"))
+if os.path.exists(fnt_src):
+    for f in glob.glob(os.path.join(fnt_src, "*.ttf")):
+        cp(f, os.path.join(fnt_dst, os.path.basename(f)))
+    if os.path.exists(os.path.join(fnt_src, "intro_sound.wav")):
+        cp(os.path.join(fnt_src, "intro_sound.wav"), os.path.join(fnt_dst, "intro_sound.wav"))
 
 print("OK: Resources copied")
 

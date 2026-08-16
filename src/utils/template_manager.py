@@ -5,6 +5,7 @@ Provides 100% reliable load/save API for future templates and package definition
 """
 import os
 import json
+from datetime import datetime
 from path_config import PATHS
 
 class TemplateManager:

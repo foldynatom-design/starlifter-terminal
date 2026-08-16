@@ -1015,58 +1015,89 @@ if os.path.exists(local_logo_uee): main.LOGO_UEE_FILE = local_logo_uee
 # Subclass FPDF templates to implement v0.6 features
 OriginalMilitaryPDF = main.MilitaryPDF
 
+def _ensure_roboto_font(pdf):
+    """Ensure Roboto font is registered in FPDF instance across all search paths."""
+    from path_config import PATHS
+    candidates = [
+        getattr(PATHS, 'fonts', ''),
+        os.path.join(getattr(PATHS, 'app_root', '.'), "fonts"),
+        os.path.join(getattr(PATHS, 'resources', '.'), "fonts"),
+        os.path.join(getattr(sys, '_MEIPASS', ''), "fonts"),
+        os.path.join(getattr(PATHS, 'internal', '.'), "fonts"),
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "fonts"),
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts"),
+    ]
+    reg_font = None
+    bold_font = None
+    for c in candidates:
+        if c and os.path.isdir(c):
+            r = os.path.join(c, "Roboto-Regular.ttf")
+            b = os.path.join(c, "Roboto-Bold.ttf")
+            if os.path.isfile(r):
+                reg_font = r
+                bold_font = b if os.path.isfile(b) else r
+                break
+    if reg_font:
+        fdir = os.path.dirname(reg_font)
+        for pkl in ("Roboto-Regular.pkl", "Roboto-Regular.cw127.pkl", "Roboto-Bold.pkl", "Roboto-Bold.cw127.pkl"):
+            try:
+                p = os.path.join(fdir, pkl)
+                if os.path.exists(p): os.remove(p)
+            except Exception: pass
+
+        try:
+            try: pdf.add_font("Roboto", "", reg_font, uni=True)
+            except TypeError: pdf.add_font("Roboto", "", reg_font)
+        except Exception: pass
+
+        try:
+            try: pdf.add_font("Roboto", "I", reg_font, uni=True)
+            except TypeError: pdf.add_font("Roboto", "I", reg_font)
+        except Exception: pass
+
+        if bold_font:
+            try:
+                try: pdf.add_font("Roboto", "B", bold_font, uni=True)
+                except TypeError: pdf.add_font("Roboto", "B", bold_font)
+            except Exception: pass
+
+            try:
+                try: pdf.add_font("Roboto", "BI", bold_font, uni=True)
+                except TypeError: pdf.add_font("Roboto", "BI", bold_font)
+            except Exception: pass
+
 # Pre-cache Roboto font data at module level (parse TTF once, reuse everywhere)
 _FONT_CACHE = {}
 def _precache_fonts():
-    """Parse Roboto TTF files once and store font definitions for reuse.
-    
-    IMPORTANT: fpdf 1.7.2 generates .pkl cache files next to the .ttf files.
-    These .pkl files contain the ABSOLUTE PATH from the machine where they were
-    generated. If the installer ships pre-generated .pkl files from a different
-    machine (e.g. C:\\Users\\tomas.foldyna\\...), they will cause a
-    'No such file or directory' error on any other PC.
-    
-    Fix: Always delete stale .pkl files before calling add_font so that fpdf
-    regenerates them with the correct local paths for the current machine.
-    """
+    """Parse Roboto TTF files once and store font definitions for reuse."""
     import fpdf
-    fonts_dir = getattr(main, 'resource_path', lambda p: p)('fonts')
-    if not os.path.exists(fonts_dir):
-        fonts_dir = getattr(main, 'resource_path', lambda p: p)('resources/fonts')
-    reg_font = os.path.join(fonts_dir, "Roboto-Regular.ttf")
-    bold_font = os.path.join(fonts_dir, "Roboto-Bold.ttf")
-
-    # --- Delete stale .pkl files from any previous machine ---
-    # This guarantees fpdf always regenerates them with the correct local paths.
-    for pkl_name in ("Roboto-Regular.pkl", "Roboto-Regular.cw127.pkl",
-                     "Roboto-Bold.pkl", "Roboto-Bold.cw127.pkl"):
-        pkl_path = os.path.join(fonts_dir, pkl_name)
-        try:
-            if os.path.exists(pkl_path):
-                os.remove(pkl_path)
-        except Exception:
-            pass  # Read-only filesystem edge case â€” silently ignore
-    # ---------------------------------------------------------
-
-    # Create a temporary PDF just to parse fonts once
     tmp = fpdf.FPDF()
-    try:
-        if os.path.exists(reg_font):
-            tmp.add_font("Roboto", "", reg_font, uni=True)
-            tmp.add_font("Roboto", "I", reg_font, uni=True)
-        if os.path.exists(bold_font):
-            tmp.add_font("Roboto", "B", bold_font, uni=True)
-        # Store parsed font definitions
-        for key, val in tmp.fonts.items():
-            _FONT_CACHE[key] = val
-    except Exception as e:
-        print(f"[WARNING] Font pre-cache failed: {e}")
+    _ensure_roboto_font(tmp)
+    for key, val in tmp.fonts.items():
+        _FONT_CACHE[key] = val
 
 _precache_fonts()
 
-# Ä‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚Â
+# ── Monkey-patch fpdf.FPDF.set_font: Auto-register Roboto or fallback to Helvetica ──
+import fpdf
+_orig_fpdf_set_font = fpdf.FPDF.set_font
+def _safe_fpdf_set_font(self, family=None, style='', size=0):
+    if family:
+        fam_key = family.lower()
+        if fam_key == "roboto" and "roboto" not in getattr(self, 'fonts', {}):
+            _ensure_roboto_font(self)
+        if hasattr(self, 'fonts') and fam_key not in self.fonts and fam_key not in ('courier', 'helvetica', 'times', 'symbol', 'zapfdingbats'):
+            family = 'Helvetica'
+    try:
+        return _orig_fpdf_set_font(self, family=family, style=style, size=size)
+    except Exception:
+        return _orig_fpdf_set_font(self, family='Helvetica', style=style, size=size)
+
+fpdf.FPDF.set_font = _safe_fpdf_set_font
+
+# ==============================================================================
 # SECTION 6: PatchedMilitaryPDF Class
-# Ä‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚ÂÄ‚ËĂ˘â‚¬ËĂ‚Â
+# ==============================================================================
 
 class PatchedMilitaryPDF(OriginalMilitaryPDF):
     def footer(self):

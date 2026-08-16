@@ -269,7 +269,7 @@ def _get_ship_dims(name_low):
     return None
 
 
-def _recommend_shuttle(vessel_name, total_scu, ships_db=None):
+def _recommend_shuttle(vessel_name, total_scu, ships_db=None, loading_type="", location=""):
     """Recommend best cargo shuttle + loading method for ANY ship.
 
     Works for ALL vessels -- carriers with hangars get hangar shuttle recs,
@@ -279,6 +279,8 @@ def _recommend_shuttle(vessel_name, total_scu, ships_db=None):
         vessel_name: Ship name (e.g. 'Aegis Idris', 'Drake Cutlass Black')
         total_scu: Total SCU to transport
         ships_db: Optional UEX ships dict. Auto-loads from JSON if None.
+        loading_type: Optional loading type (e.g. 'hangar', 'eva', 'surface')
+        location: Optional staging location name
 
     Returns dict with:
         hangar_shuttles: list of ships that fit in hangar (empty for non-carriers)
@@ -296,6 +298,8 @@ def _recommend_shuttle(vessel_name, total_scu, ships_db=None):
         ships_db = _load_uex_ships_db()
 
     vn_low = vessel_name.lower()
+    loc_str = str(location or "").lower()
+    type_str = str(loading_type or "").lower()
 
     # ── Strip manufacturer prefix for matching ──
     for prefix in ["aegis", "anvil", "drake", "rsi", "crusader", "misc",
@@ -331,8 +335,8 @@ def _recommend_shuttle(vessel_name, total_scu, ships_db=None):
     is_concept_mother = hangar_info.get("concept_only", False) if hangar_info else False
     concept_note = " (NOTE: Concept ship, specs may change.)" if is_concept_mother else ""
 
-    is_eva = any(e in str(loading_type).lower() for e in ["eva", "orbit", "float"]) or any(e in str(location).lower() for e in ["eva", "orbit", "float"])
-    is_planetary = any(e in str(location).lower() for e in ["surface", "outpost", "planet", "ground", "land", "monox", "bloom", "delamar", "sunset mesa", "ostler", "jacksons", "jackson's", "yang", "arid reach", "rayari", "shubin", "hdms", "babbage", "lorville", "area18", "area 18", "orison", "levski", "revolux", "zeus", "rappel", "facility", "site", "farm"]) or any(e in str(loading_type).lower() for e in ["surface", "outpost", "planet", "planetary", "ground"])
+    is_eva = any(e in type_str for e in ["eva", "orbit", "float"]) or any(e in loc_str for e in ["eva", "orbit", "float"])
+    is_planetary = any(e in loc_str for e in ["surface", "outpost", "planet", "ground", "land", "monox", "bloom", "delamar", "sunset mesa", "ostler", "jacksons", "jackson's", "yang", "arid reach", "rayari", "shubin", "hdms", "babbage", "lorville", "area18", "area 18", "orison", "levski", "revolux", "zeus", "rappel", "facility", "site", "farm"]) or any(e in type_str for e in ["surface", "outpost", "planet", "planetary", "ground"])
 
     # ── Build candidate shuttle list ──
     max_pad_order = _PAD_ORDER.get(hangar_info.get("max_pad", "XS"), 0) if hangar_info else 0
