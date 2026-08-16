@@ -5,48 +5,46 @@
 
 ---
 
+## 📦 Latest Release: v0.6.1
+
+Download the latest installer from [GitHub Releases](https://github.com/foldynatom-design/starlifter-terminal/releases/tag/v0.6.1):
+- **Installer**: [`Starlifter_Setup.exe`](https://github.com/foldynatom-design/starlifter-terminal/releases/download/v0.6.1/Starlifter_Setup.exe)
+
+### What's New in v0.6.1:
+- Fixed application startup runtime dependencies and packaging (`main.pyc`, `rp_stories.py`, `api.py`).
+- Fixed Supply Route PDF generation and shuttle recommendation calculations.
+- Purged checkerboard artifacts from all signature assets for crisp alpha transparency.
+- Full uninstaller and Start Menu / Desktop shortcut registration.
+
+---
+
 ## 📋 Features
 
 ### Requisition Manifest (PDF)
-- Generate classified **military-style requisition PDFs** with cargo tables, totals, and commander signatures
-- Classification levels: **PUBLIC / SECURED / CLASSIFIED** — each with matching watermark and security header
-- Automatic **ledger hash ID** for document tracking
-- Digital signature fields with pre-loaded squadron signatures
+- Generate military-style requisition PDFs with cargo tables, totals, and commander signatures.
+- Classification levels: **PUBLIC / SECURED / CLASSIFIED** with matching watermarks and security headers.
+- Automatic ledger hash ID tracking.
+- Digital signature fields with pre-loaded squadron signatures.
 
 ### Supply Route PDF
-- Full **cargo load planning** with box sizes, quantities, and aUEC pricing
-- Auto-boxing system (Stor-All 1 SCU containers calculated automatically)
-- Courtesy item tagging
-- Batch export — generate multiple PDFs at once with one click
-- **`>> TRANSMITTING UPLINK...`** animation on generate
+- Cargo load planning with box sizes, quantities, and aUEC pricing.
+- Auto-boxing system (Stor-All containers calculated automatically).
+- Courtesy item tagging.
+- Single and batch export options.
 
 ### Cargo Management & Stor-All Packing
-- Exact **Stor-All** physical grid volumes enforced:
-  - 1 SCU = 1.00 SCU Grid Space
-  - 2 SCU = 2.00 SCU Grid Space
-  - 4 SCU = 4.00 SCU Grid Space
-  - 8 SCU = 8.00 SCU Grid Space
-- **Autoloader Integration**: Automatic inclusion of magazines and batteries based on gear type (e.g. 1:40 ratio for rifles).
-- Quick-Add from live **UEX trade database** with category filter
-- Custom cargo lines for non-database items
-- Per-item pricing with **total aUEC** calculation
-- Copy draft / copy final with prices to clipboard
+- Physical Stor-All grid volumes enforced (1, 2, 4, 8 SCU).
+- Quick-Add with category filtering from trade databases.
+- Custom cargo lines for non-database items.
+- Per-item pricing and total aUEC calculations.
+- Clipboard copy/paste import and export.
 
 ### Shuttle & Hangar Recommendation Engine
-- Recommends the best **mothership** (Idris, Kraken, Polaris, Javelin...) based on cargo and pad size
-- Verified in-game hangar fit data for each ship class
-- **Strict Pure-Cargo Rule**: PDF routing reports completely filter out explorer/touring ships (Carrack, 890 Jump, etc.) and only recommend pure cargo haulers (C2, Caterpillar, RAFT, etc.).
+- Recommends best cargo shuttle / mothership based on cargo volume and pad sizing.
+- Pure-cargo filtering for freight transport routes.
 
 ### Trade Route Assistant
-- Live **Star Citizen UEX** trade route database
-- Commodity prices, buy/sell locations
-- Route optimizer based on cargo capacity
-
-### Terminal Aesthetics
-- Full **military terminal UI** — dark amber theme, monospace typography
-- Intro video + sound on launch
-- Sound effects on PDF generation and key actions
-- Communication channel selector (OPEN_PUBLIC / RESTRICTED / ENCRYPTED)
+- Integrated trade database with commodity prices and buy/sell locations.
 
 ---
 
@@ -57,130 +55,39 @@
 - ~500 MB free disk space
 
 ### Steps
-
-1. Download **`Starlifter_Setup.exe`** from [Releases](https://github.com/foldynatom-design/starlifter-terminal/releases)
-2. **Unblock the file** before running *(see section below)*
-3. Run `Starlifter_Setup.exe`
-4. Click **BEGIN INSTALLATION**
-5. The installer will:
-   - Extract all application files to `%LOCALAPPDATA%\Starlifter_Terminal\`
-   - Create a **Desktop shortcut**
-   - Register in **Start Menu**
-   - Add to **Windows Add/Remove Programs**
-
----
-
-## 🔓 How to Unblock the Installer (Windows SmartScreen)
-
-Because this app is **not commercially code-signed**, Windows will show a SmartScreen warning. This is normal for independent tools. Follow these steps:
-
-### Option A — Right-click Unblock (Recommended)
-1. Right-click `Starlifter_Setup.exe`
-2. Select **Properties**
-3. At the bottom of the **General** tab, check ✅ **"Unblock"**
-4. Click **OK**
-5. Run the installer normally
-
-### Option B — SmartScreen "More info"
-1. Double-click the installer
-2. When SmartScreen appears, click **"More info"**
-3. Click **"Run anyway"**
-
-### Option C — Windows Defender / Antivirus
-If your antivirus quarantines the file:
-1. Open **Windows Security** → **Virus & threat protection**
-2. Go to **Protection history**
-3. Find the quarantined file → click **Restore** or **Allow**
-
-> ℹ️ **Why does this happen?**  
-> Windows flags executables that don't have a paid Microsoft code-signing certificate. The source code for this tool is fully open — you can review it in this repository before running.
+1. Download **`Starlifter_Setup.exe`** from [Releases](https://github.com/foldynatom-design/starlifter-terminal/releases).
+2. Right-click the file → **Properties** → check **"Unblock"** (if Windows SmartScreen appears).
+3. Run `Starlifter_Setup.exe` and click **BEGIN INSTALLATION**.
+4. The terminal will be installed to `%LOCALAPPDATA%\Starlifter_Terminal\` with Desktop and Start Menu shortcuts.
 
 ---
 
 ## 🗑️ Uninstall
 
-**Option A — Windows Settings:**
-Settings → Apps → "Starlifter Requisition Terminal v0.6" → Uninstall
-
-**Option B — Direct:**
-Run `Uninstall.exe` in `%LOCALAPPDATA%\Starlifter_Terminal\`
-
-The uninstaller removes:
-- All application files from AppData
-- Desktop shortcut
-- Start Menu entry
-- Windows Programs registry entry
+- **Windows Settings:** Apps → Installed Apps → "Starlifter Requisition Terminal v0.6.1" → **Uninstall**
+- **Direct:** Run `Uninstall.exe` in `%LOCALAPPDATA%\Starlifter_Terminal\`
 
 ---
 
 ## 🏗️ Building from Source
 
-Requirements: Python 3.11+, PyInstaller
-
 ```bash
 # Install dependencies
-pip install pyinstaller customtkinter opencv-python pillow fpdf2 fontTools
+pip install pyinstaller customtkinter opencv-python pillow fpdf fontTools
 
-# Full build (app + installer)
+# Build executable and installer
 python build_installer.py
 
 # Output: dist/Starlifter_Setup.exe
 ```
 
-> **Note:** Never commit `.pkl` font cache files — they contain absolute paths from the build machine and will cause PDF errors on other PCs. The `.gitignore` already excludes them.
-
----
-
-## 📁 File Structure
-
-```
-Starlifter_Terminal/          ← Install location (%LOCALAPPDATA%)
-├── Starlifter Requisition Terminal.exe
-├── main.pyc                  ← Core application logic
-├── config.json               ← Settings
-├── app_icon.ico
-├── logo.png / logo_uee44.png
-├── watermark_*.png
-├── fonts/
-│   ├── Roboto-Regular.ttf
-│   └── Roboto-Bold.ttf
-├── resources/
-│   ├── ship_grids_db.json
-│   ├── trade_db.json
-│   ├── sounds/
-│   └── Podpisy/              ← Commander signature images
-└── _internal/                ← Python runtime (PyInstaller)
-```
-
----
-
-## ⚠️ Known Issues
-
-- **Category filter autofill** — The category filter for writing/search/delete can be a bit janky. It works with patience when trying to autofill entries.
-
 ---
 
 ## 🌐 Data Sources
 
-This tool pulls live data from the following community APIs:
-
-| Source | URL | Data Provided |
-|--------|-----|---------------|
-| **UEX Corp** | [uexcorp.space](https://uexcorp.space/) | Commodity & item trade prices, buy/sell locations, ship specs (SCU, pad size) |
-| **Star Citizen Wiki** | [api.star-citizen.wiki](https://api.star-citizen.wiki/) | Vehicle dimensions, item volumes/weights, production status, manufacturer data |
-| **SC-Cargo.space** | [sc-cargo.space](https://sc-cargo.space/) | Ship cargo grid layouts — exact bay dimensions (width × height × length per group) |
-
-All data is fetched on-demand via the **⟳ Verify All Data** button and cached locally for offline use.
-
-> 🙏 Huge thanks to the maintainers of these community projects for making their data freely available.
-
----
-
-## 📌 Known Limitations
-
-- Requires an active internet connection for **live trade data and verification** (offline mode uses cached DB)
-- Intro video may not play on systems without media codecs (app continues normally)
-- Not affiliated with Cloud Imperium Games — this is a fan-made RP tool
+- **UEX Corp** ([uexcorp.space](https://uexcorp.space/)) — Commodity & trade prices, ship specs.
+- **Star Citizen Wiki** ([api.star-citizen.wiki](https://api.star-citizen.wiki/)) — Vehicle data, item details.
+- **SC-Cargo.space** ([sc-cargo.space](https://sc-cargo.space/)) — Ship cargo grid dimensions.
 
 ---
 
