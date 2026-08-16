@@ -15,8 +15,8 @@ check_paths = [
     r'C:\Program Files\Starlifter',
     r'C:\Program Files (x86)\Starlifter',
     os.path.expanduser(r'~\Desktop\Starlifter_Terminal'),
-    r'C:\Users\tomfo\AppData\Local\Starlifter_Terminal\dist',
-    r'C:\Users\tomfo\AppData\Local\Programs\Starlifter',
+    os.path.expanduser(r'~\AppData\Local\Starlifter_Terminal\dist'),
+    os.path.expanduser(r'~\AppData\Local\Programs\Starlifter'),
 ]
 for p in check_paths:
     exists = os.path.exists(p)
@@ -24,13 +24,12 @@ for p in check_paths:
         files = os.listdir(p)[:10]
         print(f"  [FOUND] {p}")
         print(f"          files: {files}")
-    else:
         print(f"  [  -  ] {p}")
 
 # Check for EXE in common places
 print()
 print("=== Hledám .exe soubory ===")
-for root_dir in [PATHS.app_root, r'C:\Users\tomfo\Desktop']:
+for root_dir in [PATHS.app_root, os.path.expanduser(r'~\Desktop')]:
     if os.path.isdir(root_dir):
         for f in os.listdir(root_dir):
             if f.endswith('.exe') and 'starlifter' in f.lower():

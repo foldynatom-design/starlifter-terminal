@@ -20,7 +20,13 @@
 - Batch export — generate multiple PDFs at once with one click
 - **`>> TRANSMITTING UPLINK...`** animation on generate
 
-### Cargo Management
+### Cargo Management & Stor-All Packing
+- Exact **Stor-All** physical grid volumes enforced:
+  - 1 SCU = 1.00 SCU Grid Space
+  - 2 SCU = 2.00 SCU Grid Space
+  - 4 SCU = 4.00 SCU Grid Space
+  - 8 SCU = 8.00 SCU Grid Space
+- **Autoloader Integration**: Automatic inclusion of magazines and batteries based on gear type (e.g. 1:40 ratio for rifles).
 - Quick-Add from live **UEX trade database** with category filter
 - Custom cargo lines for non-database items
 - Per-item pricing with **total aUEC** calculation
@@ -29,6 +35,7 @@
 ### Shuttle & Hangar Recommendation Engine
 - Recommends the best **mothership** (Idris, Kraken, Polaris, Javelin...) based on cargo and pad size
 - Verified in-game hangar fit data for each ship class
+- **Strict Pure-Cargo Rule**: PDF routing reports completely filter out explorer/touring ships (Carrack, 890 Jump, etc.) and only recommend pure cargo haulers (C2, Caterpillar, RAFT, etc.).
 
 ### Trade Route Assistant
 - Live **Star Citizen UEX** trade route database

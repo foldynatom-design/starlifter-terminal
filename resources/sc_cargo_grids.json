@@ -1,0 +1,4397 @@
+{
+  "Origin 100i": {
+    "manufacturer": "Origin",
+    "name": "100i",
+    "capacity": 2,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 2,
+    "_groups_count": 1
+  },
+  "Origin 125a": {
+    "manufacturer": "Origin",
+    "name": "125a",
+    "capacity": 2,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 2,
+    "_groups_count": 1
+  },
+  "Origin 135c": {
+    "manufacturer": "Origin",
+    "name": "135c",
+    "capacity": 6,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 5,
+            "width": 1,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 6,
+    "_groups_count": 1
+  },
+  "Origin 300i": {
+    "manufacturer": "Origin",
+    "name": "300i",
+    "capacity": 8,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 4
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 8,
+    "_groups_count": 1
+  },
+  "Origin 315p": {
+    "manufacturer": "Origin",
+    "name": "315p",
+    "capacity": 12,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 2
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 3,
+            "width": 2,
+            "height": 1,
+            "length": 4
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 12,
+    "_groups_count": 1
+  },
+  "Origin 325a": {
+    "manufacturer": "Origin",
+    "name": "325a",
+    "capacity": 4,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 4,
+    "_groups_count": 1
+  },
+  "Origin 350r": {
+    "manufacturer": "Origin",
+    "name": "350r",
+    "capacity": 4,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 4,
+    "_groups_count": 1
+  },
+  "Origin 400i": {
+    "manufacturer": "Origin",
+    "name": "400i",
+    "capacity": 42,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 2,
+            "length": 7
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 42,
+    "_groups_count": 1
+  },
+  "Origin 600i Explorer": {
+    "manufacturer": "Origin",
+    "name": "600i Explorer",
+    "capacity": 44,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 7,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 4,
+            "width": 1,
+            "height": 2,
+            "length": 1
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 4,
+            "width": 1,
+            "height": 2,
+            "length": 1
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 8,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "width": 1,
+            "height": 3,
+            "length": 2
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 3,
+            "length": 1
+          },
+          {
+            "x": 7,
+            "y": 0,
+            "z": 2,
+            "width": 1,
+            "height": 3,
+            "length": 2
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 44,
+    "_groups_count": 2
+  },
+  "Origin 600i Touring": {
+    "manufacturer": "Origin",
+    "name": "600i Touring",
+    "capacity": 20,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 7,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 4,
+            "width": 1,
+            "height": 2,
+            "length": 1
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 4,
+            "width": 1,
+            "height": 2,
+            "length": 1
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 20,
+    "_groups_count": 1
+  },
+  "Origin 890 Jump": {
+    "manufacturer": "Origin",
+    "name": "890 Jump",
+    "capacity": 388,
+    "groups": [
+      {
+        "x": 2,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 4,
+            "length": 12
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 15,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 2,
+            "length": 5
+          },
+          {
+            "x": 7,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 2,
+            "length": 5
+          }
+        ]
+      },
+      {
+        "x": 2,
+        "z": 23,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 5
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 5
+          }
+        ]
+      },
+      {
+        "x": 3,
+        "z": 31,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 5
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 5
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 388,
+    "_groups_count": 4
+  },
+  "Crusader A2 Hercules": {
+    "manufacturer": "Crusader",
+    "name": "A2 Hercules",
+    "capacity": 216,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 2,
+            "length": 18
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 216,
+    "_groups_count": 1
+  },
+  "RSI Constellation Andromeda": {
+    "manufacturer": "RSI",
+    "name": "Constellation Andromeda",
+    "capacity": 96,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 3,
+            "length": 8
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 96,
+    "_groups_count": 1
+  },
+  "RSI Apollo Medivac": {
+    "manufacturer": "RSI",
+    "name": "Apollo Medivac",
+    "capacity": 32,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4,
+            "maxSize": 2
+          },
+          {
+            "x": 4,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4,
+            "maxSize": 2
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 32,
+    "_groups_count": 1
+  },
+  "RSI Apollo Triage": {
+    "manufacturer": "RSI",
+    "name": "Apollo Triage",
+    "capacity": 32,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4,
+            "maxSize": 2
+          },
+          {
+            "x": 4,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4,
+            "maxSize": 2
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 32,
+    "_groups_count": 1
+  },
+  "RSI Constellation Aquila": {
+    "manufacturer": "RSI",
+    "name": "Constellation Aquila",
+    "capacity": 96,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 3,
+            "length": 8
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 96,
+    "_groups_count": 1
+  },
+  "RSI Arrastra [Concept]": {
+    "manufacturer": "RSI",
+    "name": "Arrastra [Concept]",
+    "capacity": 576,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 8,
+            "height": 4,
+            "length": 18
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 576,
+    "_groups_count": 1
+  },
+  "Anvil Asgard": {
+    "manufacturer": "Anvil",
+    "name": "Asgard",
+    "capacity": 180,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 4,
+            "length": 9
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 180,
+    "_groups_count": 1
+  },
+  "Aurora (Mk II) Aurora Mk II": {
+    "manufacturer": "Aurora (Mk II)",
+    "name": "Aurora Mk II",
+    "capacity": 2,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 1
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 1
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 2,
+    "_groups_count": 1
+  },
+  "Aurora Mk II [Cargo] Aurora Mk II Cargo": {
+    "manufacturer": "Aurora Mk II [Cargo]",
+    "name": "Aurora Mk II Cargo",
+    "capacity": 8,
+    "groups": [
+      {
+        "x": 1,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 3
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 3
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 6,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 1
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 1
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 8,
+    "_groups_count": 2
+  },
+  "Aurora CL Aurora CL Mk I": {
+    "manufacturer": "Aurora CL",
+    "name": "Aurora CL Mk I",
+    "capacity": 6,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 6
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 6,
+    "_groups_count": 1
+  },
+  "Aurora ES Aurora ES Mk I": {
+    "manufacturer": "Aurora ES",
+    "name": "Aurora ES Mk I",
+    "capacity": 3,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 3
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 3,
+    "_groups_count": 1
+  },
+  "Aurora LN Aurora LN Mk I": {
+    "manufacturer": "Aurora LN",
+    "name": "Aurora LN Mk I",
+    "capacity": 3,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 3
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 3,
+    "_groups_count": 1
+  },
+  "Aurora LX Aurora LX Mk I": {
+    "manufacturer": "Aurora LX",
+    "name": "Aurora LX Mk I",
+    "capacity": 3,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 3
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 3,
+    "_groups_count": 1
+  },
+  "Aurora MR Aurora MR Mk I": {
+    "manufacturer": "Aurora MR",
+    "name": "Aurora MR Mk I",
+    "capacity": 3,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 3
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 3,
+    "_groups_count": 1
+  },
+  "Aegis Avenger Titan": {
+    "manufacturer": "Aegis",
+    "name": "Avenger Titan",
+    "capacity": 8,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 4
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 8,
+    "_groups_count": 1
+  },
+  "C1 Spirit ${scu}": {
+    "manufacturer": "C1 Spirit",
+    "name": "${scu}",
+    "capacity": 64,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          },
+          {
+            "x": 4,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 64,
+    "_groups_count": 1
+  },
+  "Anvil C8 Pisces": {
+    "manufacturer": "Anvil",
+    "name": "C8 Pisces",
+    "capacity": 4,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 4,
+    "_groups_count": 1
+  },
+  "Anvil C8X Pisces": {
+    "manufacturer": "Anvil",
+    "name": "C8X Pisces",
+    "capacity": 4,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 4,
+    "_groups_count": 1
+  },
+  "Anvil Carrack": {
+    "manufacturer": "Anvil",
+    "name": "Carrack",
+    "capacity": 456,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 3,
+            "maxSize": 8
+          },
+          {
+            "x": 10,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 7,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 3,
+            "maxSize": 8
+          },
+          {
+            "x": 10,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 14,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 3,
+            "maxSize": 8
+          },
+          {
+            "x": 10,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 456,
+    "_groups_count": 3
+  },
+  "Drake Caterpillar": {
+    "manufacturer": "Drake",
+    "name": "Caterpillar",
+    "capacity": 576,
+    "groups": [
+      {
+        "x": 1,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 2,
+            "length": 6
+          },
+          {
+            "x": 0,
+            "y": 2,
+            "z": 0,
+            "width": 5,
+            "height": 1,
+            "length": 4
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 9,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 4,
+            "width": 5,
+            "height": 4,
+            "length": 1
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 18,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 4,
+            "width": 5,
+            "height": 4,
+            "length": 1
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 27,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 4,
+            "width": 5,
+            "height": 4,
+            "length": 1
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 36,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 4,
+            "width": 5,
+            "height": 4,
+            "length": 1
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 576,
+    "_groups_count": 5
+  },
+  "Drake Clipper": {
+    "manufacturer": "Drake",
+    "name": "Clipper",
+    "capacity": 12,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 3,
+            "maxSize": 2
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 12,
+    "_groups_count": 1
+  },
+  "Drake Corsair": {
+    "manufacturer": "Drake",
+    "name": "Corsair",
+    "capacity": 72,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 3,
+            "length": 6
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 72,
+    "_groups_count": 1
+  },
+  "Argo CSV-SM": {
+    "manufacturer": "Argo",
+    "name": "CSV-SM",
+    "capacity": 4,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 4,
+    "_groups_count": 1
+  },
+  "Drake Cutlass Black": {
+    "manufacturer": "Drake",
+    "name": "Cutlass Black",
+    "capacity": 46,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 1.5,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 4,
+            "width": 4,
+            "height": 2,
+            "length": 5
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 46,
+    "_groups_count": 1
+  },
+  "Drake Cutlass Blue": {
+    "manufacturer": "Drake",
+    "name": "Cutlass Blue",
+    "capacity": 12,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 12,
+    "_groups_count": 1
+  },
+  "Drake Cutlass Red": {
+    "manufacturer": "Drake",
+    "name": "Cutlass Red",
+    "capacity": 12,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 12,
+    "_groups_count": 1
+  },
+  "Drake Cutter": {
+    "manufacturer": "Drake",
+    "name": "Cutter",
+    "capacity": 4,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 2
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 4,
+    "_groups_count": 1
+  },
+  "Drake Cutter Rambler": {
+    "manufacturer": "Drake",
+    "name": "Cutter Rambler",
+    "capacity": 2,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 1
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 2,
+    "_groups_count": 1
+  },
+  "Drake Cutter Scout": {
+    "manufacturer": "Drake",
+    "name": "Cutter Scout",
+    "capacity": 2,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 1
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 2,
+    "_groups_count": 1
+  },
+  "Tumbril Cyclone": {
+    "manufacturer": "Tumbril",
+    "name": "Cyclone",
+    "capacity": 1,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 1
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 1,
+    "_groups_count": 1
+  },
+  "F7C Hornet F7C Hornet Mk I": {
+    "manufacturer": "F7C Hornet",
+    "name": "F7C Hornet Mk I",
+    "capacity": 2,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 1
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 2,
+    "_groups_count": 1
+  },
+  "F7C Hornet (Mk II) F7C Hornet Mk II": {
+    "manufacturer": "F7C Hornet (Mk II)",
+    "name": "F7C Hornet Mk II",
+    "capacity": 2,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 1
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 2,
+    "_groups_count": 1
+  },
+  "MISC Fortune": {
+    "manufacturer": "MISC",
+    "name": "Fortune",
+    "capacity": 16,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3,
+            "maxSize": 1
+          }
+        ]
+      },
+      {
+        "x": 5,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3,
+            "maxSize": 1
+          }
+        ]
+      },
+      {
+        "x": 2,
+        "z": 6,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 2,
+            "maxSize": 1
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 16,
+    "_groups_count": 3
+  },
+  "MISC Freelancer": {
+    "manufacturer": "MISC",
+    "name": "Freelancer",
+    "capacity": 66,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 3,
+            "length": 2
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 3,
+            "length": 2
+          }
+        ]
+      },
+      {
+        "x": 1,
+        "z": 5,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 3,
+            "length": 9
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 66,
+    "_groups_count": 2
+  },
+  "MISC Freelancer DUR": {
+    "manufacturer": "MISC",
+    "name": "Freelancer DUR",
+    "capacity": 36,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 3,
+            "length": 2
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 3,
+            "length": 2
+          }
+        ]
+      },
+      {
+        "x": 1,
+        "z": 5,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 3,
+            "length": 4
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 36,
+    "_groups_count": 2
+  },
+  "MISC Freelancer MAX": {
+    "manufacturer": "MISC",
+    "name": "Freelancer MAX",
+    "capacity": 120,
+    "groups": [
+      {
+        "x": 0,
+        "z": 12,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 3,
+            "length": 2
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 3,
+            "length": 2
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 3,
+            "length": 9
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 120,
+    "_groups_count": 2
+  },
+  "MISC Freelancer MIS": {
+    "manufacturer": "MISC",
+    "name": "Freelancer MIS",
+    "capacity": 36,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 3,
+            "length": 2
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 3,
+            "length": 2
+          }
+        ]
+      },
+      {
+        "x": 1,
+        "z": 5,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 3,
+            "length": 4
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 36,
+    "_groups_count": 2
+  },
+  "RSI Galaxy [Base Concept]": {
+    "manufacturer": "RSI",
+    "name": "Galaxy [Base Concept]",
+    "capacity": 64,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          },
+          {
+            "x": 12,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 64,
+    "_groups_count": 1
+  },
+  "RSI Galaxy [Cargo Concept]": {
+    "manufacturer": "RSI",
+    "name": "Galaxy [Cargo Concept]",
+    "capacity": 576,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          },
+          {
+            "x": 12,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 12,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 16
+          },
+          {
+            "x": 10,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 16
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 576,
+    "_groups_count": 2
+  },
+  "Drake Golem Ox": {
+    "manufacturer": "Drake",
+    "name": "Golem Ox",
+    "capacity": 64,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 8
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 64,
+    "_groups_count": 1
+  },
+  "Aegis Hammerhead": {
+    "manufacturer": "Aegis",
+    "name": "Hammerhead",
+    "capacity": 64,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 8
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 64,
+    "_groups_count": 1
+  },
+  "RSI Hermes": {
+    "manufacturer": "RSI",
+    "name": "Hermes",
+    "capacity": 288,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 18
+          },
+          {
+            "x": 6,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 18
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 288,
+    "_groups_count": 1
+  },
+  "MISC Hull-A": {
+    "manufacturer": "MISC",
+    "name": "Hull-A",
+    "capacity": 64,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 4,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 4,
+            "length": 4
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 64,
+    "_groups_count": 1
+  },
+  "Hull-B Hull-B [Concept]": {
+    "manufacturer": "Hull-B",
+    "name": "Hull-B [Concept]",
+    "capacity": 512,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          },
+          {
+            "x": 6,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          },
+          {
+            "x": 8,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          },
+          {
+            "x": 12,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          },
+          {
+            "x": 14,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          },
+          {
+            "x": 18,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          },
+          {
+            "x": 20,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 11,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          },
+          {
+            "x": 6,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          },
+          {
+            "x": 8,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          },
+          {
+            "x": 12,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          },
+          {
+            "x": 14,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          },
+          {
+            "x": 18,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          },
+          {
+            "x": 20,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 512,
+    "_groups_count": 2
+  },
+  "MISC Hull-C": {
+    "manufacturer": "MISC",
+    "name": "Hull-C",
+    "capacity": 4608,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 14,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 28,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 42,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 11,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 14,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 28,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 42,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 4608,
+    "_groups_count": 2
+  },
+  "MISC Hull-D [Concept]": {
+    "manufacturer": "MISC",
+    "name": "Hull-D [Concept]",
+    "capacity": 6912,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 14,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 28,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 42,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          }
+        ],
+        "minSize": 32
+      },
+      {
+        "x": 0,
+        "z": 11,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 14,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 28,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 42,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          }
+        ],
+        "minSize": 32
+      },
+      {
+        "x": 0,
+        "z": 22,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 14,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 28,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 42,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8
+          }
+        ],
+        "minSize": 32
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 6912,
+    "_groups_count": 3
+  },
+  "MISC Hull-E [Concept]": {
+    "manufacturer": "MISC",
+    "name": "Hull-E [Concept]",
+    "capacity": 12288,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 18,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 36,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 54,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8
+          }
+        ],
+        "minSize": 32
+      },
+      {
+        "x": 0,
+        "z": 11,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 18,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 36,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 54,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8
+          }
+        ],
+        "minSize": 32
+      },
+      {
+        "x": 0,
+        "z": 22,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 18,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 36,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 54,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8
+          }
+        ],
+        "minSize": 32
+      },
+      {
+        "x": 0,
+        "z": 33,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 18,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 36,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8
+          },
+          {
+            "x": 54,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8
+          }
+        ],
+        "minSize": 32
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 12288,
+    "_groups_count": 4
+  },
+  "Aegis Idris-M": {
+    "manufacturer": "Aegis",
+    "name": "Idris-M",
+    "capacity": 1326,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 6,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 11,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 19,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 24,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 32,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 37,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 47,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 6,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 11,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 19,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 24,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 32,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 37,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 47,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          }
+        ]
+      },
+      {
+        "x": 23,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 7,
+            "width": 18,
+            "height": 2,
+            "length": 4,
+            "maxSize": 16
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 1,
+            "width": 14,
+            "height": 2,
+            "length": 5,
+            "maxSize": 16
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 1,
+            "maxSize": 16
+          },
+          {
+            "x": 6.5,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 2,
+            "length": 1,
+            "maxSize": 16
+          },
+          {
+            "x": 14,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 1,
+            "maxSize": 16
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 1326,
+    "_groups_count": 2
+  },
+  "Aegis Idris-P": {
+    "manufacturer": "Aegis",
+    "name": "Idris-P",
+    "capacity": 1374,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 6,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 11,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 19,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 24,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 32,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 37,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 47,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 6,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 11,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 19,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 24,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 32,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 37,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          },
+          {
+            "x": 16,
+            "y": 0,
+            "z": 47,
+            "width": 4,
+            "height": 4,
+            "length": 4
+          }
+        ]
+      },
+      {
+        "x": 23,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 7,
+            "width": 18,
+            "height": 2,
+            "length": 4,
+            "maxSize": 16
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 1,
+            "width": 14,
+            "height": 2,
+            "length": 5,
+            "maxSize": 16
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 1,
+            "maxSize": 16
+          },
+          {
+            "x": 6.5,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 2,
+            "length": 1,
+            "maxSize": 16
+          },
+          {
+            "x": 14,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 1,
+            "maxSize": 16
+          }
+        ]
+      },
+      {
+        "x": 23,
+        "z": 14,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 2,
+            "length": 4,
+            "maxSize": 2
+          },
+          {
+            "x": 4,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 2,
+            "length": 4,
+            "maxSize": 2
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 1374,
+    "_groups_count": 3
+  },
+  "Crusader Intrepid": {
+    "manufacturer": "Crusader",
+    "name": "Intrepid",
+    "capacity": 8,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 4
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 4
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 8,
+    "_groups_count": 1
+  },
+  "Ironclad Ironclad [Concept]": {
+    "manufacturer": "Ironclad",
+    "name": "Ironclad [Concept]",
+    "capacity": 2200,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 6,
+            "length": 20
+          },
+          {
+            "x": 8,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 6,
+            "length": 20
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 21,
+            "width": 6,
+            "height": 6,
+            "length": 10
+          },
+          {
+            "x": 8,
+            "y": 0,
+            "z": 21,
+            "width": 6,
+            "height": 6,
+            "length": 10
+          }
+        ]
+      },
+      {
+        "x": 17,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 2,
+            "maxSize": 1
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 2,
+            "maxSize": 1
+          },
+          {
+            "x": 6,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 2,
+            "maxSize": 1
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 3,
+            "width": 2,
+            "height": 2,
+            "length": 2,
+            "maxSize": 1
+          },
+          {
+            "x": 6,
+            "y": 0,
+            "z": 3,
+            "width": 2,
+            "height": 2,
+            "length": 2,
+            "maxSize": 1
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 2200,
+    "_groups_count": 2
+  },
+  "Ironclad Assault Ironclad Assault [Concept]": {
+    "manufacturer": "Ironclad Assault",
+    "name": "Ironclad Assault [Concept]",
+    "capacity": 1440,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 6,
+            "length": 20
+          },
+          {
+            "x": 8,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 6,
+            "length": 20
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 1440,
+    "_groups_count": 1
+  },
+  "Anvil Liberator [Concept]": {
+    "manufacturer": "Anvil",
+    "name": "Liberator [Concept]",
+    "capacity": 400,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 4,
+            "length": 10
+          }
+        ]
+      },
+      {
+        "x": 8,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 4,
+            "length": 10
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 400,
+    "_groups_count": 2
+  },
+  "Origin M80": {
+    "manufacturer": "Origin",
+    "name": "M80",
+    "capacity": 2,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 2,
+    "_groups_count": 1
+  },
+  "Banu Merchantman [Concept]": {
+    "manufacturer": "Banu",
+    "name": "Merchantman [Concept]",
+    "capacity": 2880,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 10,
+            "length": 24
+          }
+        ]
+      },
+      {
+        "x": 9,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 10,
+            "length": 24
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 2880,
+    "_groups_count": 2
+  },
+  "Argo MOLE": {
+    "manufacturer": "Argo",
+    "name": "MOLE",
+    "capacity": 32,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 4
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 32,
+    "_groups_count": 1
+  },
+  "Argo MPUV-C": {
+    "manufacturer": "Argo",
+    "name": "MPUV-C",
+    "capacity": 2,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 2,
+    "_groups_count": 1
+  },
+  "Argo MPUV-T": {
+    "manufacturer": "Argo",
+    "name": "MPUV-T",
+    "capacity": 16,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 16,
+    "_groups_count": 1
+  },
+  "Crusader Mercury Star Runner": {
+    "manufacturer": "Crusader",
+    "name": "Mercury Star Runner",
+    "capacity": 114,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 3,
+            "length": 6
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 114,
+    "_groups_count": 1
+  },
+  "Drake Mule": {
+    "manufacturer": "Drake",
+    "name": "Mule",
+    "capacity": 1,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 1
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 1,
+    "_groups_count": 1
+  },
+  "Consolidated Outland Mustang Alpha": {
+    "manufacturer": "Consolidated Outland",
+    "name": "Mustang Alpha",
+    "capacity": 4,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 4
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 4,
+    "_groups_count": 1
+  },
+  "Consolidated Outland Nomad": {
+    "manufacturer": "Consolidated Outland",
+    "name": "Nomad",
+    "capacity": 24,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 2,
+            "length": 4
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 24,
+    "_groups_count": 1
+  },
+  "Anvil Paladin": {
+    "manufacturer": "Anvil",
+    "name": "Paladin",
+    "capacity": 4,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 4
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 4,
+    "_groups_count": 1
+  },
+  "RSI Perseus": {
+    "manufacturer": "RSI",
+    "name": "Perseus",
+    "capacity": 96,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 8,
+            "height": 2,
+            "length": 6
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 96,
+    "_groups_count": 1
+  },
+  "RSI Constellation Phoenix": {
+    "manufacturer": "RSI",
+    "name": "Constellation Phoenix",
+    "capacity": 80,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 2,
+            "length": 8
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 80,
+    "_groups_count": 1
+  },
+  "RSI Polaris": {
+    "manufacturer": "RSI",
+    "name": "Polaris",
+    "capacity": 576,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 4,
+            "length": 12
+          },
+          {
+            "x": 8,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 4,
+            "length": 12
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 576,
+    "_groups_count": 1
+  },
+  "Esperia Prowler Utility": {
+    "manufacturer": "Esperia",
+    "name": "Prowler Utility",
+    "capacity": 32,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4
+          },
+          {
+            "x": 4,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 32,
+    "_groups_count": 1
+  },
+  "Railen Railen [Concept]": {
+    "manufacturer": "Railen",
+    "name": "Railen [Concept]",
+    "capacity": 640,
+    "groups": [
+      {
+        "x": 4,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 8
+          }
+        ]
+      },
+      {
+        "x": 10,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 8
+          }
+        ]
+      },
+      {
+        "x": 4,
+        "z": 10,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 8
+          }
+        ]
+      },
+      {
+        "x": 10,
+        "z": 10,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 8
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 4,
+            "length": 8
+          }
+        ]
+      },
+      {
+        "x": 16,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 4,
+            "length": 8
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 640,
+    "_groups_count": 6
+  },
+  "Aegis Reclaimer": {
+    "manufacturer": "Aegis",
+    "name": "Reclaimer",
+    "capacity": 420,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 2,
+            "length": 7,
+            "maxSize": 16
+          },
+          {
+            "x": 7,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 2,
+            "length": 7,
+            "maxSize": 16
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 11,
+            "width": 5,
+            "height": 2,
+            "length": 5,
+            "maxSize": 16
+          },
+          {
+            "x": 7,
+            "y": 0,
+            "z": 11,
+            "width": 5,
+            "height": 2,
+            "length": 5,
+            "maxSize": 16
+          }
+        ]
+      },
+      {
+        "x": 15,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 3,
+            "length": 2,
+            "maxSize": 16
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 4,
+            "width": 3,
+            "height": 3,
+            "length": 3,
+            "maxSize": 16
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 9,
+            "width": 3,
+            "height": 3,
+            "length": 3,
+            "maxSize": 16
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 14,
+            "width": 3,
+            "height": 3,
+            "length": 2,
+            "maxSize": 16
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 3,
+            "length": 2,
+            "maxSize": 16
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 4,
+            "width": 3,
+            "height": 3,
+            "length": 3,
+            "maxSize": 16
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 9,
+            "width": 3,
+            "height": 3,
+            "length": 3,
+            "maxSize": 16
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "z": 14,
+            "width": 3,
+            "height": 3,
+            "length": 2,
+            "maxSize": 16
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 420,
+    "_groups_count": 2
+  },
+  "Aegis Redeemer": {
+    "manufacturer": "Aegis",
+    "name": "Redeemer",
+    "capacity": 2,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 1
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 2,
+    "_groups_count": 1
+  },
+  "MISC Reliant Kore": {
+    "manufacturer": "MISC",
+    "name": "Reliant Kore",
+    "capacity": 6,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 3
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 3
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 6,
+    "_groups_count": 1
+  },
+  "MISC Reliant Tana": {
+    "manufacturer": "MISC",
+    "name": "Reliant Tana",
+    "capacity": 1,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 1
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 1,
+    "_groups_count": 1
+  },
+  "Aegis Retaliator": {
+    "manufacturer": "Aegis",
+    "name": "Retaliator",
+    "capacity": 74,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 2,
+            "length": 6
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 9,
+        "grids": [
+          {
+            "x": 1,
+            "y": 0,
+            "z": 1,
+            "width": 2,
+            "height": 2,
+            "length": 6
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 1
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 1,
+            "width": 1,
+            "height": 2,
+            "length": 5
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 74,
+    "_groups_count": 2
+  },
+  "RSI Salvation": {
+    "manufacturer": "RSI",
+    "name": "Salvation",
+    "capacity": 6,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 3,
+            "maxSize": 1
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 6,
+    "_groups_count": 1
+  },
+  "Grey's Shiv": {
+    "manufacturer": "Grey's",
+    "name": "Shiv",
+    "capacity": 32,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 32,
+    "_groups_count": 1
+  },
+  "Argo SRV": {
+    "manufacturer": "Argo",
+    "name": "SRV",
+    "capacity": 12,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 1,
+            "length": 3
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 12,
+    "_groups_count": 1
+  },
+  "MISC Starfarer": {
+    "manufacturer": "MISC",
+    "name": "Starfarer",
+    "capacity": 291,
+    "groups": [
+      {
+        "x": 5,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 5,
+            "length": 7
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 2
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "width": 2,
+            "height": 5,
+            "length": 5
+          }
+        ]
+      },
+      {
+        "x": 13,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 2
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "width": 2,
+            "height": 5,
+            "length": 5
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 291,
+    "_groups_count": 3
+  },
+  "MISC Starfarer Gemini": {
+    "manufacturer": "MISC",
+    "name": "Starfarer Gemini",
+    "capacity": 291,
+    "groups": [
+      {
+        "x": 5,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 5,
+            "length": 7
+          }
+        ]
+      },
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 2
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "width": 2,
+            "height": 5,
+            "length": 5
+          }
+        ]
+      },
+      {
+        "x": 13,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 2
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "width": 2,
+            "height": 5,
+            "length": 5
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 291,
+    "_groups_count": 3
+  },
+  "MISC Starlancer MAX": {
+    "manufacturer": "MISC",
+    "name": "Starlancer MAX",
+    "capacity": 224,
+    "groups": [
+      {
+        "name": "Aft Cargo Bay",
+        "x": 0,
+        "z": 19,
+        "grids": [
+          {
+            "name": "Port Side",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 3,
+            "length": 8
+          },
+          {
+            "name": "Starboard Side",
+            "x": 7,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 3,
+            "length": 8
+          }
+        ]
+      },
+      {
+        "name": "Mid Cargo Bay",
+        "x": 2,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Port Side",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 16
+          },
+          {
+            "name": "Starboard Side",
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 16
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 224,
+    "_groups_count": 2
+  },
+  "MISC Starlancer TAC": {
+    "manufacturer": "MISC",
+    "name": "Starlancer TAC",
+    "capacity": 96,
+    "groups": [
+      {
+        "name": "Aft Cargo Bay",
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Port Side",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 3,
+            "length": 8
+          },
+          {
+            "name": "Starboard Side",
+            "x": 7,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 3,
+            "length": 8
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 96,
+    "_groups_count": 1
+  },
+  "Gatac Syulen": {
+    "manufacturer": "Gatac",
+    "name": "Syulen",
+    "capacity": 6,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 1,
+            "length": 2,
+            "maxSize": 1
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 6,
+    "_groups_count": 1
+  },
+  "RSI Constellation Taurus": {
+    "manufacturer": "RSI",
+    "name": "Constellation Taurus",
+    "capacity": 174,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 3,
+            "length": 14
+          }
+        ]
+      },
+      {
+        "x": 1,
+        "z": 17,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 3,
+            "maxSize": 2
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 174,
+    "_groups_count": 2
+  },
+  "Aegis Tiburon": {
+    "manufacturer": "Aegis",
+    "name": "Tiburon",
+    "capacity": 64,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 8
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 64,
+    "_groups_count": 1
+  },
+  "Gatac Tyilui": {
+    "manufacturer": "Gatac",
+    "name": "Tyilui",
+    "capacity": 96,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 6
+          }
+        ]
+      },
+      {
+        "x": 7,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 6
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 96,
+    "_groups_count": 2
+  },
+  "Anvil Valkyrie": {
+    "manufacturer": "Anvil",
+    "name": "Valkyrie",
+    "capacity": 90,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 3,
+            "length": 6
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 90,
+    "_groups_count": 1
+  },
+  "Drake Vulture": {
+    "manufacturer": "Drake",
+    "name": "Vulture",
+    "capacity": 13,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 1,
+            "maxSize": 1
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 1,
+            "width": 2,
+            "height": 2,
+            "length": 3,
+            "maxSize": 1
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 13,
+    "_groups_count": 1
+  },
+  "RSI Zeus Mk II CL": {
+    "manufacturer": "RSI",
+    "name": "Zeus Mk II CL",
+    "capacity": 128,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 3,
+            "length": 8
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "width": 1,
+            "height": 2,
+            "length": 2
+          },
+          {
+            "x": 6,
+            "y": 0,
+            "z": 2,
+            "width": 1,
+            "height": 2,
+            "length": 2
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 128,
+    "_groups_count": 1
+  },
+  "RSI Zeus Mk II ES": {
+    "manufacturer": "RSI",
+    "name": "Zeus Mk II ES",
+    "capacity": 32,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 4
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 32,
+    "_groups_count": 1
+  },
+  "RSI Zeus Mk II MR [Concept]": {
+    "manufacturer": "RSI",
+    "name": "Zeus Mk II MR [Concept]",
+    "capacity": 16,
+    "groups": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4
+          }
+        ]
+      }
+    ],
+    "_source": "sc-cargo.space",
+    "_total_cells": 16,
+    "_groups_count": 1
+  }
+}

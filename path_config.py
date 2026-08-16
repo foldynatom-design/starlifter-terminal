@@ -74,6 +74,11 @@ class _StarlifterPaths:
         return self._paths.get("config", os.path.join(self.app_root, "config.json"))
 
     @property
+    def config_dir(self):
+        """Directory containing config.json (safe place to write packages.json, etc.)."""
+        return os.path.dirname(self.config)
+
+    @property
     def temp_dir(self):
         """Temp directory for processed images (signatures, barcodes, stamps)."""
         return self._paths.get("temp_dir",
@@ -125,6 +130,53 @@ class _StarlifterPaths:
         """Create the temp directory if it doesn't exist. Returns the path."""
         os.makedirs(self.temp_dir, exist_ok=True)
         return self.temp_dir
+
+    def ensure_resources(self):
+        """Ensure all critical resource JSON files exist.
+
+        On a clean installation, resource files may not exist yet.
+        This method creates them with safe empty defaults so that
+        lazy-loaders never crash with FileNotFoundError.
+        Called once at app startup.
+        """
+        os.makedirs(self.resources, exist_ok=True)
+
+        # Critical JSON files and their empty defaults
+        _CRITICAL_FILES = {
+            "uex_locations_db.json": {},
+            "uex_ships_db.json": {},
+            "uex_trade_db.json": {},
+            "uex_items_trade_db.json": {},
+            "sc_wiki_items_cache.json": {},
+            "commodity_prices.json": {},
+            "ship_grids_db.json": {},
+            "item_volumes.json": {},
+            "ordnance_grid_shapes.json": {},
+            "cstone_master_db.json": {},
+            "sc_cargo_ships_db.json": [],
+            "frequent_items.json": [],
+            "cstone_generated_slang.json": {},
+            "cstone_volume_map.json": {},
+            "cargo_bay_dimensions.json": {},
+            "ship_dimensions.json": {},
+            "hangar_fit_map.json": {},
+        }
+
+        seeded = []
+        for filename, default_content in _CRITICAL_FILES.items():
+            filepath = os.path.join(self.resources, filename)
+            if not os.path.isfile(filepath):
+                try:
+                    with open(filepath, "w", encoding="utf-8") as f:
+                        json.dump(default_content, f, indent=2)
+                    seeded.append(filename)
+                except OSError as e:
+                    print(f"[path_config] Warning: could not seed {filename}: {e}",
+                          file=sys.stderr)
+
+        if seeded:
+            print(f"[path_config] Clean install: auto-seeded {len(seeded)} resource files: "
+                  f"{', '.join(seeded)}", file=sys.stderr)
 
     def temp_file(self, filename):
         """Return full path to a temp file, ensuring temp_dir exists."""
@@ -192,9 +244,13 @@ class _StarlifterPaths:
         if self.is_frozen:
             app_root = os.path.dirname(sys.executable)
         else:
-            # Dev mode: path_config.py is in source/, app_root = parent of source/
             this_dir = os.path.dirname(os.path.abspath(__file__))
-            app_root = os.path.dirname(this_dir)  # project root (has resources/)
+            if os.path.exists(os.path.join(this_dir, "resources")) or os.path.exists(os.path.join(this_dir, "entry.py")):
+                app_root = this_dir
+            elif os.path.exists(os.path.join(os.path.dirname(this_dir), "resources")):
+                app_root = os.path.dirname(this_dir)
+            else:
+                app_root = this_dir
 
         self._config_file = os.path.join(app_root, "starlifter_paths.json")
 
@@ -203,8 +259,10 @@ class _StarlifterPaths:
             try:
                 with open(self._config_file, "r", encoding="utf-8") as f:
                     saved = json.load(f)
-                # Validate that critical paths still exist
-                if os.path.isdir(saved.get("app_root", "")):
+                # Validate that saved app_root matches current app_root AND exists
+                saved_root = os.path.normpath(saved.get("app_root", ""))
+                current_root = os.path.normpath(app_root)
+                if saved_root == current_root and os.path.isdir(saved_root):
                     self._paths = saved
                     self._paths["is_frozen"] = self.is_frozen
                     # Re-validate resources dir exists
@@ -300,6 +358,8 @@ class _StarlifterPaths:
 
     def _save_config(self):
         """Persist detected paths to starlifter_paths.json."""
+        if self.is_frozen:
+            return  # Do not write absolute starlifter_paths.json in production EXE mode!
         save_data = {
             "version": 1,
             "created": datetime.now().isoformat(),
@@ -331,3 +391,17 @@ class _StarlifterPaths:
 # Import this in all other modules:
 #     from path_config import PATHS
 PATHS = _StarlifterPaths()
+
+
+def load_frequent_items(config_data=None):
+    """Load frequent items from config_data dict or fallback to resources/frequent_items.json."""
+    if isinstance(config_data, dict) and config_data.get("frequent_items"):
+        return config_data["frequent_items"]
+    
+    freq_path = os.path.join(PATHS.resources, "frequent_items.json")
+    if os.path.exists(freq_path):
+        try:
+            with open(freq_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception: pass
+    return []

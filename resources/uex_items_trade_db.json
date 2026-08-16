@@ -4572,7 +4572,7 @@
       },
       {
         "terminal": "Kel-To Cloudview Center",
-        "buy": 803,
+        "buy": 977,
         "sell": 385
       },
       {
@@ -4702,7 +4702,7 @@
       },
       {
         "terminal": "FPS Armor Seraphim",
-        "buy": 955,
+        "buy": 977,
         "sell": 0
       },
       {
@@ -5401,20 +5401,52 @@
   "p4-ar \"warhawk\" rifle": {
     "locations": [
       {
-        "terminal": "CenterMass Area 18",
+        "terminal": "Cubby Blast Area 18",
+        "location": "Area18",
+        "system": "Stanton",
         "buy": 4757,
         "sell": 0
       },
       {
-        "terminal": "CenterMass New Babbage",
-        "buy": 4757,
+        "terminal": "Live Fire Weapons HUR-L5",
+        "location": "HUR-L5",
+        "system": "Stanton",
+        "buy": 4648,
+        "sell": 0
+      },
+      {
+        "terminal": "FPS Armor MIC-L4",
+        "location": "MIC-L4",
+        "system": "Stanton",
+        "buy": 4648,
+        "sell": 0
+      },
+      {
+        "terminal": "FPS Armor CRU-L4",
+        "location": "CRU-L4",
+        "system": "Stanton",
+        "buy": 4648,
+        "sell": 0
+      },
+      {
+        "terminal": "Ashland Shop Ignis",
+        "location": "Ignis",
+        "system": "Pyro",
+        "buy": 4532,
+        "sell": 0
+      },
+      {
+        "terminal": "Fallow Field Shop",
+        "location": "Pyro IV",
+        "system": "Pyro",
+        "buy": 4532,
         "sell": 0
       }
     ],
-    "cargo_type": "loose",
-    "packing_cat": "combat",
+    "cargo_type": "grid",
+    "packing_cat": "fps_weapons",
     "name": "P4-AR \"Warhawk\" Rifle",
-    "id_category": 18
+    "id_category": 1
   },
   "br-2 shotgun": {
     "locations": [
@@ -5580,7 +5612,7 @@
       },
       {
         "terminal": "Live Fire Nyx Gateway (Pyro)",
-        "buy": 4994,
+        "buy": 4746,
         "sell": 0
       },
       {
@@ -5783,7 +5815,7 @@
       },
       {
         "terminal": "Live Fire MIC-L1",
-        "buy": 265,
+        "buy": 275,
         "sell": 0
       },
       {
@@ -8831,7 +8863,7 @@
       },
       {
         "terminal": "Refinery HUR-L1",
-        "buy": 108000,
+        "buy": 54000,
         "sell": 0
       },
       {
@@ -8931,7 +8963,7 @@
       },
       {
         "terminal": "Platinum Nyx Gateway (Stanton)",
-        "buy": 180000,
+        "buy": 54000,
         "sell": 0
       },
       {
@@ -13590,6 +13622,11 @@
         "terminal": "Noodle Bar - Lorville",
         "buy": 3,
         "sell": 0
+      },
+      {
+        "terminal": "Whammer's - Stratus",
+        "buy": 3,
+        "sell": 0
       }
     ],
     "cargo_type": "loose",
@@ -14237,6 +14274,11 @@
         "terminal": "Kel-To Lorville",
         "buy": 3,
         "sell": 0
+      },
+      {
+        "terminal": "Whammer's - Stratus",
+        "buy": 3,
+        "sell": 0
       }
     ],
     "cargo_type": "loose",
@@ -14664,6 +14706,11 @@
         "terminal": "Coffee To Go Area 18",
         "buy": 4,
         "sell": 0
+      },
+      {
+        "terminal": "Ellroy's Green Circle",
+        "buy": 3,
+        "sell": 0
       }
     ],
     "cargo_type": "loose",
@@ -14811,6 +14858,11 @@
         "terminal": "Laying Roots Levski",
         "buy": 205,
         "sell": 0
+      },
+      {
+        "terminal": "Ellroy's Green Circle",
+        "buy": 194,
+        "sell": 0
       }
     ],
     "cargo_type": "loose",
@@ -14842,7 +14894,7 @@
       },
       {
         "terminal": "Kel-To Cloudview Center",
-        "buy": 2745,
+        "buy": 2993,
         "sell": 1316
       },
       {
@@ -31026,7 +31078,7 @@
       },
       {
         "terminal": "Live Fire Seraphim",
-        "buy": 396,
+        "buy": 36,
         "sell": 0
       },
       {
@@ -36823,40 +36875,52 @@
   "p4-ar \"nightstalker\" rifle": {
     "locations": [
       {
-        "terminal": "Cubby Area 18",
+        "terminal": "Cubby Blast Area 18",
+        "location": "Area18",
+        "system": "Stanton",
         "buy": 4757,
         "sell": 0
       },
       {
-        "terminal": "FPS Armor MIC-L4",
+        "terminal": "Live Fire Weapons HUR-L5",
+        "location": "HUR-L5",
+        "system": "Stanton",
         "buy": 4648,
         "sell": 0
       },
       {
-        "terminal": "Live Fire HUR-L5",
+        "terminal": "FPS Armor MIC-L4",
+        "location": "MIC-L4",
+        "system": "Stanton",
         "buy": 4648,
         "sell": 0
       },
       {
         "terminal": "FPS Armor CRU-L4",
+        "location": "CRU-L4",
+        "system": "Stanton",
         "buy": 4648,
         "sell": 0
       },
       {
-        "terminal": "Shop Ashland",
+        "terminal": "Ashland Shop Ignis",
+        "location": "Ignis",
+        "system": "Pyro",
         "buy": 4532,
         "sell": 0
       },
       {
-        "terminal": "Shop Fallow Field",
+        "terminal": "Fallow Field Shop",
+        "location": "Pyro IV",
+        "system": "Pyro",
         "buy": 4532,
         "sell": 0
       }
     ],
-    "cargo_type": "loose",
-    "packing_cat": "combat",
+    "cargo_type": "grid",
+    "packing_cat": "fps_weapons",
     "name": "P4-AR \"Nightstalker\" Rifle",
-    "id_category": 18
+    "id_category": 1
   },
   "lh86 \"warhawk\" pistol": {
     "locations": [
@@ -36976,7 +37040,7 @@
       },
       {
         "terminal": "Kel-To Cloudview Center",
-        "buy": 4435,
+        "buy": 4955,
         "sell": 0
       },
       {
@@ -37947,6 +38011,11 @@
       },
       {
         "terminal": "Sundries PSSL",
+        "buy": 4,
+        "sell": 0
+      },
+      {
+        "terminal": "Ellroy's Green Circle",
         "buy": 4,
         "sell": 0
       }
@@ -56227,7 +56296,7 @@
     "locations": [
       {
         "terminal": "Cargo Baijini",
-        "buy": 19175,
+        "buy": 19000,
         "sell": 0
       },
       {
@@ -56297,7 +56366,7 @@
       },
       {
         "terminal": "Refinery Pyro Gtwy (Stanton)",
-        "buy": 18050,
+        "buy": 18217,
         "sell": 0
       },
       {
@@ -56442,7 +56511,7 @@
       },
       {
         "terminal": "Platinum Nyx Gateway (Pyro)",
-        "buy": 19175,
+        "buy": 19000,
         "sell": 0
       },
       {
@@ -56452,7 +56521,7 @@
       },
       {
         "terminal": "Platinum Nyx Gateway (Stanton)",
-        "buy": 19000,
+        "buy": 19175,
         "sell": 0
       },
       {
@@ -58427,7 +58496,7 @@
       },
       {
         "terminal": "Refinery HUR-L1",
-        "buy": 109200,
+        "buy": 79200,
         "sell": 0
       },
       {
@@ -58522,7 +58591,7 @@
       },
       {
         "terminal": "Platinum Nyx Gateway (Stanton)",
-        "buy": 109200,
+        "buy": 79200,
         "sell": 0
       },
       {
@@ -68551,75 +68620,52 @@
   "p4-ar \"boneyard\" rifle": {
     "locations": [
       {
-        "terminal": "FPS Armor Tressler",
-        "buy": 4425,
+        "terminal": "Cubby Blast Area 18",
+        "location": "Area18",
+        "system": "Stanton",
+        "buy": 4757,
         "sell": 0
       },
       {
-        "terminal": "Live Fire HUR-L4",
-        "buy": 4907,
+        "terminal": "Live Fire Weapons HUR-L5",
+        "location": "HUR-L5",
+        "system": "Stanton",
+        "buy": 4648,
         "sell": 0
       },
       {
-        "terminal": "Live Fire Terra Gateway (Stanton)",
-        "buy": 4623,
+        "terminal": "FPS Armor MIC-L4",
+        "location": "MIC-L4",
+        "system": "Stanton",
+        "buy": 4648,
         "sell": 0
       },
       {
-        "terminal": "Live Fire Pyro Gateway (Stanton)",
-        "buy": 4330,
+        "terminal": "FPS Armor CRU-L4",
+        "location": "CRU-L4",
+        "system": "Stanton",
+        "buy": 4648,
         "sell": 0
       },
       {
-        "terminal": "Live Fire MIC-L3",
-        "buy": 4623,
+        "terminal": "Ashland Shop Ignis",
+        "location": "Ignis",
+        "system": "Pyro",
+        "buy": 4532,
         "sell": 0
       },
       {
-        "terminal": "FPS Armor CRU-L1",
-        "buy": 4907,
-        "sell": 0
-      },
-      {
-        "terminal": "Live Fire Nyx Gateway (Stanton)",
-        "buy": 4623,
-        "sell": 0
-      },
-      {
-        "terminal": "Live Fire MIC-L1",
-        "buy": 4623,
-        "sell": 0
-      },
-      {
-        "terminal": "FPS Armor Seraphim",
-        "buy": 4623,
-        "sell": 1313
-      },
-      {
-        "terminal": "Live Fire Stanton Gateway (Pyro)",
-        "buy": 4623,
-        "sell": 0
-      },
-      {
-        "terminal": "Live Fire Pyro Gateway (Nyx)",
-        "buy": 4623,
-        "sell": 0
-      },
-      {
-        "terminal": "Live Fire Stanton Gateway (Nyx)",
-        "buy": 4623,
-        "sell": 0
-      },
-      {
-        "terminal": "Live Fire Nyx Gateway (Pyro)",
-        "buy": 4623,
+        "terminal": "Fallow Field Shop",
+        "location": "Pyro IV",
+        "system": "Pyro",
+        "buy": 4532,
         "sell": 0
       }
     ],
-    "cargo_type": "loose",
-    "packing_cat": "combat",
+    "cargo_type": "grid",
+    "packing_cat": "fps_weapons",
     "name": "P4-AR \"Boneyard\" Rifle",
-    "id_category": 18
+    "id_category": 1
   },
   "p8-sc": {
     "locations": [
@@ -68750,7 +68796,7 @@
       },
       {
         "terminal": "Live Fire Nyx Gateway (Pyro)",
-        "buy": 3147,
+        "buy": 2850,
         "sell": 0
       },
       {
@@ -68853,7 +68899,7 @@
       },
       {
         "terminal": "Live Fire Nyx Gateway (Pyro)",
-        "buy": 1082,
+        "buy": 809,
         "sell": 0
       }
     ],
@@ -68961,7 +69007,7 @@
       },
       {
         "terminal": "FPS Armor Seraphim",
-        "buy": 1096,
+        "buy": 1070,
         "sell": 0
       },
       {
@@ -69054,7 +69100,7 @@
       },
       {
         "terminal": "Live Fire Nyx Gateway (Pyro)",
-        "buy": 4622,
+        "buy": 4151,
         "sell": 0
       },
       {
@@ -69137,7 +69183,7 @@
       },
       {
         "terminal": "Live Fire Nyx Gateway (Pyro)",
-        "buy": 4622,
+        "buy": 4151,
         "sell": 0
       }
     ],
@@ -69230,7 +69276,7 @@
       },
       {
         "terminal": "Live Fire Nyx Gateway (Pyro)",
-        "buy": 2813,
+        "buy": 2466,
         "sell": 0
       },
       {
@@ -69378,7 +69424,7 @@
       },
       {
         "terminal": "Live Fire Nyx Gateway (Pyro)",
-        "buy": 2813,
+        "buy": 2466,
         "sell": 0
       }
     ],
@@ -72935,6 +72981,11 @@
         "terminal": "Cargo Levski",
         "buy": 1237,
         "sell": 0
+      },
+      {
+        "terminal": "Providence Surplus",
+        "buy": 1237,
+        "sell": 0
       }
     ],
     "cargo_type": "grid",
@@ -73477,7 +73528,7 @@
       },
       {
         "terminal": "Refinery HUR-L1",
-        "buy": 21700,
+        "buy": 6200,
         "sell": 0
       },
       {
@@ -73567,7 +73618,7 @@
       },
       {
         "terminal": "Platinum Nyx Gateway (Stanton)",
-        "buy": 21700,
+        "buy": 6200,
         "sell": 0
       },
       {
@@ -77326,7 +77377,7 @@
       },
       {
         "terminal": "FPS Armor Seraphim",
-        "buy": 3274,
+        "buy": 3247,
         "sell": 0
       },
       {
@@ -81961,11 +82012,6 @@
         "sell": 0
       },
       {
-        "terminal": "FPS Armor Nyx Gateway (Pyro)",
-        "buy": 1290,
-        "sell": 0
-      },
-      {
         "terminal": "FPS Armor Pyro Gateway (Nyx)",
         "buy": 1290,
         "sell": 0
@@ -82036,6 +82082,11 @@
       {
         "terminal": "FPS Armor MIC-L4",
         "buy": 1097,
+        "sell": 0
+      },
+      {
+        "terminal": "FPS Armor Nyx Gateway (Stanton)",
+        "buy": 1290,
         "sell": 0
       }
     ],
@@ -87112,6 +87163,11 @@
         "terminal": "Refinery Stanton Gtwy (Pyro)",
         "buy": 5,
         "sell": 0
+      },
+      {
+        "terminal": "Ellroy's Green Circle",
+        "buy": 4,
+        "sell": 0
       }
     ],
     "cargo_type": "loose",
@@ -89350,7 +89406,7 @@
       },
       {
         "terminal": "FPS Armor Seraphim",
-        "buy": 3274,
+        "buy": 3247,
         "sell": 0
       }
     ],
@@ -91808,7 +91864,7 @@
       },
       {
         "terminal": "Live Fire Nyx Gateway (Pyro)",
-        "buy": 5056,
+        "buy": 4660,
         "sell": 0
       }
     ],
@@ -94965,6 +95021,11 @@
         "terminal": "Hot Dogs Nyx Gateway (Stanton)",
         "buy": 3,
         "sell": 0
+      },
+      {
+        "terminal": "Whammer's - Stratus",
+        "buy": 3,
+        "sell": 0
       }
     ],
     "cargo_type": "loose",
@@ -95337,6 +95398,11 @@
         "terminal": "Kel-To Lorville",
         "buy": 3,
         "sell": 0
+      },
+      {
+        "terminal": "Whammer's - Stratus",
+        "buy": 3,
+        "sell": 0
       }
     ],
     "cargo_type": "loose",
@@ -95521,6 +95587,11 @@
       },
       {
         "terminal": "Kel-To NBIS",
+        "buy": 4,
+        "sell": 0
+      },
+      {
+        "terminal": "Whammer's - Stratus",
         "buy": 4,
         "sell": 0
       }
@@ -96043,6 +96114,11 @@
         "terminal": "Noodle Bar - Lorville",
         "buy": 3,
         "sell": 0
+      },
+      {
+        "terminal": "Whammer's - Stratus",
+        "buy": 3,
+        "sell": 0
       }
     ],
     "cargo_type": "loose",
@@ -96237,6 +96313,11 @@
         "terminal": "Pizza Nyx Gateway (Stanton)",
         "buy": 6,
         "sell": 0
+      },
+      {
+        "terminal": "Kel-To Area 18",
+        "buy": 0,
+        "sell": 1
       }
     ],
     "cargo_type": "loose",
@@ -98988,7 +99069,7 @@
       },
       {
         "terminal": "FPS Armor Seraphim",
-        "buy": 3274,
+        "buy": 3247,
         "sell": 0
       },
       {
@@ -99721,30 +99802,52 @@
   "p4-ar \"desert shadow\" rifle": {
     "locations": [
       {
-        "terminal": "FPS Armor MIC-L4",
+        "terminal": "Cubby Blast Area 18",
+        "location": "Area18",
+        "system": "Stanton",
+        "buy": 4757,
+        "sell": 0
+      },
+      {
+        "terminal": "Live Fire Weapons HUR-L5",
+        "location": "HUR-L5",
+        "system": "Stanton",
         "buy": 4648,
         "sell": 0
       },
       {
-        "terminal": "Live Fire HUR-L5",
+        "terminal": "FPS Armor MIC-L4",
+        "location": "MIC-L4",
+        "system": "Stanton",
         "buy": 4648,
         "sell": 0
       },
       {
         "terminal": "FPS Armor CRU-L4",
+        "location": "CRU-L4",
+        "system": "Stanton",
         "buy": 4648,
         "sell": 0
       },
       {
-        "terminal": "Live Fire Seraphim",
-        "buy": 4568,
+        "terminal": "Ashland Shop Ignis",
+        "location": "Ignis",
+        "system": "Pyro",
+        "buy": 4532,
+        "sell": 0
+      },
+      {
+        "terminal": "Fallow Field Shop",
+        "location": "Pyro IV",
+        "system": "Pyro",
+        "buy": 4532,
         "sell": 0
       }
     ],
-    "cargo_type": "loose",
-    "packing_cat": "combat",
+    "cargo_type": "grid",
+    "packing_cat": "fps_weapons",
     "name": "P4-AR \"Desert Shadow\" Rifle",
-    "id_category": 18
+    "id_category": 1
   },
   "hemera": {
     "locations": [
@@ -105130,7 +105233,7 @@
       {
         "terminal": "Teach's Levski",
         "buy": 80850,
-        "sell": 0
+        "sell": 7260
       },
       {
         "terminal": "Platinum Pyro Gateway (Nyx)",
@@ -109054,7 +109157,7 @@
       },
       {
         "terminal": "Kel-To August Dunlow",
-        "buy": 78,
+        "buy": 18,
         "sell": 0
       }
     ],
@@ -109163,6 +109266,11 @@
         "terminal": "Laying Roots Levski",
         "buy": 4,
         "sell": 1
+      },
+      {
+        "terminal": "Ellroy's Green Circle",
+        "buy": 3,
+        "sell": 0
       }
     ],
     "cargo_type": "loose",
@@ -109284,12 +109392,12 @@
       },
       {
         "terminal": "Platinum Nyx Gateway (Pyro)",
-        "buy": 21200,
+        "buy": 20900,
         "sell": 0
       },
       {
         "terminal": "Platinum Nyx Gateway (Stanton)",
-        "buy": 20900,
+        "buy": 21200,
         "sell": 0
       },
       {
@@ -109329,7 +109437,7 @@
       },
       {
         "terminal": "Refinery CRU-L1",
-        "buy": 21232,
+        "buy": 21138,
         "sell": 0
       },
       {
@@ -109414,7 +109522,7 @@
       },
       {
         "terminal": "Cargo Baijini",
-        "buy": 21138,
+        "buy": 20900,
         "sell": 0
       },
       {
@@ -111010,6 +111118,11 @@
         "terminal": "Kel-To NBIS",
         "buy": 10,
         "sell": 0
+      },
+      {
+        "terminal": "Ellroy's Green Circle",
+        "buy": 9,
+        "sell": 0
       }
     ],
     "cargo_type": "loose",
@@ -111122,6 +111235,11 @@
       {
         "terminal": "Kel-To NBIS",
         "buy": 9,
+        "sell": 0
+      },
+      {
+        "terminal": "Ellroy's Green Circle",
+        "buy": 8,
         "sell": 0
       }
     ],
@@ -111236,6 +111354,11 @@
         "terminal": "Kel-To NBIS",
         "buy": 6,
         "sell": 0
+      },
+      {
+        "terminal": "Ellroy's Green Circle",
+        "buy": 5,
+        "sell": 0
       }
     ],
     "cargo_type": "loose",
@@ -111349,6 +111472,11 @@
         "terminal": "Kel-To NBIS",
         "buy": 9,
         "sell": 0
+      },
+      {
+        "terminal": "Ellroy's Green Circle",
+        "buy": 8,
+        "sell": 0
       }
     ],
     "cargo_type": "loose",
@@ -111461,6 +111589,11 @@
       {
         "terminal": "Kel-To NBIS",
         "buy": 7,
+        "sell": 0
+      },
+      {
+        "terminal": "Ellroy's Green Circle",
+        "buy": 6,
         "sell": 0
       }
     ],
@@ -126696,7 +126829,7 @@
       },
       {
         "terminal": "Cargo Baijini",
-        "buy": 63,
+        "buy": 199,
         "sell": 0
       },
       {
@@ -132468,7 +132601,7 @@
       },
       {
         "terminal": "Kel-To Aspire Grand",
-        "buy": 600,
+        "buy": 2600,
         "sell": 0
       },
       {
@@ -132513,7 +132646,7 @@
       },
       {
         "terminal": "Live Fire Nyx Gateway (Pyro)",
-        "buy": 2600,
+        "buy": 2599,
         "sell": 0
       },
       {
@@ -132698,7 +132831,7 @@
       },
       {
         "terminal": "Ship Weapons ARC-L3",
-        "buy": 181930,
+        "buy": 29760,
         "sell": 0
       },
       {
@@ -132821,7 +132954,7 @@
       },
       {
         "terminal": "Ship Weapons ARC-L3",
-        "buy": 45760,
+        "buy": 15700,
         "sell": 0
       },
       {
@@ -133178,6 +133311,11 @@
       },
       {
         "terminal": "Shelf Stable PSSL",
+        "buy": 17,
+        "sell": 0
+      },
+      {
+        "terminal": "Conscientious Levski",
         "buy": 17,
         "sell": 0
       }
@@ -134515,7 +134653,7 @@
       },
       {
         "terminal": "Platinum Nyx Gateway (Pyro)",
-        "buy": 1150,
+        "buy": 1000,
         "sell": 0
       },
       {
@@ -134650,7 +134788,7 @@
       },
       {
         "terminal": "Live Fire Nyx Gateway (Pyro)",
-        "buy": 1150,
+        "buy": 1000,
         "sell": 0
       },
       {
@@ -134730,7 +134868,7 @@
       },
       {
         "terminal": "Cargo Baijini",
-        "buy": 1150,
+        "buy": 1000,
         "sell": 0
       },
       {
@@ -137139,6 +137277,11 @@
         "terminal": "Kel-To Aspire Grand",
         "buy": 622,
         "sell": 0
+      },
+      {
+        "terminal": "Live Fire MIC-L1",
+        "buy": 622,
+        "sell": 0
       }
     ],
     "cargo_type": "loose",
@@ -138470,7 +138613,7 @@
       },
       {
         "terminal": "Platinum Nyx Gateway (Stanton)",
-        "buy": 38400,
+        "buy": 28400,
         "sell": 0
       },
       {
@@ -138555,7 +138698,7 @@
       },
       {
         "terminal": "Refinery HUR-L1",
-        "buy": 38400,
+        "buy": 26400,
         "sell": 0
       },
       {
@@ -138678,7 +138821,7 @@
       },
       {
         "terminal": "Platinum Nyx Gateway (Stanton)",
-        "buy": 85560,
+        "buy": 54560,
         "sell": 0
       },
       {
@@ -138763,7 +138906,7 @@
       },
       {
         "terminal": "Refinery HUR-L1",
-        "buy": 85560,
+        "buy": 54560,
         "sell": 0
       },
       {
@@ -138886,7 +139029,7 @@
       },
       {
         "terminal": "Platinum Nyx Gateway (Stanton)",
-        "buy": 58800,
+        "buy": 16800,
         "sell": 0
       },
       {
@@ -138971,7 +139114,7 @@
       },
       {
         "terminal": "Refinery HUR-L1",
-        "buy": 58800,
+        "buy": 16800,
         "sell": 0
       },
       {
@@ -139094,7 +139237,7 @@
       },
       {
         "terminal": "Platinum Nyx Gateway (Stanton)",
-        "buy": 270400,
+        "buy": 230400,
         "sell": 0
       },
       {
@@ -139174,7 +139317,7 @@
       },
       {
         "terminal": "Refinery HUR-L1",
-        "buy": 270400,
+        "buy": 230400,
         "sell": 0
       },
       {
@@ -139297,7 +139440,7 @@
       },
       {
         "terminal": "Platinum Nyx Gateway (Stanton)",
-        "buy": 138000,
+        "buy": 108000,
         "sell": 0
       },
       {
@@ -139377,7 +139520,7 @@
       },
       {
         "terminal": "Refinery HUR-L1",
-        "buy": 138000,
+        "buy": 10800,
         "sell": 0
       },
       {
@@ -139904,5 +140047,307 @@
     "packing_cat": "ordnance",
     "name": "Strife Mass Driver Cannon",
     "id_category": 32
+  },
+  "stirling exploration backpack": {
+    "locations": [
+      {
+        "terminal": "FPS Armor Nyx Gateway (Pyro)",
+        "buy": 10000,
+        "sell": 0
+      },
+      {
+        "terminal": "FPS Armor Nyx Gateway (Stanton)",
+        "buy": 10000,
+        "sell": 0
+      }
+    ],
+    "cargo_type": "loose",
+    "packing_cat": "armor",
+    "name": "Stirling Exploration Backpack",
+    "id_category": 2
+  },
+  "stirling exploration helmet": {
+    "locations": [
+      {
+        "terminal": "FPS Armor Nyx Gateway (Pyro)",
+        "buy": 26780,
+        "sell": 0
+      },
+      {
+        "terminal": "FPS Armor Nyx Gateway (Stanton)",
+        "buy": 26780,
+        "sell": 0
+      }
+    ],
+    "cargo_type": "loose",
+    "packing_cat": "armor",
+    "name": "Stirling Exploration Helmet",
+    "id_category": 3
+  },
+  "cq7 rifle magazine (40 cap)": {
+    "locations": [
+      {
+        "terminal": "Live Fire Nyx Gateway (Pyro)",
+        "buy": 293,
+        "sell": 0
+      },
+      {
+        "terminal": "Live Fire MIC-L1",
+        "buy": 293,
+        "sell": 0
+      },
+      {
+        "terminal": "FPS Armor MIC-L1",
+        "buy": 293,
+        "sell": 0
+      },
+      {
+        "terminal": "FPS Armor Nyx Gateway (Stanton)",
+        "buy": 293,
+        "sell": 0
+      },
+      {
+        "terminal": "Guns Dudley",
+        "buy": 293,
+        "sell": 0
+      },
+      {
+        "terminal": "Guns Patch City",
+        "buy": 293,
+        "sell": 0
+      }
+    ],
+    "cargo_type": "loose",
+    "packing_cat": "combat",
+    "name": "CQ7 Rifle Magazine (40 Cap)",
+    "id_category": 17
+  },
+  "cq7 rifle": {
+    "locations": [
+      {
+        "terminal": "Live Fire MIC-L1",
+        "buy": 4575,
+        "sell": 0
+      },
+      {
+        "terminal": "FPS Armor MIC-L1",
+        "buy": 4575,
+        "sell": 0
+      },
+      {
+        "terminal": "FPS Armor Nyx Gateway (Stanton)",
+        "buy": 4575,
+        "sell": 0
+      },
+      {
+        "terminal": "Guns Dudley",
+        "buy": 4575,
+        "sell": 0
+      },
+      {
+        "terminal": "Guns Patch City",
+        "buy": 4575,
+        "sell": 0
+      },
+      {
+        "terminal": "FPS Armor Seraphim",
+        "buy": 4575,
+        "sell": 0
+      }
+    ],
+    "cargo_type": "loose",
+    "packing_cat": "combat",
+    "name": "CQ7 Rifle",
+    "id_category": 18
+  },
+  "stirling exploration suit": {
+    "locations": [
+      {
+        "terminal": "FPS Armor Nyx Gateway (Stanton)",
+        "buy": 23120,
+        "sell": 0
+      }
+    ],
+    "cargo_type": "loose",
+    "packing_cat": "armor",
+    "name": "Stirling Exploration Suit",
+    "id_category": 24
+  },
+  "sledge iii mass driver cannon": {
+    "locations": [
+      {
+        "terminal": "CenterMass New Babbage",
+        "buy": 58094,
+        "sell": 0
+      }
+    ],
+    "cargo_type": "grid",
+    "packing_cat": "ordnance",
+    "name": "Sledge III Mass Driver Cannon",
+    "id_category": 32
+  },
+  "p4-ar \"star kitten\" rifle": {
+    "locations": [],
+    "cargo_type": "grid",
+    "packing_cat": "fps_weapons",
+    "name": "P4-AR \"Star Kitten\" Rifle",
+    "id_category": 1
+  },
+  "p4-ar star kitten rifle": {
+    "locations": [],
+    "cargo_type": "grid",
+    "packing_cat": "fps_weapons",
+    "name": "P4-AR \"Star Kitten\" Rifle",
+    "id_category": 1
+  },
+  "p4-ar nightstalker rifle": {
+    "locations": [
+      {
+        "terminal": "Cubby Blast Area 18",
+        "location": "Area18",
+        "system": "Stanton",
+        "buy": 4757,
+        "sell": 0
+      },
+      {
+        "terminal": "Live Fire Weapons HUR-L5",
+        "location": "HUR-L5",
+        "system": "Stanton",
+        "buy": 4648,
+        "sell": 0
+      },
+      {
+        "terminal": "FPS Armor MIC-L4",
+        "location": "MIC-L4",
+        "system": "Stanton",
+        "buy": 4648,
+        "sell": 0
+      },
+      {
+        "terminal": "FPS Armor CRU-L4",
+        "location": "CRU-L4",
+        "system": "Stanton",
+        "buy": 4648,
+        "sell": 0
+      },
+      {
+        "terminal": "Ashland Shop Ignis",
+        "location": "Ignis",
+        "system": "Pyro",
+        "buy": 4532,
+        "sell": 0
+      },
+      {
+        "terminal": "Fallow Field Shop",
+        "location": "Pyro IV",
+        "system": "Pyro",
+        "buy": 4532,
+        "sell": 0
+      }
+    ],
+    "cargo_type": "grid",
+    "packing_cat": "fps_weapons",
+    "name": "P4-AR \"Nightstalker\" Rifle",
+    "id_category": 1
+  },
+  "p4-ar \"blacklist\" rifle": {
+    "locations": [
+      {
+        "terminal": "Cubby Blast Area 18",
+        "location": "Area18",
+        "system": "Stanton",
+        "buy": 4757,
+        "sell": 0
+      },
+      {
+        "terminal": "Live Fire Weapons HUR-L5",
+        "location": "HUR-L5",
+        "system": "Stanton",
+        "buy": 4648,
+        "sell": 0
+      },
+      {
+        "terminal": "FPS Armor MIC-L4",
+        "location": "MIC-L4",
+        "system": "Stanton",
+        "buy": 4648,
+        "sell": 0
+      },
+      {
+        "terminal": "FPS Armor CRU-L4",
+        "location": "CRU-L4",
+        "system": "Stanton",
+        "buy": 4648,
+        "sell": 0
+      },
+      {
+        "terminal": "Ashland Shop Ignis",
+        "location": "Ignis",
+        "system": "Pyro",
+        "buy": 4532,
+        "sell": 0
+      },
+      {
+        "terminal": "Fallow Field Shop",
+        "location": "Pyro IV",
+        "system": "Pyro",
+        "buy": 4532,
+        "sell": 0
+      }
+    ],
+    "cargo_type": "grid",
+    "packing_cat": "fps_weapons",
+    "name": "P4-AR \"Blacklist\" Rifle",
+    "id_category": 1
+  },
+  "p4-ar \"secondwind\" rifle": {
+    "locations": [
+      {
+        "terminal": "Cubby Blast Area 18",
+        "location": "Area18",
+        "system": "Stanton",
+        "buy": 4757,
+        "sell": 0
+      },
+      {
+        "terminal": "Live Fire Weapons HUR-L5",
+        "location": "HUR-L5",
+        "system": "Stanton",
+        "buy": 4648,
+        "sell": 0
+      },
+      {
+        "terminal": "FPS Armor MIC-L4",
+        "location": "MIC-L4",
+        "system": "Stanton",
+        "buy": 4648,
+        "sell": 0
+      },
+      {
+        "terminal": "FPS Armor CRU-L4",
+        "location": "CRU-L4",
+        "system": "Stanton",
+        "buy": 4648,
+        "sell": 0
+      },
+      {
+        "terminal": "Ashland Shop Ignis",
+        "location": "Ignis",
+        "system": "Pyro",
+        "buy": 4532,
+        "sell": 0
+      },
+      {
+        "terminal": "Fallow Field Shop",
+        "location": "Pyro IV",
+        "system": "Pyro",
+        "buy": 4532,
+        "sell": 0
+      }
+    ],
+    "cargo_type": "grid",
+    "packing_cat": "fps_weapons",
+    "name": "P4-AR \"SecondWind\" Rifle",
+    "id_category": 1
   }
 }

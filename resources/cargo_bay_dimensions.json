@@ -1,0 +1,518 @@
+{
+  "avenger titan": {
+    "length": 5.0,
+    "width": 2.5,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "hammerhead": {
+    "length": 10.0,
+    "width": 5.0,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "idris-m": {
+    "length": 5.0,
+    "width": 5.0,
+    "height": 5.0,
+    "access": "ramp"
+  },
+  "idris-p": {
+    "length": 5.0,
+    "width": 5.0,
+    "height": 5.0,
+    "access": "ramp"
+  },
+  "reclaimer": {
+    "length": 8.8,
+    "width": 6.2,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "redeemer": {
+    "length": 1.2,
+    "width": 1.2,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "retaliator": {
+    "length": 7.5,
+    "width": 3.8,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "tiburon": {
+    "length": 10.0,
+    "width": 5.0,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "asgard": {
+    "length": 11.2,
+    "width": 6.2,
+    "height": 5.0,
+    "access": "ramp"
+  },
+  "c8 pisces": {
+    "length": 2.5,
+    "width": 1.2,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "c8x pisces": {
+    "length": 2.5,
+    "width": 1.2,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "carrack": {
+    "length": 5.0,
+    "width": 5.0,
+    "height": 5.0,
+    "access": "ramp"
+  },
+  "liberator [concept]": {
+    "length": 12.5,
+    "width": 6.2,
+    "height": 5.0,
+    "access": "ramp"
+  },
+  "paladin": {
+    "length": 5.0,
+    "width": 1.2,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "valkyrie": {
+    "length": 7.5,
+    "width": 6.2,
+    "height": 3.8,
+    "access": "ramp"
+  },
+  "csv-sm": {
+    "length": 2.5,
+    "width": 2.5,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "mole": {
+    "length": 5.0,
+    "width": 5.0,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "moth": {
+    "length": 7.5,
+    "width": 5.0,
+    "height": 5.0,
+    "access": "ramp"
+  },
+  "mpuv-c": {
+    "length": 2.5,
+    "width": 1.2,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "mpuv-t": {
+    "length": 5.0,
+    "width": 2.5,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "raft": {
+    "length": 15.0,
+    "width": 10.0,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "srv": {
+    "length": 3.8,
+    "width": 5.0,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "merchantman [concept]": {
+    "length": 30.0,
+    "width": 7.5,
+    "height": 12.5,
+    "access": "ramp"
+  },
+  "nomad": {
+    "length": 5.0,
+    "width": 3.8,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "a2 hercules": {
+    "length": 22.5,
+    "width": 7.5,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "c2 hercules": {
+    "length": 18.8,
+    "width": 10.0,
+    "height": 5.0,
+    "access": "ramp"
+  },
+  "intrepid": {
+    "length": 5.0,
+    "width": 1.2,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "m2 hercules": {
+    "length": 18.8,
+    "width": 10.0,
+    "height": 3.8,
+    "access": "ramp"
+  },
+  "mercury star runner": {
+    "length": 7.5,
+    "width": 7.5,
+    "height": 3.8,
+    "access": "ramp"
+  },
+  "caterpillar": {
+    "length": 7.5,
+    "width": 6.2,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "clipper": {
+    "length": 3.8,
+    "width": 2.5,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "corsair": {
+    "length": 7.5,
+    "width": 5.0,
+    "height": 3.8,
+    "access": "ramp"
+  },
+  "cutlass black": {
+    "length": 6.2,
+    "width": 5.0,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "cutlass blue": {
+    "length": 3.8,
+    "width": 1.2,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "cutlass red": {
+    "length": 3.8,
+    "width": 1.2,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "cutter": {
+    "length": 2.5,
+    "width": 1.2,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "cutter rambler": {
+    "length": 1.2,
+    "width": 1.2,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "cutter scout": {
+    "length": 1.2,
+    "width": 1.2,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "golem ox": {
+    "length": 10.0,
+    "width": 5.0,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "mule": {
+    "length": 1.2,
+    "width": 1.2,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "vulture": {
+    "length": 3.8,
+    "width": 2.5,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "prowler utility": {
+    "length": 5.0,
+    "width": 2.5,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "syulen": {
+    "length": 2.5,
+    "width": 3.8,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "tyilui": {
+    "length": 7.5,
+    "width": 5.0,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "shiv": {
+    "length": 10.0,
+    "width": 2.5,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "$p": {
+    "length": 8.8,
+    "width": 6.2,
+    "height": 6.2,
+    "access": "ramp"
+  },
+  "fortune": {
+    "length": 3.8,
+    "width": 1.2,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "freelancer": {
+    "length": 2.5,
+    "width": 1.2,
+    "height": 3.8,
+    "access": "ramp"
+  },
+  "freelancer dur": {
+    "length": 2.5,
+    "width": 1.2,
+    "height": 3.8,
+    "access": "ramp"
+  },
+  "freelancer max": {
+    "length": 2.5,
+    "width": 1.2,
+    "height": 3.8,
+    "access": "ramp"
+  },
+  "freelancer mis": {
+    "length": 2.5,
+    "width": 1.2,
+    "height": 3.8,
+    "access": "ramp"
+  },
+  "hull-a": {
+    "length": 5.0,
+    "width": 2.5,
+    "height": 5.0,
+    "access": "ramp"
+  },
+  "hull-c": {
+    "length": 10.0,
+    "width": 15.0,
+    "height": 7.5,
+    "access": "ramp"
+  },
+  "hull-e [concept]": {
+    "length": 10.0,
+    "width": 20.0,
+    "height": 7.5,
+    "access": "ramp"
+  },
+  "reliant kore": {
+    "length": 3.8,
+    "width": 1.2,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "reliant tana": {
+    "length": 1.2,
+    "width": 1.2,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "starfarer gemini": {
+    "length": 8.8,
+    "width": 6.2,
+    "height": 6.2,
+    "access": "ramp"
+  },
+  "starlancer max": {
+    "length": 10.0,
+    "width": 2.5,
+    "height": 3.8,
+    "access": "ramp"
+  },
+  "starlancer tac": {
+    "length": 10.0,
+    "width": 2.5,
+    "height": 3.8,
+    "access": "ramp"
+  },
+  "100i": {
+    "length": 2.5,
+    "width": 1.2,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "125a": {
+    "length": 2.5,
+    "width": 1.2,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "135c": {
+    "length": 5.0,
+    "width": 1.2,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "300i": {
+    "length": 5.0,
+    "width": 2.5,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "315p": {
+    "length": 5.0,
+    "width": 2.5,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "325a": {
+    "length": 2.5,
+    "width": 2.5,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "350r": {
+    "length": 2.5,
+    "width": 2.5,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "400i": {
+    "length": 8.8,
+    "width": 3.8,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "600i explorer": {
+    "length": 5.0,
+    "width": 1.2,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "890 jump": {
+    "length": 15.0,
+    "width": 7.5,
+    "height": 5.0,
+    "access": "ramp"
+  },
+  "m80": {
+    "length": 2.5,
+    "width": 1.2,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "apollo medivac": {
+    "length": 5.0,
+    "width": 2.5,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "apollo triage": {
+    "length": 5.0,
+    "width": 2.5,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "arrastra [concept]": {
+    "length": 22.5,
+    "width": 10.0,
+    "height": 5.0,
+    "access": "ramp"
+  },
+  "constellation andromeda": {
+    "length": 10.0,
+    "width": 5.0,
+    "height": 3.8,
+    "access": "ramp"
+  },
+  "constellation aquila": {
+    "length": 10.0,
+    "width": 5.0,
+    "height": 3.8,
+    "access": "ramp"
+  },
+  "constellation phoenix": {
+    "length": 10.0,
+    "width": 6.2,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "constellation taurus": {
+    "length": 17.5,
+    "width": 5.0,
+    "height": 3.8,
+    "access": "ramp"
+  },
+  "galaxy [base concept]": {
+    "length": 10.0,
+    "width": 2.5,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "galaxy [cargo concept]": {
+    "length": 10.0,
+    "width": 2.5,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "hermes": {
+    "length": 22.5,
+    "width": 5.0,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "perseus": {
+    "length": 7.5,
+    "width": 10.0,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "polaris": {
+    "length": 15.0,
+    "width": 7.5,
+    "height": 5.0,
+    "access": "ramp"
+  },
+  "salvation": {
+    "length": 3.8,
+    "width": 2.5,
+    "height": 1.2,
+    "access": "ramp"
+  },
+  "zeus mk ii cl": {
+    "length": 10.0,
+    "width": 6.2,
+    "height": 3.8,
+    "access": "ramp"
+  },
+  "zeus mk ii es": {
+    "length": 5.0,
+    "width": 5.0,
+    "height": 2.5,
+    "access": "ramp"
+  },
+  "zeus mk ii mr [concept]": {
+    "length": 5.0,
+    "width": 2.5,
+    "height": 2.5,
+    "access": "ramp"
+  }
+}

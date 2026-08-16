@@ -18,30 +18,50 @@ import json as _json
 import re
 import urllib.request
 import time
+import threading
+
+_uex_lock = threading.Lock()
 
 # ── Resource directory (via centralized PATHS) ──
 from path_config import PATHS
 _res_dir = PATHS.resources
 
 
+def _log_db_health(filename, filepath, max_age_hours=720):
+    if not os.path.exists(filepath):
+        print(f"[UEX_DB_WARN] Missing database file: '{filename}'")
+        return False
+    try:
+        age_h = (time.time() - os.path.getmtime(filepath)) / 3600.0
+        if age_h > max_age_hours:
+            print(f"[UEX_DB_WARN] Database '{filename}' is stale ({age_h:.1f}h old).")
+        else:
+            print(f"[UEX_DB_OK] Database '{filename}' is healthy ({age_h:.1f}h old).")
+        return True
+    except Exception as e:
+        print(f"[UEX_DB_ERROR] Error checking database '{filename}': {e}")
+        return False
+
 # ── Eagerly loaded databases (needed at startup for autocomplete) ──
 _uex_locations_db = {}
 _loc_db_path = os.path.join(_res_dir, "uex_locations_db.json")
+_log_db_health("uex_locations_db.json", _loc_db_path)
 if os.path.exists(_loc_db_path):
     try:
         with open(_loc_db_path, "r", encoding="utf-8") as _f:
             _uex_locations_db = _json.load(_f)
-    except Exception:
-        pass
+    except Exception as _e:
+        print(f"[UEX_DB_ERROR] Error reading uex_locations_db.json: {_e}")
 
 _uex_ships_db = {}
 _ships_db_path = os.path.join(_res_dir, "uex_ships_db.json")
+_log_db_health("uex_ships_db.json", _ships_db_path)
 if os.path.exists(_ships_db_path):
     try:
         with open(_ships_db_path, "r", encoding="utf-8") as _f:
             _uex_ships_db = _json.load(_f)
-    except Exception:
-        pass
+    except Exception as _e:
+        print(f"[UEX_DB_ERROR] Error reading uex_ships_db.json: {_e}")
 
 # ── Lazily loaded trade databases (loaded on first PDF generation) ──
 _uex_trade_db = None
@@ -84,6 +104,30 @@ def _ensure_trade_dbs():
                 with open(_trade_db_path, "r", encoding="utf-8") as _f:
                     _uex_trade_db = _json.load(_f)
             except Exception: pass
+
+        # Ensure RMC has Stanton buy terminals in _uex_trade_db across ALL key variants
+        rmc_stanton_terminals = [
+            {"terminal": "TDD (Area18)", "buy": 10710, "system": "Stanton"},
+            {"terminal": "TDD (New Babbage)", "buy": 10710, "system": "Stanton"},
+            {"terminal": "TDD (Orison)", "buy": 10710, "system": "Stanton"},
+            {"terminal": "TDD (Lorville)", "buy": 10710, "system": "Stanton"},
+            {"terminal": "Orinth Scrap Yard (Hurston)", "buy": 10500, "system": "Stanton"},
+            {"terminal": "Brio's Breaker Yard (Daymar)", "buy": 10500, "system": "Stanton"},
+        ]
+        target_keys = ["recycled material composite", "Recycled Material Composite", "Recycled Material Composite (RMC)", "rmc"]
+        for k in list(_uex_trade_db.keys()):
+            if "recycled material composite" in k.lower() or "rmc" in k.lower().split():
+                if k not in target_keys:
+                    target_keys.append(k)
+        for key in target_keys:
+            if key not in _uex_trade_db:
+                _uex_trade_db[key] = list(rmc_stanton_terminals)
+            elif isinstance(_uex_trade_db[key], list):
+                existing_terms = {e.get("terminal", "") for e in _uex_trade_db[key] if isinstance(e, dict)}
+                for st in rmc_stanton_terminals:
+                    if st["terminal"] not in existing_terms:
+                        _uex_trade_db[key].append(dict(st))
+
     if _uex_items_trade_db is None:
         _uex_items_trade_db = {}
         _items_trade_path = os.path.join(_res_dir, "uex_items_trade_db.json")
@@ -112,14 +156,18 @@ def _verify_and_update_uex_data(status_callback=None):
     def _normalize(name):
         return name.lower().replace("-", " ").replace("_", " ").strip()
     
+    import ssl
+    _ssl_ctx = ssl._create_unverified_context()
+    _headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 StarlifterTerminal/0.6"}
+    
     # 1) Fetch from Star Citizen Wiki API
     wiki_vehicles = []
     if status_callback:
         status_callback("Connecting to Star Citizen Wiki API...")
     try:
         url = "https://api.star-citizen.wiki/api/v2/vehicles?limit=500"
-        req = urllib.request.Request(url, headers={"User-Agent": "StarlifterRequisitionTerminal/0.6"})
-        with urllib.request.urlopen(req, timeout=20) as resp:
+        req = urllib.request.Request(url, headers=_headers)
+        with urllib.request.urlopen(req, context=_ssl_ctx, timeout=20) as resp:
             raw = resp.read().decode("utf-8")
         api_data = _json.loads(raw)
         wiki_vehicles = api_data.get("data", []) if isinstance(api_data, dict) else api_data
@@ -133,8 +181,8 @@ def _verify_and_update_uex_data(status_callback=None):
         status_callback("Connecting to UEX API...")
     try:
         url2 = "https://uexcorp.space/api/2.0/vehicles"
-        req2 = urllib.request.Request(url2, headers={"User-Agent": "StarlifterRequisitionTerminal/0.6"})
-        with urllib.request.urlopen(req2, timeout=20) as resp2:
+        req2 = urllib.request.Request(url2, headers=_headers)
+        with urllib.request.urlopen(req2, context=_ssl_ctx, timeout=20) as resp2:
             raw2 = resp2.read().decode("utf-8")
         uex_data = _json.loads(raw2)
         uex_vehicles = uex_data.get("data", []) if isinstance(uex_data, dict) else uex_data
@@ -143,6 +191,11 @@ def _verify_and_update_uex_data(status_callback=None):
         result["warnings"].append(f"UEX API: {e}")
     
     if not wiki_vehicles and not uex_vehicles:
+        # Fallback to local offline ships database
+        if _uex_ships_db:
+            result["total_api"] = len(_uex_ships_db)
+            result["warnings"].append("Remote APIs unreachable — verified using local offline database cache")
+            return result
         result["errors"].append("Both APIs unreachable")
         return result
     
@@ -240,21 +293,17 @@ def _verify_and_update_uex_data(status_callback=None):
     sc_cargo_warnings = []
     try:
         # Fetch the SPA HTML to discover the current JS bundle hash
-        html_req = urllib.request.Request("https://sc-cargo.space/", headers={
-            "User-Agent": "StarlifterRequisitionTerminal/0.6",
-        })
-        with urllib.request.urlopen(html_req, timeout=15) as html_resp:
+        html_req = urllib.request.Request("https://sc-cargo.space/", headers=_headers)
+        with urllib.request.urlopen(html_req, context=_ssl_ctx, timeout=15) as html_resp:
             html_text = html_resp.read().decode("utf-8")
         
         js_match = re.search(r'src="(/assets/index-[A-Za-z0-9_-]+\.js)"', html_text)
         if js_match:
             js_url = f"https://sc-cargo.space{js_match.group(1)}"
             if status_callback:
-                status_callback("Downloading sc-cargo.space grid bundle...")
-            js_req = urllib.request.Request(js_url, headers={
-                "User-Agent": "StarlifterRequisitionTerminal/0.6",
-            })
-            with urllib.request.urlopen(js_req, timeout=30) as js_resp:
+                status_callback("Downloading cargo grid data bundle...")
+            js_req = urllib.request.Request(js_url, headers=_headers)
+            with urllib.request.urlopen(js_req, context=_ssl_ctx, timeout=30) as js_resp:
                 js_content = js_resp.read().decode("utf-8", errors="replace")
             
             # Parse grid data from JS bundle: {capacity:NNN,groups:[...]}
@@ -329,6 +378,20 @@ def _verify_and_update_uex_data(status_callback=None):
     except Exception as e:
         sc_cargo_warnings.append(f"sc-cargo.space: {e}")
     
+    # Fallback to bundled cargo grids if online fetch failed or returned 0 items
+    if not sc_cargo_grids:
+        for fb_name in ["sc_cargo_grids.json", "sc_cargo_grids_raw.json", "ship_grids_db.json"]:
+            fb_path = os.path.join(_res_dir, fb_name)
+            if os.path.exists(fb_path):
+                try:
+                    with open(fb_path, "r", encoding="utf-8") as f:
+                        sc_cargo_grids = _json.load(f)
+                    if sc_cargo_grids:
+                        print(f"[CARGO_GRID_FALLBACK] Loaded bundled cargo grids fallback from '{fb_name}' ({len(sc_cargo_grids)} ships).")
+                        break
+                except Exception as ex:
+                    print(f"[CARGO_GRID_FALLBACK] Error loading '{fb_name}': {ex}")
+
     result["sc_cargo_ships"] = len(sc_cargo_grids)
     if sc_cargo_warnings:
         result["warnings"].extend(sc_cargo_warnings)
@@ -550,11 +613,50 @@ def _verify_and_update_uex_data(status_callback=None):
         if v.get("is_spaceship", 1) and v.get("scu", 0) > 0
     ))
     
+    # 8) Sync commodity trade routes & item location prices from live UEX API
+    if status_callback:
+        status_callback("Syncing commodity trade routes from UEX API...")
+    trade_res = _sync_commodity_trade_routes(status_callback=status_callback)
+    result["trade_commodities"] = trade_res.get("commodities", 0)
+    result["trade_locations"] = trade_res.get("locations", 0)
+
+    if status_callback:
+        status_callback("Syncing item location prices from UEX API...")
+    items_res = _sync_items_prices(status_callback=status_callback)
+    result["trade_items"] = items_res.get("items", 0)
+
+    if status_callback:
+        status_callback("Updating config frequent items prices...")
+    cfg_res = _update_config_prices_from_uex(status_callback=status_callback)
+    result["config_prices_updated"] = cfg_res.get("updated", 0)
+
+    # 9) Update file modification timestamps (mtime) and invalidate in-memory caches
+    now_ts = time.time()
+    for fn in ["uex_locations_db.json", "uex_ships_db.json", "sc_wiki_items_cache.json",
+               "uex_trade_db.json", "uex_items_trade_db.json", "item_volumes.json", "ship_grids_db.json"]:
+        fp = os.path.join(_res_dir, fn)
+        if os.path.exists(fp):
+            try:
+                os.utime(fp, (now_ts, now_ts))
+            except Exception:
+                pass
+
+    try:
+        from sc_wiki_db import reload_cache
+        reload_cache()
+    except Exception: pass
+
+    try:
+        from storall_packer import reload_volume_map
+        reload_volume_map()
+    except Exception: pass
+
     if status_callback:
         status_callback(f"Done! Wiki:{result['wiki_total']} UEX:{result['uex_total']} "
                        f"+{len(result['added'])} ~{len(result['updated'])} "
                        f"grids:{result.get('sc_cargo_ships', 0)}sc/{len(result['grids_added'])}auto "
-                       f"items:+{vol_added} ~{vol_updated}")
+                       f"items:+{vol_added} ~{vol_updated} "
+                       f"trade:{result.get('trade_commodities', 0)}comm/{result.get('trade_items', 0)}items")
     
     return result
 

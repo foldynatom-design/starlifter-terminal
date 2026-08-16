@@ -227,11 +227,14 @@ if __name__ == "__main__":
     for key, val in sorted(ships.items()):
         print(f"  {key}: {val['capacity']} SCU, {val['_groups_count']} groups, {val['_total_cells']} cells")
     
-    # Step 2: Save raw SC-Cargo data
+    # Step 2: Save raw SC-Cargo data and bundled fallback file
     raw_path = os.path.join(resources_dir, "sc_cargo_grids_raw.json")
+    bundled_path = os.path.join(resources_dir, "sc_cargo_grids.json")
     with open(raw_path, "w", encoding="utf-8") as f:
         json.dump(ships, f, indent=2, ensure_ascii=False)
-    print(f"\nRaw data saved: {raw_path}")
+    with open(bundled_path, "w", encoding="utf-8") as f:
+        json.dump(ships, f, indent=2, ensure_ascii=False)
+    print(f"\nRaw data saved: {raw_path} and {bundled_path}")
     
     # Step 3: Merge with existing DB
     if os.path.exists(db_path):

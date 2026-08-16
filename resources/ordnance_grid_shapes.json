@@ -1,65 +1,74 @@
 {
   "S1": {
-    "width": 1,
-    "height": 1,
-    "length": 1,
-    "scu": 0.125,
-    "label": "1/8 SCU"
+    "width_m": 0.2,
+    "height_m": 0.2,
+    "length_m": 1.2,
+    "scu": 0.0246,
+    "grid_footprint_scu": 0.125,
+    "label": "Size 1 Missile (1.2m x 0.2m x 0.2m)"
   },
   "S2": {
-    "width": 1,
-    "height": 1,
-    "length": 1,
-    "scu": 1.0,
-    "label": "1 SCU"
+    "width_m": 0.25,
+    "height_m": 0.25,
+    "length_m": 1.8,
+    "scu": 0.0576,
+    "grid_footprint_scu": 0.25,
+    "label": "Size 2 Missile (1.8m x 0.25m x 0.25m)"
   },
   "S3": {
-    "width": 2,
-    "height": 2,
-    "length": 2,
-    "scu": 8.0,
-    "label": "8 SCU"
+    "width_m": 0.3,
+    "height_m": 0.3,
+    "length_m": 2.5,
+    "scu": 0.115,
+    "grid_footprint_scu": 0.5,
+    "label": "Size 3 Missile (2.5m x 0.3m x 0.3m)"
   },
   "S4": {
-    "width": 2,
-    "height": 2,
-    "length": 2,
-    "scu": 8.0,
-    "label": "8 SCU"
+    "width_m": 0.35,
+    "height_m": 0.35,
+    "length_m": 3.0,
+    "scu": 0.188,
+    "grid_footprint_scu": 1.0,
+    "label": "Size 4 Missile (3.0m x 0.35m x 0.35m)"
   },
   "S5": {
-    "width": 2,
-    "height": 2,
-    "length": 4,
-    "scu": 16.0,
-    "label": "16 SCU"
+    "width_m": 0.5,
+    "height_m": 0.4,
+    "length_m": 4.0,
+    "scu": 0.41,
+    "grid_footprint_scu": 1.6,
+    "label": "Size 5 Bomb / Torpedo (4.0m x 0.5m x 0.4m)"
   },
   "S7": {
-    "width": 2,
-    "height": 2,
-    "length": 4,
-    "scu": 16.0,
-    "label": "16 SCU"
+    "width_m": 0.55,
+    "height_m": 0.45,
+    "length_m": 5.0,
+    "scu": 0.70,
+    "grid_footprint_scu": 2.0,
+    "label": "Size 7 Torpedo (5.0m x 0.55m x 0.45m)"
   },
   "S9": {
-    "width": 2,
-    "height": 2,
-    "length": 6,
-    "scu": 24.0,
-    "label": "24 SCU"
+    "width_m": 0.6,
+    "height_m": 0.5,
+    "length_m": 6.0,
+    "scu": 0.922,
+    "grid_footprint_scu": 2.4,
+    "label": "Size 9 Torpedo (6.0m x 0.6m x 0.5m)"
   },
   "S10": {
-    "width": 2,
-    "height": 2,
-    "length": 8,
-    "scu": 32.0,
-    "label": "32 SCU"
+    "width_m": 0.75,
+    "height_m": 0.5,
+    "length_m": 8.0,
+    "scu": 1.536,
+    "grid_footprint_scu": 3.2,
+    "label": "Size 10 Colossus Bomb (8.0m x 0.75m x 0.5m)"
   },
   "S12": {
-    "width": 2,
-    "height": 2,
-    "length": 8,
-    "scu": 32.0,
-    "label": "32 SCU"
+    "width_m": 0.9,
+    "height_m": 0.6,
+    "length_m": 10.0,
+    "scu": 2.76,
+    "grid_footprint_scu": 4.8,
+    "label": "Size 12 Heavy Ordnance (10.0m x 0.9m x 0.6m)"
   }
 }

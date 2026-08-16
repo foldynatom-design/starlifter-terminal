@@ -1,0 +1,148 @@
+{
+  "carrack": {
+    "bay_dimensions": {
+      "length": 22.0,
+      "width": 16.0,
+      "height": 6.0
+    },
+    "known_fits": [
+      "c8",
+      "c8x",
+      "c8r",
+      "pisces",
+      "c8x pisces",
+      "c8r pisces",
+      "c8 pisces",
+      "merlin",
+      "archimedes",
+      "85x",
+      "p-52",
+      "p-72",
+      "kruger",
+      "aurora",
+      "fury",
+      "m50",
+      "razor"
+    ],
+    "known_no_fit": [
+      "cutlass",
+      "freelancer",
+      "vanguard",
+      "c2",
+      "caterpillar"
+    ]
+  },
+  "890 jump": {
+    "bay_dimensions": {
+      "length": 40.0,
+      "width": 25.0,
+      "height": 8.0
+    },
+    "known_fits": [
+      "85x",
+      "300i",
+      "325a",
+      "315p",
+      "350r",
+      "100i",
+      "125a",
+      "135c",
+      "c8",
+      "c8x",
+      "pisces",
+      "arrow",
+      "razor",
+      "m50",
+      "fury"
+    ],
+    "known_no_fit": [
+      "cutlass",
+      "freelancer",
+      "c2"
+    ]
+  },
+  "polaris": {
+    "bay_dimensions": {
+      "length": 32.0,
+      "width": 22.0,
+      "height": 8.0
+    },
+    "known_fits": [
+      "sabre",
+      "gladius",
+      "arrow",
+      "hornet",
+      "scorpius",
+      "defender",
+      "f8c",
+      "f7c",
+      "aurora",
+      "mustang",
+      "pisces",
+      "c8x",
+      "fury"
+    ],
+    "known_no_fit": [
+      "c2",
+      "caterpillar",
+      "starfarer"
+    ]
+  },
+  "idris": {
+    "bay_dimensions": {
+      "length": 65.0,
+      "width": 30.0,
+      "height": 10.0
+    },
+    "known_fits": [
+      "gladius",
+      "hornet",
+      "sabre",
+      "arrow",
+      "eclipse",
+      "vanguard",
+      "ares",
+      "scorpius",
+      "f8c",
+      "c8x",
+      "pisces"
+    ],
+    "known_no_fit": [
+      "c2",
+      "caterpillar",
+      "hull c"
+    ]
+  },
+  "c2 hercules": {
+    "bay_dimensions": {
+      "length": 42.0,
+      "width": 14.0,
+      "height": 7.0
+    },
+    "known_fits": [
+      "c8",
+      "c8x",
+      "pisces",
+      "merlin",
+      "archimedes",
+      "fury",
+      "razor",
+      "m50",
+      "ursa",
+      "nova",
+      "ballista",
+      "centurion",
+      "spartan",
+      "cyclone",
+      "mule",
+      "stv",
+      "ptv",
+      "roc",
+      "roc-ds"
+    ],
+    "known_no_fit": [
+      "freelancer",
+      "cutlass"
+    ]
+  }
+}

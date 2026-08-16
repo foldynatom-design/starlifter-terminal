@@ -4,6 +4,9 @@ echo Building Starlifter Requisition Terminal v0.6
 echo ===================================================
 pip install pyinstaller customtkinter opencv-python pillow fpdf fontTools
 
+:: 0. Purge temporary font PKL cache files containing absolute dev paths
+del /q fonts\*.pkl 2>nul
+
 :: 1. Compile in Directory Mode
 pyinstaller --clean --onedir --noconsole --name "Starlifter Requisition Terminal" --paths "." --collect-all fontTools --collect-all fpdf --hidden-import "fontTools.misc.bezierTools" --icon "app_icon.ico" entry.py
 

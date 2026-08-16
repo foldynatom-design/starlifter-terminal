@@ -1,0 +1,561 @@
+{
+  "vessels": {
+    "UEE Helios (Aegis Idris-M)": [
+      {
+        "name": "Size 1 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7383,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Size 2 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7641,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Size 3 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7383,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Size 4 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7641,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Size 5 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7984,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Decoy Countermeasures",
+        "qty": 1,
+        "box_size": "4 SCU",
+        "price": 8585,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Noise Countermeasures",
+        "qty": 1,
+        "box_size": "4 SCU",
+        "price": 4293,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Hydrogen Fuel",
+        "qty": 4,
+        "box_size": "8 SCU",
+        "price": 196,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Quantum Fuel",
+        "qty": 4,
+        "box_size": "8 SCU",
+        "price": 978,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Raptor IV Missile",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": 1070,
+        "unit": "missile",
+        "courtesy": false
+      },
+      {
+        "name": "Thunderbolt III Missile",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": 523,
+        "unit": "missile",
+        "courtesy": false
+      },
+      {
+        "name": "Dominator II Missile",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": 350,
+        "unit": "missile",
+        "courtesy": false
+      },
+      {
+        "name": "Recycled Material Composite (RMC)",
+        "qty": 16,
+        "box_size": "8 SCU",
+        "price": 10710,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "MaxLift Tractor Beam",
+        "qty": 2,
+        "box_size": "Loose",
+        "price": 1975,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT",
+        "qty": 2,
+        "box_size": "Loose",
+        "price": 20155,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT Canister",
+        "qty": 20,
+        "box_size": "Loose",
+        "price": 275,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "CRUZ Lux",
+        "qty": 400,
+        "box_size": "Loose",
+        "price": 6,
+        "unit": "bottle",
+        "courtesy": false
+      },
+      {
+        "name": "Seeker IX Torpedo",
+        "qty": "",
+        "box_size": "24 SCU",
+        "price": 17595
+      },
+      {
+        "name": "Argus IX Torpedo",
+        "qty": "",
+        "box_size": "24 SCU",
+        "price": 16716
+      },
+      {
+        "name": "Typhoon IX Torpedo",
+        "qty": "",
+        "box_size": "24 SCU",
+        "price": 17595
+      },
+      {
+        "name": "Colossus Bomb",
+        "qty": "",
+        "box_size": "32 SCU",
+        "price": 83125
+      },
+      {
+        "name": "Stormburst Bomb",
+        "qty": "",
+        "box_size": "8 SCU",
+        "price": 5065
+      },
+      {
+        "name": "Maxlift Tractor Beam Battery",
+        "qty": 2,
+        "price": 166,
+        "box_size": "Loose",
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio Multi-tool Battery",
+        "qty": 2,
+        "price": 63,
+        "box_size": "Loose",
+        "unit": "SCU",
+        "courtesy": false
+      }
+    ],
+    "UEE Bastion (RSI Polaris)": [
+      {
+        "name": "Quantum Fuel",
+        "qty": 2,
+        "box_size": "8 SCU",
+        "price": 978,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Hydrogen Fuel",
+        "qty": 2,
+        "box_size": "8 SCU",
+        "price": 196,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Size 1 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7383,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Size 2 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7641,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Size 3 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7383,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Size 4 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7641,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Size 5 Ammunition",
+        "qty": 1,
+        "box_size": "8 SCU",
+        "price": 7984,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Decoy Countermeasures",
+        "qty": 1,
+        "box_size": "4 SCU",
+        "price": 8585,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Noise Countermeasures",
+        "qty": 1,
+        "box_size": "4 SCU",
+        "price": 4293,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Raptor IV Missile",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": 1070,
+        "unit": "missile",
+        "courtesy": false
+      },
+      {
+        "name": "Thunderbolt III Missile",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": 523,
+        "unit": "missile",
+        "courtesy": false
+      },
+      {
+        "name": "Dominator II Missile",
+        "qty": "",
+        "box_size": "1 SCU",
+        "price": 350,
+        "unit": "missile",
+        "courtesy": false
+      },
+      {
+        "name": "Recycled Material Composite (RMC)",
+        "qty": 8,
+        "box_size": "8 SCU",
+        "price": 10710,
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "MaxLift Tractor Beam",
+        "qty": 2,
+        "box_size": "Loose",
+        "price": 1975,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT",
+        "qty": 2,
+        "box_size": "Loose",
+        "price": 20155,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT Canister",
+        "qty": 20,
+        "box_size": "Loose",
+        "price": 275,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "CRUZ Lux",
+        "qty": 200,
+        "box_size": "Loose",
+        "price": 6,
+        "unit": "bottle",
+        "courtesy": false
+      },
+      {
+        "name": "Seeker IX Torpedo",
+        "qty": 28,
+        "box_size": "24 SCU",
+        "price": 17595
+      },
+      {
+        "name": "Argus IX Torpedo",
+        "qty": "",
+        "box_size": "24 SCU",
+        "price": 16716
+      },
+      {
+        "name": "Typhoon IX Torpedo",
+        "qty": "",
+        "box_size": "24 SCU",
+        "price": 17595
+      },
+      {
+        "name": "Maxlift Tractor Beam Battery",
+        "qty": 2,
+        "price": 166,
+        "box_size": "Loose",
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio Multi-tool Battery",
+        "qty": 2,
+        "price": 63,
+        "box_size": "Loose",
+        "unit": "SCU",
+        "courtesy": false
+      }
+    ],
+    "Reclaimer (Aegis Reclaimer)": [
+      {
+        "name": "Recycled Material Composite (RMC)",
+        "qty": 40,
+        "box_size": "8 SCU"
+      },
+      {
+        "name": "Construction Materials",
+        "qty": 40,
+        "box_size": "8 SCU"
+      },
+      {
+        "name": "MaxLift Tractor Beam",
+        "qty": 2,
+        "box_size": "Loose",
+        "price": 1975
+      },
+      {
+        "name": "Maxlift Tractor Beam Battery",
+        "qty": 2,
+        "box_size": "Loose",
+        "price": 166
+      },
+      {
+        "name": "Cambio SRT",
+        "qty": 2,
+        "box_size": "Loose",
+        "price": 20155
+      },
+      {
+        "name": "Cambio Multi-tool Battery",
+        "qty": 2,
+        "box_size": "Loose"
+      },
+      {
+        "name": "CRUZ Lux",
+        "qty": 50,
+        "box_size": "Loose",
+        "price": 6
+      },
+      {
+        "name": "Cambio SRT Canister",
+        "qty": 20,
+        "box_size": "Loose",
+        "price": 275,
+        "unit": "unit",
+        "courtesy": false
+      }
+    ],
+    "Mole (ARGO MOLE)": [
+      {
+        "name": "MaxLift Tractor Beam",
+        "qty": 2,
+        "box_size": "Loose",
+        "price": 1975
+      },
+      {
+        "name": "Maxlift Tractor Beam Battery",
+        "qty": 2,
+        "box_size": "Loose",
+        "price": 166
+      },
+      {
+        "name": "Cambio SRT",
+        "qty": 2,
+        "box_size": "Loose",
+        "price": 20155
+      },
+      {
+        "name": "Cambio Multi-tool Battery",
+        "qty": 2,
+        "box_size": "Loose"
+      },
+      {
+        "name": "CRUZ Lux",
+        "qty": 20,
+        "box_size": "Loose",
+        "price": 6
+      },
+      {
+        "name": "Cambio SRT Canister",
+        "qty": 20,
+        "box_size": "Loose",
+        "price": 275,
+        "unit": "unit",
+        "courtesy": false
+      }
+    ],
+    "Moth (Argo MOTH)": [
+      {
+        "name": "MaxLift Tractor Beam",
+        "qty": 2,
+        "box_size": "Loose",
+        "price": 1975
+      },
+      {
+        "name": "Maxlift Tractor Beam Battery",
+        "qty": 2,
+        "box_size": "Loose",
+        "price": 166
+      },
+      {
+        "name": "Cambio SRT",
+        "qty": 2,
+        "box_size": "Loose",
+        "price": 20155
+      },
+      {
+        "name": "Cambio Multi-tool Battery",
+        "qty": 2,
+        "box_size": "Loose"
+      },
+      {
+        "name": "CRUZ Lux",
+        "qty": 20,
+        "box_size": "Loose",
+        "price": 6
+      },
+      {
+        "name": "Cambio SRT Canister",
+        "qty": 20,
+        "box_size": "Loose",
+        "price": 275,
+        "unit": "unit",
+        "courtesy": false
+      }
+    ],
+    "Perseus (RSI Perseus)": [
+      {
+        "name": "Stor-All 1 SCU Storage Container",
+        "qty": 1,
+        "box_size": "1 SCU",
+        "price": 2100,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "MaxLift Tractor Beam",
+        "qty": 1,
+        "box_size": "Loose",
+        "price": 1975,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT",
+        "qty": 1,
+        "box_size": "Loose",
+        "price": 20155,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "CRUZ Lux",
+        "qty": 40,
+        "box_size": "Loose",
+        "price": 6,
+        "unit": "bottle",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio SRT Canister",
+        "qty": 10,
+        "box_size": "Loose",
+        "price": 275,
+        "unit": "unit",
+        "courtesy": false
+      },
+      {
+        "name": "Scorch Plasma Grenade",
+        "qty": 20,
+        "box_size": "1 SCU",
+        "price": 506,
+        "unit": "grenade",
+        "courtesy": false
+      },
+      {
+        "name": "P4-AR Magazine",
+        "qty": 100,
+        "box_size": "1 SCU",
+        "price": 198,
+        "unit": "mag",
+        "courtesy": false
+      },
+      {
+        "name": "Maxlift Tractor Beam Battery",
+        "qty": 1,
+        "price": 166,
+        "box_size": "Loose",
+        "unit": "SCU",
+        "courtesy": false
+      },
+      {
+        "name": "Cambio Multi-tool Battery",
+        "qty": 1,
+        "price": 63,
+        "box_size": "Loose",
+        "unit": "SCU",
+        "courtesy": false
+      }
+    ]
+  }
+}

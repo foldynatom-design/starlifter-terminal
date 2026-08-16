@@ -1,0 +1,2192 @@
+{
+  "origin 100i": {
+    "length": 19.0,
+    "width": 12.0,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "100i": {
+    "length": 19.0,
+    "width": 12.0,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "origin 125a": {
+    "length": 19.0,
+    "width": 12.0,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "125a": {
+    "length": 19.0,
+    "width": 12.0,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "origin 135c": {
+    "length": 19.0,
+    "width": 12.0,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "135c": {
+    "length": 19.0,
+    "width": 12.0,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "origin 300i": {
+    "length": 27.0,
+    "width": 17.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "300i": {
+    "length": 27.0,
+    "width": 17.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "origin 315p": {
+    "length": 27.0,
+    "width": 17.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "315p": {
+    "length": 27.0,
+    "width": 17.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "origin 325a": {
+    "length": 27.5,
+    "width": 17.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "325a": {
+    "length": 27.5,
+    "width": 17.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "origin 350r": {
+    "length": 27.0,
+    "width": 17.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "350r": {
+    "length": 27.0,
+    "width": 17.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "origin 400i": {
+    "length": 56.0,
+    "width": 32.0,
+    "height": 12.5,
+    "pad_size": "L"
+  },
+  "400i": {
+    "length": 56.0,
+    "width": 32.0,
+    "height": 12.5,
+    "pad_size": "L"
+  },
+  "origin 600i explorer": {
+    "length": 91.5,
+    "width": 52.0,
+    "height": 17.0,
+    "pad_size": "L"
+  },
+  "600i explorer": {
+    "length": 91.5,
+    "width": 52.0,
+    "height": 17.0,
+    "pad_size": "L"
+  },
+  "origin 600i touring": {
+    "length": 91.5,
+    "width": 52.0,
+    "height": 17.0,
+    "pad_size": "L"
+  },
+  "600i touring": {
+    "length": 91.5,
+    "width": 52.0,
+    "height": 17.0,
+    "pad_size": "L"
+  },
+  "origin 85x": {
+    "length": 14.0,
+    "width": 13.5,
+    "height": 4.0,
+    "pad_size": "L"
+  },
+  "origin 890 jump": {
+    "length": 210.0,
+    "width": 80.0,
+    "height": 45.0,
+    "pad_size": "L"
+  },
+  "890 jump": {
+    "length": 210.0,
+    "width": 80.0,
+    "height": 45.0,
+    "pad_size": "L"
+  },
+  "crusader a2 hercules starlifter": {
+    "length": 94.0,
+    "width": 70.0,
+    "height": 23.0,
+    "pad_size": "L"
+  },
+  "rsi apollo medivac": {
+    "length": 65.0,
+    "width": 43.0,
+    "height": 14.0,
+    "pad_size": "L"
+  },
+  "apollo medivac": {
+    "length": 65.0,
+    "width": 43.0,
+    "height": 14.0,
+    "pad_size": "L"
+  },
+  "rsi apollo triage": {
+    "length": 65.0,
+    "width": 45.0,
+    "height": 14.0,
+    "pad_size": "L"
+  },
+  "apollo triage": {
+    "length": 65.0,
+    "width": 45.0,
+    "height": 14.0,
+    "pad_size": "L"
+  },
+  "rsi arrastra": {
+    "length": 124.0,
+    "width": 64.0,
+    "height": 21.0,
+    "pad_size": "L"
+  },
+  "anvil arrow": {
+    "length": 17.2,
+    "width": 12.2,
+    "height": 4.5,
+    "pad_size": "L"
+  },
+  "rsi aurora mk i cl": {
+    "length": 19.0,
+    "width": 8.8,
+    "height": 4.5,
+    "pad_size": "L"
+  },
+  "rsi aurora mk i es": {
+    "length": 19.0,
+    "width": 8.8,
+    "height": 4.5,
+    "pad_size": "L"
+  },
+  "rsi aurora mk i ln": {
+    "length": 19.0,
+    "width": 8.8,
+    "height": 4.5,
+    "pad_size": "L"
+  },
+  "rsi aurora mk i lx": {
+    "length": 19.0,
+    "width": 8.8,
+    "height": 4.5,
+    "pad_size": "L"
+  },
+  "rsi aurora mk i mr": {
+    "length": 19.0,
+    "width": 8.8,
+    "height": 4.5,
+    "pad_size": "L"
+  },
+  "aegis avenger stalker": {
+    "length": 20.0,
+    "width": 15.0,
+    "height": 6.5,
+    "pad_size": "L"
+  },
+  "$z avenger titan": {
+    "length": 20.0,
+    "width": 15.0,
+    "height": 6.5,
+    "pad_size": "L"
+  },
+  "avenger titan": {
+    "length": 20.0,
+    "width": 15.0,
+    "height": 6.5,
+    "pad_size": "L"
+  },
+  "aegis avenger titan renegade": {
+    "length": 20.0,
+    "width": 15.0,
+    "height": 6.5,
+    "pad_size": "L"
+  },
+  "aegis avenger warlock": {
+    "length": 20.0,
+    "width": 15.0,
+    "height": 6.5,
+    "pad_size": "L"
+  },
+  "anvil ballista": {
+    "length": 17.0,
+    "width": 7.0,
+    "height": 5.5,
+    "pad_size": "L"
+  },
+  "anvil ballista dunestalker": {
+    "length": 17.0,
+    "width": 7.0,
+    "height": 5.5,
+    "pad_size": "L"
+  },
+  "anvil ballista snowblind": {
+    "length": 17.0,
+    "width": 7.0,
+    "height": 5.5,
+    "pad_size": "L"
+  },
+  "esperia blade": {
+    "length": 20.5,
+    "width": 16.5,
+    "height": 5.5,
+    "pad_size": "L"
+  },
+  "drake buccaneer": {
+    "length": 16.8,
+    "width": 15.2,
+    "height": 5.5,
+    "pad_size": "L"
+  },
+  "crusader c2 hercules starlifter": {
+    "length": 94.0,
+    "width": 70.0,
+    "height": 23.0,
+    "pad_size": "L"
+  },
+  "anvil c8 pisces": {
+    "length": 16.0,
+    "width": 12.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "c8 pisces": {
+    "length": 16.0,
+    "width": 12.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "anvil c8r pisces rescue": {
+    "length": 16.0,
+    "width": 12.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "anvil c8x pisces expedition": {
+    "length": 16.0,
+    "width": 12.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "anvil carrack": {
+    "length": 126.0,
+    "width": 74.0,
+    "height": 30.0,
+    "pad_size": "L"
+  },
+  "carrack": {
+    "length": 126.0,
+    "width": 74.0,
+    "height": 30.0,
+    "pad_size": "L"
+  },
+  "anvil carrack expedition": {
+    "length": 126.0,
+    "width": 74.0,
+    "height": 30.0,
+    "pad_size": "L"
+  },
+  "drake caterpillar": {
+    "length": 111.5,
+    "width": 39.5,
+    "height": 13.4,
+    "pad_size": "L"
+  },
+  "caterpillar": {
+    "length": 111.5,
+    "width": 39.5,
+    "height": 13.4,
+    "pad_size": "L"
+  },
+  "drake caterpillar pirate edition": {
+    "length": 111.5,
+    "width": 39.5,
+    "height": 13.4,
+    "pad_size": "L"
+  },
+  "anvil centurion": {
+    "length": 17.0,
+    "width": 7.0,
+    "height": 5.5,
+    "pad_size": "L"
+  },
+  "rsi constellation andromeda": {
+    "length": 63.5,
+    "width": 27.8,
+    "height": 15.2,
+    "pad_size": "L"
+  },
+  "constellation andromeda": {
+    "length": 63.5,
+    "width": 27.8,
+    "height": 15.2,
+    "pad_size": "L"
+  },
+  "rsi constellation aquila": {
+    "length": 63.5,
+    "width": 27.8,
+    "height": 15.2,
+    "pad_size": "L"
+  },
+  "constellation aquila": {
+    "length": 63.5,
+    "width": 27.8,
+    "height": 15.2,
+    "pad_size": "L"
+  },
+  "rsi constellation phoenix": {
+    "length": 63.5,
+    "width": 27.8,
+    "height": 15.2,
+    "pad_size": "L"
+  },
+  "constellation phoenix": {
+    "length": 63.5,
+    "width": 27.8,
+    "height": 15.2,
+    "pad_size": "L"
+  },
+  "rsi constellation phoenix emerald": {
+    "length": 63.5,
+    "width": 27.8,
+    "height": 15.2,
+    "pad_size": "L"
+  },
+  "rsi constellation taurus": {
+    "length": 70.0,
+    "width": 27.8,
+    "height": 15.2,
+    "pad_size": "L"
+  },
+  "constellation taurus": {
+    "length": 70.0,
+    "width": 27.8,
+    "height": 15.2,
+    "pad_size": "L"
+  },
+  "drake corsair": {
+    "length": 53.0,
+    "width": 30.0,
+    "height": 25.0,
+    "pad_size": "L"
+  },
+  "corsair": {
+    "length": 53.0,
+    "width": 30.0,
+    "height": 25.0,
+    "pad_size": "L"
+  },
+  "anvil crucible": {
+    "length": 90.0,
+    "width": 50.0,
+    "height": 20.0,
+    "pad_size": "L"
+  },
+  "drake cutlass black": {
+    "length": 37.5,
+    "width": 26.5,
+    "height": 11.5,
+    "pad_size": "L"
+  },
+  "cutlass black": {
+    "length": 37.5,
+    "width": 26.5,
+    "height": 11.5,
+    "pad_size": "L"
+  },
+  "drake cutlass blue": {
+    "length": 37.5,
+    "width": 26.5,
+    "height": 11.5,
+    "pad_size": "L"
+  },
+  "cutlass blue": {
+    "length": 37.5,
+    "width": 26.5,
+    "height": 11.5,
+    "pad_size": "L"
+  },
+  "drake cutlass red": {
+    "length": 37.5,
+    "width": 26.5,
+    "height": 11.5,
+    "pad_size": "L"
+  },
+  "cutlass red": {
+    "length": 37.5,
+    "width": 26.5,
+    "height": 11.5,
+    "pad_size": "L"
+  },
+  "drake cutlass steel": {
+    "length": 37.5,
+    "width": 26.5,
+    "height": 11.5,
+    "pad_size": "L"
+  },
+  "drake cutter": {
+    "length": 20.0,
+    "width": 16.0,
+    "height": 6.0,
+    "pad_size": "L"
+  },
+  "cutter": {
+    "length": 20.0,
+    "width": 16.0,
+    "height": 6.0,
+    "pad_size": "L"
+  },
+  "drake cutter scout": {
+    "length": 20.0,
+    "width": 16.0,
+    "height": 6.0,
+    "pad_size": "L"
+  },
+  "cutter scout": {
+    "length": 20.0,
+    "width": 16.0,
+    "height": 6.0,
+    "pad_size": "L"
+  },
+  "drake cutter rambler": {
+    "length": 20.0,
+    "width": 16.0,
+    "height": 6.0,
+    "pad_size": "L"
+  },
+  "cutter rambler": {
+    "length": 20.0,
+    "width": 16.0,
+    "height": 6.0,
+    "pad_size": "L"
+  },
+  "tumbril cyclone": {
+    "length": 8.8,
+    "width": 6.0,
+    "height": 3.5,
+    "pad_size": "L"
+  },
+  "cyclone": {
+    "length": 8.8,
+    "width": 6.0,
+    "height": 3.5,
+    "pad_size": "L"
+  },
+  "tumbril cyclone aa": {
+    "length": 8.8,
+    "width": 6.0,
+    "height": 3.5,
+    "pad_size": "L"
+  },
+  "tumbril cyclone mt": {
+    "length": 8.8,
+    "width": 6.0,
+    "height": 3.5,
+    "pad_size": "L"
+  },
+  "tumbril cyclone rc": {
+    "length": 8.8,
+    "width": 6.0,
+    "height": 3.5,
+    "pad_size": "L"
+  },
+  "tumbril cyclone rn": {
+    "length": 8.8,
+    "width": 6.0,
+    "height": 3.5,
+    "pad_size": "L"
+  },
+  "tumbril cyclone tr": {
+    "length": 8.8,
+    "width": 6.0,
+    "height": 3.5,
+    "pad_size": "L"
+  },
+  "banu defender": {
+    "length": 24.5,
+    "width": 24.5,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "drake dragonfly black": {
+    "length": 7.0,
+    "width": 2.5,
+    "height": 2.0,
+    "pad_size": "L"
+  },
+  "drake dragonfly yellowjacket": {
+    "length": 7.0,
+    "width": 2.5,
+    "height": 2.0,
+    "pad_size": "L"
+  },
+  "aegis eclipse": {
+    "length": 24.5,
+    "width": 24.5,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "misc endeavor": {
+    "length": 200.0,
+    "width": 48.0,
+    "height": 20.0,
+    "pad_size": "L"
+  },
+  "misc expanse": {
+    "length": 35.5,
+    "width": 21.2,
+    "height": 10.7,
+    "pad_size": "L"
+  },
+  "anvil f7a hornet mk i": {
+    "length": 28.2,
+    "width": 25.5,
+    "height": 7.5,
+    "pad_size": "L"
+  },
+  "anvil f7c hornet mk ii": {
+    "length": 22.5,
+    "width": 22.0,
+    "height": 6.5,
+    "pad_size": "L"
+  },
+  "anvil f7c hornet wildfire mk i": {
+    "length": 28.2,
+    "width": 25.5,
+    "height": 7.5,
+    "pad_size": "L"
+  },
+  "anvil f7c-m super hornet mk i": {
+    "length": 28.2,
+    "width": 25.5,
+    "height": 7.5,
+    "pad_size": "L"
+  },
+  "anvil f7c-m super hornet heartseeker mk i": {
+    "length": 28.2,
+    "width": 25.5,
+    "height": 7.5,
+    "pad_size": "L"
+  },
+  "anvil f7c-r hornet tracker mk i": {
+    "length": 28.2,
+    "width": 25.5,
+    "height": 7.5,
+    "pad_size": "L"
+  },
+  "anvil f7c-s hornet ghost mk i": {
+    "length": 28.2,
+    "width": 25.5,
+    "height": 7.5,
+    "pad_size": "L"
+  },
+  "anvil f8c lightning": {
+    "length": 26.0,
+    "width": 25.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "misc freelancer": {
+    "length": 38.0,
+    "width": 23.5,
+    "height": 9.5,
+    "pad_size": "L"
+  },
+  "freelancer": {
+    "length": 38.0,
+    "width": 23.5,
+    "height": 9.5,
+    "pad_size": "L"
+  },
+  "misc freelancer dur": {
+    "length": 38.0,
+    "width": 23.5,
+    "height": 9.5,
+    "pad_size": "L"
+  },
+  "freelancer dur": {
+    "length": 38.0,
+    "width": 23.5,
+    "height": 9.5,
+    "pad_size": "L"
+  },
+  "misc freelancer max": {
+    "length": 38.0,
+    "width": 34.0,
+    "height": 9.5,
+    "pad_size": "L"
+  },
+  "freelancer max": {
+    "length": 38.0,
+    "width": 34.0,
+    "height": 9.5,
+    "pad_size": "L"
+  },
+  "misc freelancer mis": {
+    "length": 38.0,
+    "width": 23.5,
+    "height": 9.5,
+    "pad_size": "L"
+  },
+  "freelancer mis": {
+    "length": 38.0,
+    "width": 23.5,
+    "height": 9.5,
+    "pad_size": "L"
+  },
+  "mirai fury": {
+    "length": 7.0,
+    "width": 5.4,
+    "height": 3.0,
+    "pad_size": "L"
+  },
+  "mirai fury lx": {
+    "length": 7.0,
+    "width": 5.4,
+    "height": 3.0,
+    "pad_size": "L"
+  },
+  "mirai fury mx": {
+    "length": 7.0,
+    "width": 5.4,
+    "height": 3.0,
+    "pad_size": "L"
+  },
+  "origin g12": {
+    "length": 7.2,
+    "width": 5.8,
+    "height": 2.7,
+    "pad_size": "L"
+  },
+  "rsi galaxy": {
+    "length": 110.0,
+    "width": 60.0,
+    "height": 22.0,
+    "pad_size": "L"
+  },
+  "anvil gladiator": {
+    "length": 22.8,
+    "width": 21.0,
+    "height": 6.0,
+    "pad_size": "L"
+  },
+  "aegis gladius": {
+    "length": 21.0,
+    "width": 17.5,
+    "height": 5.5,
+    "pad_size": "L"
+  },
+  "aegis gladius pirate": {
+    "length": 21.0,
+    "width": 17.5,
+    "height": 5.5,
+    "pad_size": "L"
+  },
+  "aegis gladius valiant": {
+    "length": 21.0,
+    "width": 17.5,
+    "height": 5.5,
+    "pad_size": "L"
+  },
+  "esperia glaive": {
+    "length": 33.0,
+    "width": 24.0,
+    "height": 9.0,
+    "pad_size": "L"
+  },
+  "aegis hammerhead": {
+    "length": 120.0,
+    "width": 72.0,
+    "height": 16.0,
+    "pad_size": "L"
+  },
+  "hammerhead": {
+    "length": 120.0,
+    "width": 72.0,
+    "height": 16.0,
+    "pad_size": "L"
+  },
+  "anvil hawk": {
+    "length": 23.0,
+    "width": 17.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "drake herald": {
+    "length": 24.8,
+    "width": 12.5,
+    "height": 9.0,
+    "pad_size": "L"
+  },
+  "c.o. hoverquad": {
+    "length": 5.2,
+    "width": 1.4,
+    "height": 1.3,
+    "pad_size": "L"
+  },
+  "misc hull a": {
+    "length": 30.0,
+    "width": 12.5,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "misc hull b": {
+    "length": 71.0,
+    "width": 17.0,
+    "height": 9.0,
+    "pad_size": "L"
+  },
+  "misc hull c": {
+    "length": 91.2,
+    "width": 36.0,
+    "height": 26.3,
+    "pad_size": "L"
+  },
+  "misc hull d": {
+    "length": 209.0,
+    "width": 70.0,
+    "height": 70.0,
+    "pad_size": "L"
+  },
+  "misc hull e": {
+    "length": 372.0,
+    "width": 104.0,
+    "height": 104.0,
+    "pad_size": "L"
+  },
+  "anvil hurricane": {
+    "length": 24.0,
+    "width": 18.5,
+    "height": 6.5,
+    "pad_size": "L"
+  },
+  "aegis idris-m": {
+    "length": 243.0,
+    "width": 127.0,
+    "height": 57.5,
+    "pad_size": "L"
+  },
+  "idris-m": {
+    "length": 243.0,
+    "width": 127.0,
+    "height": 57.5,
+    "pad_size": "L"
+  },
+  "aegis idris-p": {
+    "length": 240.0,
+    "width": 125.0,
+    "height": 45.0,
+    "pad_size": "L"
+  },
+  "idris-p": {
+    "length": 240.0,
+    "width": 125.0,
+    "height": 45.0,
+    "pad_size": "L"
+  },
+  "drake kraken": {
+    "length": 270.0,
+    "width": 104.0,
+    "height": 64.0,
+    "pad_size": "L"
+  },
+  "drake kraken privateer": {
+    "length": 270.0,
+    "width": 104.0,
+    "height": 64.0,
+    "pad_size": "L"
+  },
+  "anvil legionnaire": {
+    "length": 32.0,
+    "width": 24.0,
+    "height": 13.0,
+    "pad_size": "L"
+  },
+  "anvil liberator": {
+    "length": 119.0,
+    "width": 67.0,
+    "height": 25.0,
+    "pad_size": "L"
+  },
+  "rsi lynx": {
+    "length": 7.8,
+    "width": 5.7,
+    "height": 3.5,
+    "pad_size": "L"
+  },
+  "crusader m2 hercules starlifter": {
+    "length": 94.0,
+    "width": 70.0,
+    "height": 23.0,
+    "pad_size": "L"
+  },
+  "origin m50": {
+    "length": 11.5,
+    "width": 11.0,
+    "height": 3.5,
+    "pad_size": "L"
+  },
+  "rsi mantis": {
+    "length": 30.0,
+    "width": 17.0,
+    "height": 7.5,
+    "pad_size": "L"
+  },
+  "banu merchantman": {
+    "length": 160.0,
+    "width": 160.0,
+    "height": 65.0,
+    "pad_size": "L"
+  },
+  "crusader mercury star runner": {
+    "length": 55.0,
+    "width": 51.0,
+    "height": 19.0,
+    "pad_size": "L"
+  },
+  "mercury star runner": {
+    "length": 55.0,
+    "width": 51.0,
+    "height": 19.0,
+    "pad_size": "L"
+  },
+  "argo mole": {
+    "length": 45.0,
+    "width": 26.0,
+    "height": 15.0,
+    "pad_size": "L"
+  },
+  "mole": {
+    "length": 45.0,
+    "width": 26.0,
+    "height": 15.0,
+    "pad_size": "L"
+  },
+  "argo mpuv cargo": {
+    "length": 8.5,
+    "width": 5.0,
+    "height": 3.5,
+    "pad_size": "L"
+  },
+  "argo mpuv personnel": {
+    "length": 10.5,
+    "width": 9.0,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "drake mule": {
+    "length": 8.8,
+    "width": 6.0,
+    "height": 3.5,
+    "pad_size": "L"
+  },
+  "mule": {
+    "length": 8.8,
+    "width": 6.0,
+    "height": 3.5,
+    "pad_size": "L"
+  },
+  "consolidated outland mustang alpha": {
+    "length": 21.5,
+    "width": 18.0,
+    "height": 9.0,
+    "pad_size": "L"
+  },
+  "mustang alpha": {
+    "length": 21.5,
+    "width": 18.0,
+    "height": 9.0,
+    "pad_size": "L"
+  },
+  "c.o. mustang alpha vindicator": {
+    "length": 21.5,
+    "width": 18.0,
+    "height": 9.0,
+    "pad_size": "L"
+  },
+  "c.o. mustang beta": {
+    "length": 21.5,
+    "width": 18.0,
+    "height": 9.0,
+    "pad_size": "L"
+  },
+  "c.o. mustang delta": {
+    "length": 21.5,
+    "width": 18.0,
+    "height": 9.0,
+    "pad_size": "L"
+  },
+  "c.o. mustang gamma": {
+    "length": 21.5,
+    "width": 18.0,
+    "height": 9.0,
+    "pad_size": "L"
+  },
+  "c.o. mustang omega": {
+    "length": 21.5,
+    "width": 18.0,
+    "height": 9.0,
+    "pad_size": "L"
+  },
+  "aegis nautilus": {
+    "length": 125.0,
+    "width": 72.0,
+    "height": 21.6,
+    "pad_size": "L"
+  },
+  "aegis nautilus solstice edition": {
+    "length": 125.0,
+    "width": 72.0,
+    "height": 21.6,
+    "pad_size": "L"
+  },
+  "consolidated outland nomad": {
+    "length": 27.0,
+    "width": 19.0,
+    "height": 10.0,
+    "pad_size": "L"
+  },
+  "nomad": {
+    "length": 27.0,
+    "width": 19.0,
+    "height": 10.0,
+    "pad_size": "L"
+  },
+  "aopoa nox": {
+    "length": 5.2,
+    "width": 1.4,
+    "height": 1.3,
+    "pad_size": "L"
+  },
+  "aopoa nox kue": {
+    "length": 5.2,
+    "width": 1.4,
+    "height": 1.3,
+    "pad_size": "L"
+  },
+  "misc odyssey": {
+    "length": 140.0,
+    "width": 90.0,
+    "height": 35.0,
+    "pad_size": "L"
+  },
+  "rsi orion": {
+    "length": 170.0,
+    "width": 50.0,
+    "height": 50.0,
+    "pad_size": "L"
+  },
+  "kruger p-52 merlin": {
+    "length": 12.0,
+    "width": 7.8,
+    "height": 3.2,
+    "pad_size": "L"
+  },
+  "kruger p-72 archimedes": {
+    "length": 12.0,
+    "width": 7.8,
+    "height": 3.2,
+    "pad_size": "L"
+  },
+  "kruger p-72 archimedes emerald": {
+    "length": 12.0,
+    "width": 7.8,
+    "height": 3.2,
+    "pad_size": "L"
+  },
+  "rsi perseus": {
+    "length": 100.5,
+    "width": 42.2,
+    "height": 22.3,
+    "pad_size": "L"
+  },
+  "perseus": {
+    "length": 100.5,
+    "width": 42.2,
+    "height": 22.3,
+    "pad_size": "L"
+  },
+  "c.o. pioneer": {
+    "length": 247.0,
+    "width": 133.0,
+    "height": 53.0,
+    "pad_size": "L"
+  },
+  "rsi polaris": {
+    "length": 166.0,
+    "width": 82.0,
+    "height": 35.0,
+    "pad_size": "L"
+  },
+  "polaris": {
+    "length": 166.0,
+    "width": 82.0,
+    "height": 35.0,
+    "pad_size": "L"
+  },
+  "misc prospector": {
+    "length": 26.5,
+    "width": 16.5,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "esperia prowler": {
+    "length": 34.0,
+    "width": 32.0,
+    "height": 15.0,
+    "pad_size": "L"
+  },
+  "greycat ptv": {
+    "length": 3.5,
+    "width": 2.5,
+    "height": 2.2,
+    "pad_size": "L"
+  },
+  "argo raft": {
+    "length": 39.5,
+    "width": 23.0,
+    "height": 12.0,
+    "pad_size": "L"
+  },
+  "raft": {
+    "length": 39.5,
+    "width": 23.0,
+    "height": 12.0,
+    "pad_size": "L"
+  },
+  "gatac railen": {
+    "length": 53.0,
+    "width": 52.0,
+    "height": 67.0,
+    "pad_size": "L"
+  },
+  "tumbril ranger cv": {
+    "length": 3.7,
+    "width": 2.0,
+    "height": 2.0,
+    "pad_size": "L"
+  },
+  "tumbril ranger rc": {
+    "length": 3.7,
+    "width": 2.0,
+    "height": 2.0,
+    "pad_size": "L"
+  },
+  "tumbril ranger tr": {
+    "length": 3.7,
+    "width": 2.0,
+    "height": 2.0,
+    "pad_size": "L"
+  },
+  "mirai razor": {
+    "length": 12.5,
+    "width": 9.0,
+    "height": 3.0,
+    "pad_size": "L"
+  },
+  "mirai razor ex": {
+    "length": 12.5,
+    "width": 9.0,
+    "height": 3.0,
+    "pad_size": "L"
+  },
+  "mirai razor lx": {
+    "length": 12.5,
+    "width": 9.0,
+    "height": 3.0,
+    "pad_size": "L"
+  },
+  "aegis reclaimer": {
+    "length": 160.0,
+    "width": 120.0,
+    "height": 55.0,
+    "pad_size": "L"
+  },
+  "reclaimer": {
+    "length": 160.0,
+    "width": 120.0,
+    "height": 55.0,
+    "pad_size": "L"
+  },
+  "aegis redeemer": {
+    "length": 51.0,
+    "width": 25.0,
+    "height": 14.0,
+    "pad_size": "L"
+  },
+  "redeemer": {
+    "length": 51.0,
+    "width": 25.0,
+    "height": 14.0,
+    "pad_size": "L"
+  },
+  "misc reliant kore": {
+    "length": 28.5,
+    "width": 14.8,
+    "height": 4.5,
+    "pad_size": "L"
+  },
+  "reliant kore": {
+    "length": 28.5,
+    "width": 14.8,
+    "height": 4.5,
+    "pad_size": "L"
+  },
+  "misc reliant mako": {
+    "length": 28.5,
+    "width": 14.8,
+    "height": 4.5,
+    "pad_size": "L"
+  },
+  "misc reliant sen": {
+    "length": 28.5,
+    "width": 14.8,
+    "height": 4.5,
+    "pad_size": "L"
+  },
+  "misc reliant tana": {
+    "length": 28.5,
+    "width": 14.8,
+    "height": 4.5,
+    "pad_size": "L"
+  },
+  "reliant tana": {
+    "length": 28.5,
+    "width": 14.8,
+    "height": 4.5,
+    "pad_size": "L"
+  },
+  "aegis retaliator": {
+    "length": 70.5,
+    "width": 44.0,
+    "height": 13.5,
+    "pad_size": "L"
+  },
+  "retaliator": {
+    "length": 70.5,
+    "width": 44.0,
+    "height": 13.5,
+    "pad_size": "L"
+  },
+  "aegis retaliator bomber": {
+    "length": 70.5,
+    "width": 44.0,
+    "height": 13.5,
+    "pad_size": "L"
+  },
+  "greycat roc": {
+    "length": 6.0,
+    "width": 3.9,
+    "height": 3.5,
+    "pad_size": "L"
+  },
+  "greycat roc-ds": {
+    "length": 6.6,
+    "width": 5.0,
+    "height": 3.5,
+    "pad_size": "L"
+  },
+  "aegis sabre": {
+    "length": 24.5,
+    "width": 24.5,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "aegis sabre comet": {
+    "length": 24.5,
+    "width": 24.5,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "aegis sabre raven": {
+    "length": 24.5,
+    "width": 24.5,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "rsi scorpius": {
+    "length": 32.0,
+    "width": 24.0,
+    "height": 13.0,
+    "pad_size": "L"
+  },
+  "rsi scorpius antares": {
+    "length": 32.0,
+    "width": 24.0,
+    "height": 13.0,
+    "pad_size": "L"
+  },
+  "vanduul scythe": {
+    "length": 33.0,
+    "width": 24.0,
+    "height": 9.0,
+    "pad_size": "L"
+  },
+  "anvil spartan": {
+    "length": 17.0,
+    "width": 7.0,
+    "height": 5.5,
+    "pad_size": "L"
+  },
+  "crusader a1 spirit": {
+    "length": 47.5,
+    "width": 44.0,
+    "height": 10.0,
+    "pad_size": "L"
+  },
+  "crusader c1 spirit": {
+    "length": 47.5,
+    "width": 44.0,
+    "height": 10.0,
+    "pad_size": "L"
+  },
+  "crusader e1 spirit": {
+    "length": 46.5,
+    "width": 43.5,
+    "height": 10.0,
+    "pad_size": "L"
+  },
+  "argo srv": {
+    "length": 31.5,
+    "width": 21.5,
+    "height": 9.5,
+    "pad_size": "L"
+  },
+  "srv": {
+    "length": 31.5,
+    "width": 21.5,
+    "height": 9.5,
+    "pad_size": "L"
+  },
+  "misc starfarer": {
+    "length": 102.0,
+    "width": 48.5,
+    "height": 24.5,
+    "pad_size": "L"
+  },
+  "misc starfarer gemini": {
+    "length": 102.0,
+    "width": 48.5,
+    "height": 24.5,
+    "pad_size": "L"
+  },
+  "starfarer gemini": {
+    "length": 102.0,
+    "width": 48.5,
+    "height": 24.5,
+    "pad_size": "L"
+  },
+  "tumbril storm": {
+    "length": 10.2,
+    "width": 7.7,
+    "height": 4.0,
+    "pad_size": "L"
+  },
+  "tumbril storm aa": {
+    "length": 10.2,
+    "width": 7.7,
+    "height": 4.0,
+    "pad_size": "L"
+  },
+  "greycat stv": {
+    "length": 8.8,
+    "width": 6.0,
+    "height": 3.5,
+    "pad_size": "L"
+  },
+  "gatac syulen": {
+    "length": 28.0,
+    "width": 25.0,
+    "height": 16.0,
+    "pad_size": "L"
+  },
+  "syulen": {
+    "length": 28.0,
+    "width": 25.0,
+    "height": 16.0,
+    "pad_size": "L"
+  },
+  "esperia talon": {
+    "length": 24.0,
+    "width": 15.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "esperia talon shrike": {
+    "length": 24.0,
+    "width": 15.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "anvil terrapin": {
+    "length": 20.0,
+    "width": 16.5,
+    "height": 7.5,
+    "pad_size": "L"
+  },
+  "rsi ursa": {
+    "length": 8.8,
+    "width": 6.0,
+    "height": 3.5,
+    "pad_size": "L"
+  },
+  "rsi ursa fortuna": {
+    "length": 8.8,
+    "width": 6.0,
+    "height": 3.5,
+    "pad_size": "L"
+  },
+  "anvil valkyrie": {
+    "length": 48.0,
+    "width": 38.0,
+    "height": 12.0,
+    "pad_size": "L"
+  },
+  "valkyrie": {
+    "length": 48.0,
+    "width": 38.0,
+    "height": 12.0,
+    "pad_size": "L"
+  },
+  "anvil valkyrie liberator edition": {
+    "length": 48.0,
+    "width": 38.0,
+    "height": 12.0,
+    "pad_size": "L"
+  },
+  "aegis vanguard harbinger": {
+    "length": 48.0,
+    "width": 40.0,
+    "height": 9.5,
+    "pad_size": "L"
+  },
+  "aegis vanguard hoplite": {
+    "length": 48.0,
+    "width": 40.0,
+    "height": 9.5,
+    "pad_size": "L"
+  },
+  "aegis vanguard sentinel": {
+    "length": 48.0,
+    "width": 40.0,
+    "height": 9.5,
+    "pad_size": "L"
+  },
+  "aegis vanguard warden": {
+    "length": 48.0,
+    "width": 40.0,
+    "height": 9.5,
+    "pad_size": "L"
+  },
+  "aegis vulcan": {
+    "length": 38.5,
+    "width": 16.5,
+    "height": 10.0,
+    "pad_size": "L"
+  },
+  "drake vulture": {
+    "length": 34.0,
+    "width": 16.0,
+    "height": 9.0,
+    "pad_size": "L"
+  },
+  "vulture": {
+    "length": 34.0,
+    "width": 16.0,
+    "height": 9.0,
+    "pad_size": "L"
+  },
+  "origin x1": {
+    "length": 5.2,
+    "width": 1.9,
+    "height": 1.6,
+    "pad_size": "L"
+  },
+  "origin x1 force": {
+    "length": 5.2,
+    "width": 1.9,
+    "height": 1.6,
+    "pad_size": "L"
+  },
+  "origin x1 velocity": {
+    "length": 5.2,
+    "width": 1.9,
+    "height": 1.6,
+    "pad_size": "L"
+  },
+  "rsi zeus mk ii es": {
+    "length": 46.0,
+    "width": 35.0,
+    "height": 9.0,
+    "pad_size": "L"
+  },
+  "zeus mk ii es": {
+    "length": 46.0,
+    "width": 35.0,
+    "height": 9.0,
+    "pad_size": "L"
+  },
+  "rsi zeus mk ii mr": {
+    "length": 45.7,
+    "width": 34.3,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "rsi zeus mk ii cl": {
+    "length": 46.0,
+    "width": 35.0,
+    "height": 9.0,
+    "pad_size": "L"
+  },
+  "zeus mk ii cl": {
+    "length": 46.0,
+    "width": 35.0,
+    "height": 9.0,
+    "pad_size": "L"
+  },
+  "anvil f8c lightning executive edition": {
+    "length": 26.0,
+    "width": 25.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "anvil f7a hornet mk ii": {
+    "length": 28.2,
+    "width": 25.5,
+    "height": 7.5,
+    "pad_size": "L"
+  },
+  "anvil f7c hornet mk i": {
+    "length": 28.2,
+    "width": 25.5,
+    "height": 7.5,
+    "pad_size": "L"
+  },
+  "mirai pulse": {
+    "length": 3.5,
+    "width": 2.5,
+    "height": 1.5,
+    "pad_size": "L"
+  },
+  "mirai pulse lx": {
+    "length": 3.5,
+    "width": 2.5,
+    "height": 1.5,
+    "pad_size": "L"
+  },
+  "argo mpuv tractor": {
+    "length": 9.0,
+    "width": 8.5,
+    "height": 4.0,
+    "pad_size": "L"
+  },
+  "aegis sabre firebird": {
+    "length": 24.5,
+    "width": 24.5,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "drake ironclad": {
+    "length": 120.0,
+    "width": 52.0,
+    "height": 20.0,
+    "pad_size": "L"
+  },
+  "drake ironclad assault": {
+    "length": 120.0,
+    "width": 52.0,
+    "height": 20.0,
+    "pad_size": "L"
+  },
+  "aegis sabre peregrine": {
+    "length": 24.5,
+    "width": 24.5,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "argo atls": {
+    "length": 1.8,
+    "width": 2.0,
+    "height": 2.8,
+    "pad_size": "L"
+  },
+  "misc fortune": {
+    "length": 26.5,
+    "width": 16.5,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "fortune": {
+    "length": 26.5,
+    "width": 16.5,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "crusader intrepid": {
+    "length": 23.1,
+    "width": 20.2,
+    "height": 6.1,
+    "pad_size": "L"
+  },
+  "intrepid": {
+    "length": 23.1,
+    "width": 20.2,
+    "height": 6.1,
+    "pad_size": "L"
+  },
+  "mirai guardian": {
+    "length": 24.3,
+    "width": 16.3,
+    "height": 9.1,
+    "pad_size": "L"
+  },
+  "mirai guardian qi": {
+    "length": 24.3,
+    "width": 16.3,
+    "height": 9.1,
+    "pad_size": "L"
+  },
+  "argo csv-sm": {
+    "length": 5.4,
+    "width": 4.1,
+    "height": 2.8,
+    "pad_size": "L"
+  },
+  "csv-sm": {
+    "length": 5.4,
+    "width": 4.1,
+    "height": 2.8,
+    "pad_size": "L"
+  },
+  "misc starlancer tac": {
+    "length": 83.0,
+    "width": 52.0,
+    "height": 16.0,
+    "pad_size": "L"
+  },
+  "starlancer tac": {
+    "length": 83.0,
+    "width": 52.0,
+    "height": 16.0,
+    "pad_size": "L"
+  },
+  "misc starlancer max": {
+    "length": 90.0,
+    "width": 60.0,
+    "height": 20.0,
+    "pad_size": "L"
+  },
+  "starlancer max": {
+    "length": 90.0,
+    "width": 60.0,
+    "height": 20.0,
+    "pad_size": "L"
+  },
+  "anvil f7c-r hornet tracker mk ii": {
+    "length": 22.5,
+    "width": 22.0,
+    "height": 6.5,
+    "pad_size": "L"
+  },
+  "anvil f7c-s hornet ghost mk ii": {
+    "length": 22.5,
+    "width": 22.0,
+    "height": 6.5,
+    "pad_size": "L"
+  },
+  "anvil terrapin medic": {
+    "length": 20.0,
+    "width": 16.5,
+    "height": 7.5,
+    "pad_size": "L"
+  },
+  "anvil paladin": {
+    "length": 53.0,
+    "width": 37.5,
+    "height": 13.6,
+    "pad_size": "L"
+  },
+  "paladin": {
+    "length": 53.0,
+    "width": 37.5,
+    "height": 13.6,
+    "pad_size": "L"
+  },
+  "anvil f7c-m super hornet mk ii": {
+    "length": 24.0,
+    "width": 24.0,
+    "height": 6.5,
+    "pad_size": "L"
+  },
+  "drake golem": {
+    "length": 15.5,
+    "width": 10.0,
+    "height": 4.5,
+    "pad_size": "L"
+  },
+  "argo atls geo": {
+    "length": 1.8,
+    "width": 2.0,
+    "height": 2.8,
+    "pad_size": "L"
+  },
+  "anvil asgard": {
+    "length": 48.0,
+    "width": 38.0,
+    "height": 12.0,
+    "pad_size": "L"
+  },
+  "asgard": {
+    "length": 48.0,
+    "width": 38.0,
+    "height": 12.0,
+    "pad_size": "L"
+  },
+  "greycat mtc": {
+    "length": 8.8,
+    "width": 6.0,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "mirai guardian mx": {
+    "length": 25.0,
+    "width": 20.0,
+    "height": 11.0,
+    "pad_size": "L"
+  },
+  "argo atls ikti": {
+    "length": 3.2,
+    "width": 1.6,
+    "height": 1.6,
+    "pad_size": "L"
+  },
+  "argo atls ikti rad": {
+    "length": 3.2,
+    "width": 1.6,
+    "height": 1.6,
+    "pad_size": "L"
+  },
+  "argo atls ikti geo": {
+    "length": 1.8,
+    "width": 2.0,
+    "height": 2.8,
+    "pad_size": "L"
+  },
+  "argo atls ikti geo rad": {
+    "length": 1.8,
+    "width": 2.0,
+    "height": 2.8,
+    "pad_size": "L"
+  },
+  "esperia prowler utility": {
+    "length": 34.0,
+    "width": 32.0,
+    "height": 15.0,
+    "pad_size": "L"
+  },
+  "prowler utility": {
+    "length": 34.0,
+    "width": 32.0,
+    "height": 15.0,
+    "pad_size": "L"
+  },
+  "rsi meteor": {
+    "length": 30.0,
+    "width": 17.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "kruger l-21 wolf": {
+    "length": 21.5,
+    "width": 10.5,
+    "height": 4.2,
+    "pad_size": "L"
+  },
+  "esperia stinger": {
+    "length": 32.0,
+    "width": 35.0,
+    "height": 10.0,
+    "pad_size": "L"
+  },
+  "grey's shiv": {
+    "length": 36.0,
+    "width": 28.0,
+    "height": 14.0,
+    "pad_size": "L"
+  },
+  "shiv": {
+    "length": 36.0,
+    "width": 28.0,
+    "height": 14.0,
+    "pad_size": "L"
+  },
+  "drake clipper": {
+    "length": 26.5,
+    "width": 50.0,
+    "height": 13.0,
+    "pad_size": "L"
+  },
+  "clipper": {
+    "length": 26.5,
+    "width": 50.0,
+    "height": 13.0,
+    "pad_size": "L"
+  },
+  "drake golem ox": {
+    "length": 15.5,
+    "width": 10.0,
+    "height": 4.5,
+    "pad_size": "L"
+  },
+  "golem ox": {
+    "length": 15.5,
+    "width": 10.0,
+    "height": 4.5,
+    "pad_size": "L"
+  },
+  "greycat mdc": {
+    "length": 7.0,
+    "width": 5.5,
+    "height": 2.0,
+    "pad_size": "L"
+  },
+  "rsi salvation": {
+    "length": 14.5,
+    "width": 8.5,
+    "height": 4.0,
+    "pad_size": "L"
+  },
+  "salvation": {
+    "length": 14.5,
+    "width": 8.5,
+    "height": 4.0,
+    "pad_size": "L"
+  },
+  "rsi hermes": {
+    "length": 65.0,
+    "width": 58.0,
+    "height": 14.0,
+    "pad_size": "L"
+  },
+  "hermes": {
+    "length": 65.0,
+    "width": 58.0,
+    "height": 14.0,
+    "pad_size": "L"
+  },
+  "argo moth": {
+    "length": 45.0,
+    "width": 25.8,
+    "height": 15.0,
+    "pad_size": "L"
+  },
+  "moth": {
+    "length": 45.0,
+    "width": 25.8,
+    "height": 15.0,
+    "pad_size": "L"
+  },
+  "rsi aurora mk ii": {
+    "length": 27.5,
+    "width": 10.5,
+    "height": 5.5,
+    "pad_size": "L"
+  },
+  "rsi aurora mk i se": {
+    "length": 19.0,
+    "width": 8.8,
+    "height": 4.5,
+    "pad_size": "L"
+  },
+  "greycat utv": {
+    "length": 4.0,
+    "width": 2.6,
+    "height": 2.2,
+    "pad_size": "L"
+  },
+  "drake pitbull": {
+    "length": 5.9,
+    "width": 6.1,
+    "height": 3.0,
+    "pad_size": "L"
+  },
+  "origin m80": {
+    "length": 32.0,
+    "width": 17.3,
+    "height": 6.4,
+    "pad_size": "L"
+  },
+  "m80": {
+    "length": 32.0,
+    "width": 17.3,
+    "height": 6.4,
+    "pad_size": "L"
+  },
+  "misc starlite": {
+    "length": 32.0,
+    "width": 19.9,
+    "height": 9.1,
+    "pad_size": "L"
+  },
+  "aegis tiburon": {
+    "length": 121.0,
+    "width": 68.0,
+    "height": 20.0,
+    "pad_size": "L"
+  },
+  "tiburon": {
+    "length": 121.0,
+    "width": 68.0,
+    "height": 20.0,
+    "pad_size": "L"
+  },
+  "anvil odin": {
+    "length": 752.0,
+    "width": 222.0,
+    "height": 213.0,
+    "pad_size": "L"
+  },
+  "gatac tyilui": {
+    "length": 58.8,
+    "width": 52.0,
+    "height": 67.2,
+    "pad_size": "L"
+  },
+  "tyilui": {
+    "length": 58.8,
+    "width": 52.0,
+    "height": 67.2,
+    "pad_size": "L"
+  },
+  "aegis hammerhead 2949 best in show edition": {
+    "length": 120.0,
+    "width": 72.0,
+    "height": 16.0,
+    "pad_size": "L"
+  },
+  "aegis idris-p wikelo war special": {
+    "length": 243.0,
+    "width": 127.0,
+    "height": 57.5,
+    "pad_size": "L"
+  },
+  "aegis reclaimer 2949 best in show edition": {
+    "length": 160.0,
+    "width": 120.0,
+    "height": 55.0,
+    "pad_size": "L"
+  },
+  "aegis sabre firebird wikelo war special": {
+    "length": 24.5,
+    "width": 24.5,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "aegis sabre peregrine wikelo speedy special": {
+    "length": 24.5,
+    "width": 24.5,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "anvil asgard wikelo war special": {
+    "length": 48.0,
+    "width": 38.0,
+    "height": 12.0,
+    "pad_size": "L"
+  },
+  "anvil f7c-m hornet heartseeker mk i": {
+    "length": 28.2,
+    "width": 25.5,
+    "height": 7.5,
+    "pad_size": "L"
+  },
+  "anvil f7c-m hornet heartseeker mk ii": {
+    "length": 24.0,
+    "width": 24.0,
+    "height": 6.5,
+    "pad_size": "L"
+  },
+  "anvil f7 hornet mk wikelo": {
+    "length": 24.0,
+    "width": 24.0,
+    "height": 6.5,
+    "pad_size": "L"
+  },
+  "anvil f8a lightning": {
+    "length": 26.0,
+    "width": 25.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "anvil f8c lightning wikelo sneak special": {
+    "length": 26.0,
+    "width": 25.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "anvil f8c lightning wikelo war special": {
+    "length": 26.0,
+    "width": 25.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "anvil terrapin medic wikelo savior special": {
+    "length": 20.0,
+    "width": 16.5,
+    "height": 7.5,
+    "pad_size": "L"
+  },
+  "aopoa khartu-al": {
+    "length": 32.0,
+    "width": 13.5,
+    "height": 8.8,
+    "pad_size": "L"
+  },
+  "aopoa nox wikelo special": {
+    "length": 5.2,
+    "width": 1.4,
+    "height": 1.3,
+    "pad_size": "L"
+  },
+  "aopoa san'tok.yāi": {
+    "length": 24.0,
+    "width": 23.0,
+    "height": 23.0,
+    "pad_size": "L"
+  },
+  "argo atls geo ikti": {
+    "length": 3.2,
+    "width": 1.6,
+    "height": 1.6,
+    "pad_size": "L"
+  },
+  "argo mole alliance": {
+    "length": 45.0,
+    "width": 26.0,
+    "height": 15.0,
+    "pad_size": "L"
+  },
+  "argo raft wikelo work special": {
+    "length": 39.5,
+    "width": 23.0,
+    "height": 12.0,
+    "pad_size": "L"
+  },
+  "atls cool metal color": {
+    "length": 3.2,
+    "width": 1.6,
+    "height": 1.6,
+    "pad_size": "L"
+  },
+  "atls orange line": {
+    "length": 3.2,
+    "width": 1.6,
+    "height": 1.6,
+    "pad_size": "L"
+  },
+  "atls snowland color": {
+    "length": 3.2,
+    "width": 1.6,
+    "height": 1.6,
+    "pad_size": "L"
+  },
+  "c.o. mustang citizencon 2948 edition": {
+    "length": 21.5,
+    "width": 18.0,
+    "height": 9.0,
+    "pad_size": "L"
+  },
+  "corsair pyam exec": {
+    "length": 53.0,
+    "width": 30.0,
+    "height": 25.0,
+    "pad_size": "L"
+  },
+  "crusader a2 hercules starlifter wikelo war special": {
+    "length": 94.0,
+    "width": 70.0,
+    "height": 23.0,
+    "pad_size": "L"
+  },
+  "crusader ares star fighter inferno": {
+    "length": 30.0,
+    "width": 27.0,
+    "height": 6.0,
+    "pad_size": "L"
+  },
+  "crusader ares star fighter inferno wikelo war special": {
+    "length": 30.0,
+    "width": 27.0,
+    "height": 6.0,
+    "pad_size": "L"
+  },
+  "crusader ares star fighter ion": {
+    "length": 30.0,
+    "width": 27.0,
+    "height": 6.0,
+    "pad_size": "L"
+  },
+  "crusader ares star fighter ion wikelo sneak special": {
+    "length": 30.0,
+    "width": 27.0,
+    "height": 6.0,
+    "pad_size": "L"
+  },
+  "crusader c1 spirit wikelo special": {
+    "length": 47.5,
+    "width": 44.0,
+    "height": 10.0,
+    "pad_size": "L"
+  },
+  "crusader intrepid wikelo work special": {
+    "length": 23.1,
+    "width": 20.2,
+    "height": 6.1,
+    "pad_size": "L"
+  },
+  "cutlass black pyam exec": {
+    "length": 37.5,
+    "width": 26.5,
+    "height": 11.5,
+    "pad_size": "L"
+  },
+  "drake caterpillar pirate": {
+    "length": 111.5,
+    "width": 39.5,
+    "height": 13.4,
+    "pad_size": "L"
+  },
+  "drake clipper wikelo war special": {
+    "length": 26.5,
+    "width": 21.0,
+    "height": 18.0,
+    "pad_size": "L"
+  },
+  "drake command module": {
+    "length": 20.0,
+    "width": 16.0,
+    "height": 6.0,
+    "pad_size": "L"
+  },
+  "drake dragonfly": {
+    "length": 7.0,
+    "width": 2.5,
+    "height": 2.0,
+    "pad_size": "L"
+  },
+  "drake dragonfly star kitten": {
+    "length": 7.0,
+    "width": 2.5,
+    "height": 2.0,
+    "pad_size": "L"
+  },
+  "drake golem alliance": {
+    "length": 15.5,
+    "width": 7.0,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "drake golem wikelo work special": {
+    "length": 15.5,
+    "width": 7.0,
+    "height": 5.0,
+    "pad_size": "L"
+  },
+  "esperia prowler utility wikelo work special": {
+    "length": 34.0,
+    "width": 32.0,
+    "height": 15.0,
+    "pad_size": "L"
+  },
+  "f8c lightning pyam exec": {
+    "length": 26.0,
+    "width": 25.0,
+    "height": 8.0,
+    "pad_size": "L"
+  },
+  "grey's basher": {
+    "length": 13.7,
+    "width": 11.3,
+    "height": 4.5,
+    "pad_size": "L"
+  },
+  "hornet f7a mk ii pyam exec": {
+    "length": 22.5,
+    "width": 22.0,
+    "height": 6.5,
+    "pad_size": "L"
+  },
+  "kruger l-21 wolf wikelo sneak special": {
+    "length": 21.5,
+    "width": 10.5,
+    "height": 4.2,
+    "pad_size": "L"
+  },
+  "kruger l-21 wolf wikelo war special": {
+    "length": 21.5,
+    "width": 10.5,
+    "height": 4.2,
+    "pad_size": "L"
+  },
+  "kruger l-22 alpha wolf": {
+    "length": 21.5,
+    "width": 10.5,
+    "height": 4.2,
+    "pad_size": "L"
+  },
+  "kruger l-22 alpha wolf wikelo war special": {
+    "length": 21.5,
+    "width": 10.5,
+    "height": 4.2,
+    "pad_size": "L"
+  },
+  "mirai guardian mx wikelo war special": {
+    "length": 26.0,
+    "width": 17.0,
+    "height": 10.0,
+    "pad_size": "L"
+  },
+  "mirai guardian qi wikelo special": {
+    "length": 24.3,
+    "width": 16.3,
+    "height": 9.1,
+    "pad_size": "L"
+  },
+  "mirai guardian wikelo war special": {
+    "length": 24.3,
+    "width": 16.3,
+    "height": 9.1,
+    "pad_size": "L"
+  }
+}

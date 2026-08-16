@@ -41,5 +41,12 @@ test_*.png
 Thumbs.db
 .DS_Store
 
+# Runtime auto-generated path cache (environment specific)
+starlifter_paths.json
+
 # Large bundled JS (scraped data, not needed at runtime)
 resources/sc_cargo_bundle.js
+
+# Temporary scratch directory and PDF output artifacts
+scratch/
+*.pdf

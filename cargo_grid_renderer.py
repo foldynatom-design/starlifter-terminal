@@ -22,6 +22,7 @@ import os
 import sys
 import json
 import math
+from PIL import Image, ImageDraw, ImageFont
 
 # ── Lazy-loaded ship grid database ──
 _grid_db_cache = None
@@ -35,39 +36,101 @@ _MANUFACTURER_PREFIXES = [
 
 # ── Category colors (R, G, B) for cargo types ──
 COLORS = {
-    "CMD":  (76, 175, 80),    # green — commodities
-    "SUP":  (66, 133, 244),   # blue  — supply (Stor-All)
-    "ORD":  (211, 47, 47),    # red   — ordnance
-    "FREE": (158, 158, 158),  # grey  — empty space
+    "CMD":     (76, 175, 80),    # green   — commodities & manufactured cargo (RMC, Scrap, Fuel)
+    "ORE":     (235, 165, 25),   # amber   — raw/refined ores & minerals (Quantainium, Gold, Laranite)
+    "WPN":     (0, 180, 216),    # cyan    — ship weapons & turrets (CF-Series, Cannons, Gatlings)
+    "CMP":     (156, 39, 176),   # purple  — ship components & fabricators (Shields, Coolers, QD)
+    "MSL":     (255, 120, 20),   # orange  — missiles, torpedoes, bombs
+    "AMM":     (220, 45, 45),    # crimson — naval ammunition & ballistic crates
+    "BOX_ARM": (190, 60, 70),    # burgundy— Stor-All (Weapons & Ammo)
+    "BOX_CLO": (45, 110, 185),   # steel bl— Stor-All (Armor & Clothing)
+    "BOX_UTL": (240, 185, 30),   # gold    — Stor-All (Tools & Utility)
+    "BOX_MED": (0, 180, 140),    # teal    — Stor-All (Medical & Consumables)
+    "BOX_REP": (220, 105, 40),   # bronze  — Stor-All (Repair Deck Spares)
+    "SUP":     (66, 133, 244),   # blue    — supply (General Stor-All)
+    "ORD":     (255, 120, 20),   # fallback ordnance
+    "FREE":    (158, 158, 158),  # grey    — empty space
 }
 
 # Darker shades for isometric right face
 COLORS_DARK = {
-    "CMD":  (56, 142, 60),
-    "SUP":  (48, 100, 200),
-    "ORD":  (183, 28, 28),
-    "FREE": (117, 117, 117),
+    "CMD":     (56, 142, 60),
+    "ORE":     (200, 135, 15),
+    "WPN":     (0, 150, 199),
+    "CMP":     (123, 31, 162),
+    "MSL":     (220, 90, 10),
+    "AMM":     (180, 30, 30),
+    "BOX_ARM": (150, 40, 50),
+    "BOX_CLO": (30, 85, 150),
+    "BOX_UTL": (205, 150, 15),
+    "BOX_MED": (0, 145, 110),
+    "BOX_REP": (180, 80, 25),
+    "SUP":     (48, 100, 200),
+    "ORD":     (220, 90, 10),
+    "FREE":    (117, 117, 117),
 }
 
 # Even darker for front face
 COLORS_FRONT = {
-    "CMD":  (46, 125, 50),
-    "SUP":  (40, 85, 170),
-    "ORD":  (160, 20, 20),
-    "FREE": (97, 97, 97),
+    "CMD":     (46, 125, 50),
+    "ORE":     (170, 110, 10),
+    "WPN":     (3, 115, 160),
+    "CMP":     (106, 27, 154),
+    "MSL":     (190, 70, 5),
+    "AMM":     (150, 20, 20),
+    "BOX_ARM": (120, 25, 35),
+    "BOX_CLO": (20, 65, 120),
+    "BOX_UTL": (170, 120, 5),
+    "BOX_MED": (0, 115, 85),
+    "BOX_REP": (145, 60, 15),
+    "SUP":     (40, 85, 170),
+    "ORD":     (190, 70, 5),
+    "FREE":    (97, 97, 97),
 }
 
-# ── Ordnance grid shapes: maps missile size class to WxHxL grid footprint ──
+# ── Ordnance grid shapes: maps missile size class to WxHxL grid footprint & exact physical SCU ──
 _ORDNANCE_GRID_SHAPES = {
-    "S1":  {"w": 1, "h": 1, "l": 1, "scu": 0.125},
-    "S2":  {"w": 1, "h": 1, "l": 1, "scu": 1.0},
-    "S3":  {"w": 2, "h": 2, "l": 2, "scu": 8.0},
-    "S4":  {"w": 2, "h": 2, "l": 2, "scu": 8.0},
-    "S5":  {"w": 2, "h": 2, "l": 4, "scu": 16.0},
-    "S7":  {"w": 2, "h": 2, "l": 4, "scu": 16.0},
-    "S9":  {"w": 2, "h": 2, "l": 6, "scu": 24.0},
-    "S10": {"w": 2, "h": 2, "l": 8, "scu": 32.0},
-    "S12": {"w": 2, "h": 2, "l": 8, "scu": 32.0},
+    "S1":  {"w": 1, "h": 1, "l": 1, "scu": 1.0, "desc": "Size 1 Missile (~1.25m length, 1 SCU)"},
+    "S2":  {"w": 1, "h": 1, "l": 1, "scu": 1.0, "desc": "Size 2 Missile (~1.75m length, 1 SCU)"},
+    "S3":  {"w": 1, "h": 1, "l": 2, "scu": 2.0, "desc": "Size 3 Missile (~2.75m length, 2 SCU)"},
+    "S4":  {"w": 1, "h": 1, "l": 2, "scu": 2.0, "desc": "Size 4 Missile (~3.50m length, 2 SCU)"},
+    "S5":  {"w": 1, "h": 1, "l": 4, "scu": 4.0, "desc": "Size 5 Torpedo (~5.00m length, 4 SCU)"},
+    "S7":  {"w": 1, "h": 2, "l": 4, "scu": 8.0, "desc": "Size 7 Torpedo (~7.50m length, 8 SCU)"},
+    "S9":  {"w": 2, "h": 2, "l": 6, "scu": 24.0, "desc": "Size 9 Heavy Torpedo (~10.5m length, 24 SCU)"},
+    "S10": {"w": 2, "h": 2, "l": 8, "scu": 32.0, "desc": "Size 10 MOAB Bomb / Capital Torpedo (~12-14m, 32 SCU)"},
+    "S12": {"w": 2, "h": 2, "l": 8, "scu": 32.0, "desc": "Size 12 Capital Anti-Cap Torpedo (~14m, 32 SCU)"},
+}
+
+# ── Ship Weapon grid shapes: maps weapon size class to WxHxL grid footprint & exact physical SCU ──
+_SHIP_WEAPON_GRID_SHAPES = {
+    "S1":  {"w": 1, "h": 1, "l": 1, "scu": 1.0, "desc": "Size 1 Ship Weapon (~1.5m, 1 SCU)"},
+    "S2":  {"w": 1, "h": 1, "l": 2, "scu": 2.0, "desc": "Size 2 Ship Weapon (~2.2m, 2 SCU)"},
+    "S3":  {"w": 1, "h": 1, "l": 2, "scu": 2.0, "desc": "Size 3 Ship Weapon (~3.0m, 2 SCU)"},
+    "S4":  {"w": 1, "h": 1, "l": 3, "scu": 3.0, "desc": "Size 4 Ship Weapon (~4.0m, 3 SCU)"},
+    "S5":  {"w": 1, "h": 1, "l": 4, "scu": 4.0, "desc": "Size 5 Ship Weapon (~5.5m, 4 SCU)"},
+    "S6":  {"w": 1, "h": 2, "l": 4, "scu": 8.0, "desc": "Size 6 Ship Weapon (~7.0m, 8 SCU)"},
+    "S7":  {"w": 1, "h": 2, "l": 4, "scu": 8.0, "desc": "Size 7 Ship Weapon (~9.0m, 8 SCU)"},
+    "S8":  {"w": 2, "h": 2, "l": 6, "scu": 24.0, "desc": "Size 8 Capital Cannon (~12m, 24 SCU)"},
+}
+
+# ── Ship Component & Fabricator grid shapes ──
+_SHIP_COMPONENT_GRID_SHAPES = {
+    "S1":  {"w": 1, "h": 1, "l": 1, "scu": 1.0, "desc": "Size 1 Small Component (1 SCU)"},
+    "S2":  {"w": 1, "h": 1, "l": 2, "scu": 2.0, "desc": "Size 2 Medium Component (2 SCU)"},
+    "S3":  {"w": 2, "h": 1, "l": 2, "scu": 4.0, "desc": "Size 3 Large Component (4 SCU)"},
+    "S4":  {"w": 2, "h": 2, "l": 2, "scu": 8.0, "desc": "Size 4 Capital Component (8 SCU)"},
+    "FAB": {"w": 2, "h": 1, "l": 2, "scu": 4.0, "desc": "Industrial Fabricator Module (4 SCU)"},
+}
+
+# ── Standard Cargo Container grid shapes (Star Citizen standard 32, 24, 16, 8, 4, 2, 1 SCU) ──
+STANDARD_SCU_SHAPES = {
+    32: [(2, 2, 8), (8, 2, 2)],  # podélně ||| nebo napříč ---- (výška vždy H=2)
+    24: [(2, 2, 6), (6, 2, 2)],  # podélně ||| nebo napříč ---- (výška vždy H=2)
+    16: [(2, 2, 4), (4, 2, 2)],  # podélně ||| nebo napříč ---- (výška vždy H=2)
+    8:  [(2, 2, 2)],              # standardní krychle 2x2x2
+    4:  [(2, 1, 2)],              # čtvercový půdorys 2x2 naležato (výška vždy H=1)
+    2:  [(1, 1, 2), (2, 1, 1)],  # podélně ||| nebo napříč ---- (výška vždy H=1)
+    1:  [(1, 1, 1)],
 }
 
 # Regex patterns to detect missile size class from item name
@@ -83,18 +146,11 @@ _ROMAN = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5,
 
 
 def _get_ordnance_shape(name):
-    """Detect missile/torpedo size class from name and return grid shape.
-
-    Returns dict {w, h, l, scu} or None if not ordnance.
-    """
+    """Detect missile/torpedo size class from name and return grid shape."""
     nm = name.upper().strip()
 
-    # Direct Roman numeral patterns: "Seeker IX Torpedo", "Vanquisher X-CS Torpedo"
-    # Match: " IX ", " IX-", " XII-", end of string
     for roman, arabic in sorted(_ROMAN.items(), key=lambda x: -x[1]):
-        # Pad with spaces for boundary detection
         padded = f" {nm} "
-        # Check " IX " or " IX-" or ending with " IX"
         if (f" {roman} " in padded or
                 f" {roman}-" in padded or
                 nm.endswith(f" {roman}")):
@@ -102,13 +158,45 @@ def _get_ordnance_shape(name):
             if key in _ORDNANCE_GRID_SHAPES:
                 return _ORDNANCE_GRID_SHAPES[key]
 
-    # Bomb detection
     if "BOMB" in nm:
         if "COLOSSUS" in nm:
             return _ORDNANCE_GRID_SHAPES["S10"]
-        return _ORDNANCE_GRID_SHAPES["S3"]  # Default bomb size
+        return _ORDNANCE_GRID_SHAPES["S3"]
 
     return None
+
+
+def _get_ship_weapon_shape(name):
+    """Detect ship weapon size class from name and return grid shape."""
+    nm = name.upper().strip()
+    for prefix, sz in [("CF-117", 1), ("CF-227", 2), ("CF-337", 3), ("CF-447", 4), ("CF-557", 5), ("AD4B", 4), ("AD5B", 5)]:
+        if prefix in nm:
+            return _SHIP_WEAPON_GRID_SHAPES[f"S{sz}"]
+    if any(k in nm for k in ["RHINO", "SIZE 4", "S4"]):
+        return _SHIP_WEAPON_GRID_SHAPES["S4"]
+    if any(k in nm for k in ["PANTHER", "SIZE 3", "S3"]):
+        return _SHIP_WEAPON_GRID_SHAPES["S3"]
+    if any(k in nm for k in ["BADGER", "SIZE 2", "S2"]):
+        return _SHIP_WEAPON_GRID_SHAPES["S2"]
+    if any(k in nm for k in ["BULLDOG", "SIZE 1", "S1"]):
+        return _SHIP_WEAPON_GRID_SHAPES["S1"]
+    if any(k in nm for k in ["GALDISEEN", "SIZE 5", "S5"]):
+        return _SHIP_WEAPON_GRID_SHAPES["S5"]
+    return _SHIP_WEAPON_GRID_SHAPES["S2"]
+
+
+def _get_ship_component_shape(name):
+    """Detect ship component / fabricator size and return grid shape."""
+    nm = name.upper().strip()
+    if any(k in nm for k in ["FABRICATOR", "MODULE", "SALVAGE"]):
+        return _SHIP_COMPONENT_GRID_SHAPES["FAB"]
+    if any(k in nm for k in ["FR-86", "JS-400", "GOLIATH", "CAPITAL", "SIZE 4", "S4"]):
+        return _SHIP_COMPONENT_GRID_SHAPES["S4"]
+    if any(k in nm for k in ["FR-76", "JS-300", "SIREN", "CROSSFIELD", "LARGE", "SIZE 3", "S3"]):
+        return _SHIP_COMPONENT_GRID_SHAPES["S3"]
+    if any(k in nm for k in ["FR-66", "MEDIUM", "SIZE 2", "S2", "ATLAS", "VOYAGE"]):
+        return _SHIP_COMPONENT_GRID_SHAPES["S2"]
+    return _SHIP_COMPONENT_GRID_SHAPES["S1"]
 
 
 
@@ -149,34 +237,132 @@ def load_ship_grid(vessel_name):
     """Load ship grid data by fuzzy-matching vessel name.
 
     Returns dict with 'capacity', 'groups' etc., or None if not found.
-    Uses 3-tier matching: exact → partial → word-based.
+    Uses strict 4-tier model matching (ignores standalone manufacturer names).
+    Automatically strips edition/variant suffixes to resolve to base hull.
+    E.g. "Hammerhead Best in Show Edition" -> "Hammerhead" cargo grid.
     """
     db = _load_grid_db()
-    if not db:
+    if not db or not vessel_name:
         return None
 
-    vessel_low = vessel_name.lower().strip()
-    vessel_clean_low = _clean_vessel_name(vessel_name).lower().strip()
+    import re
 
-    # Strategy 1: Exact match
-    for key, val in db.items():
-        kl = key.lower()
-        if kl == vessel_low or kl == vessel_clean_low:
-            return val
+    # ── Edition/Variant Suffix Stripping ──
+    # Strip common edition/variant suffixes to extract the base hull name.
+    # Examples:
+    #   "Hammerhead Best in Show Edition" -> "Hammerhead"
+    #   "Caterpillar Pirate Edition" -> "Caterpillar"
+    #   "Avenger Titan Renegade" -> "Avenger Titan Renegade" (valid variant, kept)
+    #   "600i Explorer IAE 2953 Edition" -> "600i Explorer"
+    _EDITION_SUFFIXES = [
+        r'\s+best\s+in\s+show\s+edition\b',
+        r'\s+best\s+in\s+show\b',
+        r'\s+bis\s+edition\b',
+        r'\s+citizencon\s+\d{4}\s+edition\b',
+        r'\s+citizencon\s+edition\b',
+        r'\s+iae\s+\d{4}\s+edition\b',
+        r'\s+iae\s+edition\b',
+        r'\s+invictus\s+\d{4}\s+edition\b',
+        r'\s+invictus\s+edition\b',
+        r'\s+pirate\s+edition\b',
+        r'\s+vindicator\s+edition\b',
+        r'\s+foundation\s+festival\s+edition\b',
+        r'\s+subscribers?\s+edition\b',
+        r'\s+special\s+edition\b',
+        r'\s+limited\s+edition\b',
+        r'\s+anniversary\s+edition\b',
+        r'\s+showdown\s+edition\b',
+        r'\s+day1\s+edition\b',
+        r'\s+2\s*nd\s+anniversary\s+edition\b',
+        r'\s+\d{4}\s+edition\b',
+        r'\s+edition\b',
+    ]
 
-    # Strategy 2: Partial match (contains)
-    for key, val in db.items():
-        kl = key.lower()
-        if (vessel_clean_low in kl or kl in vessel_clean_low or
-                vessel_low in kl or kl in vessel_low):
-            return val
+    def _strip_edition(name):
+        """Strip edition/variant suffixes from a vessel name."""
+        stripped = name
+        for pat in _EDITION_SUFFIXES:
+            stripped = re.sub(pat, '', stripped, flags=re.IGNORECASE)
+        return stripped.strip()
 
-    # Strategy 3: Word match (any significant word)
-    vessel_words = [w for w in vessel_low.split() if len(w) > 2]
-    for key, val in db.items():
-        kl = key.lower()
-        if any(w in kl for w in vessel_words):
-            return val
+    base_hull_name = _strip_edition(vessel_name)
+
+    inside_parens = re.findall(r'\((.*?)\)', vessel_name)
+    model_inside = inside_parens[0].strip() if inside_parens else ""
+
+    vessel_names_to_try = []
+    if model_inside:
+        stripped_model = _strip_edition(model_inside)
+        vessel_names_to_try.append(stripped_model)
+        vessel_names_to_try.append(_clean_vessel_name(stripped_model))
+        if model_inside.lower() != stripped_model.lower():
+            vessel_names_to_try.append(model_inside)
+
+    # Stripped base hull name FIRST (highest priority for edition variants)
+    if base_hull_name and base_hull_name.lower() != vessel_name.lower():
+        vessel_names_to_try.append(base_hull_name)
+        vessel_names_to_try.append(_clean_vessel_name(base_hull_name))
+
+    vessel_names_to_try.append(vessel_name)
+
+    no_parens = re.sub(r'\(.*?\)', '', vessel_name).strip()
+    if no_parens and no_parens != vessel_name:
+        stripped_no_parens = _strip_edition(no_parens)
+        if stripped_no_parens and stripped_no_parens.lower() != no_parens.lower():
+            vessel_names_to_try.append(stripped_no_parens)
+            vessel_names_to_try.append(_clean_vessel_name(stripped_no_parens))
+        vessel_names_to_try.append(no_parens)
+        vessel_names_to_try.append(_clean_vessel_name(no_parens))
+
+    _MANUFACTURERS_SET = {
+        "aegis", "anvil", "drake", "rsi", "crusader", "misc", "origin",
+        "consolidated outland", "argo", "mirai", "gatac", "esperia",
+        "aopoa", "banu", "tumbril", "greycat", "musashi", "drake interplanetary",
+        "roberts space industries", "musashi industrial", "crusader industries",
+        "aegis dynamics", "anvil aerospace"
+    }
+
+    for vname in vessel_names_to_try:
+        vessel_low = vname.lower().strip()
+        vessel_clean_low = _clean_vessel_name(vname).lower().strip()
+
+        # Strategy 1: Exact match on dictionary key or ship name/short_name
+        for key, val in db.items():
+            kl = key.lower()
+            sname = (val.get("name") or "").lower()
+            s_short = (val.get("short_name") or "").lower()
+            if vessel_low == kl or vessel_clean_low == kl or vessel_low == sname or vessel_clean_low == s_short:
+                return val
+
+        # Strategy 2: Model name substring match (e.g. "ironclad" or "c2 hercules")
+        raw_words = [w for w in vessel_clean_low.split() if w not in _MANUFACTURERS_SET and len(w) > 1]
+        if not raw_words:
+            raw_words = [w for w in vessel_low.split() if w not in _MANUFACTURERS_SET and len(w) > 1]
+        if not raw_words:
+            raw_words = vessel_clean_low.split()
+
+        target_model = " ".join(raw_words)
+        if target_model:
+            for key, val in db.items():
+                kl = key.lower()
+                sname = (val.get("name") or "").lower()
+                s_short = (val.get("short_name") or "").lower()
+                if target_model == s_short or target_model == sname or target_model in kl or target_model in sname:
+                    return val
+
+        # Strategy 3: All model words match (e.g. "ironclad" and "assault")
+        if raw_words:
+            for key, val in db.items():
+                kl = key.lower()
+                if all(w in kl for w in raw_words):
+                    return val
+
+        # Strategy 4: Fallback single model word match (EXCLUDING generic manufacturer words)
+        if raw_words:
+            for key, val in db.items():
+                kl = key.lower()
+                if any(w in kl for w in raw_words):
+                    return val
 
     return None
 
@@ -211,7 +397,10 @@ def _compute_grid_dimensions(ship_grid):
             max_z = max(max_z, z + l)
             total_slots += w * h * l
 
+        g_name = g.get("name", g.get("group_name", f"Bay {len(groups_info)+1}"))
         groups_info.append({
+            "name": g_name,
+            "group_name": g_name,
             "grids": grids,
             "width": max_x,
             "height": max_y,
@@ -241,8 +430,12 @@ def _build_slot_map(group_info):
     return slot_map
 
 
-def _assign_blocks_to_slots(groups_info, breakdown):
+def _assign_blocks_to_slots(groups_info, breakdown, vessel_name=None):
     """Assign cargo blocks to grid slots using greedy bin-packing.
+
+    Idris rules:
+      - Light Deck / Hangar 1: RMC, Hydrogen Fuel, Quantum Fuel, Ordnance (missiles/torpedoes/bombs), Repair Box 1 SCU.
+      - Cargo Deck / Main Hangar: Weapons, Armor, Tools, Medical Stor-All boxes and general cargo.
 
     Returns list of block assignments per group:
     [{slots: [(x,y,z)...], label, category, scu}]
@@ -250,70 +443,246 @@ def _assign_blocks_to_slots(groups_info, breakdown):
     # Collect all blocks to place
     blocks = []
 
-    # Category priority: ORD first (cluster together), then CMD, then SUP
-    _CAT_PRIORITY = {"ORD": 0, "CMD": 1, "SUP": 2}
+    # Category priority: MSL first (cluster together), then AMM, WPN, CMP, ORE, CMD, SUP
+    _CAT_PRIORITY = {"MSL": 0, "AMM": 1, "ORD": 1, "WPN": 2, "CMP": 3, "ORE": 4, "CMD": 5, "SUP": 6}
 
     # Ordnance: each unit is a separate block with proper grid shape
     for item in breakdown.get("ordnance_items", []):
         scu = item.get("scu_per_unit", 1)
         name = item.get("name", "ORDNANCE")
-        shape = _get_ordnance_shape(name)
+        box_scu = item.get("box_scu")
+        box_shape = item.get("box_shape")
+        shape = box_shape or _get_ordnance_shape(name)
+        n_low = name.lower()
+        is_ammo = any(k in n_low for k in ["ammo", "ammunition", "magazine", "battery", "countermeasure"])
+        category = "AMM" if is_ammo else "MSL"
+        
+        if box_scu:
+            # BOXED ordnance: each qty unit is a separate physical box
+            for i in range(item.get("qty", 1)):
+                blk = {
+                    "label": f"{name.upper()} #{i+1}",
+                    "category": category,
+                    "scu": box_scu,
+                }
+                if shape:
+                    blk["shape"] = shape
+                blocks.append(blk)
+        else:
+            # Loose ordnance: EVERY missile/bomb/torpedo is an indivisible physical item
+            # with its exact physical grid shape. Never decompose into generic crates.
+            tot_units = int(item.get("qty", 1))
+            unit_scu = max(int(shape["scu"]) if shape else max(int(scu), 1), 1)
+            for i in range(tot_units):
+                blk = {
+                    "label": f"{name.upper()} #{i+1}",
+                    "category": category,
+                    "scu": unit_scu,
+                }
+                if shape:
+                    blk["shape"] = shape
+                blocks.append(blk)
+
+    # Ship Weapons: each weapon is placed with proper physical grid shape
+    for item in breakdown.get("ship_weapon_items", []):
+        scu = item.get("scu_per_unit", 1)
+        name = item.get("name", "SHIP WEAPON")
+        box_scu = item.get("box_scu")
+        box_shape = item.get("box_shape")
+        shape = box_shape or _get_ship_weapon_shape(name)
         for i in range(item.get("qty", 1)):
             blk = {
                 "label": f"{name.upper()} #{i+1}",
-                "category": "ORD",
-                "scu": max(scu, 1),  # at least 1 slot on grid
+                "category": "WPN",
+                "scu": box_scu or max(shape.get("scu", scu) if shape else scu, 1),
             }
             if shape:
-                blk["shape"] = shape  # {w, h, l} for 3D rendering
+                blk["shape"] = shape
             blocks.append(blk)
 
-    # Commodities: grouped
-    for item in breakdown.get("commodity_items", []):
-        scu = item.get("total_scu", item.get("qty", 1))
-        name = item.get("name", "COMMODITY")
-        blocks.append({
-            "label": f"{name.upper()} x{item.get('qty', 1)}",
-            "category": "CMD",
-            "scu": max(scu, 1),  # at least 1 slot
-        })
+    # Ship Components & Fabricators
+    for item in breakdown.get("ship_component_items", []):
+        scu = item.get("scu_per_unit", 1)
+        name = item.get("name", "SHIP COMPONENT")
+        box_scu = item.get("box_scu")
+        box_shape = item.get("box_shape")
+        shape = box_shape or _get_ship_component_shape(name)
+        for i in range(item.get("qty", 1)):
+            blk = {
+                "label": f"{name.upper()} #{i+1}",
+                "category": "CMP",
+                "scu": box_scu or max(shape.get("scu", scu) if shape else scu, 1),
+            }
+            if shape:
+                blk["shape"] = shape
+            blocks.append(blk)
 
-    # Stor-All boxes
+    # Raw / Refined Ores & Precious Minerals
+    for item in breakdown.get("ore_items", []):
+        name = item.get("name", "ORE")
+        box_scu = item.get("box_scu")
+        box_shape = item.get("box_shape")
+        if box_scu:
+            for i in range(item.get("qty", 1)):
+                blk = {
+                    "label": f"{name.upper()} #{i+1}",
+                    "category": "ORE",
+                    "scu": box_scu,
+                }
+                if box_shape:
+                    blk["shape"] = box_shape
+                blocks.append(blk)
+        else:
+            scu_val = int(item.get("total_scu", item.get("qty", 1)))
+            rem_scu = max(scu_val, 1)
+            for c_size in [32, 24, 16, 8, 4, 2, 1]:
+                while rem_scu >= c_size:
+                    blocks.append({
+                        "label": f"{name.upper()} ({c_size} SCU)",
+                        "category": "ORE",
+                        "scu": c_size,
+                    })
+                    rem_scu -= c_size
+
+    # Commodities: auto-decompose loose items into standard Star Citizen containers (sc-cargo.space style)
+    for item in breakdown.get("commodity_items", []):
+        name = item.get("name", "COMMODITY")
+        box_scu = item.get("box_scu")
+        box_shape = item.get("box_shape")
+        if box_scu:
+            for i in range(item.get("qty", 1)):
+                blk = {
+                    "label": f"{name.upper()} #{i+1}",
+                    "category": "CMD",
+                    "scu": box_scu,
+                }
+                if box_shape:
+                    blk["shape"] = box_shape
+                blocks.append(blk)
+        else:
+            scu_val = int(item.get("total_scu", item.get("qty", 1)))
+            rem_scu = max(scu_val, 1)
+            for c_size in [32, 24, 16, 8, 4, 2, 1]:
+                while rem_scu >= c_size:
+                    blocks.append({
+                        "label": f"{name.upper()} ({c_size} SCU)",
+                        "category": "CMD",
+                        "scu": c_size,
+                    })
+                    rem_scu -= c_size
+
+
+    # Stor-All boxes with category-specific subdivision
     for box in breakdown.get("stor_all_boxes", []):
+        lbl = str(box.get("label", "STOR-ALL")).upper()
+        if "WEAPON" in lbl or "ARMORY" in lbl:
+            b_cat = "BOX_ARM"
+        elif "ARMOR" in lbl or "CLOTH" in lbl:
+            b_cat = "BOX_CLO"
+        elif "TOOL" in lbl or "UTIL" in lbl:
+            b_cat = "BOX_UTL"
+        elif "MED" in lbl or "CONSUM" in lbl:
+            b_cat = "BOX_MED"
+        elif "REPAIR" in lbl:
+            b_cat = "BOX_REP"
+        else:
+            b_cat = "SUP"
+
         blocks.append({
             "label": box.get("label", "STOR-ALL"),
-            "category": "SUP",
-            "scu": max(box.get("scu", 1), 1),  # at least 1 slot
+            "category": b_cat,
+            "scu": max(box.get("scu", 1), 1),
         })
 
-    # Sort by category priority (ORD first = cluster together), then SCU descending
-    blocks.sort(key=lambda b: (_CAT_PRIORITY.get(b["category"], 9), -b["scu"]))
+    # Sort by category priority, then group identical items together (base name), then SCU descending
+    def _base_label(lbl):
+        """Strip trailing ' #N' numbering to cluster identical items together."""
+        s = str(lbl)
+        idx = s.rfind(" #")
+        return s[:idx].strip() if idx > 0 else s.strip()
+
+    blocks.sort(key=lambda b: (_CAT_PRIORITY.get(b["category"], 9), _base_label(b["label"]), -b["scu"]))
+
+    # Check Idris vessel deck assignment rule
+    v_low = str(vessel_name or "").lower()
+    if "(" in v_low and ")" in v_low:
+        v_low += " " + v_low[v_low.find("(")+1 : v_low.rfind(")")].strip()
+    is_idris = "idris" in v_low
+
+    def is_idris_light_deck_block(blk):
+        lbl = str(blk.get("label", "")).lower()
+        cat = blk.get("category", "")
+        if cat in ("BOX_REP", "MSL", "AMM", "ORD"):
+            return True
+        if any(k in lbl for k in ["repair", "rmc", "recycled material", "hydrogen fuel", "quantum fuel", "fuel"]):
+            return True
+        if cat == "CMD" and any(k in lbl for k in ["fuel", "rmc", "recycled", "hydrogen", "quantum"]):
+            return True
+        return False
 
     # Assign blocks to groups
     all_assignments = []
     remaining_blocks = list(blocks)
 
     for gi, ginfo in enumerate(groups_info):
+        gname = str(ginfo.get("group_name", ginfo.get("name", ""))).lower()
+        is_light_group = (is_idris and gi == 0) or any(k in gname for k in ["light", "hangar 1", "h1", "flight"])
+        is_deck2_group = (is_idris and gi == 1) or any(k in gname for k in ["deck 2", "hangar 2", "h2", "cargo deck", "upper"])
+
         slot_map = _build_slot_map(ginfo)
         occupied = set()
         group_assignments = []
 
         for block in remaining_blocks[:]:
+            if is_idris:
+                wants_light = is_idris_light_deck_block(block)
+                if is_light_group and not wants_light:
+                    continue  # Hangar 1 reserved strictly for Repair Box, RMC, Fuel, Ordnance
+                if is_deck2_group and wants_light and any(b for b in remaining_blocks if not is_idris_light_deck_block(b)):
+                    continue  # Deck 2 prioritizes Fabricator, Med boxes, Armor, Tools, General Cargo
+
             needed = int(block["scu"])
             if needed <= 0:
                 needed = 1
 
-            shape = block.get("shape")
+            explicit_shape = block.get("shape")
             placed_slots = []
 
-            if shape:
-                # Shape-aware placement for ordnance (WxHxL contiguous box)
-                sw, sh, sl = shape["w"], shape["h"], shape["l"]
+            # Candidate shapes to try (explicit shape or standard SCU shapes)
+            if explicit_shape:
+                candidate_shapes = [(explicit_shape["w"], explicit_shape["h"], explicit_shape["l"])]
+            elif needed in STANDARD_SCU_SHAPES:
+                candidate_shapes = STANDARD_SCU_SHAPES[needed]
+            else:
+                candidate_shapes = [(1, 1, needed)]
+
+            for sw, sh, sl in candidate_shapes:
+                if sw > ginfo["width"] or sh > ginfo["height"] or sl > ginfo["length"]:
+                    continue
+
+                if is_idris and is_light_group:
+                    # On Idris flight deck: large boxes prefer wall slots first, then fill linearly
+                    if needed >= 8:
+                        sx_cands = [0]
+                        rw = ginfo["width"] - sw
+                        if rw > 0 and rw not in sx_cands:
+                            sx_cands.append(rw)
+                        # Fill remaining positions linearly
+                        for x_fill in range(ginfo["width"] - sw + 1):
+                            if x_fill not in sx_cands:
+                                sx_cands.append(x_fill)
+                    else:
+                        # Small items: sequential left-to-right for contiguous clustering
+                        sx_cands = list(range(ginfo["width"] - sw + 1))
+                else:
+                    sx_cands = list(range(ginfo["width"] - sw + 1))
+
                 placed = False
                 for sy in range(ginfo["height"] - sh + 1):
                     for sz in range(ginfo["length"] - sl + 1):
-                        for sx in range(ginfo["width"] - sw + 1):
-                            # Check if all slots in WxHxL box are free
+                        for sx in sx_cands:
+                            if sx + sw > ginfo["width"]:
+                                continue
                             candidates = []
                             valid = True
                             for dy in range(sh):
@@ -328,14 +697,16 @@ def _assign_blocks_to_slots(groups_info, breakdown):
                                         break
                                 if not valid:
                                     break
-                            if valid and len(candidates) >= needed:
-                                placed_slots = candidates[:needed]
+                            if valid and len(candidates) == needed:
+                                placed_slots = candidates
                                 placed = True
                                 break
                         if placed:
                             break
                     if placed:
                         break
+                if placed:
+                    break
 
             if not placed_slots:
                 # Fallback: greedy slot grab
@@ -483,9 +854,31 @@ def render_full_grid_page(pdf, ship_grid, breakdown, vessel_name,
     header_h = 48
 
     if "PUBLIC" in sec or "OPEN" in sec:
-        pdf.set_font("Roboto", "B", 16)
-        pdf.set_text_color(180, 140, 40)
-        pdf.text(80, 100, "[CARGO DATA REDACTED -- PUBLIC CHANNEL]")
+        # Dark military header background box
+        pdf.set_fill_color(25, 35, 56)
+        pdf.rect(14, header_h + 10, 269, 120, 'F')
+        pdf.set_draw_color(212, 175, 55)
+        pdf.set_line_width(0.8)
+        pdf.rect(14, header_h + 10, 269, 120, 'D')
+
+        # Redacted classification text
+        pdf.set_text_color(212, 175, 55)
+        try: pdf.set_font("Roboto", "B", 13)
+        except Exception: pdf.set_font("Helvetica", "B", 13)
+        pdf.text(35, header_h + 45, "[CARGO GRID SCHEMATIC REDACTED -- PUBLIC UNCLASSIFIED CHANNEL]")
+
+        pdf.set_text_color(200, 210, 225)
+        try: pdf.set_font("Roboto", "", 9)
+        except Exception: pdf.set_font("Helvetica", "", 9)
+        pdf.text(35, header_h + 65, "Tactical 3D cargo layout, slot allocations, and ordnance placement schematics are classified.")
+        pdf.text(35, header_h + 75, "Access is restricted to authorized UEE 44th Battlegroup logistics officers and ship command.")
+
+        pdf.set_fill_color(180, 40, 40)
+        pdf.rect(35, header_h + 90, 227, 10, 'F')
+        pdf.set_text_color(255, 255, 255)
+        try: pdf.set_font("Roboto", "B", 8)
+        except Exception: pdf.set_font("Helvetica", "B", 8)
+        pdf.text(75, header_h + 96.5, "SECURITY CLASSIFICATION: RESTRICTED / PUBLIC REDACTION ACTIVE")
         return
 
     if not ship_grid or "groups" not in ship_grid:
@@ -518,7 +911,7 @@ def render_full_grid_page(pdf, ship_grid, breakdown, vessel_name,
             "total_vol": 0, "blocks": [], "ordnance_items": [],
             "commodity_items": [], "supply_items": [], "stor_all_boxes": [],
         }
-        assignments = _assign_blocks_to_slots(groups_info, empty_breakdown)
+        assignments = _assign_blocks_to_slots(groups_info, empty_breakdown, vessel_name=vessel_name)
 
         import tempfile
         import os
@@ -612,7 +1005,7 @@ def render_full_grid_page(pdf, ship_grid, breakdown, vessel_name,
         _draw_legend(pdf, breakdown, ship_grid, vessel_name, lh - 22)
         return
 
-    assignments = _assign_blocks_to_slots(groups_info, breakdown)
+    assignments = _assign_blocks_to_slots(groups_info, breakdown, vessel_name=vessel_name)
 
     # ── Render isometric image with PIL ──
     import tempfile
@@ -625,22 +1018,19 @@ def render_full_grid_page(pdf, ship_grid, breakdown, vessel_name,
             from PIL import Image as PILImage
             img = PILImage.open(img_path)
             iw, ih = img.size
-            # Available area: below header, above legend
-            avail_w = lw - 16  # 281mm
-            avail_h = lh - header_h - 28  # ~134mm
-            # Convert px to mm at 150 DPI
+            # Available area: below header (48mm), above legend (194mm)
+            avail_w = lw - 12  # 285mm
+            avail_h = lh - header_h - 18  # 144mm
             dpi = 150
             img_w_mm = iw / dpi * 25.4
             img_h_mm = ih / dpi * 25.4
-            # Scale to fill available area
             scale = min(avail_w / img_w_mm, avail_h / img_h_mm)
             img_w_mm *= scale
             img_h_mm *= scale
-            # Center in available area (below header)
             img_x = (lw - img_w_mm) / 2
             img_y = header_h + (avail_h - img_h_mm) / 2
             pdf.image(img_path, x=img_x, y=img_y, w=img_w_mm, h=img_h_mm)
-            legend_y = lh - 22
+            legend_y = lh - 18
         except Exception as e:
             print(f"[GridPage] Image error: {e}")
         try:
@@ -691,13 +1081,14 @@ def _render_iso_image(groups_info, assignments, ship_grid, vessel_name):
 
     # Cell size — make cubes look cubic in isometric
     # For small grids (< 20 cells), use bigger cells for better visibility
+    # Cell size — high resolution for large, crisp isometric grid rendering
     total_cells = grid_w + grid_l
-    if total_cells <= 12:
-        cell_px = max(48, min(64, 3200 // max(total_cells, 1)))
-    elif total_cells <= 24:
-        cell_px = max(32, min(48, 2800 // max(total_cells, 1)))
+    if total_cells <= 16:
+        cell_px = max(60, min(96, 4800 // max(total_cells, 1)))
+    elif total_cells <= 32:
+        cell_px = max(44, min(68, 4200 // max(total_cells, 1)))
     else:
-        cell_px = max(20, min(40, 2400 // max(total_cells, 1)))
+        cell_px = max(34, min(54, 3800 // max(total_cells, 1)))
     cell_h_px = cell_px // 2  # cubic proportions in iso
 
     # Image dimensions
@@ -706,8 +1097,8 @@ def _render_iso_image(groups_info, assignments, ship_grid, vessel_name):
     img_w = iso_w + 80
     img_h = iso_h + 80
 
-    # White background (matches PDF page)
-    img = Image.new("RGBA", (img_w, img_h), (255, 255, 255, 255))
+    # Transparent background to allow tight getbbox() cropping
+    img = Image.new("RGBA", (img_w, img_h), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
 
     # Origin: top-center of isometric space
@@ -720,59 +1111,110 @@ def _render_iso_image(groups_info, assignments, ship_grid, vessel_name):
     def iso_y(x, z, y=0):
         return oy_px + (x + z) * cell_px // 4 - y * cell_h_px
 
+    def _draw_iso_tile(draw_obj, gx, gz, fill_col, outline_col):
+        """Draw an isometric floor tile for cell (gx, gz) with exact vertex alignment."""
+        p_back = (iso_x(gx, gz), iso_y(gx, gz, 0))
+        p_right = (iso_x(gx + 1, gz), iso_y(gx + 1, gz, 0))
+        p_front = (iso_x(gx + 1, gz + 1), iso_y(gx + 1, gz + 1, 0))
+        p_left = (iso_x(gx, gz + 1), iso_y(gx, gz + 1, 0))
+        draw_obj.polygon([p_back, p_right, p_front, p_left], fill=fill_col, outline=outline_col)
+
     # ── 1) GRID PAPER — checkered isometric floor ──
     grid_line = (210, 214, 222, 255)
     for gz in range(grid_l):
         for gx in range(grid_w):
             if (gx + gz) % 2 == 0:
-                fill = (232, 234, 240, 255)
+                fill = (235, 237, 242, 255)
             else:
-                fill = (226, 228, 234, 255)
-            _draw_iso_diamond(draw, iso_x(gx, gz), iso_y(gx, gz),
-                              cell_px, fill, grid_line)
+                fill = (228, 230, 236, 255)
+            _draw_iso_tile(draw, gx, gz, fill, grid_line)
 
-    # ── 2) BAY FLOOR HIGHLIGHT ──
+    # ── 2) BAY FLOOR HIGHLIGHT & WIREFRAME ENVELOPE ──
+    bay_wireframe = (140, 160, 185, 180)
     for gi, ginfo in enumerate(groups_info):
         gox = ginfo.get("offset_x", 0) + grid_pad
         goz = ginfo.get("offset_z", 0) + grid_pad
         slot_map = _build_slot_map(ginfo)
+        gw = ginfo.get("width", 1)
+        gl = ginfo.get("length", 1)
+        gh = ginfo.get("height", 1)
+
+        # Draw floor slots (y = 0) with clear highlighted bay tile styling
         for (sx, sy, sz), _ in slot_map.items():
             if sy != 0:
                 continue
             ax, az = sx + gox, sz + goz
             if (ax + az) % 2 == 0:
-                fill = (210, 230, 215, 255)
+                fill = (218, 232, 244, 255)
             else:
-                fill = (200, 222, 208, 255)
-            _draw_iso_diamond(draw, iso_x(ax, az), iso_y(ax, az),
-                              cell_px, fill, (180, 200, 185, 255))
+                fill = (208, 224, 238, 255)
+            _draw_iso_tile(draw, ax, az, fill, (160, 180, 205, 255))
 
-    # ── 3) RENDER INDIVIDUAL CUBES — back to front ──
-    # Collect all renderable slots
-    all_cubes = []
-    for gi, ginfo in enumerate(groups_info):
+        # Exact wireframe blueprint boundary cage for the bay volume
+        p_b_back = (iso_x(gox, goz), iso_y(gox, goz, 0))
+        p_b_right = (iso_x(gox + gw, goz), iso_y(gox + gw, goz, 0))
+        p_b_front = (iso_x(gox + gw, goz + gl), iso_y(gox + gw, goz + gl, 0))
+        p_b_left = (iso_x(gox, goz + gl), iso_y(gox, goz + gl, 0))
+
+        p_t_back = (iso_x(gox, goz), iso_y(gox, goz, gh))
+        p_t_right = (iso_x(gox + gw, goz), iso_y(gox + gw, goz, gh))
+        p_t_front = (iso_x(gox + gw, goz + gl), iso_y(gox + gw, goz + gl, gh))
+        p_t_left = (iso_x(gox, goz + gl), iso_y(gox, goz + gl, gh))
+
+        # Top perimeter wireframe
+        draw.line([p_t_back, p_t_right, p_t_front, p_t_left, p_t_back], fill=bay_wireframe, width=1)
+        # Vertical corner pillars
+        draw.line([p_b_back, p_t_back], fill=bay_wireframe, width=1)
+        draw.line([p_b_right, p_t_right], fill=bay_wireframe, width=1)
+        draw.line([p_b_front, p_t_front], fill=bay_wireframe, width=1)
+        draw.line([p_b_left, p_t_left], fill=bay_wireframe, width=1)
+
+
+    # ── 3) RENDER LOADED MULTI-SLOT CARGO BOXES & CONTAINERS — back to front ──
+    # Renders real physical container sizes (16 SCU 2x2x4, 8 SCU 2x2x2, 4 SCU 1x2x2, 2 SCU 1x1x2, 1 SCU 1x1x1)
+    all_boxes = []
+    for gi, (ginfo, gassgn) in enumerate(zip(groups_info, assignments)):
         gox = ginfo.get("offset_x", 0) + grid_pad
         goz = ginfo.get("offset_z", 0) + grid_pad
-        slot_map = _build_slot_map(ginfo)
-        for (sx, sy, sz), _ in slot_map.items():
-            cat_info = slot_categories.get((gi, sx, sy, sz), ("FREE", 0))
-            cat = cat_info[0] if isinstance(cat_info, tuple) else cat_info
-            scu = cat_info[1] if isinstance(cat_info, tuple) else 0
-            all_cubes.append((sx + gox, sy, sz + goz, cat, scu))
+        for block in gassgn:
+            cat = block.get("category", "FREE")
+            if cat == "FREE":
+                continue
+            slots = block.get("slots", [])
+            if not slots:
+                continue
+            min_x = min(s[0] for s in slots)
+            max_x = max(s[0] for s in slots)
+            min_y = min(s[1] for s in slots)
+            max_y = max(s[1] for s in slots)
+            min_z = min(s[2] for s in slots)
+            max_z = max(s[2] for s in slots)
+            bw = max_x - min_x + 1
+            bh = max_y - min_y + 1
+            bl = max_z - min_z + 1
+            scu = block.get("scu", len(slots))
 
-    # Sort: back-to-front for painter's algorithm
-    # In our iso: small (x+z) = back/top of screen, large = front/bottom
-    # Within same depth: left (small x) before right (large x)
-    # Within same position: bottom (small y) before top (large y)
-    all_cubes.sort(key=lambda c: (c[0] + c[2], c[0] - c[2], c[1]))
+            bx = min_x + gox
+            by = min_y
+            bz = min_z + goz
 
-    for wx, wy, wz, cat, scu in all_cubes:
-        _draw_cube_pil(draw, iso_x, iso_y, wx, wy, wz, cell_px, cell_h_px, cat)
-        # Overlay ordnance PNG icon on front face of ORD cubes
-        if cat == "ORD":
-            fcx = (iso_x(wx, wz) + iso_x(wx + 1, wz)) // 2
-            fcy = (iso_y(wx, wz, wy) + iso_y(wx, wz, wy + 1)) // 2
-            _overlay_ordnance_icon(img, fcx, fcy, cell_px, scu)
+            # If contiguous rectangular box: render as unified multi-slot container
+            if bw * bh * bl == len(slots):
+                all_boxes.append((bx, by, bz, bw, bh, bl, cat, scu))
+            else:
+                # Discontiguous fallback: render individual unit cubes
+                for sx, sy, sz in slots:
+                    all_boxes.append((sx + gox, sy, sz + goz, 1, 1, 1, cat, 1))
+
+    # Sort back-to-front by isometric depth: (bx + bw + bz + bl, bx - bz, by)
+    all_boxes.sort(key=lambda b: (b[0] + b[3] + b[2] + b[5], b[0] - b[2], b[1]))
+
+    for bx, by, bz, bw, bh, bl, cat, scu in all_boxes:
+        c_top = _CUBE_COLORS.get(cat, _CUBE_COLORS["FREE"])["top"]
+        c_right = _CUBE_COLORS.get(cat, _CUBE_COLORS["FREE"])["right"]
+        c_front = _CUBE_COLORS.get(cat, _CUBE_COLORS["FREE"])["left"]
+        _draw_iso_box_pil(draw, iso_x, iso_y, bx, by, bz, bw, bh, bl,
+                          cell_px, cell_h_px, c_top, c_right, c_front, cat, scu)
 
     # ── 4) BAY LABELS ──
     try:
@@ -802,15 +1244,19 @@ def _render_iso_image(groups_info, assignments, ship_grid, vessel_name):
         draw.text((lx - 30, ly + cell_px + 2), bay_name, fill=(90, 100, 120, 255), font=font_small)
         draw.text((lx - 30, ly + cell_px * 2), cap_text, fill=(130, 140, 155, 255), font=font_small)
 
-    # ── Auto-crop whitespace ──
+    # ── Auto-crop whitespace tightly ──
     bbox = img.getbbox()
     if bbox:
-        img = img.crop((max(0, bbox[0] - 20), max(0, bbox[1] - 20),
-                         min(img_w, bbox[2] + 20), min(img_h, bbox[3] + 20)))
+        img = img.crop((max(0, bbox[0] - 12), max(0, bbox[1] - 12),
+                         min(img_w, bbox[2] + 12), min(img_h, bbox[3] + 12)))
+
+    # Composite onto solid white background
+    final_img = Image.new("RGB", img.size, (255, 255, 255))
+    final_img.paste(img, (0, 0), img)
 
     import tempfile
     tmp = tempfile.NamedTemporaryFile(suffix=".png", delete=False)
-    img.convert("RGB").save(tmp.name, "PNG")
+    final_img.save(tmp.name, "PNG")
     tmp.close()
     return tmp.name
 
@@ -821,142 +1267,210 @@ def _draw_iso_diamond(draw, cx, cy, cell_px, fill, outline):
 
 
 # ── Cube colors matching sc-cargo.space ──
+# ── Cube colors matching sc-cargo.space ──
 _CUBE_COLORS = {
-    "CMD":  {"top": (120, 200, 140), "left": (90, 175, 110), "right": (70, 155, 90)},
-    "SUP":  {"top": (100, 170, 220), "left": (70, 145, 195), "right": (50, 125, 175)},
-    "ORD":  {"top": (230, 130, 140), "left": (205, 105, 115), "right": (185, 85, 95)},
-    "FREE": {"top": (195, 205, 195), "left": (175, 185, 175), "right": (160, 170, 160)},
+    "CMD":     {"top": (120, 200, 140), "left": (90, 175, 110), "right": (70, 155, 90)},
+    "ORE":     {"top": (255, 195, 60),  "left": (225, 160, 30),  "right": (195, 130, 15)},
+    "WPN":     {"top": (0, 210, 245),   "left": (0, 170, 215),   "right": (0, 140, 185)},
+    "CMP":     {"top": (190, 80, 225),  "left": (155, 45, 190),  "right": (125, 25, 160)},
+    "MSL":     {"top": (255, 145, 45),  "left": (230, 110, 20),  "right": (200, 85, 10)},
+    "AMM":     {"top": (240, 85, 85),   "left": (210, 50, 50),   "right": (175, 30, 30)},
+    "BOX_ARM": {"top": (190, 60, 70),   "left": (150, 40, 50),   "right": (120, 25, 35)},
+    "BOX_CLO": {"top": (45, 110, 185),  "left": (30, 85, 150),   "right": (20, 65, 120)},
+    "BOX_UTL": {"top": (240, 185, 30),  "left": (205, 150, 15),  "right": (170, 120, 5)},
+    "BOX_MED": {"top": (0, 180, 140),   "left": (0, 145, 110),   "right": (0, 115, 85)},
+    "BOX_REP": {"top": (220, 105, 40),  "left": (180, 80, 25),   "right": (145, 60, 15)},
+    "SUP":     {"top": (100, 170, 220), "left": (70, 145, 195), "right": (50, 125, 175)},
+    "ORD":     {"top": (255, 145, 45),  "left": (230, 110, 20),  "right": (200, 85, 10)},
+    "FREE":    {"top": (230, 240, 250), "left": (220, 230, 242), "right": (210, 220, 235)},
 }
 
 
 def _draw_cube_pil(draw, iso_x_fn, iso_y_fn, wx, wy, wz, cell_px, cell_h_px, category):
-    """Draw a single 1x1x1 SCU cube at world position (wx, wy, wz).
-
-    Renders 3 visible faces (top, left, right) with category-specific colors.
-    Leaves a 1px gap between cubes to show grid structure.
-    """
+    """Draw a single 1x1x1 SCU cube at world position (wx, wy, wz) with precise isometric geometry."""
     colors = _CUBE_COLORS.get(category, _CUBE_COLORS["FREE"])
-    gap = 1  # pixel gap between cubes
+    alpha = 255 if category != "FREE" else 28
+    edge = (45, 50, 60, 255) if category != "FREE" else (160, 175, 195, 75)
 
-    # Half-cell dimensions
-    hw = cell_px // 2
-    hh = cell_px // 4
+    # Top face vertices (at height wy + 1)
+    t_back = (iso_x_fn(wx, wz), iso_y_fn(wx, wz, wy + 1))
+    t_right = (iso_x_fn(wx + 1, wz), iso_y_fn(wx + 1, wz, wy + 1))
+    t_left = (iso_x_fn(wx, wz + 1), iso_y_fn(wx, wz + 1, wy + 1))
+    t_front = (iso_x_fn(wx + 1, wz + 1), iso_y_fn(wx + 1, wz + 1, wy + 1))
 
-    # Screen coords for the 4 key points of a unit cube
-    # Top of cube (y+1)
-    top_cx = iso_x_fn(wx, wz)
-    top_cy = iso_y_fn(wx, wz, wy + 1)
-    # Bottom of cube (y)
-    bot_cx = iso_x_fn(wx, wz)
-    bot_cy = iso_y_fn(wx, wz, wy)
+    # Bottom face vertices (at height wy)
+    b_left = (iso_x_fn(wx, wz + 1), iso_y_fn(wx, wz + 1, wy))
+    b_front = (iso_x_fn(wx + 1, wz + 1), iso_y_fn(wx + 1, wz + 1, wy))
+    b_right = (iso_x_fn(wx + 1, wz), iso_y_fn(wx + 1, wz, wy))
 
-    # Top face diamond (at y+1 level)
-    t_top = (top_cx, top_cy - hh + gap)
-    t_right = (top_cx + hw - gap, top_cy)
-    t_bottom = (top_cx, top_cy + hh - gap)
-    t_left = (top_cx - hw + gap, top_cy)
+    # 1. Top face (brightest)
+    draw.polygon([t_back, t_right, t_front, t_left], fill=(*colors["top"], alpha), outline=edge)
 
-    # Bottom corners (at y level)
-    b_bottom = (bot_cx, bot_cy + hh - gap)
-    b_right = (bot_cx + hw - gap, bot_cy)
-    b_left = (bot_cx - hw + gap, bot_cy)
+    # 2. Left face (front-left visible side)
+    draw.polygon([t_left, t_front, b_front, b_left], fill=(*colors["left"], alpha), outline=edge)
 
-    alpha = 255
-    edge = (60, 70, 80, 255) if category != "FREE" else (150, 160, 170, 255)
-
-    # Top face
-    top_poly = [t_top, t_right, t_bottom, t_left]
-    draw.polygon(top_poly, fill=(*colors["top"], alpha), outline=edge)
-
-    # Left face (front-left visible side)
-    left_poly = [t_left, t_bottom, b_bottom, b_left]
-    draw.polygon(left_poly, fill=(*colors["left"], alpha), outline=edge)
-
-    # Right face (front-right visible side)
-    right_poly = [t_right, t_bottom, b_bottom, b_right]
-    draw.polygon(right_poly, fill=(*colors["right"], alpha), outline=edge)
+    # 3. Right face (front-right visible side)
+    draw.polygon([t_front, t_right, b_right, b_front], fill=(*colors["right"], alpha), outline=edge)
 
 
 def _draw_iso_box_pil(draw, iso_x_fn, iso_y_fn, bx, by, bz, bw, bh, bl,
                        cell_px, cell_h_px, color_top, color_right, color_front,
                        category, scu):
-    """Draw a filled isometric 3D box with PIL. Includes ordnance markings."""
-    b_fl = (iso_x_fn(bx, bz), iso_y_fn(bx, bz, by))
-    b_fr = (iso_x_fn(bx, bz + bl), iso_y_fn(bx, bz + bl, by))
-    b_bl = (iso_x_fn(bx + bw, bz), iso_y_fn(bx + bw, bz, by))
-    t_fl = (iso_x_fn(bx, bz), iso_y_fn(bx, bz, by + bh))
-    t_fr = (iso_x_fn(bx, bz + bl), iso_y_fn(bx, bz + bl, by + bh))
-    t_bl = (iso_x_fn(bx + bw, bz), iso_y_fn(bx + bw, bz, by + bh))
-    t_br = (iso_x_fn(bx + bw, bz + bl), iso_y_fn(bx + bw, bz + bl, by + bh))
+    """Draw a clean, seamless multi-slot isometric 3D cargo container of dimensions (bw, bh, bl)."""
+    alpha = 255 if category != "FREE" else 28
+    edge = (45, 50, 60, 255) if category != "FREE" else (160, 175, 195, 75)
 
-    edge = (50, 55, 65, 255)
+    # Top face vertices (at height by + bh)
+    t_back = (iso_x_fn(bx, bz), iso_y_fn(bx, bz, by + bh))
+    t_right = (iso_x_fn(bx + bw, bz), iso_y_fn(bx + bw, bz, by + bh))
+    t_left = (iso_x_fn(bx, bz + bl), iso_y_fn(bx, bz + bl, by + bh))
+    t_front = (iso_x_fn(bx + bw, bz + bl), iso_y_fn(bx + bw, bz + bl, by + bh))
+
+    # Bottom face vertices (at height by)
+    b_left = (iso_x_fn(bx, bz + bl), iso_y_fn(bx, bz + bl, by))
+    b_front = (iso_x_fn(bx + bw, bz + bl), iso_y_fn(bx + bw, bz + bl, by))
+    b_right = (iso_x_fn(bx + bw, bz), iso_y_fn(bx + bw, bz, by))
 
     if category == "FREE":
-        # Dotted outline only (no fill)
-        dot_color = (170, 175, 185, 200)
-        for poly in [[t_fl, t_bl, t_br, t_fr], [t_fl, t_bl, b_bl, b_fl], [t_fl, t_fr, b_fr, b_fl]]:
-            draw.polygon(poly, fill=(240, 242, 248, 120), outline=dot_color)
+        free_fill = (240, 245, 252, 28)
+        draw.polygon([t_back, t_right, t_front, t_left], fill=free_fill, outline=edge)
+        draw.polygon([t_left, t_front, b_front, b_left], fill=free_fill, outline=edge)
+        draw.polygon([t_front, t_right, b_right, b_front], fill=free_fill, outline=edge)
     else:
-        # Solid filled faces
-        draw.polygon([t_fl, t_bl, t_br, t_fr], fill=(*color_top, 255), outline=edge)
-        draw.polygon([t_fl, t_bl, b_bl, b_fl], fill=(*color_front, 255), outline=edge)
-        draw.polygon([t_fl, t_fr, b_fr, b_fl], fill=(*color_right, 255), outline=edge)
+        # 1. Top face (brightest)
+        draw.polygon([t_back, t_right, t_front, t_left], fill=(*color_top, alpha), outline=edge)
 
-    # Ordnance: cage cross on top face + hazard marking
-    if category == "ORD":
-        cage_color = (255, 200, 200, 200)
-        draw.line([t_fl, t_br], fill=cage_color, width=1)
-        draw.line([t_bl, t_fr], fill=cage_color, width=1)
-        # Hazard border on front face
-        draw.line([t_fl, b_fl], fill=(255, 100, 100, 200), width=2)
-        draw.line([t_bl, b_bl], fill=(255, 100, 100, 200), width=2)
+        # 2. Left face (front-left visible)
+        draw.polygon([t_left, t_front, b_front, b_left], fill=(*color_front, alpha), outline=edge)
 
-        # Weapon symbol on front face
-        fcx = (t_fl[0] + t_bl[0]) // 2
-        fcy = (t_fl[1] + b_fl[1]) // 2
-        s = max(3, min(cell_px // 3, 8))
-        _draw_ordnance_symbol_pil(draw, fcx, fcy, s, scu)
+        # 3. Right face (front-right visible)
+        draw.polygon([t_front, t_right, b_right, b_front], fill=(*color_right, alpha), outline=edge)
 
-    # SCU label
-    fcx = (t_fl[0] + t_bl[0] + b_bl[0] + b_fl[0]) // 4
-    fcy = (t_fl[1] + t_bl[1] + b_bl[1] + b_fl[1]) // 4
-    scu_text = str(int(scu))
-    txt_color = (255, 255, 255, 255) if category not in ("FREE",) else (130, 140, 160, 255)
-    draw.text((fcx - 2, fcy - 4), scu_text, fill=txt_color)
+        # Monolithic solid container styling matching sc-cargo.space
+        if bw > 1 or bl > 1 or bh > 1:
+            # Outer bevel frame highlight on top face
+            pass
+
+            # 4. Centered SCU Badge on Top Face Diamond
+            if scu >= 2:
+                tcx = (t_back[0] + t_right[0] + t_front[0] + t_left[0]) // 4
+                tcy = (t_back[1] + t_right[1] + t_front[1] + t_left[1]) // 4
+                scu_str = f"{int(scu)}"
+                try:
+                    f_size = max(9, min(cell_px - 2, 14))
+                    lbl_font = ImageFont.truetype("arial.ttf", f_size)
+                except Exception:
+                    lbl_font = ImageFont.load_default()
+                # Subtle text shadow + crisp white text
+                draw.text((tcx - 3, tcy - 5), scu_str, fill=(20, 25, 35, 200), font=lbl_font)
+                draw.text((tcx - 4, tcy - 6), scu_str, fill=(255, 255, 255, 255), font=lbl_font)
+
+            # High-visibility Ordnance / Weapon / Commodity / Stor-All badge for large containers (>= 4 SCU)
+            if category in ("MSL", "AMM", "WPN", "CMP", "CMD", "ORE", "BOX_ARM", "BOX_CLO", "BOX_UTL", "BOX_MED", "BOX_REP"):
+                fcx = (t_front[0] + b_front[0]) // 2
+                fcy = (t_front[1] + b_front[1]) // 2
+                s = max(4, min(cell_px // 2, 12))
+                _draw_ordnance_symbol_pil(draw, fcx, fcy, s, scu, category=category)
 
 
-def _draw_ordnance_symbol_pil(draw, cx, cy, s, scu):
-    """Draw missile/torpedo/bomb silhouette on a cargo box face.
 
-    Uses PNG icon overlays from resources/ when available,
-    falls back to simple line drawings.
-    """
-    sym_color = (255, 230, 230, 255)
-    if scu >= 30:
-        # Bomb: fat oval + tail fins
-        draw.ellipse((cx - s, cy - s, cx + s, cy + s // 2), outline=sym_color, width=1)
-        draw.line((cx - s // 2, cy + s // 2, cx, cy + s), fill=sym_color, width=1)
-        draw.line((cx + s // 2, cy + s // 2, cx, cy + s), fill=sym_color, width=1)
-    elif scu >= 10:
-        # Torpedo: long body + cone
-        draw.line((cx, cy - s, cx, cy + s // 2), fill=sym_color, width=2)
-        draw.line((cx - s // 3, cy + s // 2, cx + s // 3, cy + s // 2), fill=sym_color, width=1)
-        draw.polygon([(cx, cy - s), (cx - s // 4, cy - s + s // 2), (cx + s // 4, cy - s + s // 2)], fill=sym_color)
+def _draw_ordnance_symbol_pil(draw, cx, cy, s, scu, category="MSL"):
+    """Draw bold, high-contrast silhouette for weapons, components, ores, commodities, missiles, ammo, and Stor-All categories."""
+    dark_edge = (30, 30, 30, 255)
+
+    if category == "CMD":
+        # Commodity / RMC / Freight container symbol (industrial crate / canister)
+        cmd_lime = (220, 255, 220, 255)
+        w = max(3, s // 2)
+        h = max(3, s // 2)
+        draw.rectangle([cx - w, cy - h, cx + w, cy + h], fill=cmd_lime, outline=dark_edge)
+        draw.line([(cx - w, cy), (cx + w, cy)], fill=dark_edge, width=1)
+        draw.line([(cx, cy - h), (cx, cy + h)], fill=dark_edge, width=1)
+
+    if category == "WPN":
+        # Ship Weapon: dual laser cannon / repeater barrel silhouette
+        wpn_cyan = (200, 245, 255, 255)
+        wpn_glow = (0, 220, 255, 255)
+        bw = max(2, s // 3)
+        bh = max(4, s)
+        draw.rectangle([cx - bw - 2, cy - bh, cx - bw, cy + bh // 2], fill=wpn_cyan, outline=dark_edge)
+        draw.rectangle([cx + bw, cy - bh, cx + bw + 2, cy + bh // 2], fill=wpn_cyan, outline=dark_edge)
+        draw.rectangle([cx - bw, cy - bh // 3, cx + bw, cy + bh // 2 + 2], fill=wpn_glow, outline=dark_edge)
+        draw.polygon([(cx - bw - 1, cy - bh), (cx - bw - 2, cy - bh - 2), (cx - bw, cy - bh - 2)], fill=(255, 255, 255, 255))
+        draw.polygon([(cx + bw + 1, cy - bh), (cx + bw, cy - bh - 2), (cx + bw + 2, cy - bh - 2)], fill=(255, 255, 255, 255))
+
+    elif category == "CMP":
+        # Ship Component / Fabricator: Diamond shield module & circuit core
+        cmp_purple = (240, 190, 255, 255)
+        cmp_core = (170, 50, 240, 255)
+        bh = max(4, s)
+        draw.polygon([(cx, cy - bh), (cx + bh, cy), (cx, cy + bh), (cx - bh, cy)], fill=cmp_purple, outline=dark_edge)
+        cs = max(2, bh // 2)
+        draw.rectangle([cx - cs, cy - cs, cx + cs, cy + cs], fill=cmp_core, outline=dark_edge)
+
+    elif category == "ORE":
+        # Raw / Refined Ore: Mineral crystal cluster
+        gold_color = (255, 215, 50, 255)
+        gem_light = (255, 245, 180, 255)
+        bh = max(4, s)
+        draw.polygon([(cx, cy - bh), (cx + bh // 2, cy + bh // 3), (cx, cy + bh), (cx - bh // 2, cy + bh // 3)], fill=gold_color, outline=dark_edge)
+        draw.polygon([(cx, cy - bh), (cx - bh // 2, cy + bh // 3), (cx, cy)], fill=gem_light, outline=dark_edge)
+        draw.polygon([(cx + bh // 2, cy - bh // 3), (cx + bh, cy + bh // 2), (cx + bh // 3, cy + bh // 2)], fill=gold_color, outline=dark_edge)
+
+    elif category == "AMM":
+        # Ammunition bullet cartridge symbol
+        bullet_gold = (255, 220, 90, 255)
+        w = max(2, s // 2)
+        h = max(4, s)
+        draw.rectangle([cx - w - 2, cy - h // 3, cx - w, cy + h // 2], fill=bullet_gold, outline=dark_edge)
+        draw.rectangle([cx - w // 2, cy - h // 2, cx + w // 2, cy + h // 2], fill=bullet_gold, outline=dark_edge)
+        draw.polygon([(cx, cy - h), (cx - w // 2, cy - h // 2), (cx + w // 2, cy - h // 2)], fill=(255, 255, 255, 255), outline=dark_edge)
+        draw.rectangle([cx + w, cy - h // 3, cx + w + 2, cy + h // 2], fill=bullet_gold, outline=dark_edge)
+
+    elif category == "BOX_ARM":
+        # Stor-All Armory: Handgun / small arm silhouette
+        draw.rectangle([cx - s // 2, cy - s // 4, cx + s // 2, cy], fill=(255, 240, 240, 255), outline=dark_edge)
+        draw.rectangle([cx + s // 6, cy, cx + s // 2, cy + s // 2], fill=(255, 200, 200, 255), outline=dark_edge)
+
+    elif category == "BOX_CLO":
+        # Stor-All Armor: Helmet visor silhouette
+        draw.ellipse([cx - s // 2, cy - s // 2, cx + s // 2, cy + s // 2], fill=(220, 240, 255, 255), outline=dark_edge)
+        draw.rectangle([cx - s // 3, cy - s // 6, cx + s // 3, cy + s // 6], fill=(40, 100, 180, 255))
+
+    elif category == "BOX_UTL":
+        # Stor-All Tools: Wrench / multi-tool
+        draw.rectangle([cx - s // 6, cy - s // 2, cx + s // 6, cy + s // 2], fill=(255, 245, 180, 255), outline=dark_edge)
+        draw.rectangle([cx - s // 3, cy - s // 2, cx + s // 3, cy - s // 4], fill=(255, 210, 40, 255), outline=dark_edge)
+
+    elif category == "BOX_MED":
+        # Stor-All Medical: Bold Red/White Cross
+        w = max(2, s // 3)
+        draw.rectangle([cx - w, cy - s // 2, cx + w, cy + s // 2], fill=(255, 255, 255, 255), outline=dark_edge)
+        draw.rectangle([cx - s // 2, cy - w, cx + s // 2, cy + w], fill=(255, 255, 255, 255), outline=dark_edge)
+
+    elif category == "BOX_REP":
+        # Stor-All Repair Deck: Spanner & Gear
+        draw.ellipse([cx - s // 3, cy - s // 3, cx + s // 3, cy + s // 3], fill=(255, 200, 160, 255), outline=dark_edge)
+        draw.line([cx - s // 2, cy + s // 2, cx + s // 2, cy - s // 2], fill=(255, 140, 50, 255), width=2)
+
     else:
-        # Missile: thin body + fins
-        draw.line((cx, cy - s, cx, cy + s // 2), fill=sym_color, width=1)
-        draw.line((cx - s // 3, cy + s // 4, cx, cy - s // 4), fill=sym_color, width=1)
-        draw.line((cx + s // 3, cy + s // 4, cx, cy - s // 4), fill=sym_color, width=1)
+        # Missile / Rocket symbol (high-contrast white & gold sharp silhouette)
+        msl_white = (255, 255, 255, 255)
+        msl_gold = (255, 200, 50, 255)
+        bw = max(2, s // 3)
+        bh = max(4, s)
+        draw.polygon([(cx, cy - bh), (cx - bw, cy - bh // 3), (cx + bw, cy - bh // 3)], fill=msl_gold, outline=dark_edge)
+        draw.rectangle([cx - bw, cy - bh // 3, cx + bw, cy + bh // 2], fill=msl_white, outline=dark_edge)
+        draw.polygon([(cx - bw, cy + bh // 6), (cx - bw * 2 - 2, cy + bh // 2 + 1), (cx - bw, cy + bh // 2)], fill=msl_gold, outline=dark_edge)
+        draw.polygon([(cx + bw, cy + bh // 6), (cx + bw * 2 + 2, cy + bh // 2 + 1), (cx + bw, cy + bh // 2)], fill=msl_gold, outline=dark_edge)
+        draw.line([cx - bw // 2, cy + bh // 2 + 1, cx + bw // 2, cy + bh // 2 + 1], fill=(255, 120, 0, 255), width=1)
 
 
 # ── Ordnance icon cache ──
 _ORD_ICON_CACHE = {}
 
 def _load_ordnance_icon(scu, target_size):
-    """Load and cache ordnance PNG icon, resized to target_size.
-
-    Returns PIL Image (RGBA) or None.
-    """
+    """Load and cache ordnance PNG icon, resized to target_size."""
     if scu >= 30:
         icon_name = "ordnance_bomb.png"
     elif scu >= 10:
@@ -984,10 +1498,7 @@ def _load_ordnance_icon(scu, target_size):
 
 
 def _overlay_ordnance_icon(img, cx, cy, cell_px, scu):
-    """Paste ordnance PNG icon onto the cargo grid image at (cx, cy).
-
-    Centers the icon on the front face of the cube.
-    """
+    """Paste ordnance PNG icon onto the cargo grid image at (cx, cy)."""
     icon_size = max(12, cell_px // 2)
     icon = _load_ordnance_icon(scu, icon_size)
     if icon is None:
@@ -996,7 +1507,6 @@ def _overlay_ordnance_icon(img, cx, cy, cell_px, scu):
     try:
         paste_x = cx - icon_size // 2
         paste_y = cy - icon_size // 2
-        # Ensure within image bounds
         if paste_x >= 0 and paste_y >= 0:
             img.paste(icon, (paste_x, paste_y), icon)
     except Exception:
@@ -1009,35 +1519,79 @@ def _draw_legend(pdf, breakdown, ship_grid, vessel_name, y_pos):
     used = breakdown.get("total_vol", 0)
     free = cap - used if isinstance(cap, (int, float)) else "?"
     cmd = breakdown.get("commodity_vol", 0)
+    ore = breakdown.get("ore_vol", 0)
+    wpn = breakdown.get("ship_weapon_vol", 0)
+    cmp = breakdown.get("ship_component_vol", 0)
     sup = breakdown.get("supply_vol", 0)
     ordn = breakdown.get("ordnance_vol", 0)
     groups = len(ship_grid.get("groups", [])) if ship_grid else 0
 
-    y = min(y_pos, 195)  # Must fit on landscape page (210mm tall)
+    y = min(y_pos, 186)  # Must fit on landscape page (210mm tall)
+
+    # Overload / Cannot fit warning
+    is_overloaded = isinstance(cap, (int, float)) and used > cap
+    if is_overloaded:
+        overflow_scu = used - cap
+        pdf.set_fill_color(180, 20, 20)
+        pdf.rect(14, y - 7, 268, 5.5, 'F')
+        pdf.set_font("Roboto", "B", 7)
+        pdf.set_text_color(255, 255, 255)
+        pdf.text(16, y - 3.2, f"CRITICAL ALERT: CARGO EXCEEDS VESSEL CAPACITY BY +{overflow_scu:.0f} SCU (CANNOT FIT IN HOLD // OVERLOADED)")
 
     # Stats line
     pdf.set_font("Roboto", "", 6.5)
-    pdf.set_text_color(60, 70, 90)
-    stats = f"Vessel: {vessel_name}  |  Capacity: {cap} SCU  |  Sections: {groups}"
-    pdf.text(14, y, stats)
-    stats2 = f"Used: {used:.0f} SCU  |  Free: {free:.0f} SCU  |  Commodity: {cmd:.0f}  |  Supply: {sup:.0f}  |  Ordnance: {ordn:.0f}"
-    pdf.text(14, y + 5, stats2)
+    if is_overloaded:
+        pdf.set_text_color(180, 20, 20)
+        stats = f"Vessel: {vessel_name}  |  Capacity: {cap} SCU  |  Sections: {groups}  |  STATUS: OVERLOADED"
+        free_str = f"OVERFLOW (+{used - cap:.0f} SCU CANNOT FIT)"
+    else:
+        pdf.set_text_color(60, 70, 90)
+        stats = f"Vessel: {vessel_name}  |  Capacity: {cap} SCU  |  Sections: {groups}"
+        free_str = f"{free:.0f} SCU"
 
-    # Color legend
-    legend_y = y + 12
-    legend_items = [
-        ("CMD", "Commodity", COLORS["CMD"]),
-        ("SUP", "Supply (Stor-All)", COLORS["SUP"]),
-        ("ORD", "Ordnance", COLORS["ORD"]),
-        ("FREE", "Free", COLORS["FREE"]),
+    pdf.text(14, y, stats)
+    stats2 = f"Used: {used:.0f} SCU | Free: {free_str} | Cmd: {cmd:.0f} | Ore: {ore:.0f} | Wpn: {wpn:.0f} | Cmp: {cmp:.0f} | Msl/Ammo: {ordn:.0f} | Sup: {sup:.0f}"
+    pdf.text(14, y + 4.5, stats2)
+
+    # Row 1: Direct Grid Cargo Categories
+    legend_y1 = y + 10
+    row1_items = [
+        ("CMD", "Commodities / RMC", COLORS["CMD"]),
+        ("ORE", "Ores & Minerals", COLORS["ORE"]),
+        ("WPN", "Ship Weapons", COLORS["WPN"]),
+        ("CMP", "Components / Fab", COLORS["CMP"]),
+        ("MSL", "Missiles / Torps", COLORS["MSL"]),
+        ("AMM", "Ammunition", COLORS["AMM"]),
     ]
-    x = 14
-    for code, label, color in legend_items:
+    x1 = 14
+    for code, label, color in row1_items:
         pdf.set_fill_color(*color)
         pdf.set_draw_color(80, 80, 80)
         pdf.set_line_width(0.1)
-        pdf.rect(x, legend_y - 2.5, 3, 3, 'DF')
-        pdf.set_font("Roboto", "", 5.5)
+        pdf.rect(x1, legend_y1 - 2.5, 3, 3, 'DF')
+        pdf.set_font("Roboto", "", 5.0)
         pdf.set_text_color(60, 70, 90)
-        pdf.text(x + 4, legend_y, f"{code} — {label}")
-        x += pdf.get_string_width(f"{code} — {label}") + 8
+        pdf.text(x1 + 4, legend_y1, f"{code} — {label}")
+        x1 += pdf.get_string_width(f"{code} — {label}") + 6
+
+    # Row 2: Stor-All Categorized Boxes & Free Space
+    legend_y2 = y + 15.5
+    row2_items = [
+        ("BOX-ARM", "Stor-All [Weapons]", COLORS["BOX_ARM"]),
+        ("BOX-CLO", "Stor-All [Armor]", COLORS["BOX_CLO"]),
+        ("BOX-UTL", "Stor-All [Tools]", COLORS["BOX_UTL"]),
+        ("BOX-MED", "Stor-All [Medical]", COLORS["BOX_MED"]),
+        ("BOX-REP", "Stor-All [Repair]", COLORS["BOX_REP"]),
+        ("SUP", "Stor-All [Supply]", COLORS["SUP"]),
+        ("FREE", "Free Space", COLORS["FREE"]),
+    ]
+    x2 = 14
+    for code, label, color in row2_items:
+        pdf.set_fill_color(*color)
+        pdf.set_draw_color(80, 80, 80)
+        pdf.set_line_width(0.1)
+        pdf.rect(x2, legend_y2 - 2.5, 3, 3, 'DF')
+        pdf.set_font("Roboto", "", 5.0)
+        pdf.set_text_color(60, 70, 90)
+        pdf.text(x2 + 4, legend_y2, f"{code} — {label}")
+        x2 += pdf.get_string_width(f"{code} — {label}") + 5

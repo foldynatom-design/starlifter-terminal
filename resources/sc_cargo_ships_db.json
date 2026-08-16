@@ -1,0 +1,3499 @@
+[
+  {
+    "name": "Avenger Titan",
+    "full_name": "$z Avenger Titan",
+    "manufacturer": "$z",
+    "cargo_scu": 8,
+    "unofficial_cargo_scu": 8,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 4,
+            "volume_scu": 8,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hammerhead",
+    "full_name": "Aegis Hammerhead",
+    "manufacturer": "Aegis",
+    "cargo_scu": 64,
+    "unofficial_cargo_scu": 64,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 8,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Idris-M",
+    "full_name": "Aegis Idris-M",
+    "manufacturer": "Aegis",
+    "cargo_scu": 1326,
+    "unofficial_cargo_scu": 1326,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 6,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 11,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 19,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 24,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 32,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 37,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 47,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 16,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 16,
+            "y": 0,
+            "z": 6,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 16,
+            "y": 0,
+            "z": 11,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 16,
+            "y": 0,
+            "z": 19,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 16,
+            "y": 0,
+            "z": 24,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 16,
+            "y": 0,
+            "z": 32,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 16,
+            "y": 0,
+            "z": 37,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 16,
+            "y": 0,
+            "z": 47,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Idris-P",
+    "full_name": "Aegis Idris-P",
+    "manufacturer": "Aegis",
+    "cargo_scu": 1374,
+    "unofficial_cargo_scu": 1374,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 6,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 11,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 19,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 24,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 32,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 37,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 47,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 16,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 16,
+            "y": 0,
+            "z": 6,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 16,
+            "y": 0,
+            "z": 11,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 16,
+            "y": 0,
+            "z": 19,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 16,
+            "y": 0,
+            "z": 24,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 16,
+            "y": 0,
+            "z": 32,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 16,
+            "y": 0,
+            "z": 37,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 16,
+            "y": 0,
+            "z": 47,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Reclaimer",
+    "full_name": "Aegis Reclaimer",
+    "manufacturer": "Aegis",
+    "cargo_scu": 420,
+    "unofficial_cargo_scu": 420,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 2,
+            "length": 7,
+            "volume_scu": 70,
+            "max_box_size": 16,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 7,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 2,
+            "length": 7,
+            "volume_scu": 70,
+            "max_box_size": 16,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 11,
+            "width": 5,
+            "height": 2,
+            "length": 5,
+            "volume_scu": 50,
+            "max_box_size": 16,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 7,
+            "y": 0,
+            "z": 11,
+            "width": 5,
+            "height": 2,
+            "length": 5,
+            "volume_scu": 50,
+            "max_box_size": 16,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Redeemer",
+    "full_name": "Aegis Redeemer",
+    "manufacturer": "Aegis",
+    "cargo_scu": 2,
+    "unofficial_cargo_scu": 2,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 1,
+            "volume_scu": 2,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Retaliator",
+    "full_name": "Aegis Retaliator",
+    "manufacturer": "Aegis",
+    "cargo_scu": 74,
+    "unofficial_cargo_scu": 74,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 2,
+            "length": 6,
+            "volume_scu": 36,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Tiburon",
+    "full_name": "Aegis Tiburon",
+    "manufacturer": "Aegis",
+    "cargo_scu": 64,
+    "unofficial_cargo_scu": 64,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 8,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Asgard",
+    "full_name": "Anvil Asgard",
+    "manufacturer": "Anvil",
+    "cargo_scu": 180,
+    "unofficial_cargo_scu": 276,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 4,
+            "length": 9,
+            "volume_scu": 180,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "C8 Pisces",
+    "full_name": "Anvil C8 Pisces",
+    "manufacturer": "Anvil",
+    "cargo_scu": 4,
+    "unofficial_cargo_scu": 4,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2,
+            "volume_scu": 2,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2,
+            "volume_scu": 2,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "C8X Pisces",
+    "full_name": "Anvil C8X Pisces",
+    "manufacturer": "Anvil",
+    "cargo_scu": 4,
+    "unofficial_cargo_scu": 4,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2,
+            "volume_scu": 2,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2,
+            "volume_scu": 2,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Carrack",
+    "full_name": "Anvil Carrack",
+    "manufacturer": "Anvil",
+    "cargo_scu": 456,
+    "unofficial_cargo_scu": 456,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 5,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 3,
+            "volume_scu": 24,
+            "max_box_size": 8,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 10,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Liberator [Concept]",
+    "full_name": "Anvil Liberator [Concept]",
+    "manufacturer": "Anvil",
+    "cargo_scu": 400,
+    "unofficial_cargo_scu": 400,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 4,
+            "length": 10,
+            "volume_scu": 200,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Paladin",
+    "full_name": "Anvil Paladin",
+    "manufacturer": "Anvil",
+    "cargo_scu": 4,
+    "unofficial_cargo_scu": 4,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 4,
+            "volume_scu": 4,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Valkyrie",
+    "full_name": "Anvil Valkyrie",
+    "manufacturer": "Anvil",
+    "cargo_scu": 90,
+    "unofficial_cargo_scu": 90,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 3,
+            "length": 6,
+            "volume_scu": 90,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "CSV-SM",
+    "full_name": "Argo CSV-SM",
+    "manufacturer": "Argo",
+    "cargo_scu": 4,
+    "unofficial_cargo_scu": 4,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 2,
+            "volume_scu": 4,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "MOLE",
+    "full_name": "Argo MOLE",
+    "manufacturer": "Argo",
+    "cargo_scu": 32,
+    "unofficial_cargo_scu": 32,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 4,
+            "volume_scu": 32,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "MOTH",
+    "full_name": "Argo MOTH",
+    "manufacturer": "Argo",
+    "cargo_scu": 224,
+    "unofficial_cargo_scu": 224,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 6,
+            "volume_scu": 96,
+            "max_box_size": 8,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 6,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 4,
+            "length": 6,
+            "volume_scu": 96,
+            "max_box_size": 8,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "MPUV-C",
+    "full_name": "Argo MPUV-C",
+    "manufacturer": "Argo",
+    "cargo_scu": 2,
+    "unofficial_cargo_scu": 2,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2,
+            "volume_scu": 2,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "MPUV-T",
+    "full_name": "Argo MPUV-T",
+    "manufacturer": "Argo",
+    "cargo_scu": 16,
+    "unofficial_cargo_scu": 16,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4,
+            "volume_scu": 16,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Raft",
+    "full_name": "Argo Raft",
+    "manufacturer": "Argo",
+    "cargo_scu": 192,
+    "unofficial_cargo_scu": 192,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 8,
+            "height": 2,
+            "length": 12,
+            "volume_scu": 192,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SRV",
+    "full_name": "Argo SRV",
+    "manufacturer": "Argo",
+    "cargo_scu": 12,
+    "unofficial_cargo_scu": 12,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 1,
+            "length": 3,
+            "volume_scu": 12,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Merchantman [Concept]",
+    "full_name": "Banu Merchantman [Concept]",
+    "manufacturer": "Banu",
+    "cargo_scu": 2880,
+    "unofficial_cargo_scu": 2880,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 10,
+            "length": 24,
+            "volume_scu": 1440,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mustang Alpha",
+    "full_name": "Consolidated Outland Mustang Alpha",
+    "manufacturer": "Consolidated Outland",
+    "cargo_scu": 0,
+    "unofficial_cargo_scu": 0,
+    "bay_labels": [],
+    "grid_layout": []
+  },
+  {
+    "name": "Nomad",
+    "full_name": "Consolidated Outland Nomad",
+    "manufacturer": "Consolidated Outland",
+    "cargo_scu": 24,
+    "unofficial_cargo_scu": 24,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 2,
+            "length": 4,
+            "volume_scu": 24,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Pioneer [Concept]",
+    "full_name": "Consolidated Outland Pioneer [Concept]",
+    "manufacturer": "Consolidated Outland",
+    "cargo_scu": 0,
+    "unofficial_cargo_scu": 0,
+    "bay_labels": [],
+    "grid_layout": []
+  },
+  {
+    "name": "A2 Hercules",
+    "full_name": "Crusader A2 Hercules",
+    "manufacturer": "Crusader",
+    "cargo_scu": 216,
+    "unofficial_cargo_scu": 216,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 2,
+            "length": 18,
+            "volume_scu": 216,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "C2 Hercules",
+    "full_name": "Crusader C2 Hercules",
+    "manufacturer": "Crusader",
+    "cargo_scu": 696,
+    "unofficial_cargo_scu": 696,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 8,
+            "height": 4,
+            "length": 15,
+            "volume_scu": 480,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 1,
+            "y": 0,
+            "z": 16,
+            "width": 6,
+            "height": 4,
+            "length": 9,
+            "volume_scu": 216,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Intrepid",
+    "full_name": "Crusader Intrepid",
+    "manufacturer": "Crusader",
+    "cargo_scu": 8,
+    "unofficial_cargo_scu": 8,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 4,
+            "volume_scu": 4,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 4,
+            "volume_scu": 4,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "M2 Hercules",
+    "full_name": "Crusader M2 Hercules",
+    "manufacturer": "Crusader",
+    "cargo_scu": 522,
+    "unofficial_cargo_scu": 522,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 8,
+            "height": 3,
+            "length": 15,
+            "volume_scu": 360,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 1,
+            "y": 0,
+            "z": 16,
+            "width": 6,
+            "height": 3,
+            "length": 9,
+            "volume_scu": 162,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mercury Star Runner",
+    "full_name": "Crusader Mercury Star Runner",
+    "manufacturer": "Crusader",
+    "cargo_scu": 114,
+    "unofficial_cargo_scu": 114,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 3,
+            "length": 6,
+            "volume_scu": 108,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3,
+            "volume_scu": 6,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Caterpillar",
+    "full_name": "Drake Caterpillar",
+    "manufacturer": "Drake",
+    "cargo_scu": 576,
+    "unofficial_cargo_scu": 576,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 1,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 2,
+            "length": 6,
+            "volume_scu": 60,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 2,
+            "z": 0,
+            "width": 5,
+            "height": 1,
+            "length": 4,
+            "volume_scu": 20,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Clipper",
+    "full_name": "Drake Clipper",
+    "manufacturer": "Drake",
+    "cargo_scu": 12,
+    "unofficial_cargo_scu": 12,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 3,
+            "volume_scu": 12,
+            "max_box_size": 2,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Corsair",
+    "full_name": "Drake Corsair",
+    "manufacturer": "Drake",
+    "cargo_scu": 72,
+    "unofficial_cargo_scu": 204,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 3,
+            "length": 6,
+            "volume_scu": 72,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Cutlass Black",
+    "full_name": "Drake Cutlass Black",
+    "manufacturer": "Drake",
+    "cargo_scu": 46,
+    "unofficial_cargo_scu": 46,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3,
+            "volume_scu": 6,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 4,
+            "width": 4,
+            "height": 2,
+            "length": 5,
+            "volume_scu": 40,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Cutlass Blue",
+    "full_name": "Drake Cutlass Blue",
+    "manufacturer": "Drake",
+    "cargo_scu": 12,
+    "unofficial_cargo_scu": 12,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3,
+            "volume_scu": 6,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3,
+            "volume_scu": 6,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Cutlass Red",
+    "full_name": "Drake Cutlass Red",
+    "manufacturer": "Drake",
+    "cargo_scu": 12,
+    "unofficial_cargo_scu": 12,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3,
+            "volume_scu": 6,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3,
+            "volume_scu": 6,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Cutter",
+    "full_name": "Drake Cutter",
+    "manufacturer": "Drake",
+    "cargo_scu": 4,
+    "unofficial_cargo_scu": 12,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 2,
+            "volume_scu": 4,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Cutter Rambler",
+    "full_name": "Drake Cutter Rambler",
+    "manufacturer": "Drake",
+    "cargo_scu": 2,
+    "unofficial_cargo_scu": 2,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 1,
+            "volume_scu": 2,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Cutter Scout",
+    "full_name": "Drake Cutter Scout",
+    "manufacturer": "Drake",
+    "cargo_scu": 2,
+    "unofficial_cargo_scu": 2,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 1,
+            "volume_scu": 2,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Golem Ox",
+    "full_name": "Drake Golem Ox",
+    "manufacturer": "Drake",
+    "cargo_scu": 64,
+    "unofficial_cargo_scu": 64,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 8,
+            "volume_scu": 64,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mule",
+    "full_name": "Drake Mule",
+    "manufacturer": "Drake",
+    "cargo_scu": 1,
+    "unofficial_cargo_scu": 1,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 1,
+            "volume_scu": 1,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Vulture",
+    "full_name": "Drake Vulture",
+    "manufacturer": "Drake",
+    "cargo_scu": 13,
+    "unofficial_cargo_scu": 26,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 1,
+            "volume_scu": 1,
+            "max_box_size": 1,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 1,
+            "width": 2,
+            "height": 2,
+            "length": 3,
+            "volume_scu": 12,
+            "max_box_size": 1,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Prowler Utility",
+    "full_name": "Esperia Prowler Utility",
+    "manufacturer": "Esperia",
+    "cargo_scu": 32,
+    "unofficial_cargo_scu": 32,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4,
+            "volume_scu": 16,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 4,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4,
+            "volume_scu": 16,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Syulen",
+    "full_name": "Gatac Syulen",
+    "manufacturer": "Gatac",
+    "cargo_scu": 6,
+    "unofficial_cargo_scu": 6,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 1,
+            "length": 2,
+            "volume_scu": 6,
+            "max_box_size": 1,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Tyilui",
+    "full_name": "Gatac Tyilui",
+    "manufacturer": "Gatac",
+    "cargo_scu": 96,
+    "unofficial_cargo_scu": 96,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 6,
+            "volume_scu": 48,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Shiv",
+    "full_name": "Grey's Shiv",
+    "manufacturer": "Grey's",
+    "cargo_scu": 32,
+    "unofficial_cargo_scu": 32,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8,
+            "volume_scu": 32,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "$P",
+    "full_name": "MISC $P",
+    "manufacturer": "MISC",
+    "cargo_scu": 291,
+    "unofficial_cargo_scu": 291,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 5,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 5,
+            "length": 7,
+            "volume_scu": 175,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fortune",
+    "full_name": "MISC Fortune",
+    "manufacturer": "MISC",
+    "cargo_scu": 16,
+    "unofficial_cargo_scu": 30,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 3,
+            "volume_scu": 6,
+            "max_box_size": 1,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Freelancer",
+    "full_name": "MISC Freelancer",
+    "manufacturer": "MISC",
+    "cargo_scu": 66,
+    "unofficial_cargo_scu": 66,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 3,
+            "length": 2,
+            "volume_scu": 6,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 3,
+            "length": 2,
+            "volume_scu": 6,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Freelancer DUR",
+    "full_name": "MISC Freelancer DUR",
+    "manufacturer": "MISC",
+    "cargo_scu": 36,
+    "unofficial_cargo_scu": 36,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 3,
+            "length": 2,
+            "volume_scu": 6,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 3,
+            "length": 2,
+            "volume_scu": 6,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Freelancer MAX",
+    "full_name": "MISC Freelancer MAX",
+    "manufacturer": "MISC",
+    "cargo_scu": 120,
+    "unofficial_cargo_scu": 156,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 12,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 3,
+            "length": 2,
+            "volume_scu": 6,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 3,
+            "length": 2,
+            "volume_scu": 6,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Freelancer MIS",
+    "full_name": "MISC Freelancer MIS",
+    "manufacturer": "MISC",
+    "cargo_scu": 36,
+    "unofficial_cargo_scu": 36,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 3,
+            "length": 2,
+            "volume_scu": 6,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 3,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 3,
+            "length": 2,
+            "volume_scu": 6,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hull-A",
+    "full_name": "MISC Hull-A",
+    "manufacturer": "MISC",
+    "cargo_scu": 64,
+    "unofficial_cargo_scu": 64,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 32,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 4,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 4,
+            "length": 4,
+            "volume_scu": 32,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hull-C",
+    "full_name": "MISC Hull-C",
+    "manufacturer": "MISC",
+    "cargo_scu": 4608,
+    "unofficial_cargo_scu": 4608,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 576,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 14,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 576,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 28,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 576,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 42,
+            "y": 0,
+            "z": 0,
+            "width": 12,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 576,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hull-D [Concept]",
+    "full_name": "MISC Hull-D [Concept]",
+    "manufacturer": "MISC",
+    "cargo_scu": 0,
+    "unofficial_cargo_scu": 0,
+    "bay_labels": [],
+    "grid_layout": []
+  },
+  {
+    "name": "Hull-E [Concept]",
+    "full_name": "MISC Hull-E [Concept]",
+    "manufacturer": "MISC",
+    "cargo_scu": 12288,
+    "unofficial_cargo_scu": 12288,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 768,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 18,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 768,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 36,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 768,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 54,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 768,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 768,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 18,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 768,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 36,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 768,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 54,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 768,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 768,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 18,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 768,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 36,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 768,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 54,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 768,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 768,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 18,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 768,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 36,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 768,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 54,
+            "y": 0,
+            "z": 0,
+            "width": 16,
+            "height": 6,
+            "length": 8,
+            "volume_scu": 768,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Reliant Kore",
+    "full_name": "MISC Reliant Kore",
+    "manufacturer": "MISC",
+    "cargo_scu": 6,
+    "unofficial_cargo_scu": 6,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 3,
+            "volume_scu": 3,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 2,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 3,
+            "volume_scu": 3,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Reliant Tana",
+    "full_name": "MISC Reliant Tana",
+    "manufacturer": "MISC",
+    "cargo_scu": 1,
+    "unofficial_cargo_scu": 1,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 1,
+            "volume_scu": 1,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Starfarer Gemini",
+    "full_name": "MISC Starfarer Gemini",
+    "manufacturer": "MISC",
+    "cargo_scu": 291,
+    "unofficial_cargo_scu": 291,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 5,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 5,
+            "length": 7,
+            "volume_scu": 175,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Starlancer MAX",
+    "full_name": "MISC Starlancer MAX",
+    "manufacturer": "MISC",
+    "cargo_scu": 224,
+    "unofficial_cargo_scu": 470,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 19,
+        "grids": [
+          {
+            "name": "Port Side",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 3,
+            "length": 8,
+            "volume_scu": 48,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Starboard Side",
+            "x": 7,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 3,
+            "length": 8,
+            "volume_scu": 48,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Starlancer TAC",
+    "full_name": "MISC Starlancer TAC",
+    "manufacturer": "MISC",
+    "cargo_scu": 96,
+    "unofficial_cargo_scu": 246,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Port Side",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 3,
+            "length": 8,
+            "volume_scu": 48,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Starboard Side",
+            "x": 7,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 3,
+            "length": 8,
+            "volume_scu": 48,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "100i",
+    "full_name": "Origin 100i",
+    "manufacturer": "Origin",
+    "cargo_scu": 2,
+    "unofficial_cargo_scu": 2,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2,
+            "volume_scu": 2,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "125a",
+    "full_name": "Origin 125a",
+    "manufacturer": "Origin",
+    "cargo_scu": 2,
+    "unofficial_cargo_scu": 2,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2,
+            "volume_scu": 2,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "135c",
+    "full_name": "Origin 135c",
+    "manufacturer": "Origin",
+    "cargo_scu": 6,
+    "unofficial_cargo_scu": 6,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 4,
+            "volume_scu": 4,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 5,
+            "width": 1,
+            "height": 1,
+            "length": 2,
+            "volume_scu": 2,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "300i",
+    "full_name": "Origin 300i",
+    "manufacturer": "Origin",
+    "cargo_scu": 8,
+    "unofficial_cargo_scu": 8,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 4,
+            "volume_scu": 8,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "315p",
+    "full_name": "Origin 315p",
+    "manufacturer": "Origin",
+    "cargo_scu": 12,
+    "unofficial_cargo_scu": 12,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 2,
+            "volume_scu": 4,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 3,
+            "width": 2,
+            "height": 1,
+            "length": 4,
+            "volume_scu": 8,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "325a",
+    "full_name": "Origin 325a",
+    "manufacturer": "Origin",
+    "cargo_scu": 4,
+    "unofficial_cargo_scu": 4,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 2,
+            "volume_scu": 4,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "350r",
+    "full_name": "Origin 350r",
+    "manufacturer": "Origin",
+    "cargo_scu": 4,
+    "unofficial_cargo_scu": 4,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 2,
+            "volume_scu": 4,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "400i",
+    "full_name": "Origin 400i",
+    "manufacturer": "Origin",
+    "cargo_scu": 42,
+    "unofficial_cargo_scu": 42,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 3,
+            "height": 2,
+            "length": 7,
+            "volume_scu": 42,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "600i Explorer",
+    "full_name": "Origin 600i Explorer",
+    "manufacturer": "Origin",
+    "cargo_scu": 44,
+    "unofficial_cargo_scu": 44,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 4,
+            "volume_scu": 8,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 7,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 2,
+            "length": 4,
+            "volume_scu": 8,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 2,
+            "y": 0,
+            "z": 4,
+            "width": 1,
+            "height": 2,
+            "length": 1,
+            "volume_scu": 2,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 5,
+            "y": 0,
+            "z": 4,
+            "width": 1,
+            "height": 2,
+            "length": 1,
+            "volume_scu": 2,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "600i Touring",
+    "full_name": "Origin 600i Touring",
+    "manufacturer": "Origin",
+    "cargo_scu": 0,
+    "unofficial_cargo_scu": 0,
+    "bay_labels": [],
+    "grid_layout": []
+  },
+  {
+    "name": "890 Jump",
+    "full_name": "Origin 890 Jump",
+    "manufacturer": "Origin",
+    "cargo_scu": 388,
+    "unofficial_cargo_scu": 388,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 2,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 4,
+            "length": 12,
+            "volume_scu": 288,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "M80",
+    "full_name": "Origin M80",
+    "manufacturer": "Origin",
+    "cargo_scu": 2,
+    "unofficial_cargo_scu": 2,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 1,
+            "height": 1,
+            "length": 2,
+            "volume_scu": 2,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Apollo Medivac",
+    "full_name": "RSI Apollo Medivac",
+    "manufacturer": "RSI",
+    "cargo_scu": 32,
+    "unofficial_cargo_scu": 32,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4,
+            "volume_scu": 16,
+            "max_box_size": 2,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 4,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4,
+            "volume_scu": 16,
+            "max_box_size": 2,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Apollo Triage",
+    "full_name": "RSI Apollo Triage",
+    "manufacturer": "RSI",
+    "cargo_scu": 32,
+    "unofficial_cargo_scu": 32,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4,
+            "volume_scu": 16,
+            "max_box_size": 2,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 4,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4,
+            "volume_scu": 16,
+            "max_box_size": 2,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Arrastra [Concept]",
+    "full_name": "RSI Arrastra [Concept]",
+    "manufacturer": "RSI",
+    "cargo_scu": 576,
+    "unofficial_cargo_scu": 576,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 8,
+            "height": 4,
+            "length": 18,
+            "volume_scu": 576,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Constellation Andromeda",
+    "full_name": "RSI Constellation Andromeda",
+    "manufacturer": "RSI",
+    "cargo_scu": 96,
+    "unofficial_cargo_scu": 96,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 3,
+            "length": 8,
+            "volume_scu": 96,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Constellation Aquila",
+    "full_name": "RSI Constellation Aquila",
+    "manufacturer": "RSI",
+    "cargo_scu": 96,
+    "unofficial_cargo_scu": 96,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 3,
+            "length": 8,
+            "volume_scu": 96,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Constellation Phoenix",
+    "full_name": "RSI Constellation Phoenix",
+    "manufacturer": "RSI",
+    "cargo_scu": 80,
+    "unofficial_cargo_scu": 80,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 2,
+            "length": 8,
+            "volume_scu": 80,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Constellation Taurus",
+    "full_name": "RSI Constellation Taurus",
+    "manufacturer": "RSI",
+    "cargo_scu": 174,
+    "unofficial_cargo_scu": 174,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 3,
+            "length": 14,
+            "volume_scu": 168,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Galaxy [Base Concept]",
+    "full_name": "RSI Galaxy [Base Concept]",
+    "manufacturer": "RSI",
+    "cargo_scu": 64,
+    "unofficial_cargo_scu": 64,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8,
+            "volume_scu": 32,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 12,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8,
+            "volume_scu": 32,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Galaxy [Cargo Concept]",
+    "full_name": "RSI Galaxy [Cargo Concept]",
+    "manufacturer": "RSI",
+    "cargo_scu": 576,
+    "unofficial_cargo_scu": 576,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8,
+            "volume_scu": 32,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 12,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 8,
+            "volume_scu": 32,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hermes",
+    "full_name": "RSI Hermes",
+    "manufacturer": "RSI",
+    "cargo_scu": 288,
+    "unofficial_cargo_scu": 528,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 18,
+            "volume_scu": 144,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 6,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 18,
+            "volume_scu": 144,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Perseus",
+    "full_name": "RSI Perseus",
+    "manufacturer": "RSI",
+    "cargo_scu": 96,
+    "unofficial_cargo_scu": 96,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 8,
+            "height": 2,
+            "length": 6,
+            "volume_scu": 96,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Polaris",
+    "full_name": "RSI Polaris",
+    "manufacturer": "RSI",
+    "cargo_scu": 576,
+    "unofficial_cargo_scu": 576,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 4,
+            "length": 12,
+            "volume_scu": 288,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 8,
+            "y": 0,
+            "z": 0,
+            "width": 6,
+            "height": 4,
+            "length": 12,
+            "volume_scu": 288,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Salvation",
+    "full_name": "RSI Salvation",
+    "manufacturer": "RSI",
+    "cargo_scu": 6,
+    "unofficial_cargo_scu": 6,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 1,
+            "length": 3,
+            "volume_scu": 6,
+            "max_box_size": 1,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Zeus Mk II CL",
+    "full_name": "RSI Zeus Mk II CL",
+    "manufacturer": "RSI",
+    "cargo_scu": 128,
+    "unofficial_cargo_scu": 152,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 1,
+            "y": 0,
+            "z": 0,
+            "width": 5,
+            "height": 3,
+            "length": 8,
+            "volume_scu": 120,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 2,
+            "width": 1,
+            "height": 2,
+            "length": 2,
+            "volume_scu": 4,
+            "max_box_size": null,
+            "unsecured": false
+          },
+          {
+            "name": "Cargo Grid",
+            "x": 6,
+            "y": 0,
+            "z": 2,
+            "width": 1,
+            "height": 2,
+            "length": 2,
+            "volume_scu": 4,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Zeus Mk II ES",
+    "full_name": "RSI Zeus Mk II ES",
+    "manufacturer": "RSI",
+    "cargo_scu": 32,
+    "unofficial_cargo_scu": 32,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 4,
+            "height": 2,
+            "length": 4,
+            "volume_scu": 32,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Zeus Mk II MR [Concept]",
+    "full_name": "RSI Zeus Mk II MR [Concept]",
+    "manufacturer": "RSI",
+    "cargo_scu": 16,
+    "unofficial_cargo_scu": 16,
+    "bay_labels": [],
+    "grid_layout": [
+      {
+        "x": 0,
+        "z": 0,
+        "grids": [
+          {
+            "name": "Cargo Grid",
+            "x": 0,
+            "y": 0,
+            "z": 0,
+            "width": 2,
+            "height": 2,
+            "length": 4,
+            "volume_scu": 16,
+            "max_box_size": null,
+            "unsecured": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Cyclone",
+    "full_name": "Tumbril Cyclone",
+    "manufacturer": "Tumbril",
+    "cargo_scu": 0,
+    "unofficial_cargo_scu": 0,
+    "bay_labels": [],
+    "grid_layout": []
+  }
+]

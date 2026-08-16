@@ -201,12 +201,20 @@ class StarlifterUninstaller(ctk.CTk):
             # Step 4: Deleting AppData
             self.update_task_status(3, "running")
             self.info_lbl.configure(text="Cleaning AppData files...")
-            
+            import stat
+
+            def remove_readonly(func, path, excinfo):
+                try:
+                    os.chmod(path, stat.S_IWRITE)
+                    func(path)
+                except Exception:
+                    pass
+
             if os.path.exists(self.app_data):
                 # Try to rmtree AppData
                 for i in range(5):
                     try:
-                        shutil.rmtree(self.app_data)
+                        shutil.rmtree(self.app_data, onerror=remove_readonly)
                         break
                     except Exception:
                         time.sleep(0.5)

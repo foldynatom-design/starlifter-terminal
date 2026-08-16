@@ -71,6 +71,15 @@ def _get_concept_ships():
     if _concept_ships_cache is None:
         data = _load_json_resource("concept_ships.json", [])
         _concept_ships_cache = set(data) if isinstance(data, list) else set()
+        
+        # Enforce known concept ships if JSON is empty/missing
+        _concept_ships_cache.update([
+            "banu merchantman", "hull d", "hull e", "bmm", "merchantman",
+            "kraken", "kraken privateer", "pioneer", "endeavor", "orion", "polaris",
+            "galaxy", "apollo", "apollo medivac", "apollo triage", "genesis",
+            "genesis starliner", "crucible", "vulcan", "legionnaire", "expanse",
+            "liberator", "nautilus", "odyssey", "railent", "san'tok.yai"
+        ])
     return _concept_ships_cache
 
 
@@ -260,30 +269,14 @@ def _get_ship_dims(name_low):
     return None
 
 
-def _recommend_shuttle(vessel_name, total_scu, ships_db=None):
-    """Recommend best cargo shuttle + loading method for ANY ship.
-
-    Works for ALL vessels -- carriers with hangars get hangar shuttle recs,
-    regular cargo ships get landing pad / EVA / self-load recommendations.
-
-    Args:
-        vessel_name: Ship name (e.g. 'Aegis Idris', 'Drake Cutlass Black')
-        total_scu: Total SCU to transport
-        ships_db: Optional UEX ships dict. Auto-loads from JSON if None.
-
-    Returns dict with:
-        hangar_shuttles: list of ships that fit in hangar (empty for non-carriers)
-        pad_shuttles: list of ships for landing pad transfer
-        recommended: best option dict or None
-        loading_method: 'self' / 'hangar' / 'landing_pad' / 'eva'
-        note: human-readable note for PDF
-        mother_ship: display name
-        has_hangar: bool
-    """
+def _recommend_shuttle(vessel_name, total_scu, ships_db=None, loading_type="", location="", location_type=None):
+    """Recommend best cargo shuttle + loading method for ANY ship."""
+    if location_type and not loading_type:
+        loading_type = location_type
     if not vessel_name or total_scu <= 0:
         return None
 
-    if ships_db is None:
+    if not isinstance(ships_db, dict):
         ships_db = _load_uex_ships_db()
 
     vn_low = vessel_name.lower()
@@ -322,29 +315,27 @@ def _recommend_shuttle(vessel_name, total_scu, ships_db=None):
     is_concept_mother = hangar_info.get("concept_only", False) if hangar_info else False
     concept_note = " (NOTE: Concept ship, specs may change.)" if is_concept_mother else ""
 
-    # ── SELF-LOAD: ship itself can carry the cargo ──
-    if vessel_scu >= total_scu and not has_hangar:
-        return {
-            "hangar_shuttles": [],
-            "pad_shuttles": [],
-            "recommended": {
-                "name": vessel_display, "scu": vessel_scu, "trips": 1,
-                "pad": vessel_pad, "is_cargo": 1,
-            },
-            "loading_method": "self",
-            "note": (
-                f"SELF-LOAD: {vessel_display} has {vessel_scu} SCU capacity. "
-                f"Load {total_scu} SCU directly at trade terminal or landing pad."
-            ),
-            "mother_ship": vessel_display,
-            "has_hangar": False,
-            "total_scu": total_scu,
-        }
+    is_eva = any(e in str(loading_type).lower() for e in ["eva", "orbit", "float"]) or any(e in str(location).lower() for e in ["eva", "orbit", "float"])
+    is_planetary = any(e in str(location).lower() for e in ["surface", "outpost", "planet", "ground", "land", "monox", "bloom", "delamar", "sunset mesa", "ostler", "jacksons", "jackson's", "yang", "arid reach", "rayari", "shubin", "hdms", "babbage", "lorville", "area18", "area 18", "orison", "levski", "revolux", "zeus", "rappel", "facility", "site", "farm"]) or any(e in str(loading_type).lower() for e in ["surface", "outpost", "planet", "planetary", "ground"])
 
     # ── Build candidate shuttle list ──
-    max_pad_order = _PAD_ORDER.get(hangar_info["max_pad"], 0) if hangar_info else 0
+    max_pad_order = _PAD_ORDER.get(hangar_info.get("max_pad", "XS"), 0) if hangar_info else 0
     known_fits = hangar_info.get("known_fits", []) if hangar_info else []
     known_no_fit = hangar_info.get("known_no_fit", []) if hangar_info else []
+
+    # ── Non-cargo ship exclusion list (Refueling, Luxury, Passenger, Mining, Salvage, Heavy Military) ──
+    NON_CARGO_KEYWORDS = [
+        "starfarer", "gemini", "890", "jump", "600i", "400i", "300i", "325a", "350r",
+        "starliner", "genesis", "starlite", "phoenix", "reclaimer", "vulture", "prospector",
+        "mole", "orion", "arrastra", "expanse", "pioneer", "crucible", "vulcan", "apollo",
+        "cutlass red", "cutlass blue", "herald", "terrapin", "hammerhead", "nautilus",
+        "retaliator", "redeemer", "valkyrie", "eclipse", "gladiator", "ares", "asgard",
+        "idris", "javelin", "polaris", "kraken", "touring", "vanguard", "fighter",
+        "interceptor", "racer", "stealth", "bomber", "sentinel", "harbinger", "warden",
+        "hoplite", "gladius", "arrow", "hornet", "sabre", "blade", "buccaneer", "hawk",
+        "scorpius", "mantis", "luxury", "gunship", "corvette", "salvage", "mining",
+        "exploration", "medical", "refuel", "tanker", "passenger"
+    ]
 
     hangar_ships = []
     all_cargo_ships = []
@@ -357,18 +348,16 @@ def _recommend_shuttle(vessel_name, total_scu, ships_db=None):
         if scu <= 0:
             continue
 
-        # Skip the vessel itself
         if ship_name_low == vn_low or ship_name_low == vn_low_clean:
             continue
 
-        # HARD RULE: concept-only ships are NEVER recommended
         if ship_name_low in _CONCEPT_SHIPS:
             continue
         display_name = v.get("name", "").lower()
         if any(cs in display_name for cs in _CONCEPT_SHIPS):
             continue
 
-        trips = max(1, -(-total_scu // scu))  # ceil division
+        trips = max(1, -(-total_scu // scu))
         ship_entry = {
             "name": v.get("name", v.get("short_name", "?")),
             "scu": scu,
@@ -379,13 +368,16 @@ def _recommend_shuttle(vessel_name, total_scu, ships_db=None):
             "priority": 0,
         }
 
-        # Track ALL cargo ships for pad/EVA recommendations
-        if scu > 0 and pad:
-            all_cargo_ships.append(ship_entry.copy())
+        # Filter out non-cargo ships from external transport candidate pool
+        is_non_cargo = any(nk in ship_name_low or nk in display_name for nk in NON_CARGO_KEYWORDS)
 
-        # ── Hangar-fit check (only for carriers) ──
+        if scu > 0 and pad and not is_non_cargo:
+            if vn_low_clean in ["raft", "hull a", "hull b", "nomad"] and pad == "GV":
+                pass
+            else:
+                all_cargo_ships.append(ship_entry.copy())
+
         if has_hangar:
-            # Priority shuttles
             is_priority = False
             for pk, pv in _PRIORITY_SHUTTLES.items():
                 if pk in ship_name_low or ship_name_low in pk:
@@ -395,9 +387,8 @@ def _recommend_shuttle(vessel_name, total_scu, ships_db=None):
 
             if not is_priority:
                 if not pad or _PAD_ORDER.get(pad, 99) > max_pad_order:
-                    continue  # Skip for hangar list (still in all_cargo_ships)
+                    continue
 
-            # Check known_no_fit
             if any(nf in ship_name_low or ship_name_low in nf for nf in known_no_fit):
                 continue
 
@@ -408,6 +399,106 @@ def _recommend_shuttle(vessel_name, total_scu, ships_db=None):
                 kf in ship_name_low or ship_name_low in kf for kf in known_fits
             )
             hangar_ships.append(ship_entry)
+
+    def _shuttle_tier_sort_key(s):
+        s_low = s["name"].lower()
+        if "golem" in s_low or "ox" in s_low:
+            rank = 1
+        elif "mpuv cargo" in s_low or "mpuv-c" in s_low or "mpuv 1c" in s_low or "mpuv-1c" in s_low:
+            rank = 2
+        elif "mpuv tractor" in s_low or "mpuv-t" in s_low or "mpuv" in s_low:
+            rank = 3
+        elif "cutter" in s_low:
+            rank = 4
+        else:
+            rank = 10
+        return (rank, s["scu"])
+
+    if total_scu <= 64:
+        # Strictly select from ARGO MPUV Cargo, ARGO MPUV Tractor, DRAKE GOLEM OX for <64 SCU (Idris internal hangar fit)
+        small_allowed = ["mpuv cargo", "mpuv tractor", "golem", "ox"]
+        cargo_options = [s for s in all_cargo_ships if any(k in s["name"].lower() for k in small_allowed)]
+        cargo_options.sort(key=lambda x: x["scu"])
+        if not cargo_options:
+            cargo_options = [
+                {"name": "Argo MPUV Cargo", "scu": 2, "trips": math.ceil(total_scu / 2), "pad": "XS", "is_cargo": 1},
+                {"name": "Argo MPUV Tractor", "scu": 16, "trips": math.ceil(total_scu / 16), "pad": "S", "is_cargo": 1},
+                {"name": "Drake Golem Ox", "scu": 64, "trips": math.ceil(total_scu / 64), "pad": "S", "is_cargo": 1},
+            ]
+    else:
+        cargo_options = [s for s in all_cargo_ships if s["scu"] >= total_scu]
+        cargo_options.sort(key=lambda x: x["scu"])
+        if not cargo_options:
+            cargo_options = sorted(all_cargo_ships, key=lambda x: -x["scu"])[:3]
+
+    chosen_choices = cargo_options[:3]
+    choices_str = " / ".join(f"{c['name']} ({c['scu']} SCU)" for c in chosen_choices) if chosen_choices else "Drake Golem Ox (64 SCU) / Argo MPUV Cargo (2 SCU) / Argo MPUV Tractor (16 SCU)"
+
+    # ── SELF-LOAD vs EVA LOAD ──
+    if is_eva and not has_hangar:
+        return {
+            "hangar_shuttles": [],
+            "pad_shuttles": [],
+            "recommended": chosen_choices[0] if chosen_choices else {
+                "name": "Drake Cutlass Black", "scu": 46, "trips": 1,
+                "pad": "M", "is_cargo": 1,
+            },
+            "loading_method": "eva",
+            "note": (
+                f"EVA LOADING WARNING: Deep space / orbital EVA transfer required for {vessel_display} at {location or 'Orbit (EVA)'}. "
+                f"Zero-g cargo extraction active. Tractor beam personnel mandatory. Recommended transfer shuttles: {choices_str}."
+            ),
+            "mother_ship": vessel_display,
+            "has_hangar": False,
+            "total_scu": total_scu,
+        }
+
+    is_hangar_staging = any(e in str(loading_type).lower() for e in ["hangar", "bay", "elevator", "in hangar"]) or any(e in str(location).lower() for e in ["hangar", "bay", "in hangar"])
+    load_location_str = "in hangar via freight elevator." if is_hangar_staging else "on landing pad."
+    marine_note = " Marine security escort recommended for planetary surface operations." if is_planetary else ""
+
+    # Capital mothership keys that require shuttle transfers in orbit/staging
+    _NON_CARGO_MOTHERSHIPS = {"idris", "javelin", "kraken", "polaris", "890 jump", "carrack", "hull c", "hull d", "hull e"}
+    is_true_mothership = any(m in vn_low_clean for m in _NON_CARGO_MOTHERSHIPS)
+
+    # ── IN-HANGAR STAGING (Direct capital dock freight elevator loading) ──
+    if is_hangar_staging:
+        return {
+            "hangar_shuttles": [],
+            "pad_shuttles": [],
+            "recommended": {
+                "name": vessel_display, "scu": vessel_scu, "trips": 1,
+                "pad": vessel_pad, "is_cargo": 1,
+            },
+            "loading_method": "in_hangar",
+            "note": (
+                f"IN-HANGAR DIRECTIVE: {vessel_display} ({vessel_scu} SCU) docked directly in capital hangar. "
+                f"Direct freight elevator staging into primary hold ({total_scu:.1f} SCU). "
+                f"Use of ATLS, MaxLift, and personnel with tractor beams advised."
+            ),
+            "mother_ship": vessel_display,
+            "has_hangar": has_hangar,
+            "total_scu": total_scu,
+        }
+
+    if vessel_scu >= total_scu and not is_eva:
+        return {
+            "hangar_shuttles": [],
+            "pad_shuttles": [],
+            "recommended": {
+                "name": vessel_display, "scu": vessel_scu, "trips": 1,
+                "pad": vessel_pad, "is_cargo": 1,
+            },
+            "loading_method": "self",
+            "note": (
+                f"SELF-LOAD DIRECTIVE: {vessel_display} ({vessel_scu} SCU) can land directly {load_location_str.rstrip('.')} "
+                f"to load {total_scu:.1f} SCU directly into primary hold. "
+                f"Use of ATLS, MaxLift, and personnel with tractor beams advised.{marine_note}"
+            ),
+            "mother_ship": vessel_display,
+            "has_hangar": False,
+            "total_scu": total_scu,
+        }
 
     # Sort hangar ships
     hangar_ships.sort(key=lambda x: (
@@ -435,78 +526,94 @@ def _recommend_shuttle(vessel_name, total_scu, ships_db=None):
     best_multi = multi_trip_ships[0] if multi_trip_ships else None
 
     if has_hangar:
-        ship_label = hangar_info["name"]
+        ship_label = hangar_info.get("name", vn_low.title()) if hangar_info else vn_low.title()
 
+        # Only use internal hangar shuttle if it takes AT MOST 2 TRIPS (max 2 otočky)
         if best_hangar and best_hangar["trips"] <= 2:
             loading_method = "hangar"
             recommended = best_hangar
-            trip_txt = "Single trip" if best_hangar["trips"] == 1 else "2 trips required"
+            trip_txt = "Single trip" if best_hangar["trips"] == 1 else "2 trips required (max limit)"
             note = (
-                f"SHUTTLE RECOMMENDATION: Use {best_hangar['name']} "
-                f"({best_hangar['scu']} SCU, pad {best_hangar['pad']}). "
-                f"{trip_txt} via {ship_label} internal hangar.{concept_note}"
-            )
-        elif best_hangar and best_hangar["trips"] > 2:
-            loading_method = "landing_pad"
-            recommended = best_pad if best_pad else best_hangar
-            pad_opt = (
-                f"Alt: {best_pad['name']} ({best_pad['scu']} SCU) on landing pad. "
-                if best_pad else ""
-            )
-            note = (
-                f"⚠️ CARGO VOLUME HIGH ({best_hangar['trips']} trips via "
-                f"{best_hangar['name']}). Consider landing pad loading. {pad_opt}{concept_note}"
-            )
-        elif best_pad:
-            loading_method = "landing_pad"
-            recommended = best_pad
-            note = (
-                f"NO CARGO SHUTTLE FITS IN {ship_label.upper()} HANGAR. "
-                f"Use {best_pad['name']} ({best_pad['scu']} SCU) via landing pad.{concept_note}"
+                f"HANGAR LOADING DIRECTIVE: Internal bay loading via {best_hangar['name']} "
+                f"({best_hangar['scu']} SCU, {trip_txt}). Use of ATLS and personnel with tractor beams advised.{marine_note}"
             )
         else:
-            loading_method = "eva"
-            recommended = best_multi
+            loading_method = "landing_pad"
+            cargo_options = [s for s in all_cargo_ships if s.get("scu", 0) > 0]
+            cargo_options.sort(key=lambda x: x["scu"])
+            fits_options = [s for s in cargo_options if s["scu"] >= total_scu]
+            if not fits_options:
+                fits_options = cargo_options[-3:]
+            
+            seen_cnames = set()
+            unique_choices = []
+            for c in fits_options:
+                if c["name"] not in seen_cnames:
+                    seen_cnames.add(c["name"])
+                    unique_choices.append(c)
+            chosen_choices = unique_choices[:4]
+            recommended = chosen_choices[0] if chosen_choices else best_pad
+            choices_str = " | ".join(f"{c['name']} ({c['scu']} SCU)" for c in chosen_choices)
+            
             note = (
-                f"NO SHUTTLE AVAILABLE for {total_scu} SCU in {ship_label}. "
-                f"EVA manual transfer required.{concept_note}"
+                f"LANDING PAD WARNING: Transport vessel exceeds internal hangar dimensions of {ship_label}. "
+                f"EVA / Landing Pad transfer required. Recommended options: {choices_str}."
             )
 
         hangar_note = hangar_info.get("note", "")
         if hangar_note:
             note += f" [{hangar_note}]"
     else:
-        # ── Non-carrier ship: landing pad or EVA ──
         ship_label = vessel_display
-        if best_pad:
-            loading_method = "landing_pad"
-            recommended = best_pad
+        cargo_options = [s for s in all_cargo_ships if s["scu"] >= total_scu]
+        cargo_options.sort(key=lambda x: x["scu"])
+        if not cargo_options:
+            cargo_options = sorted(all_cargo_ships, key=lambda x: -x["scu"])[:5]
+        
+        # Deduplicate cargo ship choices by name
+        seen_cnames = set()
+        unique_choices = []
+        for c in cargo_options:
+            if c["name"] not in seen_cnames:
+                seen_cnames.add(c["name"])
+                unique_choices.append(c)
+
+        chosen_choices = unique_choices[:4]
+        recommended = chosen_choices[0] if chosen_choices else best_pad
+        choices_str = " | ".join(f"{c['name']} ({c['scu']} SCU)" for c in chosen_choices)
+        
+        loc_str = str(location or "").lower()
+        type_str = str(location_type or loading_type or "").lower()
+        is_planetary = any(k in loc_str or k in type_str for k in ["planetary", "surface", "outpost", "ground", "land", "monox", "bloom", "delamar", "sunset mesa", "ostler", "jacksons", "yang", "arid reach", "rayari", "shubin", "hdms", "babbage", "lorville", "area18", "orison", "levski", "revolux", "zeus", "rappel", "facility", "site", "farm"])
+        is_hangar_staging = any(e in type_str or e in loc_str for e in ["hangar", "bay", "elevator", "in hangar"])
+        is_eva = any(k in loc_str or k in type_str for k in ["eva", "free float", "deep space", "orbit", "interdiction"])
+        marine_note = " Marine security escort recommended for planetary surface operations." if is_planetary else ""
+
+        if is_planetary:
+            loading_method = "planetary"
+            loc_display = location if location else "Planetary Outpost"
             note = (
-                f"TRANSFER: Use {best_pad['name']} ({best_pad['scu']} SCU, "
-                f"pad {best_pad['pad']}) to ferry cargo to {ship_label}."
+                f"PLANETARY STAGING DIRECTIVE: Capital vessel {vessel_display} staging at {loc_display}. "
+                f"Shuttle/L-boat transport or orbital staging required for full cargo transfer.{marine_note}"
             )
-        elif best_multi:
-            loading_method = "landing_pad"
-            recommended = best_multi
-            note = (
-                f"TRANSFER: Use {best_multi['name']} ({best_multi['scu']} SCU), "
-                f"{best_multi['trips']} trips to load {ship_label}."
-            )
-        elif vessel_scu > 0:
+        elif is_hangar_staging or vessel_scu >= total_scu:
             loading_method = "self"
-            recommended = {
-                "name": vessel_display, "scu": vessel_scu,
-                "trips": max(1, -(-total_scu // vessel_scu)),
-                "pad": vessel_pad, "is_cargo": 1,
-            }
             note = (
-                f"SELF-LOAD: {vessel_display} ({vessel_scu} SCU). "
-                f"Multiple trade terminal runs needed for {total_scu} SCU."
+                f"HANGAR LOADING DIRECTIVE: Direct bay loading for {vessel_display} ({vessel_scu} SCU). "
+                f"Use of ATLS and Maxlift tractor beams advised.{marine_note}"
+            )
+        elif is_eva:
+            loading_method = "eva"
+            note = (
+                f"EVA LOADING WARNING: Deep space / orbital EVA transfer required for {vessel_display}. "
+                f"Captain advised to procure cargo loading at closest station. Options: {choices_str}."
             )
         else:
-            loading_method = "eva"
-            recommended = None
-            note = f"MANUAL LOAD: EVA cargo transfer required for {ship_label}."
+            loading_method = "landing_pad"
+            note = (
+                f"STAGING LOCATION DIRECTIVE: External cargo transfer required for {vessel_display} at {location if location else 'Staging Area'}. "
+                f"Recommended cargo shuttles: {choices_str}.{marine_note}"
+            )
 
     return {
         "hangar_shuttles": hangar_ships[:5],
@@ -520,28 +627,60 @@ def _recommend_shuttle(vessel_name, total_scu, ships_db=None):
     }
 
 def _recommend_cargo_ship(total_scu, ships_db=None):
-    """Recommend the best cargo ship to transport total_scu.
+    """Recommend cargo ships to transport total_scu with MULTIPLE OPTIONS.
 
-    Used by Supply Route PDF — picks the smallest ship that can carry
-    the entire cargo in one trip. If nothing fits in 1 trip, picks the
-    largest available and calculates trips needed.
-
-    Returns dict:
-        name: ship display name
-        scu: ship's cargo capacity
-        trips: number of trips required
-        note: human-readable text for PDF
-        fits: bool — True if 1 trip, False if multiple
-        alt: alternative ship name (larger) or None
+    Provides multiple dedicated external cargo ship choices (e.g. Starlancer MAX,
+    Caterpillar, Railen, Ironclad, Hercules C2) for clear capacity visualization.
+    For small cargo (< 64 SCU), strictly selects from IDRIS internal hangar compatible
+    ships: ARGO MPUV Cargo, ARGO MPUV Tractor, DRAKE GOLEM OX.
     """
-    if not total_scu or total_scu <= 0:
+    try:
+        total_scu = float(total_scu)
+    except (ValueError, TypeError):
         return None
+    if total_scu <= 0:
+        return None
+
+    # Bod 8: Small Cargo Rule (< 64 SCU) -> Idris internal hangar fit
+    if total_scu <= 64:
+        small_ships = [
+            {"name": "ARGO MPUV Cargo", "scu": 2, "key": "argo_mpuv_cargo"},
+            {"name": "ARGO MPUV Tractor", "scu": 4, "key": "argo_mpuv_tractor"},
+            {"name": "Drake Golem OX", "scu": 64, "key": "golem_ox"},
+        ]
+        best_fit = small_ships[0] if total_scu <= 2 else (small_ships[1] if total_scu <= 4 else small_ships[2])
+        options_str = " | ".join(f"{s['name']} ({s['scu']} SCU)" for s in small_ships)
+        return {
+            "name": best_fit["name"],
+            "scu": best_fit["scu"],
+            "trips": 1,
+            "note": f"SMALL CARGO (<64 SCU - IDRIS HANGAR FIT): {options_str}",
+            "fits": True,
+            "alt": small_ships[1]["name"] if best_fit["name"] == small_ships[0]["name"] else small_ships[0]["name"],
+            "options": small_ships,
+        }
 
     if ships_db is None:
         ships_db = _load_uex_ships_db()
 
     # Build sorted list of cargo ships (only real, non-concept, SCU > 0)
     cargo_ships = []
+    non_cargo_keywords = [
+        "touring", "vanguard", "fighter", "interceptor", "racer", "stealth", "bomber",
+        "sentinel", "harbinger", "warden", "hoplite", "gladius", "arrow", "hornet", "sabre",
+        "blade", "buccaneer", "hawk", "scorpius", "mantis", "eclipse",
+        "reclaimer", "890", "idris", "javelin", "hammerhead", "polaris", "nautilus",
+        "prowler", "redeemer", "valkyrie", "terrapin", "vulture", "prospector", "mole",
+        "starfarer", "carrack", "600i", "400i", "luxury", "gunship", "corvette", "salvage",
+        "mining", "exploration", "cutlass red", "cutlass blue"
+    ]
+    _DEDICATED_CARGO_HAULERS = [
+        "c2 hercules", "m2 hercules", "a2 hercules", "caterpillar", "hull c", "hull b", "hull a", "hull d", "hull e",
+        "constellation taurus", "freelancer max", "freelancer", "raft", "cutlass black", "zeus cl", "spirit c1",
+        "starlancer max", "starlancer tac", "ironclad", "rsi hermes", "golem ox", "misc golem ox", "avenger titan",
+        "nomad", "c8x pisces", "drake cutter", "constellation andromeda"
+    ]
+
     for k, v in ships_db.items():
         scu = v.get("scu", 0)
         if scu <= 0:
@@ -551,52 +690,126 @@ def _recommend_cargo_ship(total_scu, ships_db=None):
         if k.lower() in _CONCEPT_SHIPS:
             continue
         name = v.get("name", v.get("short_name", k))
+        if any(nk in name.lower() for nk in non_cargo_keywords):
+            continue
         cargo_ships.append({"name": name, "scu": scu, "key": k})
 
-    cargo_ships.sort(key=lambda x: x["scu"])
+    # Ensure dedicated heavy cargo ships exist in database pool
+    extra_ships = [
+        {"name": "MISC Golem OX", "scu": 128, "key": "golem_ox"},
+        {"name": "RSI Hermes", "scu": 288, "key": "rsi_hermes"},
+        {"name": "Drake Caterpillar", "scu": 576, "key": "caterpillar"},
+        {"name": "Crusader C2 Hercules", "scu": 696, "key": "c2_hercules"},
+        {"name": "Drake Ironclad", "scu": 1536, "key": "ironclad"},
+        {"name": "MISC Hull C", "scu": 4608, "key": "hull_c"},
+    ]
+    for es in extra_ships:
+        if not any(s["name"].lower() == es["name"].lower() or es["key"] in s["key"] for s in cargo_ships):
+            cargo_ships.append(es)
+
+    cargo_ships.sort(key=lambda x: (0 if any(dh in x["name"].lower() for dh in _DEDICATED_CARGO_HAULERS) else 1, x["scu"]))
+
 
     if not cargo_ships:
         return None
 
-    # Find smallest ship that fits in 1 trip
-    best_fit = None
-    for ship in cargo_ships:
-        if ship["scu"] >= total_scu:
-            best_fit = ship
-            break
+    # Calculate trips for each ship
+    for s in cargo_ships:
+        s["trips"] = math.ceil(total_scu / s["scu"]) if s["scu"] > 0 else 999
 
-    if best_fit:
-        # Find alternative (next size up)
-        alt = None
-        idx = cargo_ships.index(best_fit)
-        if idx + 1 < len(cargo_ships):
-            alt = cargo_ships[idx + 1]["name"]
+    # Filter ships that require AT MOST 2 TRIPS (Max 2 otočky)
+    valid_ships = [s for s in cargo_ships if s["trips"] <= 2]
+    if not valid_ships:
+        valid_ships = cargo_ships  # Fallback if cargo is astronomical
 
-        trips = 1
+    # Find 1-trip ships (scu >= total_scu)
+    single_trip_ships = [s for s in valid_ships if s["trips"] == 1]
+    
+    if single_trip_ships:
+        best_fit = single_trip_ships[0]
+        options = single_trip_ships[:3]
+        options_str = " | ".join(f"{s['name']} ({s['scu']} SCU, 1 trip)" for s in options)
         return {
             "name": best_fit["name"],
             "scu": best_fit["scu"],
-            "trips": trips,
-            "note": (
-                f"RECOMMENDED TRANSPORT: {best_fit['name'].upper()} "
-                f"({best_fit['scu']} SCU). Single trip."
-            ),
+            "trips": 1,
+            "note": f"CARGO SCU NEEDED: {total_scu:.0f} SCU | SUGGESTED SHIPS (1 TRIP): {options_str}",
             "fits": True,
-            "alt": alt,
+            "alt": options[1]["name"] if len(options) > 1 else None,
+            "options": options,
         }
     else:
-        # Nothing fits in 1 trip — use largest ship
-        largest = cargo_ships[-1]
-        trips = math.ceil(total_scu / largest["scu"]) if largest["scu"] > 0 else 999
+        # Pick smallest ship that takes exactly 2 trips (max 2 trips limit)
+        two_trip_ships = [s for s in valid_ships if s["trips"] == 2]
+        best_fit = two_trip_ships[0] if two_trip_ships else valid_ships[-1]
+        options = valid_ships[:3]
+        options_str = " | ".join(f"{s['name']} ({s['scu']} SCU, {s['trips']} trips)" for s in options)
         return {
-            "name": largest["name"],
-            "scu": largest["scu"],
-            "trips": trips,
-            "note": (
-                f"RECOMMENDED TRANSPORT: {largest['name'].upper()} "
-                f"({largest['scu']} SCU). "
-                f"Requires {trips} trips to deliver {total_scu:.0f} SCU."
-            ),
+            "name": best_fit["name"],
+            "scu": best_fit["scu"],
+            "trips": best_fit["trips"],
+            "note": f"HEAVY CARGO OPTIONS (MAX 2 TRIPS - {total_scu:.0f} SCU total): {options_str}",
             "fits": False,
-            "alt": None,
+            "alt": options[1]["name"] if len(options) > 1 else None,
+            "options": options,
         }
+
+
+def get_ship_cargo_grid(ship_name):
+    """Retrieve the exact 3D cargo grid layout and capacity for any ship or custom vessel.
+
+    Supports:
+      - Official full names: 'Crusader C2 Hercules', 'Drake Caterpillar', 'Anvil Carrack'
+      - Variant models: 'C2', 'M2', 'A2', 'Cutlass Black', 'Freelancer MAX', 'Zeus CL'
+      - Custom vessel names: 'ZugZug (C2 Hercules)', 'Enterprise (Carrack)'
+
+    Returns:
+        dict with 'name', 'full_name', 'manufacturer', 'cargo_scu', 'grid_layout'
+        or None if not found.
+    """
+    if not ship_name:
+        return None
+    s_raw = str(ship_name).strip()
+    s_low = s_raw.lower()
+
+    # 1. Parse custom vessel base model from parentheses if present: e.g. "My Ship (C2 Hercules)"
+    import re
+    m_paren = re.search(r'\(([^)]+)\)', s_raw)
+    if m_paren:
+        base_cand = m_paren.group(1).strip().lower()
+    else:
+        base_cand = s_low
+
+    # 2. Load sc_cargo_ships_db.json
+    cargo_db_path = PATHS.resource("sc_cargo_ships_db.json")
+    ships = []
+    if os.path.isfile(cargo_db_path):
+        try:
+            with open(cargo_db_path, "r", encoding="utf-8") as f:
+                ships = json.load(f)
+        except Exception:
+            pass
+
+    if not ships:
+        # Fallback to uex_ships_db
+        sdb = _load_uex_ships_db()
+        if isinstance(sdb, list):
+            ships = sdb
+        elif isinstance(sdb, dict):
+            ships = list(sdb.values())
+
+    # 3. Exact match on full_name or name
+    for s in ships:
+        f_name = s.get("full_name", s.get("name", "")).lower()
+        m_name = s.get("name", s.get("model", "")).lower()
+        if base_cand == f_name or base_cand == m_name or s_low == f_name or s_low == m_name:
+            return s
+
+    # 4. Partial substring match
+    for s in ships:
+        f_name = s.get("full_name", s.get("name", "")).lower()
+        m_name = s.get("name", s.get("model", "")).lower()
+        if (base_cand in f_name or base_cand in m_name or f_name in base_cand or m_name in base_cand) and len(base_cand) >= 3:
+            return s
+
+    return None

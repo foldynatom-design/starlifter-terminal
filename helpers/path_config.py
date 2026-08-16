@@ -191,9 +191,13 @@ class _StarlifterPaths:
         if self.is_frozen:
             app_root = os.path.dirname(sys.executable)
         else:
-            # Dev mode: helpers/ is inside source/, so go up one level
             this_dir = os.path.dirname(os.path.abspath(__file__))
-            app_root = os.path.dirname(this_dir)  # source/ directory
+            if os.path.exists(os.path.join(this_dir, "resources")) or os.path.exists(os.path.join(this_dir, "entry.py")):
+                app_root = this_dir
+            elif os.path.exists(os.path.join(os.path.dirname(this_dir), "resources")):
+                app_root = os.path.dirname(this_dir)
+            else:
+                app_root = this_dir
 
         self._config_file = os.path.join(app_root, "starlifter_paths.json")
 

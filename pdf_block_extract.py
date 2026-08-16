@@ -20,12 +20,16 @@ def draw_report_paragraph(self, x, y, width, text, redacted_sentences_indices=No
                 self.set_fill_color(0, 0, 0)
                 self.rect(current_x, current_y + 0.5, word_w - 0.5, line_height - 1, 'F')
                 current_x += word_w
+                self.set_xy(current_x, current_y)
             else:
                 self.set_text_color(30, 40, 60)
+                self.set_xy(current_x, current_y)
                 self.cell(word_w, line_height, word_to_draw, ln=0)
                 current_x += word_w
+                self.set_xy(current_x, current_y)
         if idx < len(sentences) - 1:
             current_x += space_w
+            self.set_xy(current_x, current_y)
     return current_y
 
 def draw_signatures(self):
@@ -137,7 +141,7 @@ def draw_signatures(self):
     formatted_story = LORE_STORY_CACHE["text"]
     self.set_line_width(0.2)
     self.set_draw_color(180, 190, 200)
-    self.line(140, box_y + 8, 140, box_y + box_height - 24)
+    self.line(140, box_y + 8, 140, min(box_y + box_height - 24, box_y + 40))
     sec = self.security_level.upper()
     fully_redacted = False
     redacted_sentences_indices = []
@@ -188,13 +192,8 @@ def draw_signatures(self):
         if any(s in box for s in ["2 scu", "4 scu", "8 scu", "16 scu", "24 scu", "32 scu"]):
             continue
         
-        unit_vol = 0.0
-        for k, vol in volume_map.items():
-            if k in name_low:
-                unit_vol = vol
-                break
-        if unit_vol == 0.0:
-            unit_vol = 0.005
+        from storall_packer import get_item_unit_volume
+        unit_vol = get_item_unit_volume(item["name"], volume_map)
         
         item_vol = qty * unit_vol
         total_loose_vol += item_vol
@@ -208,10 +207,10 @@ def draw_signatures(self):
     # Available Stor-All sizes: usable capacity per box
     # Only 1+ SCU sizes — sub-1-SCU items don't occupy grid slots
     STOR_ALL_SIZES = [
-        (1.0,   "1 SCU",   0.85),
-        (2.0,   "2 SCU",   1.70),
-        (4.0,   "4 SCU",   3.40),
-        (8.0,   "8 SCU",   6.80),
+        (1.0,   "1 SCU",   1.00),
+        (2.0,   "2 SCU",   2.00),
+        (4.0,   "4 SCU",   4.00),
+        (8.0,   "8 SCU",   8.00),
     ]
     
     def _pick_box_size(vol):
@@ -219,7 +218,7 @@ def draw_signatures(self):
         for scu, label, cap in STOR_ALL_SIZES:
             if vol <= cap:
                 return scu, label, cap
-        return 8.0, "8 SCU", 6.80
+        return 8.0, "8 SCU", 8.00
     
     if total_loose_vol > 0:
         box_scu, box_label, max_capacity = _pick_box_size(total_loose_vol)
@@ -228,7 +227,7 @@ def draw_signatures(self):
         num_boxes = min(num_boxes, 3)
     else:
         num_boxes = 0
-        max_capacity = 0.85
+        max_capacity = 1.00
         box_label = "1 SCU"
     
     boxes = [[] for _ in range(num_boxes)]
@@ -258,8 +257,8 @@ def draw_signatures(self):
             if box_vols[curr_box_idx] >= max_capacity:
                 curr_box_idx += 1
                 
-    # Store autobox data for page 2 rendering (don't render on page 1 — no space)
-    if num_boxes > 0 and ("VERIFIED" not in sec and "PUBLIC" not in sec):
+    # Store autobox data for page 2/3 rendering (don't render on page 1 — no space)
+    if num_boxes > 0 and ("PUBLIC" not in sec and "OPEN" not in sec):
         self._autobox_data = {
             "boxes": boxes, "box_vols": box_vols,
             "box_label": box_label, "max_capacity": max_capacity,
@@ -432,43 +431,68 @@ def draw_signatures(self):
     total_bottom_needed = sig_space_needed + directive_space
 
     # If not enough space in box, anchor to box bottom edge
-    available_for_bottom = (box_y + box_height) - content_bottom_y
-    if available_for_bottom < total_bottom_needed:
-        # Tight: push content to fit above box bottom
-        content_bottom_y = box_y + box_height - total_bottom_needed
-
-    directive_y = content_bottom_y
+    tele_y_val = tele_y if 'tele_y' in locals() else box_y + 40
+    directive_y = max(paragraph_end_y + 2, tele_y_val + 5)
     self.set_font("Roboto", "I", 5.5)
     self.set_text_color(60, 70, 90)
     if "PUBLIC" in sec or "OPEN" in sec:
-        self.text(14, directive_y, "CARGO DIRECTIVE: [REDACTED // PUBLIC CHANNEL]")
+        self.set_xy(14, directive_y)
+        self.multi_cell(122, 3.2, "CARGO DIRECTIVE: [REDACTED // PUBLIC CHANNEL]")
     else:
-        self.text(14, directive_y, grid_directive[:140])
+        self.set_xy(14, directive_y)
+        self.multi_cell(122, 3.2, grid_directive)
 
-    # RECOMMENDED TRANSPORT SHIP — only for EVA / Landing Pad, NOT Hangar
-    is_hangar_loading = "hangar" in load_type.lower() if load_type else False
-    if "PUBLIC" not in sec and "OPEN" not in sec and not is_hangar_loading:
-        try:
-            total_cargo_scu = sum(
-                int(float(i.get("qty", 1))) * (
-                    8 if "8 scu" in i.get("box_size", "").lower()
-                    else 4 if "4 scu" in i.get("box_size", "").lower()
-                    else 2 if "2 scu" in i.get("box_size", "").lower()
-                    else 1 if "1 scu" in i.get("box_size", "").lower()
-                    else 0.05
-                )
-                for i in items_list
-            ) + num_boxes
-            cargo_rec = _recommend_cargo_ship(total_cargo_scu)
-            if cargo_rec:
-                self.set_font("Roboto", "B", 5)
-                self.set_text_color(180, 140, 30)
-                self.text(14, directive_y + 4, cargo_rec["note"][:130])
-        except Exception:
-            pass
+    curr_end_y = self.get_y()
 
-    # ── SIGNATURES (always anchored to box bottom) ──
-    sig_section_y = box_y + box_height - sig_space_needed
+    # RECOMMENDED TRANSPORT SHIP / FLEET PLANNER — rendered across ALL manifests for the mother ship
+    try:
+        from fleet_helper import _recommend_shuttle, _recommend_cargo_ship
+
+        def _safe_scu(item):
+            try: q = float(str(item.get("qty", 1)).strip())
+            except Exception: q = 1.0
+            bs = str(item.get("box_size", "")).lower().strip()
+            if "32 scu" in bs: return q * 32.0
+            if "24 scu" in bs: return q * 24.0
+            if "16 scu" in bs: return q * 16.0
+            if "8 scu" in bs:  return q * 8.0
+            if "4 scu" in bs:  return q * 4.0
+            if "2 scu" in bs:  return q * 2.0
+            if "1 scu" in bs:  return q * 1.0
+            return q * 0.005
+
+        total_cargo_scu = sum(_safe_scu(i) for i in items_list) + float(num_boxes)
+        tot_scu = max(total_cargo_scu, 1.0)
+
+        vessel_name = getattr(self, 'vessel', '') or ''
+        rec_info = _recommend_shuttle(vessel_name, tot_scu)
+        rec_text = ""
+        if rec_info and rec_info.get("note"):
+            rec_text = rec_info["note"]
+        else:
+            cargo_rec = _recommend_cargo_ship(tot_scu)
+            if cargo_rec and "note" in cargo_rec:
+                rec_text = cargo_rec["note"]
+
+        if rec_text:
+            if "PUBLIC" in sec or "OPEN" in sec:
+                rec_text_clean = "RECOMMENDED TRANSPORT: [REDACTED // PUBLIC CHANNEL]"
+            else:
+                rec_text_clean = rec_text.replace('\n', ' ').strip()
+            self.set_font("Roboto", "B", 5.5)
+            self.set_text_color(180, 140, 30)
+            self.set_xy(14, curr_end_y + 1)
+            self.multi_cell(122, 3.0, rec_text_clean)
+            curr_end_y = self.get_y()
+    except Exception as e:
+        print(f"[Fleet Transport Rec] Error: {e}")
+
+    # ── SIGNATURES (always anchored below text or to box bottom) ──
+    sig_space_needed = 24
+    sig_section_y = max(curr_end_y + 4, box_y + box_height - sig_space_needed)
+    if sig_section_y > 265:
+        self.add_page()
+        sig_section_y = 35
     self.set_line_width(0.2)
     self.set_draw_color(15, 30, 60)
     self.line(12, sig_section_y, 198, sig_section_y)
@@ -536,6 +560,7 @@ def draw_signatures(self):
                     entry = {
                         "name": item.get("name", ""),
                         "qty": int(float(item.get("qty", 1))),
+                        "box_size": item.get("box_size", ""),
                     }
                     # Pass box_size so breakdown uses actual SCU
                     bs = str(item.get("box_size", "")).strip().upper()
@@ -559,14 +584,11 @@ def draw_signatures(self):
             print(f"[Cargo Grid 3D] Error: {e}")
             import traceback; traceback.print_exc()
 
-    # ── AUTOBOX PACKING MANIFEST on page 2/3 (after cargo grid) ──
+    # ── AUTOBOX PACKING MANIFEST (rendered on clean dedicated section) ──
     autobox_data = getattr(self, '_autobox_data', None)
     if autobox_data and autobox_data.get("num_boxes", 0) > 0:
-        lw, lh = self.w, self.h
-        ab_y = lh - 65
-        if ab_y < 50:
-            self.add_page()
-            ab_y = 20
+        self.add_page()
+        ab_y = 56
         self.set_fill_color(15, 30, 60)
         self.rect(14, ab_y, 182, 7, 'F')
         self.set_font("Roboto", "B", 7)
@@ -620,6 +642,9 @@ def draw_signatures(self):
 # SECTION 5: Resource Path + Font Cache
 # Ă˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘ÂĂ˘â€˘Â
 
+import os
+import sys
+
 def resource_path_patched(relative_path):
     if getattr(sys, 'frozen', False):
         base = os.path.dirname(sys.executable)
@@ -644,6 +669,8 @@ def resource_path_patched(relative_path):
             
     return os.path.join(base, relative_path)
 
+import sys
+main = sys.modules.get('main') or __import__('main')
 main.resource_path = resource_path_patched
 
 # Apply logo search paths
@@ -754,40 +781,32 @@ class PatchedMilitaryPDF(OriginalMilitaryPDF):
         })
 
     def draw_table_footer(self, grand_total):
-        official_uniforms = [
-            "tcs-4 undersuit", "tcs-4 undersuit black", "tcs-4 undersuit black/grey",
-            "tailwind flight suit", "tailwind helmet",
-            "omni-afs sapphire slate", "omni-afs sapphire slate helmet",
-            "adp-mk4 helmet woodland", "adp-mk4 core woodland", "adp-mk4 arms woodland", "adp-mk4 legs woodland", "csp-68h backpack",
-            "orc-mkx helmet woodland", "orc-mkx core woodland", "orc-mkx arms woodland", "orc-mkx legs woodland", "csp-68m backpack",
-            "field recon suit helmet", "field recon suit core", "field recon suit arms", "field recon suit legs", "csp-68l backpack",
-            "aril helmet", "aril core", "aril arms", "aril legs", "aril backpack",
-            "adiva jacket blue", "adiva jacket dark green", "adiva jacket imperial", "adiva jacket red", "adiva jacket white", "adiva jacket yellow",
-            "lemarque pants", "deo black shirt", "prim black shoes", "ventra gloves black"
+        official_uniform_prefixes = [
+            "tcs-4", "tailwind", "omni-afs", "adp-mk4", "orc-mkx", "cq7", 
+            "field recon", "csp-68", "aril", "adiva jacket", "lemarque pants",
+            "deo shirt", "prim shoes", "ventra gloves", "horizon", "beacon", "stoneface",
+            "novikov", "calva", "stoneskin", "stitcher", "defiance", "truedef", "morozov"
         ]
-        official_weapons = [
-            "fs-9 lmg", "fs-9 magazine",
-            "p4-ar \"nightstalker\" rifle", "p4-ar rifle", "p4-ar magazine",
-            "f55 lmg", "f55 lmg magazine",
-            "p8-ar rifle", "p8-ar magazine",
-            "p6-lr sniper rifle", "p6-lr magazine",
-            "br2 shotgun", "br2 magazine",
-            "p8-sc smg", "p8-sc magazine",
-            "s-38 pistol", "s-38 magazine"
+        official_weapon_prefixes = [
+            "fs-9", "p4-ar", "f55", "p8-ar", "p6-lr", "br2", "p8-sc", "s-38",
+            "a03", "lh86", "arclight", "custodian", "karna", "gallant", "coda",
+            "salvage", "tractor", "cambio", "maxlift", "paramed", "lifeguard", 
+            "medpen", "oxypen", "flare", "cruz", "pyro rmc", "multitool", "multi-tool"
         ]
         
         for r in self.original_rows:
             name_low = r['name'].lower().strip()
-            is_uniform = any(w in name_low for w in ["suit", "helmet", "core", "arms", "legs", "backpack", "jacket", "pants", "shirt", "shoes", "gloves"])
-            is_weapon = any(w in name_low for w in ["rifle", "pistol", "smg", "lmg", "shotgun", "sniper", "magazine", "cq7", "coda"])
+            is_uniform = any(w in name_low for w in ["suit", "helmet", "core", "arms", "legs", "backpack", "jacket", "pants", "shirt", "shoes", "gloves", "undersuit"])
+            is_weapon = any(w in name_low for w in ["rifle", "pistol", "smg", "lmg", "shotgun", "sniper", "magazine", "cq7", "coda", "gun"])
             
             if is_uniform:
-                if name_low not in official_uniforms:
+                is_off = any(p in name_low for p in official_uniform_prefixes)
+                if not is_off:
                     r['name'] = r['name'] + " [UNOFFICIAL EQ]"
             elif is_weapon:
                 clean_name = name_low.replace('"', '').strip()
-                clean_official = [w.replace('"', '').strip() for w in official_weapons]
-                if clean_name not in clean_official:
+                is_off_w = any(p in clean_name for p in official_weapon_prefixes)
+                if not is_off_w:
                     r['name'] = r['name'] + " [UNOFFICIAL EQ]"
 
         total_loose_vol = 0.0
@@ -1164,6 +1183,7 @@ def generate_pdf_direct(self, save_path=None):
     
     # Build PDF
     pdf = fpdf.FPDF('P', 'mm', 'A4')
+    pdf.alias_nb_pages()
     pdf.set_auto_page_break(auto=False)
     
     # Inject pre-cached fonts
@@ -1368,25 +1388,7 @@ def generate_pdf_direct(self, save_path=None):
         pair = tuple(sorted([loading_planet, t_pla]))
         return _STANTON_QT_MINS.get(pair, 12)  # default ~12 min if unknown
     
-    def _enrich_location(terminal_name):
-        """Format location as 'System > Planet > Location'."""
-        tn = terminal_name.lower()
-        for cat_locs in _uex_locations_db.values():
-            if isinstance(cat_locs, dict):
-                for loc_name, loc_info in cat_locs.items():
-                    if loc_name.lower() == tn or tn in loc_name.lower() or loc_name.lower() in tn:
-                        system = loc_info.get("system", "Stanton")
-                        planet = loc_info.get("planet", "")
-                        if planet:
-                            return f"{system} > {planet} > {loc_name}"
-                        return f"{system} > {loc_name}"
-        # Fallback: guess from name
-        if "arc-l" in tn or "area" in tn: return f"Stanton > ArcCorp > {terminal_name}"
-        if "cru-l" in tn or "orison" in tn: return f"Stanton > Crusader > {terminal_name}"
-        if "hur-l" in tn or "lorville" in tn: return f"Stanton > Hurston > {terminal_name}"
-        if "mic-l" in tn or "babbage" in tn: return f"Stanton > MicroTech > {terminal_name}"
-        if "levski" in tn: return f"Nyx > Delamar > {terminal_name}"
-        return terminal_name
+    from src.core.supply_manifest import enrich_location as _enrich_location
     
     procurement = []
     has_loose_items = total_loose_vol > 0.0001 if 'total_loose_vol' in dir() else False
@@ -1402,42 +1404,63 @@ def generate_pdf_direct(self, save_path=None):
             has_loose_items = True
             continue
         
-        # 1) Commodity trade DB — prefer nearby locations
-        candidates = []
-        for db_name, entries in _uex_trade_db.items():
-            if db_name.lower() == iname_low or iname_low in db_name.lower() or db_name.lower() in iname_low:
-                for e in entries:
-                    if e.get('b', 0) > 0:
-                        dist = _qt_distance(e['t'])
-                        candidates.append((dist, e['b'], e['t']))
-                break
+        from slang_helper import resolve_slang
+        canonical_name = resolve_slang(iname)
+        canon_low = canonical_name.lower().strip()
         
-        # 2) Items trade DB
+        is_ordnance = any(k in canon_low for k in ["torpedo", "missile", "bomb", "seeker", "argos", "argus", "typhoon", "colossus", "stormburst"])
+        
+        # 1) UEX TRADE & ITEM DB (HIGHEST PRIORITY) — real-time UEX market prices & locations
+        candidates = []
+        
+        # 1a) UEX Commodities DB
+        if _uex_trade_db:
+            for db_name, entries in _uex_trade_db.items():
+                db_low = db_name.lower().strip()
+                if db_low == iname_low or db_low == canon_low or iname_low in db_low or canon_low in db_low:
+                    if isinstance(entries, list):
+                        for e in entries:
+                            if isinstance(e, dict):
+                                buy_price = e.get('buy', e.get('b', 0))
+                                loc = e.get('terminal', e.get('t', ''))
+                                if buy_price > 0 and loc:
+                                    dist = _qt_distance(loc)
+                                    candidates.append((dist, buy_price, loc))
+                        if candidates: break
+
+        # 1b) UEX Items DB (weapons, components, armor, food, consumables)
         if not candidates and _uex_items_trade_db:
             for db_name, entries in _uex_items_trade_db.items():
-                if db_name.lower() == iname_low or iname_low in db_name.lower() or db_name.lower() in iname_low:
-                    for e in entries:
-                        if e.get('b', 0) > 0:
-                            dist = _qt_distance(e['t'])
-                            candidates.append((dist, e['b'], e['t']))
-                    break
+                db_low = db_name.lower().strip()
+                if db_low == iname_low or db_low == canon_low or iname_low in db_low or canon_low in db_low:
+                    locs = entries.get('locations', []) if isinstance(entries, dict) else (entries if isinstance(entries, list) else [])
+                    for e in locs:
+                        if isinstance(e, dict):
+                            buy_price = e.get('buy', e.get('b', 0))
+                            loc = e.get('terminal', e.get('t', ''))
+                            if buy_price > 0 and loc:
+                                if is_ordnance:
+                                    t_low = loc.lower()
+                                    if "admin office" in t_low or "checkmate" in t_low or "ruin station" in t_low:
+                                        continue
+                                dist = _qt_distance(loc)
+                                candidates.append((dist, buy_price, loc))
+                    if candidates: break
         
         if candidates:
-            # Sort by distance first, then price
             candidates.sort(key=lambda x: (x[0], x[1]))
-            # Prefer same-system: if any candidate < 50 min, filter out wormhole ones
             same_sys = [c for c in candidates if c[0] < 50]
             if same_sys:
                 candidates = same_sys
             best_loc = candidates[0][2]
             best_price = candidates[0][1]
-        
-        # 3) SC Wiki API cache — real item locations from star-citizen.wiki
+
+        # 2) SC Wiki API cache (SECOND PRIORITY) — fallback if UEX has no entry or no valid buy location
         if not best_loc:
             try:
                 from sc_wiki_db import get_best_buy_location
                 wiki_result = get_best_buy_location(
-                    iname, from_location=location or "",
+                    canonical_name, from_location=location or "",
                     from_system=loading_system or "stanton")
                 if wiki_result:
                     best_loc = wiki_result["display"]
@@ -1662,18 +1685,72 @@ def generate_pdf_direct(self, save_path=None):
             
             py += 4.5
         
-        # Route summary grouped by location
+        # Route summary grouped by base location (no A→B→A ping-pong)
         py += 3
-        loc_items = {}
+        import re as _re_blk
+
+        def _normalize_base_loc_blk(loc_str):
+            """Collapse shops/outposts at the same station/planet into one base key."""
+            if not loc_str:
+                return ""
+            s = str(loc_str).strip()
+            s_low = s.lower()
+            if any(k in s_low for k in ["pyro", "monox", "bloom", "checkmate", "orbituary", "ruin", "starlight", "patchcity"]):
+                sys_pfx = "Pyro"
+            elif any(k in s_low for k in ["nyx", "levski", "glaciem", "delamar"]):
+                sys_pfx = "Nyx"
+            else:
+                sys_pfx = "Stanton"
+            if any(k in s_low for k in ["tressler", "platinum tressler"]): main = "Port Tressler"
+            elif any(k in s_low for k in ["babbage", "microtech", "dunboro", "rayari", "calliope", "clio", "euterpe", "calhoun"]): main = "microTech"
+            elif any(k in s_low for k in ["everus"]): main = "Everus Harbor"
+            elif any(k in s_low for k in ["baijini"]): main = "Baijini Point"
+            elif any(k in s_low for k in ["seraphim"]): main = "Seraphim Station"
+            elif any(k in s_low for k in ["area18", "area 18", "arccorp", "cubby blast", "centermass", "g-loc", "wala", "lyria"]): main = "Area18"
+            elif any(k in s_low for k in ["lorville", "hurston", "hdms", "arial", "ita", "magda", "aberdeen", "tammany"]): main = "Hurston"
+            elif any(k in s_low for k in ["orison", "crusader", "yela", "daymar", "cellin", "brio", "wally"]): main = "Crusader"
+            elif any(k in s_low for k in ["levski", "delamar"]): main = "Levski"
+            elif any(k in s_low for k in ["checkmate"]): main = "Checkmate Station"
+            elif "hur-l" in s_low:
+                for lp in ["hur-l1","hur-l2","hur-l3","hur-l4","hur-l5"]:
+                    if lp in s_low: main = lp.upper(); break
+                else: main = "HUR-L"
+            elif "arc-l" in s_low:
+                for lp in ["arc-l1","arc-l2","arc-l3","arc-l4","arc-l5"]:
+                    if lp in s_low: main = lp.upper(); break
+                else: main = "ARC-L"
+            elif "cru-l" in s_low:
+                for lp in ["cru-l1","cru-l2","cru-l3","cru-l4","cru-l5"]:
+                    if lp in s_low: main = lp.upper(); break
+                else: main = "CRU-L"
+            elif "mic-l" in s_low:
+                for lp in ["mic-l1","mic-l2","mic-l3","mic-l4","mic-l5"]:
+                    if lp in s_low: main = lp.upper(); break
+                else: main = "MIC-L"
+            else:
+                parts = [p.strip() for p in s.split(' > ')] if ' > ' in s else (
+                         [p.strip() for p in s.split(' -> ')] if ' -> ' in s else [s])
+                main = parts[1] if len(parts) >= 2 else parts[0]
+            main = _re_blk.sub(r'\s*\([^)]*\)', '', main).strip()
+            return f"{sys_pfx} > {main}"
+
+        # Group by base location, then sub-sort shops within each base
+        base_groups = {}
         for p in procurement:
-            loc_items.setdefault(p['loc'], []).append(p)
-        
-        # Sort locations by planet distance (use raw_loc for accurate distance)
-        def _loc_sort_key(loc_items_pair):
-            loc, litems = loc_items_pair
-            raw = litems[0].get('raw_loc', loc) if litems else loc
-            return (_qt_distance(raw), -len(litems))
-        sorted_locs = sorted(loc_items.items(), key=_loc_sort_key)
+            bk = _normalize_base_loc_blk(p['loc']) or _normalize_base_loc_blk(p.get('raw_loc', ''))
+            base_groups.setdefault(bk, []).append(p)
+
+        sorted_bases = sorted(base_groups.items(),
+                              key=lambda pair: (_qt_distance(pair[1][0].get('raw_loc', '') or pair[1][0].get('loc', '')),
+                                               -len(pair[1])))
+        sorted_locs = []
+        for _bk, b_items in sorted_bases:
+            shop_grp = {}
+            for p in b_items:
+                shop_grp.setdefault(p['loc'], []).append(p)
+            for loc, litems in sorted(shop_grp.items(),
+                                      key=lambda x: (_qt_distance(x[1][0].get('raw_loc', x[0])), -len(x[1]))):
+                sorted_locs.append((loc, litems))
         
         if py < 245 and len(sorted_locs) >= 1:
             # Add Stor-All purchase as first stop if needed

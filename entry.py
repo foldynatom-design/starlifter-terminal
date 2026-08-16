@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 import sys
 import os
+import warnings
+warnings.filterwarnings("ignore")
+warnings.filterwarnings("ignore", category=UserWarning)
+warnings.filterwarnings("ignore", message=".*CTkImage.*")
+warnings.filterwarnings("ignore", message=".*HighDPI.*")
 import re
 import random
 import threading
@@ -132,37 +137,22 @@ apply_all_patches(main)
 from pdf_engine import _patched_generate_supply_route_pdf
 
 def _patched_animate_generate(self):
-    """Animate TRANSMITTING UPLINK on button, then generate PDF in thread."""
-    import threading, time
-    btn = getattr(self, '_sr_btn', None)
-    
-    def _run():
-        _play_sound("pdf_generated.wav")
-        frames = [">> TRANSMITTING UPLINK...", ">> TRANSMITTING UPLINK.. ", ">> TRANSMITTING UPLINK.  ",
-                  "   TRANSMITTING UPLINK...", ">> UPLINK ACTIVE <<<", ">> TRANSMITTING UPLINK..."]
-        if btn:
-            try:
-                btn.configure(state="disabled", fg_color="#1a3a2a", text_color="#00ff88")
+    """Generate Supply Route PDF directly on main thread."""
+    _play_sound("pdf_generated.wav")
+    try:
+        generate_pdf_direct(self)
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        try: messagebox.showerror("Error", f"Failed to generate PDF: {e}")
+        except: pass
+    finally:
+        if hasattr(self, '_sr_btn'):
+            try: self._sr_btn.configure(state="normal", text="Generate Supply Route PDF")
             except: pass
-        for i in range(6):
-            if btn:
-                try: btn.configure(text=frames[i % len(frames)])
-                except: pass
-            time.sleep(0.3)
-        
-        try:
-            generate_pdf_direct(self)
-        except Exception as e:
-            try: messagebox.showerror("Error", f"Failed to generate PDF: {e}")
+        if hasattr(self, 'generate_btn') and self.generate_btn:
+            try: self.generate_btn.configure(state="normal", text="GENERATE MANIFEST PDF")
             except: pass
-        
-        if btn:
-            try:
-                btn.configure(text="Generate Supply Route PDF", state="normal",
-                              fg_color="#2a3a1a", text_color="#c8a84e")
-            except: pass
-    
-    threading.Thread(target=_run, daemon=True).start()
 
 main.RequisitionApp.generate_supply_route_pdf = _patched_generate_supply_route_pdf
 main.RequisitionApp.animate_generate_supply_route_pdf = _patched_animate_generate
@@ -171,38 +161,44 @@ main.RequisitionApp.run_supply_route_generation = lambda self, items=None, wareh
 # ── Monkey-patch manifest generation: sync classification + sound ──
 _orig_gen_req = main.RequisitionApp.generate_requisition_pdf
 def _patched_generate_requisition_pdf(self):
-    """Sync _classify_var → security_level_var before manifest generation."""
-    # Guard: ALL = disabled, must select specific classification
-    cls_val = self._classify_var.get().upper() if hasattr(self, '_classify_var') else "ALL"
-    if cls_val == "ALL":
-        from tkinter import messagebox
-        messagebox.showwarning("Classification Required",
-            "Select a specific classification (PUBLIC / SECURED / CLASSIFIED) before generating.")
-        return
+    """Sync _classify_var -> security_level_var before manifest generation."""
+    cls_val = self._classify_var.get().upper() if hasattr(self, '_classify_var') else "PUBLIC"
+    if cls_val == "ALL" or not cls_val:
+        cls_val = "PUBLIC"
+        if hasattr(self, '_classify_var'):
+            try: self._classify_var.set("PUBLIC")
+            except: pass
     cls_to_sec = {
         "CLASSIFIED": "OFFICERS_ONLY_ENCRYPTED",
         "SECURED": "RESTRICTED",
         "PUBLIC": "OPEN_PUBLIC",
     }
-    sec_val = cls_to_sec.get(cls_val, "OFFICERS_ONLY_ENCRYPTED")
+    sec_val = cls_to_sec.get(cls_val, "OPEN_PUBLIC")
     if hasattr(self, 'security_level_var'):
-        self.security_level_var.set(sec_val)
+        try: self.security_level_var.set(sec_val)
+        except: pass
     _play_sound("pdf_generated.wav")
     try:
-        return _orig_gen_req(self)
+        if _orig_gen_req:
+            _orig_gen_req(self)
+        else:
+            generate_pdf_direct(self)
     except Exception as e:
         import traceback
-        crash_log = os.path.join(PATHS.app_root, '_manifest_crash.log')
-        with open(crash_log, 'w', encoding='utf-8') as f:
-            f.write(f"Error: {e}\n\n")
-            traceback.print_exc(file=f)
-            f.write(f"\n\nsecurity_level_var: {self.security_level_var.get() if hasattr(self, 'security_level_var') else 'N/A'}\n")
-            f.write(f"classify_var: {self._classify_var.get() if hasattr(self, '_classify_var') else 'N/A'}\n")
-        print(f"[MANIFEST CRASH] {e}")
         traceback.print_exc()
-        raise
+        try: messagebox.showerror("Error", f"Failed to generate PDF: {e}")
+        except: pass
+    finally:
+        if hasattr(self, 'generate_btn') and self.generate_btn:
+            try: self.generate_btn.configure(state="normal", text="GENERATE MANIFEST PDF")
+            except: pass
+        if hasattr(self, '_sr_btn'):
+            try: self._sr_btn.configure(state="normal", text="Generate Supply Route PDF")
+            except: pass
 
 main.RequisitionApp.generate_requisition_pdf = _patched_generate_requisition_pdf
+main.RequisitionApp.animate_generate_pdf = _patched_generate_requisition_pdf
+main.RequisitionApp.animate_step = lambda self, *a, **kw: None
 
 
 # ══════════════════════════════════════════════════════════════════════════
@@ -210,11 +206,33 @@ main.RequisitionApp.generate_requisition_pdf = _patched_generate_requisition_pdf
 # ══════════════════════════════════════════════════════════════════════════
 
 if __name__ == '__main__':
+    def _background_preload():
+        try:
+            from path_config import load_frequent_items
+            load_frequent_items()
+            from fleet_helper import _load_uex_ships_db
+            _load_uex_ships_db()
+            from storall_packer import load_volume_map
+            load_volume_map()
+        except Exception:
+            pass
+    threading.Thread(target=_background_preload, daemon=True).start()
+
     try:
         import customtkinter
         customtkinter.set_appearance_mode("dark")
         customtkinter.set_default_color_theme("dark-blue")
         app = main.RequisitionApp()
+        try:
+            from ui_panel import setup_responsive_window
+            setup_responsive_window(app)
+        except Exception as ex:
+            print(f"[Entry] Responsive window setup: {ex}")
+        try:
+            from src.utils.clipboard_helper import enable_universal_shortcuts
+            enable_universal_shortcuts(app)
+        except Exception as ex:
+            print(f"[Entry] Clipboard helper init: {ex}")
         app.mainloop()
     except Exception as e:
         import traceback
