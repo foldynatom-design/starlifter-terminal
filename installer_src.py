@@ -15,7 +15,7 @@ class StarlifterInstaller(ctk.CTk):
         super().__init__()
         
         # Configure window
-        self.title("Starlifter Requisition Terminal v0.6 - Installation")
+        self.title("Starlifter Requisition Terminal v0.6.1 - Installation")
         self.geometry("680x480")
         self.resizable(False, False)
         
@@ -283,11 +283,11 @@ class StarlifterInstaller(ctk.CTk):
                 uninst_exe = os.path.join(self.target_dir, "Uninstall.exe")
                 icon_file = os.path.join(self.target_dir, "app_icon.ico")
                 with winreg.CreateKey(winreg.HKEY_CURRENT_USER, reg_key) as key:
-                    winreg.SetValueEx(key, "DisplayName", 0, winreg.REG_SZ, "Starlifter Requisition Terminal v0.6")
+                    winreg.SetValueEx(key, "DisplayName", 0, winreg.REG_SZ, "Starlifter Requisition Terminal v0.6.1")
                     winreg.SetValueEx(key, "UninstallString", 0, winreg.REG_SZ, f'"{uninst_exe}"')
                     winreg.SetValueEx(key, "DisplayIcon", 0, winreg.REG_SZ, icon_file if os.path.exists(icon_file) else exe_path)
                     winreg.SetValueEx(key, "Publisher", 0, winreg.REG_SZ, "29th Starlifters / 44th Battle Group")
-                    winreg.SetValueEx(key, "DisplayVersion", 0, winreg.REG_SZ, "0.6")
+                    winreg.SetValueEx(key, "DisplayVersion", 0, winreg.REG_SZ, "0.6.1")
                     winreg.SetValueEx(key, "InstallLocation", 0, winreg.REG_SZ, self.target_dir)
                     winreg.SetValueEx(key, "NoModify", 0, winreg.REG_DWORD, 1)
                     winreg.SetValueEx(key, "NoRepair", 0, winreg.REG_DWORD, 1)
@@ -343,7 +343,7 @@ class StarlifterInstaller(ctk.CTk):
             f'$s.TargetPath = \"{target}\"; '
             f'$s.WorkingDirectory = \"{working_dir}\"; '
             f'$s.IconLocation = \"{icon_path}\"; '
-            f'$s.Description = \"UEE Logistics Center - Requisition Terminal v0.6\"; '
+            f'$s.Description = \"UEE Logistics Center - Requisition Terminal v0.6.1\"; '
             f'$s.Save()'
         )
         try:
@@ -365,7 +365,7 @@ class StarlifterInstaller(ctk.CTk):
                 f's.TargetPath = "{target}"\n'
                 f's.WorkingDirectory = "{working_dir}"\n'
                 f's.IconLocation = "{icon_path}"\n'
-                f's.Description = "UEE Logistics Center - Requisition Terminal v0.6"\n'
+                f's.Description = "UEE Logistics Center - Requisition Terminal v0.6.1"\n'
                 f's.Save\n'
             )
             vbs_path = os.path.join(self.target_dir, "_create_shortcut.vbs")

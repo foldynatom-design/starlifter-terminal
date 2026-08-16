@@ -12,7 +12,7 @@ class StarlifterUninstaller(ctk.CTk):
         super().__init__()
         
         # Configure window
-        self.title("Starlifter Requisition Terminal v0.6 - Uninstall")
+        self.title("Starlifter Requisition Terminal v0.6.1 - Uninstall")
         self.geometry("640x480")
         self.resizable(False, False)
         

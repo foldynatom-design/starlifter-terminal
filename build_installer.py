@@ -47,13 +47,14 @@ def cp(src, dst):
             shutil.copytree(src, dst, dirs_exist_ok=True)
         else:
             shutil.copytree(src, dst)
-    else:
-        shutil.copy2(src, dst)
-
-# Root level files
+# Root level files and directories
 for f in ["config.json", "main.pyc", "logo.png", "logo_uee44.png", "cvbg44_logo.png",
           "watermark_secured.png", "watermark_classified.png", "watermark_public.png", "app_icon.ico",
-          "ui_panel.py", "slang_helper.py"]:
+          "ui_panel.py", "slang_helper.py", "vessel_templates.json", "packages.json",
+          "cstone_fetcher.py", "data_validator.py", "fleet_helper.py", "lore_helper.py",
+          "path_config.py", "pdf_block_extract.py", "pdf_engine.py", "sc_wiki_db.py",
+          "sc_wiki_fetcher.py", "signature_helper.py", "storall_packer.py",
+          "cargo_grid_renderer.py", "uex_sync.py", "src"]:
     src = os.path.join(ROOT, f)
     if os.path.exists(src):
         cp(src, os.path.join(DIST, f))
