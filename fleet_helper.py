@@ -276,6 +276,9 @@ def _recommend_shuttle(vessel_name, total_scu, ships_db=None, loading_type="", l
     if not vessel_name or total_scu <= 0:
         return None
 
+    type_str = str(loading_type or "").lower()
+    loc_str = str(location or "").lower()
+
     if not isinstance(ships_db, dict):
         ships_db = _load_uex_ships_db()
 
