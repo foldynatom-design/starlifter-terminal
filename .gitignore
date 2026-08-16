@@ -4,6 +4,7 @@ dist/
 *.spec
 __pycache__/
 *.pyc
+!main.pyc
 *.pyo
 
 # Font cache — NEVER commit these, they contain absolute paths from the build machine

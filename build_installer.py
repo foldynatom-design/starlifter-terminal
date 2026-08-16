@@ -57,7 +57,7 @@ for f in ["config.json", "main.pyc", "logo.png", "logo_uee44.png", "cvbg44_logo.
           "cstone_fetcher.py", "data_validator.py", "fleet_helper.py", "lore_helper.py",
           "path_config.py", "pdf_block_extract.py", "pdf_engine.py", "sc_wiki_db.py",
           "sc_wiki_fetcher.py", "signature_helper.py", "storall_packer.py",
-          "cargo_grid_renderer.py", "uex_sync.py", "src"]:
+          "cargo_grid_renderer.py", "uex_sync.py", "rp_stories.py", "api.py", "src"]:
     src = os.path.join(ROOT, f)
     if os.path.exists(src):
         cp(src, os.path.join(DIST, f))
